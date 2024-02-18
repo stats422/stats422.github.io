@@ -7,10 +7,115 @@
     "text": "About this site"
   },
   {
+    "objectID": "RRefresher.html",
+    "href": "RRefresher.html",
+    "title": "R Refresher",
+    "section": "",
+    "text": "This is an R Refresher adapted from Weisberg (2014) We will use packages ggplot2, knitr, dplyr and tidyr"
+  },
+  {
+    "objectID": "RRefresher.html#dim",
+    "href": "RRefresher.html#dim",
+    "title": "R Refresher",
+    "section": "dim()",
+    "text": "dim()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "RRefresher.html#head",
+    "href": "RRefresher.html#head",
+    "title": "R Refresher",
+    "section": "head()",
+    "text": "head()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "RRefresher.html#summary",
+    "href": "RRefresher.html#summary",
+    "title": "R Refresher",
+    "section": "summary()",
+    "text": "summary()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSummary is being abused here. While it is fast and gives us the count of NA (missing), do consider that rounding error could occur for the summary statistics. Functions for computing stats like mean( ) can be found elsewhere:"
+  },
+  {
+    "objectID": "RRefresher.html#descriptive-basics",
+    "href": "RRefresher.html#descriptive-basics",
+    "title": "R Refresher",
+    "section": "descriptive basics",
+    "text": "descriptive basics\nChallenge (and working with webR), in teams, please compute the following for the variable birth_year in the starwars data:\n\nmean,\nsd,\nfive number summary,\ndeciles,\nthe number of missing values\nand a count (number) of unique birth years\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "RRefresher.html#conditioninggrouping",
+    "href": "RRefresher.html#conditioninggrouping",
+    "title": "R Refresher",
+    "section": "conditioning/grouping",
+    "text": "conditioning/grouping\nWe will use more of this later in the course, but for now, you should possess these fundamental data handling skills:\n\nin base R\nWe could use some basic character manipulation to make the result a little more compact. Here’s the issue:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe variable hair_color is a little too granular, let’s propose a simple fix, just keep first mention of hair color:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow let’s examine mass (weight) by hair_color and gender in base R:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nusing dplyr with a little tidyr\nThis is a preferred alternative to the base R solution because (1) it has more options and (2) you don’t lose as much information. First some data preparation, similar to the base R solution\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIf we were to stop after the summarize() below we would have a “long”/“tall” result suitable for data visualization and other functions, but it’s a little difficult to make comparisons as tabled results:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBy using .groups = “drop” and a pivot_wider() (from tidyr) we arrive at a comparable outcome, notice the missing categories:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will delve into more data handling in the future."
+  },
+  {
+    "objectID": "RRefresher.html#locally",
+    "href": "RRefresher.html#locally",
+    "title": "R Refresher",
+    "section": "locally",
+    "text": "locally\nThis is the general format for reading data in base R (won’t run on this website, you’ll need to try it in R on your own computer)\nmy_data0 &lt;- read.table(\"filename\", header=TRUE,\nna.strings=\"NA\", sep = \"\")\nThere are modifications to this basic code, for example, read.csv() is just a alias of read.table() with sep = “,” as a default. We can use it in concert with file.choose() to allow you to select files from your local drive (won’t work here, just an example)\nmy_data1 &lt;- read.csv(file.choose(), header=TRUE,\nna.strings=\"NA\")"
+  },
+  {
+    "objectID": "RRefresher.html#remotely",
+    "href": "RRefresher.html#remotely",
+    "title": "R Refresher",
+    "section": "remotely",
+    "text": "remotely\nWe can also read data from a website, note the use of read.table() with sep = “,”:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnother good first step involves examining the structure of the object:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThis will help identify numeric and non-numeric data.\nWe could load an additional package, readr, to allow us to read additional data formats such as Excel files (this is something you can do in section or in an assignment)"
+  },
+  {
+    "objectID": "RRefresher.html#examples",
+    "href": "RRefresher.html#examples",
+    "title": "R Refresher",
+    "section": "Examples",
+    "text": "Examples\n\nnormal\nThe normal distribution’s root is “norm”. The function pnorm() takes a quantile and returns a probability of observing a value less than or equal to 1.96 in a standard normal distribution:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can change the pnorm defaults to accommodate a different situation, here, SAT scores combined math/verbal:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nqnorm() answers the question - given a probability what is the value of the associated quantile?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ndnorm() - returns the height of the probability density function at points specified by the programmer. In the normal distribution, points farther from the mean have lower density\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nt\nThere are other distributions with different root names, but the same four letter identifier holds\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nchi-square\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nan additional density example and our bridge to visualization\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nTest yourself/your team\nPlease try generating values from another distribution (e.g., F, Poisson), you can find a longer list of distributions here: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Distributions.html\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "RRefresher.html#saving-graphics",
+    "href": "RRefresher.html#saving-graphics",
+    "title": "R Refresher",
+    "section": "saving graphics",
+    "text": "saving graphics\nWe can output graphics by using the GUI or directly in our code (will only run locally):\npdf(\"myhist.pdf\", height=5, width=5)\nhist(rnorm(100))\ndev.off()"
+  },
+  {
+    "objectID": "RRefresher.html#plot-in-base-r",
+    "href": "RRefresher.html#plot-in-base-r",
+    "title": "R Refresher",
+    "section": "plot() in base R",
+    "text": "plot() in base R\nBase R’s plot() function is a reasonable starting point and convenient:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "RRefresher.html#ggplot",
+    "href": "RRefresher.html#ggplot",
+    "title": "R Refresher",
+    "section": "ggplot( )",
+    "text": "ggplot( )\nWe have more data visualization power with ggplot. We could add straight lines (AKA fit linear models) for each species and for overall\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "RRefresher.html#plot-within-a-for-loop",
+    "href": "RRefresher.html#plot-within-a-for-loop",
+    "title": "R Refresher",
+    "section": "plot() within a for loop",
+    "text": "plot() within a for loop\nAnother example, first using base R to plot 4 graphs in a single window:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "RRefresher.html#tidyverse-style",
+    "href": "RRefresher.html#tidyverse-style",
+    "title": "R Refresher",
+    "section": "Tidyverse style",
+    "text": "Tidyverse style\nWe can do the same with ggplot, but it requires more data handling\nFirst, pivot the data from wide to long/tall:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAlways check your results:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nggplot will be much happier with “long” (AKA “tall” maybe also “stacked”)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can calculate the correlations for each set, the group_by() function combined with summarize in dplyr is very useful for that.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "RRefresher.html#five-minute-ggplot-refresher",
+    "href": "RRefresher.html#five-minute-ggplot-refresher",
+    "title": "R Refresher",
+    "section": "Five minute ggplot refresher",
+    "text": "Five minute ggplot refresher\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y, color) as it relates to the features.\nThe “+” separates “layers”. Think of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is just about it. I do recommend you learn how to “facet” (condition) the plots:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nread “as a function of island”, if you wanted island on the rows, move to facet_grid()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\na better use of facet_grid\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe remaining functions deal with appearance such as labels, legends and maybe adding additional geoms:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Stats422",
+    "title": "Statistics 422",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/"
   }
 ]
