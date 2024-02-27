@@ -57,4 +57,4 @@ _site/
 vendor/
 **/.DS_Store
 /.quarto/
-/_site/
+_site
