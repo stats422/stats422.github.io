@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="adapted from Weisberg ALR (2014)">
-
 <title>Statistics 422 - R Refresher</title>
 <style>
 code{white-space: pre-wrap;}
@@ -23,7 +20,6 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -36,11 +32,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -59,10 +56,8 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <style type="text/css">
 .monaco-editor pre {
   background-color: unset !important;
@@ -226,10 +221,9 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-1","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"webr::install(\"ggplot2\")\nwebr::install(\"knitr\")\nwebr::install(\"dplyr\")\nwebr::install(\"tidyr\")\nlibrary(ggplot2)\nlibrary(knitr)\nlibrary(dplyr)\nlibrary(tidyr)","id":1},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-2","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"dim(starwars)","id":2},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-3","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"head(starwars)","id":3},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-4","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"summary(starwars[, c(1:3,7)])","id":4},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-5","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"# please write you code here, run it, and upload copy of your code\n# on BruinLearn before 11:59pm tonight for credit","id":5},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-6","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"table(starwars$hair_color, useNA = \"always\")","id":6},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-7","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"# using base R only \nstarwars$hair_color_first <- sapply(strsplit(as.character(starwars$hair_color), \",\"), \n                                    function(x) x[1])\n# check it\ntable(starwars$hair_color_first, useNA = \"always\")","id":7},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-8","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"tapply(starwars$mass, list(starwars$hair_color_first, starwars$gender), mean, na.rm = TRUE)","id":8},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-9","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"starwars <- starwars %>% # pipe in tidyverse\n  mutate(hair_color_1_dplyr = sapply(strsplit(as.character(hair_color), \",\"), function(x) x[1]))\n\n# check it\ntable(starwars$hair_color_1_dplyr, useNA = \"always\")","id":9},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-10","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"starwars %>%\n  group_by(hair_color_1_dplyr, gender) %>%\n  summarize(mean_mass = mean(mass, na.rm = TRUE))","id":10},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-11","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"starwars %>%\n  group_by(hair_color_1_dplyr, gender) %>%\n  summarize(mean_mass = mean(mass, na.rm = TRUE), .groups = \"drop\") %>% \n  pivot_wider(names_from = gender, values_from = mean_mass)","id":11},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-12","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"my_data2 <-read.table(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/holten.csv\",\n               header=TRUE, sep=\",\")","id":12},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-13","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"str(my_data2)","id":13},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-14","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"pnorm(1.96)","id":14},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-15","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"pnorm(1405, mean = 1000, sd = 200) #UCLA\npnorm(1505, mean = 1000, sd = 200) #Stanford\npnorm(1135, mean = 1000, sd = 200) #UNLV","id":15},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-16","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"qnorm(0.975, mean = 0, sd = 1)\nqnorm(0.025, mean = 0, sd = 1)\nqnorm(0.95, mean = 1000, sd = 200)","id":16},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-17","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"dnorm(c(-2, -1, 0, 1, 2), mean = 0, sd = 1)","id":17},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-18","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"pt(1.96, df = 10)\npt(1.96, df = 100)\npt(1.96, df = 1000)","id":18},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-19","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"qt(0.025, df = 10)\nqt(0.975, df = 10)","id":19},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-20","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"pchisq(q = 3.84, df = 1)\nqchisq(0.95, df = 1)","id":20},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-21","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"x <- seq(from = 0, to = 10, by = 0.1)\n\nplot(x, dchisq(x, df = 1), type = \"l\", \n     main = \"Chi-Square Distribution with 1 Degree of Freedom\",\n     xlab = \"Value\", ylab = \"Density\", col = \"red\")","id":21},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-22","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"## Please try plotting or generating some values from a distribution you haven't seen demonstrated today (so no normal, t or chi-square)\n\n","id":22},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-23","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"plot(iris$Sepal.Width ~ iris$Sepal.Length, \n     col = iris$Species, pch = 20, \n     main = \"Sepal Width on Sepal Length\",\n     ylab = \"Sepal Width\",\n     xlab = \"Sepal Length\")","id":23},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-24","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"ggplot(iris, aes(x = Sepal.Length, \n                 y = Sepal.Width,\n                 color = Species)) +\n  geom_point() + \n  geom_smooth(method = 'lm', se = FALSE) +\n  geom_smooth(method = 'lm', se = FALSE, color = \"black\", aes(linetype = \"Overall\")) +  # Black line for overall trend\n  scale_color_manual(values = c(\"setosa\" = \"red\", \"versicolor\" = \"green\", \"virginica\" = \"blue\")) +\n  scale_linetype_manual(name = \"\", values = c(\"Overall\" = \"solid\"), labels = \"Overall Trend\") +\n  guides(color = guide_legend(title = \"By Species\")) +\n  theme_minimal()","id":24},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-25","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":".pardefault <- par(no.readonly = TRUE)  # save defaults\npar(mfrow=c(2, 2)) # change to 2 by 2\nxs <- names(anscombe)[1:4]\nys <- names(anscombe)[5:8]\nfor (i in 1:4){\n  plot(anscombe[, xs[i]], anscombe[, ys[i]], xlab=xs[i], ylab=ys[i],\n       xlim=c(4,20), ylim=c(2, 16))\n  abline(lm( anscombe[, ys[i]] ~ anscombe[, xs[i]]))\n}\npar(.pardefault) # restore","id":25},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-26","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"head(anscombe)","id":26},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-27","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"anscombe_long <- anscombe %>% \n  pivot_longer(cols = everything(),\n               names_to = c(\".value\", \"set\"),\n               names_pattern = \"(.)(.)\")","id":27},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-28","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"head(anscombe_long)","id":28},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-29","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"ggplot(anscombe_long, aes(x = x, y = y, color = set)) +\n  geom_point() +\n  facet_wrap(~ set) +\n  labs(title = \"Anscombe's Quartet\",\n       x = \"X value\",\n       y = \"Y value\") +\n  theme_minimal() +\n  theme(legend.position = \"none\")","id":29},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-30","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"correlations <- anscombe_long %>% \n  group_by(set) %>% \n  summarize(correlation = cor(x, y))\nprint(correlations)","id":30},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-31","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"penguins <- read.csv(\"https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv\")\nstr(penguins)","id":31},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-32","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species))","id":32},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-33","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() ","id":33},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-34","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_wrap(~ island)","id":34},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-35","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_grid(rows = vars(island))","id":35},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-36","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_grid(sex ~ island)","id":36},{"options":{"fig-cap":"","results":"markup","autorun":"false","context":"interactive","dpi":72,"classes":"","label":"unnamed-chunk-37","output":"true","warning":"true","message":"true","fig-width":7,"comment":"","fig-height":5,"out-width":"700px","out-height":""},"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  labs(title = \"Palmer Penguin Populations\",\n       x = \"Flipper Length (mm)\",\n       y = \"Body Mass (g)\") +\n  theme_classic()","id":37}];
+globalThis.qwebrCellDetails = [{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-1","context":"interactive","fig-width":7},"id":1,"code":"webr::install(\"ggplot2\")\nwebr::install(\"knitr\")\nwebr::install(\"dplyr\")\nwebr::install(\"tidyr\")\nlibrary(ggplot2)\nlibrary(knitr)\nlibrary(dplyr)\nlibrary(tidyr)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-2","context":"interactive","fig-width":7},"id":2,"code":"dim(starwars)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-3","context":"interactive","fig-width":7},"id":3,"code":"head(starwars)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-4","context":"interactive","fig-width":7},"id":4,"code":"summary(starwars[, c(1:3,7)])"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-5","context":"interactive","fig-width":7},"id":5,"code":"# please write you code here, run it, and upload copy of your code\n# on BruinLearn before 11:59pm tonight for credit"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-6","context":"interactive","fig-width":7},"id":6,"code":"table(starwars$hair_color, useNA = \"always\")"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-7","context":"interactive","fig-width":7},"id":7,"code":"# using base R only \nstarwars$hair_color_first <- sapply(strsplit(as.character(starwars$hair_color), \",\"), \n                                    function(x) x[1])\n# check it\ntable(starwars$hair_color_first, useNA = \"always\")"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-8","context":"interactive","fig-width":7},"id":8,"code":"tapply(starwars$mass, list(starwars$hair_color_first, starwars$gender), mean, na.rm = TRUE)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-9","context":"interactive","fig-width":7},"id":9,"code":"starwars <- starwars %>% # pipe in tidyverse\n  mutate(hair_color_1_dplyr = sapply(strsplit(as.character(hair_color), \",\"), function(x) x[1]))\n\n# check it\ntable(starwars$hair_color_1_dplyr, useNA = \"always\")"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-10","context":"interactive","fig-width":7},"id":10,"code":"starwars %>%\n  group_by(hair_color_1_dplyr, gender) %>%\n  summarize(mean_mass = mean(mass, na.rm = TRUE))"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-11","context":"interactive","fig-width":7},"id":11,"code":"starwars %>%\n  group_by(hair_color_1_dplyr, gender) %>%\n  summarize(mean_mass = mean(mass, na.rm = TRUE), .groups = \"drop\") %>% \n  pivot_wider(names_from = gender, values_from = mean_mass)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-12","context":"interactive","fig-width":7},"id":12,"code":"my_data2 <-read.table(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/holten.csv\",\n               header=TRUE, sep=\",\")"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-13","context":"interactive","fig-width":7},"id":13,"code":"str(my_data2)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-14","context":"interactive","fig-width":7},"id":14,"code":"pnorm(1.96)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-15","context":"interactive","fig-width":7},"id":15,"code":"pnorm(1405, mean = 1000, sd = 200) #UCLA\npnorm(1505, mean = 1000, sd = 200) #Stanford\npnorm(1135, mean = 1000, sd = 200) #UNLV"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-16","context":"interactive","fig-width":7},"id":16,"code":"qnorm(0.975, mean = 0, sd = 1)\nqnorm(0.025, mean = 0, sd = 1)\nqnorm(0.95, mean = 1000, sd = 200)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-17","context":"interactive","fig-width":7},"id":17,"code":"dnorm(c(-2, -1, 0, 1, 2), mean = 0, sd = 1)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-18","context":"interactive","fig-width":7},"id":18,"code":"pt(1.96, df = 10)\npt(1.96, df = 100)\npt(1.96, df = 1000)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-19","context":"interactive","fig-width":7},"id":19,"code":"qt(0.025, df = 10)\nqt(0.975, df = 10)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-20","context":"interactive","fig-width":7},"id":20,"code":"pchisq(q = 3.84, df = 1)\nqchisq(0.95, df = 1)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-21","context":"interactive","fig-width":7},"id":21,"code":"x <- seq(from = 0, to = 10, by = 0.1)\n\nplot(x, dchisq(x, df = 1), type = \"l\", \n     main = \"Chi-Square Distribution with 1 Degree of Freedom\",\n     xlab = \"Value\", ylab = \"Density\", col = \"red\")"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-22","context":"interactive","fig-width":7},"id":22,"code":"## Please try plotting or generating some values from a distribution you haven't seen demonstrated today (so no normal, t or chi-square)\n\n"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-23","context":"interactive","fig-width":7},"id":23,"code":"plot(iris$Sepal.Width ~ iris$Sepal.Length, \n     col = iris$Species, pch = 20, \n     main = \"Sepal Width on Sepal Length\",\n     ylab = \"Sepal Width\",\n     xlab = \"Sepal Length\")"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-24","context":"interactive","fig-width":7},"id":24,"code":"ggplot(iris, aes(x = Sepal.Length, \n                 y = Sepal.Width,\n                 color = Species)) +\n  geom_point() + \n  geom_smooth(method = 'lm', se = FALSE) +\n  geom_smooth(method = 'lm', se = FALSE, color = \"black\", aes(linetype = \"Overall\")) +  # Black line for overall trend\n  scale_color_manual(values = c(\"setosa\" = \"red\", \"versicolor\" = \"green\", \"virginica\" = \"blue\")) +\n  scale_linetype_manual(name = \"\", values = c(\"Overall\" = \"solid\"), labels = \"Overall Trend\") +\n  guides(color = guide_legend(title = \"By Species\")) +\n  theme_minimal()"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-25","context":"interactive","fig-width":7},"id":25,"code":".pardefault <- par(no.readonly = TRUE)  # save defaults\npar(mfrow=c(2, 2)) # change to 2 by 2\nxs <- names(anscombe)[1:4]\nys <- names(anscombe)[5:8]\nfor (i in 1:4){\n  plot(anscombe[, xs[i]], anscombe[, ys[i]], xlab=xs[i], ylab=ys[i],\n       xlim=c(4,20), ylim=c(2, 16))\n  abline(lm( anscombe[, ys[i]] ~ anscombe[, xs[i]]))\n}\npar(.pardefault) # restore"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-26","context":"interactive","fig-width":7},"id":26,"code":"head(anscombe)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-27","context":"interactive","fig-width":7},"id":27,"code":"anscombe_long <- anscombe %>% \n  pivot_longer(cols = everything(),\n               names_to = c(\".value\", \"set\"),\n               names_pattern = \"(.)(.)\")"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-28","context":"interactive","fig-width":7},"id":28,"code":"head(anscombe_long)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-29","context":"interactive","fig-width":7},"id":29,"code":"ggplot(anscombe_long, aes(x = x, y = y, color = set)) +\n  geom_point() +\n  facet_wrap(~ set) +\n  labs(title = \"Anscombe's Quartet\",\n       x = \"X value\",\n       y = \"Y value\") +\n  theme_minimal() +\n  theme(legend.position = \"none\")"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-30","context":"interactive","fig-width":7},"id":30,"code":"correlations <- anscombe_long %>% \n  group_by(set) %>% \n  summarize(correlation = cor(x, y))\nprint(correlations)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-31","context":"interactive","fig-width":7},"id":31,"code":"penguins <- read.csv(\"https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv\")\nstr(penguins)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-32","context":"interactive","fig-width":7},"id":32,"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species))"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-33","context":"interactive","fig-width":7},"id":33,"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() "},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-34","context":"interactive","fig-width":7},"id":34,"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_wrap(~ island)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-35","context":"interactive","fig-width":7},"id":35,"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_grid(rows = vars(island))"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-36","context":"interactive","fig-width":7},"id":36,"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_grid(sex ~ island)"},{"options":{"out-height":"","comment":"","fig-height":5,"output":"true","results":"markup","fig-cap":"","warning":"true","autorun":"false","classes":"","out-width":"700px","message":"true","dpi":72,"label":"unnamed-chunk-37","context":"interactive","fig-width":7},"id":37,"code":"ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  labs(title = \"Palmer Penguin Populations\",\n       x = \"Flipper Length (mm)\",\n       y = \"Body Mass (g)\") +\n  theme_classic()"}];
 
-</script>
-<script type="module">
+</script><script type="module">
 // Declare startupMessageQWebR globally
 globalThis.qwebrStartupMessage = document.createElement("p");
 
@@ -322,8 +316,7 @@ function displayStartupMessage(showStartupMessage, showHeaderMessage) {
 }
 
 displayStartupMessage(qwebrShowStartupMessage, qwebrShowHeaderMessage);
-</script>
-<script type="module">
+</script><script type="module">
 // Supported Evaluation Types for Context
 globalThis.EvalTypes = Object.freeze({
   Interactive: 'interactive',
@@ -569,8 +562,7 @@ globalThis.createLoadingContainer = function(qwebrCounter) {
 
   return container;
 }
-</script>
-<script type="module">
+</script><script type="module">
 // Function to install a single package
 async function qwebrInstallRPackage(packageName) {
   await mainWebR.evalRVoid(`webr::install('${packageName}');`);
@@ -666,8 +658,7 @@ globalThis.qwebrInstance = import(qwebrCustomizedWebROptions.baseURL + "webr.mjs
 // Stop timer
 const initializeWebRTimerEnd = performance.now();
 
-</script>
-<script type="module">
+</script><script type="module">
 // Function to verify a given JavaScript Object is empty
 globalThis.qwebrIsObjectEmpty = function (arr) {
     return Object.keys(arr).length === 0;
@@ -942,16 +933,11 @@ globalThis.qwebrExecuteCode = async function (
 }
 
 </script>
-
-
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Statistics 422</span>
@@ -963,7 +949,7 @@ globalThis.qwebrExecuteCode = async function (
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
@@ -972,64 +958,70 @@ globalThis.qwebrExecuteCode = async function (
  <span class="menu-text">R Refresher</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+<div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#built-in-data" id="toc-built-in-data" class="nav-link active" data-scroll-target="#built-in-data">Built in data</a>
+<li>
+<a href="#built-in-data" id="toc-built-in-data" class="nav-link active" data-scroll-target="#built-in-data">Built in data</a>
   <ul class="collapse">
-  <li><a href="#dim" id="toc-dim" class="nav-link" data-scroll-target="#dim">dim()</a></li>
+<li><a href="#dim" id="toc-dim" class="nav-link" data-scroll-target="#dim">dim()</a></li>
   <li><a href="#head" id="toc-head" class="nav-link" data-scroll-target="#head">head()</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">summary()</a></li>
   <li><a href="#descriptive-basics" id="toc-descriptive-basics" class="nav-link" data-scroll-target="#descriptive-basics">descriptive basics</a></li>
-  <li><a href="#conditioninggrouping" id="toc-conditioninggrouping" class="nav-link" data-scroll-target="#conditioninggrouping">conditioning/grouping</a>
+  <li>
+<a href="#conditioninggrouping" id="toc-conditioninggrouping" class="nav-link" data-scroll-target="#conditioninggrouping">conditioning/grouping</a>
   <ul class="collapse">
-  <li><a href="#in-base-r" id="toc-in-base-r" class="nav-link" data-scroll-target="#in-base-r">in base R</a></li>
+<li><a href="#in-base-r" id="toc-in-base-r" class="nav-link" data-scroll-target="#in-base-r">in base R</a></li>
   <li><a href="#using-dplyr-with-a-little-tidyr" id="toc-using-dplyr-with-a-little-tidyr" class="nav-link" data-scroll-target="#using-dplyr-with-a-little-tidyr">using dplyr with a little tidyr</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#data-external-to-r" id="toc-data-external-to-r" class="nav-link" data-scroll-target="#data-external-to-r">Data External to R</a>
+  </ul>
+</li>
+  </ul>
+</li>
+  <li>
+<a href="#data-external-to-r" id="toc-data-external-to-r" class="nav-link" data-scroll-target="#data-external-to-r">Data External to R</a>
   <ul class="collapse">
-  <li><a href="#locally" id="toc-locally" class="nav-link" data-scroll-target="#locally">locally</a></li>
+<li><a href="#locally" id="toc-locally" class="nav-link" data-scroll-target="#locally">locally</a></li>
   <li><a href="#remotely" id="toc-remotely" class="nav-link" data-scroll-target="#remotely">remotely</a></li>
-  </ul></li>
-  <li><a href="#distributions" id="toc-distributions" class="nav-link" data-scroll-target="#distributions">Distributions</a>
+  </ul>
+</li>
+  <li>
+<a href="#distributions" id="toc-distributions" class="nav-link" data-scroll-target="#distributions">Distributions</a>
   <ul class="collapse">
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
+<li>
+<a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
   <ul class="collapse">
-  <li><a href="#normal" id="toc-normal" class="nav-link" data-scroll-target="#normal">normal</a></li>
+<li><a href="#normal" id="toc-normal" class="nav-link" data-scroll-target="#normal">normal</a></li>
   <li><a href="#t" id="toc-t" class="nav-link" data-scroll-target="#t">t</a></li>
   <li><a href="#chi-square" id="toc-chi-square" class="nav-link" data-scroll-target="#chi-square">chi-square</a></li>
   <li><a href="#test-yourselfyour-team" id="toc-test-yourselfyour-team" class="nav-link" data-scroll-target="#test-yourselfyour-team">Test yourself/your team</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#visualizing-data" id="toc-visualizing-data" class="nav-link" data-scroll-target="#visualizing-data">Visualizing Data</a>
+  </ul>
+</li>
+  </ul>
+</li>
+  <li>
+<a href="#visualizing-data" id="toc-visualizing-data" class="nav-link" data-scroll-target="#visualizing-data">Visualizing Data</a>
   <ul class="collapse">
-  <li><a href="#saving-graphics" id="toc-saving-graphics" class="nav-link" data-scroll-target="#saving-graphics">saving graphics</a></li>
+<li><a href="#saving-graphics" id="toc-saving-graphics" class="nav-link" data-scroll-target="#saving-graphics">saving graphics</a></li>
   <li><a href="#plot-in-base-r" id="toc-plot-in-base-r" class="nav-link" data-scroll-target="#plot-in-base-r">plot() in base R</a></li>
   <li><a href="#ggplot" id="toc-ggplot" class="nav-link" data-scroll-target="#ggplot">ggplot( )</a></li>
   <li><a href="#plot-within-a-for-loop" id="toc-plot-within-a-for-loop" class="nav-link" data-scroll-target="#plot-within-a-for-loop">plot() within a for loop</a></li>
   <li><a href="#tidyverse-style" id="toc-tidyverse-style" class="nav-link" data-scroll-target="#tidyverse-style">Tidyverse style</a></li>
   <li><a href="#five-minute-ggplot-refresher" id="toc-five-minute-ggplot-refresher" class="nav-link" data-scroll-target="#five-minute-ggplot-refresher">Five minute ggplot refresher</a></li>
-  </ul></li>
   </ul>
-</nav>
+</li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
-<script type="module" id="qwebr-monaco-editor-init">
+<main class="content" id="quarto-document-content"><script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script><script type="module" id="qwebr-monaco-editor-init">
 
   // Configure the Monaco Editor's loader
   require.config({
@@ -1037,8 +1029,7 @@ globalThis.qwebrExecuteCode = async function (
       'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs'
     }
   });
-</script>
-<script type="module">
+</script><script type="module">
 // Global dictionary to store Monaco Editor instances
 globalThis.qwebrEditorInstances = {};
 
@@ -1200,10 +1191,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
   };
   
 }
-</script>
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+</script><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">R Refresher</h1>
 </div>
 
@@ -1223,32 +1211,22 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
   </div>
   
 
-</header>
-
-<p>This is an R Refresher adapted from Weisberg (2014) We will use packages ggplot2, knitr, dplyr and tidyr</p>
+</header><p>This is an R Refresher adapted from Weisberg (2014) We will use packages ggplot2, knitr, dplyr and tidyr</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<section id="built-in-data" class="level1">
-<h1>Built in data</h1>
+<section id="built-in-data" class="level1"><h1>Built in data</h1>
 <p>Upon loading library dplyr we will have access to the built-in dataset named “starwars”. Whenever one has been given a dataset, take a closer look to better understand it:</p>
-<section id="dim" class="level2">
-<h2 class="anchored" data-anchor-id="dim">dim()</h2>
+<section id="dim" class="level2"><h2 class="anchored" data-anchor-id="dim">dim()</h2>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="head" class="level2">
-<h2 class="anchored" data-anchor-id="head">head()</h2>
+</section><section id="head" class="level2"><h2 class="anchored" data-anchor-id="head">head()</h2>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">summary()</h2>
+</section><section id="summary" class="level2"><h2 class="anchored" data-anchor-id="summary">summary()</h2>
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Summary is being abused here. While it is fast and gives us the count of NA (missing), do consider that rounding error could occur for the summary statistics. Functions for computing stats like mean( ) can be found elsewhere:</p>
-</section>
-<section id="descriptive-basics" class="level2">
-<h2 class="anchored" data-anchor-id="descriptive-basics">descriptive basics</h2>
+</section><section id="descriptive-basics" class="level2"><h2 class="anchored" data-anchor-id="descriptive-basics">descriptive basics</h2>
 <p>Challenge (and working with webR), in teams, please compute the following for the variable <strong>birth_year</strong> in the starwars data:</p>
 <ul>
 <li>mean,</li>
@@ -1260,12 +1238,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </ul>
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="conditioninggrouping" class="level2">
-<h2 class="anchored" data-anchor-id="conditioninggrouping">conditioning/grouping</h2>
+</section><section id="conditioninggrouping" class="level2"><h2 class="anchored" data-anchor-id="conditioninggrouping">conditioning/grouping</h2>
 <p>We will use more of this later in the course, but for now, you should possess these fundamental data handling skills:</p>
-<section id="in-base-r" class="level3">
-<h3 class="anchored" data-anchor-id="in-base-r">in base R</h3>
+<section id="in-base-r" class="level3"><h3 class="anchored" data-anchor-id="in-base-r">in base R</h3>
 <p>We could use some basic character manipulation to make the result a little more compact. Here’s the issue:</p>
 <div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -1275,9 +1250,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <p>Now let’s examine mass (weight) by hair_color and gender in base R:</p>
 <div id="qwebr-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="using-dplyr-with-a-little-tidyr" class="level3">
-<h3 class="anchored" data-anchor-id="using-dplyr-with-a-little-tidyr">using dplyr with a little tidyr</h3>
+</section><section id="using-dplyr-with-a-little-tidyr" class="level3"><h3 class="anchored" data-anchor-id="using-dplyr-with-a-little-tidyr">using dplyr with a little tidyr</h3>
 <p>This is a preferred alternative to the base R solution because (1) it has more options and (2) you don’t lose as much information. First some data preparation, similar to the base R solution</p>
 <div id="qwebr-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -1288,22 +1261,15 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div id="qwebr-insertion-location-11"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>We will delve into more data handling in the future.</p>
-</section>
-</section>
-</section>
-<section id="data-external-to-r" class="level1">
-<h1>Data External to R</h1>
-<section id="locally" class="level2">
-<h2 class="anchored" data-anchor-id="locally">locally</h2>
+</section></section></section><section id="data-external-to-r" class="level1"><h1>Data External to R</h1>
+<section id="locally" class="level2"><h2 class="anchored" data-anchor-id="locally">locally</h2>
 <p>This is the general format for reading data in base R (won’t run on this website, you’ll need to try it in R on your own computer)</p>
 <pre><code>my_data0 &lt;- read.table("filename", header=TRUE,
 na.strings="NA", sep = "")</code></pre>
 <p>There are modifications to this basic code, for example, read.csv() is just a alias of read.table() with sep = “,” as a default. We can use it in concert with file.choose() to allow you to select files from your local drive (won’t work here, just an example)</p>
 <pre><code>my_data1 &lt;- read.csv(file.choose(), header=TRUE,
 na.strings="NA")</code></pre>
-</section>
-<section id="remotely" class="level2">
-<h2 class="anchored" data-anchor-id="remotely">remotely</h2>
+</section><section id="remotely" class="level2"><h2 class="anchored" data-anchor-id="remotely">remotely</h2>
 <p>We can also read data from a website, note the use of read.table() with sep = “,”:</p>
 <div id="qwebr-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -1312,20 +1278,15 @@ na.strings="NA")</code></pre>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>This will help identify numeric and non-numeric data.</p>
 <p>We could load an additional package, readr, to allow us to read additional data formats such as Excel files (this is something you can do in section or in an assignment)</p>
-</section>
-</section>
-<section id="distributions" class="level1">
-<h1>Distributions</h1>
+</section></section><section id="distributions" class="level1"><h1>Distributions</h1>
 <p>It’s important to know how to use the functions associated with distributions in R as many advanced textbooks do not have t-tables etc.<br>
 The first letters of each distribution family function have the following meaning:</p>
 <p>r - random generation, given a number of observations<br>
 p - distribution function, given a quantile<br>
 q - quantile function, given a probability<br>
 d - density, given a quantile</p>
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<section id="normal" class="level3">
-<h3 class="anchored" data-anchor-id="normal">normal</h3>
+<section id="examples" class="level2"><h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<section id="normal" class="level3"><h3 class="anchored" data-anchor-id="normal">normal</h3>
 <p>The normal distribution’s root is “norm”. The function pnorm() takes a quantile and returns a probability of observing a value less than or equal to 1.96 in a standard normal distribution:</p>
 <div id="qwebr-insertion-location-14"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -1338,60 +1299,41 @@ d - density, given a quantile</p>
 <p>dnorm() - returns the height of the probability density function at points specified by the programmer. In the normal distribution, points farther from the mean have lower density</p>
 <div id="qwebr-insertion-location-17"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="t" class="level3">
-<h3 class="anchored" data-anchor-id="t">t</h3>
+</section><section id="t" class="level3"><h3 class="anchored" data-anchor-id="t">t</h3>
 <p>There are other distributions with different root names, but the same four letter identifier holds</p>
 <div id="qwebr-insertion-location-18"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div id="qwebr-insertion-location-19"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="chi-square" class="level3">
-<h3 class="anchored" data-anchor-id="chi-square">chi-square</h3>
+</section><section id="chi-square" class="level3"><h3 class="anchored" data-anchor-id="chi-square">chi-square</h3>
 <div id="qwebr-insertion-location-20"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>an additional density example and our bridge to visualization</p>
 <div id="qwebr-insertion-location-21"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="test-yourselfyour-team" class="level3">
-<h3 class="anchored" data-anchor-id="test-yourselfyour-team">Test yourself/your team</h3>
+</section><section id="test-yourselfyour-team" class="level3"><h3 class="anchored" data-anchor-id="test-yourselfyour-team">Test yourself/your team</h3>
 <p>Please try generating values from another distribution (e.g., F, Poisson), you can find a longer list of distributions here: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Distributions.html</p>
 <div id="qwebr-insertion-location-22"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-</section>
-</section>
-<section id="visualizing-data" class="level1">
-<h1>Visualizing Data</h1>
-<section id="saving-graphics" class="level2">
-<h2 class="anchored" data-anchor-id="saving-graphics">saving graphics</h2>
+</section></section></section><section id="visualizing-data" class="level1"><h1>Visualizing Data</h1>
+<section id="saving-graphics" class="level2"><h2 class="anchored" data-anchor-id="saving-graphics">saving graphics</h2>
 <p>We can output graphics by using the GUI or directly in our code (will only run locally):</p>
 <pre><code>pdf("myhist.pdf", height=5, width=5)
 hist(rnorm(100))
 dev.off()</code></pre>
-</section>
-<section id="plot-in-base-r" class="level2">
-<h2 class="anchored" data-anchor-id="plot-in-base-r">plot() in base R</h2>
+</section><section id="plot-in-base-r" class="level2"><h2 class="anchored" data-anchor-id="plot-in-base-r">plot() in base R</h2>
 <p>Base R’s plot() function is a reasonable starting point and convenient:</p>
 <div id="qwebr-insertion-location-23"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="ggplot" class="level2">
-<h2 class="anchored" data-anchor-id="ggplot">ggplot( )</h2>
+</section><section id="ggplot" class="level2"><h2 class="anchored" data-anchor-id="ggplot">ggplot( )</h2>
 <p>We have more data visualization power with ggplot. We could add straight lines (AKA fit linear models) for each species and for overall</p>
 <div id="qwebr-insertion-location-24"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="plot-within-a-for-loop" class="level2">
-<h2 class="anchored" data-anchor-id="plot-within-a-for-loop">plot() within a for loop</h2>
+</section><section id="plot-within-a-for-loop" class="level2"><h2 class="anchored" data-anchor-id="plot-within-a-for-loop">plot() within a for loop</h2>
 <p>Another example, first using base R to plot 4 graphs in a single window:</p>
 <div id="qwebr-insertion-location-25"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="tidyverse-style" class="level2">
-<h2 class="anchored" data-anchor-id="tidyverse-style">Tidyverse style</h2>
+</section><section id="tidyverse-style" class="level2"><h2 class="anchored" data-anchor-id="tidyverse-style">Tidyverse style</h2>
 <p>We can do the same with ggplot, but it requires more data handling</p>
 <p>First, pivot the data from wide to long/tall:</p>
 <div id="qwebr-insertion-location-26"></div>
@@ -1407,9 +1349,7 @@ dev.off()</code></pre>
 <p>We can calculate the correlations for each set, the group_by() function combined with summarize in dplyr is very useful for that.</p>
 <div id="qwebr-insertion-location-30"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="five-minute-ggplot-refresher" class="level2">
-<h2 class="anchored" data-anchor-id="five-minute-ggplot-refresher">Five minute ggplot refresher</h2>
+</section><section id="five-minute-ggplot-refresher" class="level2"><h2 class="anchored" data-anchor-id="five-minute-ggplot-refresher">Five minute ggplot refresher</h2>
 <p>If there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins</p>
 <div id="qwebr-insertion-location-31"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -1434,11 +1374,7 @@ dev.off()</code></pre>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1458,6 +1394,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -1672,16 +1723,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">© Copyright 2024, Vivian</div>   
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2024, Vivian L.</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">This page is built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
-</footer>
-<script type="module">
+</footer><script type="module">
 // Handle cell initialization initialization
 qwebrCellDetails.map(
   (entry) => {
@@ -1793,7 +1842,6 @@ qwebrInstance.then(
   }
 );
 </script>
-
 
 
 </body></html>
