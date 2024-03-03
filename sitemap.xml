@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://stats422.github.io/about.html</loc>
-    <lastmod>2024-03-03T05:35:11.956Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/RRefresher.html</loc>
-    <lastmod>2024-03-03T05:35:10.184Z</lastmod>
+    <loc>https://stats422.github.io/Lecture01.html</loc>
+    <lastmod>2024-03-03T05:46:24.784Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/index.html</loc>
-    <lastmod>2024-03-03T05:35:11.737Z</lastmod>
+    <lastmod>2024-03-03T05:46:24.209Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats422.github.io/RRefresher.html</loc>
+    <lastmod>2024-03-03T05:46:23.976Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats422.github.io/about.html</loc>
+    <lastmod>2024-03-03T05:46:24.429Z</lastmod>
   </url>
 </urlset>
