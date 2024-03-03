@@ -1,59 +1,87 @@
 [
   {
-    "objectID": "Lecture01.html#late-afternoon-social",
-    "href": "Lecture01.html#late-afternoon-social",
-    "title": "Welcome Statistics 422",
-    "section": "Late afternoon social",
-    "text": "Late afternoon social\nLet’s use this time to interact & relax before getting started\n\n\nPlease gather in small groups (minimum 3 classmates, maximum 6)\nIf you don’t know someone please introduce yourself\nIf your group sees someone without a group, please extend an invitation to join"
-  },
-  {
-    "objectID": "Lecture01.html#section",
-    "href": "Lecture01.html#section",
-    "title": "Welcome Statistics 422",
+    "objectID": "Syllabus.html",
+    "href": "Syllabus.html",
+    "title": "Syllabus",
     "section": "",
-    "text": "Instructor\nDr. Vivian Lew\n\nMath Sciences 8923 (neighbor is Nicolas Christou)\nBruinLearn e-mail is the best way to reach me\nNo discussion or TA or grader for this course\n\n\nOther Course Details\n\nMeet Once a Week Thursdays 6pm- 8:50pm\n\nPhysics and Astronomy Building 2748\n\nOffice Hours\n\nM 4pm - 6pm (MS 8923) & F 3pm-5pm (Zoom)\nWelcome to schedule Zoom appointment(s), most evenings & weekends too"
+    "text": "Introduction\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\nContact Info: vlew@stat.ucla.edu\nOffice Hours: M 4pm - 6pm (MS 8923) and F 3pm-5pm (Zoom) and you are welcome to schedule Zoom appointment(s), most evenings & weekends too\nMeeting Times and Locations: Th 6pm - 8:50pm Physics & Astronomy 2748\nThe purpose of Statistics 422 is to thorough understanding of the fundamentals of data visualization and a working knowledge of how to perform data visualization tasks in R, Python, Tableau and incorporate additional tools."
   },
   {
-    "objectID": "Lecture01.html#what-to-expect",
-    "href": "Lecture01.html#what-to-expect",
-    "title": "Welcome Statistics 422",
-    "section": "What to expect",
-    "text": "What to expect\n\nFormat: During Class\n\nWorkshop style - some lecturing, some small group activities, breaks\nInteractive - please bring your electronics (laptop, iPad, maybe phone)\n\n\n\n\nFormat: Outside of Class\n\nIndividual homework assignments, individual late mid-quarter project, individual final project\nEncourage interaction with me but more important, with each other"
+    "objectID": "Syllabus.html#proposed-learning-outcomes",
+    "href": "Syllabus.html#proposed-learning-outcomes",
+    "title": "Syllabus",
+    "section": "Proposed Learning Outcomes",
+    "text": "Proposed Learning Outcomes\nThe overall goal of this course are to provide students with the foundations necessary for understanding and building on their existing data visualization skills. After this quarter, students will have:\n\nAn Understanding of different ways to visually represent data and familiarity with various types of charts and graphs (e.g., bar charts, line graphs, scatter plots, heat maps), and when and how to use them effectively to represent different kinds of data and relationships.\nAn understanding of data models: ways of structuring and organizing data for effective visualization. Understanding different types of data (quantitative, qualitative, spatial) and transformation and visual representation.\nAn understanding of Graphical Perception/perceived visual information. Some of the cognitive principles related to visual perception and using these principles to create compelling visualizations.\nGenerated interactive visualizations"
   },
   {
-    "objectID": "Lecture01.html#what-to-expect-1",
-    "href": "Lecture01.html#what-to-expect-1",
-    "title": "Welcome Statistics 422",
-    "section": "What to expect",
-    "text": "What to expect\nDeveloping the scaffolding needed for understanding and building on one’s existing data visualization skills.\n\nAspects\n\nTranslating data and its relationships visually for others.\n\nLearning to structure and organize data for effective visualization.\n\nLearning about the different types of visual representation and their purposes.\nUnderstanding of Graphical Perception/perceived visual information and some of the cognitive principles involved.\nLearning to generate static and interactive visualizations\nKnowing how to present your visualizations in different media (print, website, video)"
+    "objectID": "Syllabus.html#course-materials-resources",
+    "href": "Syllabus.html#course-materials-resources",
+    "title": "Syllabus",
+    "section": "Course Materials & Resources",
+    "text": "Course Materials & Resources\nAll course related materials are posted to BruinLearn (https://bruinlearn.ucla.edu/courses/180429), all assignments are uploaded to that site as well typically in the form of PDF files, photographs or recordings. Official course grades are found online on myUCLA only. Other materials used:\n\nHealy, Kieran. Data visualization: a practical introduction. Princeton University Press, 2018.\n\n\nSoftware\nWe will try to strike a balance given the many choices available to us. All of these are free:\n\nR (https://www.r-project.org/)\n\nggplot2 (https://ggplot2.tidyverse.org/)\n\nShiny (https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)\n\n\nPython (https://www.python.org/)\n\nTableau (https://softwarecentral.ucla.edu/tableau)\n\n\n\nOptional Sites\nA GitHub presence is strongly encouraged but not required. Example https://stats422.github.io/\nQuarto is useful but not required. https://quarto.org/\nOverleaf is useful but not required. https://www.overleaf.com/\nO’Reilly library access https://www.oreilly.com/library-access/\nPython Graph Gallery https://python-graph-gallery.com/\n\n\nOptional materials\n\nTufte, Edward R. The visual display of quantitative information. Vol. 2. Cheshire, CT: Graphics press, 2001.\nYau, Nathan. Visualize this: the FlowingData guide to design, visualization, and statistics. John Wiley & Sons, 2011.\nWickham, Hadley. et. al. R for Data Science, 2nd Edition O’Reilly Media, Inc. 2023 and TidyTuesday"
   },
   {
-    "objectID": "Lecture01.html#what-to-expect-2",
-    "href": "Lecture01.html#what-to-expect-2",
-    "title": "Welcome Statistics 422",
-    "section": "What to expect",
-    "text": "What to expect\n\nProcess\n\nStart with an audience and an idea and find the data (not necessarily in that order)\nPrepare the data for visualization (e.g., clean, pivot)\nRepresent the data visually with various graphical elements (e.g., color, sizes, and shape)\nPost-process the data (e.g., decide whether interactivity would add power, post process a static visualization )\n\n\n\n\nTools\n\nR/ggplot2, Shiny; Python/matplotlib, Streamlit; Tableau"
+    "objectID": "Syllabus.html#grading",
+    "href": "Syllabus.html#grading",
+    "title": "Syllabus",
+    "section": "Grading",
+    "text": "Grading\nA letter grade is assigned upon the successful completion of this course. The breakdown is:\n\n30% (10 meetings) Attending which means\n\ncontributing to the class, this involves attending class regularly\nTEAM work during class meetings\n\n20% Four (Individual) Homework Assignments\n5% Campuswire - sharing and posting questions and answers, percentage assigned is related to your rep level as determined by Campuswire (e.g., rep level 1 = 1% and top rep level = 5%)\n20% (Individual) Web App: Find your data, Design a page, Code and Video\n25% (Individual) Final Project: Find your own data, Report, Code and Video\n\n\nLate Policy\nIf you submit your homework assignments before I start the grading, it’s not counted as late. Once I begin grading it is late and won’t be accepted for full credit (but I’ll still accept it for partial credit).\nThe Web App and Final Project should both be submitted by the end of Week 11 as grading will begin immediately after the deadline. I will still accept projects for partial credit."
   },
   {
-    "objectID": "Lecture01.html#what-to-expect-3",
-    "href": "Lecture01.html#what-to-expect-3",
-    "title": "Welcome Statistics 422",
-    "section": "What to expect",
-    "text": "What to expect\n\nGrading\n\n30% Attending class weekly with in-class team activity\n20% 4 individual homework assignments\n5% Campuswire participation\n20% Web App: (individual) Find your data, Design a page, Code and Video\n25% Final Project: (individual) Find your own data, Report, Code and Video\n\n\nThe data for the Web App can be the same, but ideally a simple dataset like iris for the Web App and something more closely related to your thesis (so something more complex) for your final project"
+    "objectID": "Syllabus.html#course-outline-this-is-subject-to-change",
+    "href": "Syllabus.html#course-outline-this-is-subject-to-change",
+    "title": "Syllabus",
+    "section": "Course Outline (this is subject to change)",
+    "text": "Course Outline (this is subject to change)\n\n\n\nDate\nTopic\nReading\n\n\n\n\nWeek 1 4/4\nFirst Day business; ggplot2; story telling\nHealy Ch. 1/2; Knaflic Ch. 7 https://learning.oreilly.com/library/view/storytelling-with-data/9781119002253/c07.xhtml#c7_7\n\n\nWeek 2 4/11\nData Exploration/Analysis; Visualization Insights & Types\nWickham Ch. 10 https://learning.oreilly.com/library/view/r-for-data/9781492097396/ch10.html ; Healy Ch. 3/4, Yau Ch. 3, Wilke Ch. 5 https://learning.oreilly.com/library/view/fundamentals-of-data/9781492031079/ch05.html\n\n\nWeek 3 4/18\nReorganizing Data, Python Visualization Tools\nYau Ch.2, Wickham Ch. 5 https://learning.oreilly.com/library/view/r-for-data/9781492097396/ch05.html; Molin https://learning.oreilly.com/library/view/hands-on-data-analysis/9781800563452/\n\n\nWeek 4 4/25\nInteractive: R/Shiny\nWickham https://learning.oreilly.com/library/view/mastering-shiny/9781492047377/\n\n\nWeek 5 5/2\nInteractive: Python tools\nRichards https://learning.oreilly.com/library/view/streamlit-for-data/9781803248226/ , https://30days.streamlit.app/\n\n\nWeek 6 5/9\nWorking with Spatial Data\nHealy Ch. 7, Yau Ch. 8, Wilke Ch. 15 https://learning.oreilly.com/library/view/fundamentals-of-data/9781492031079/ch15.html\n\n\nWeek 7 5/16\nWorking with Time\nYau Ch. 4, Wilke Ch. 13 https://learning.oreilly.com/library/view/fundamentals-of-data/9781492031079/ch13.html and Ch. 14 https://learning.oreilly.com/library/view/fundamentals-of-data/9781492031079/ch14.html\n\n\nWeek 8 5/23\nTableau for starters\nMilligan https://learning.oreilly.com/library/view/learning-tableau-2022/9781801072328/ Sleeper https://learning.oreilly.com/library/view/practical-tableau/9781491977309/\n\n\nWeek 9 5/30\nGuest Lecture\n\n\n\nWeek 10 6/6\nAdvanced Visualizations with htmlwidgets\nhttps://bookdown.org/yihui/rmarkdown/html-widgets.html, https://gallery.htmlwidgets.org/, https://www.htmlwidgets.org/index.html, https://cran.r-project.org/web/packages/htmlwidgets/vignettes/develop_intro.html,\n\n\nWeek 11 6/14\nCompletion of Web App and Final Report"
   },
   {
-    "objectID": "Lecture01.html#group-activity-1",
-    "href": "Lecture01.html#group-activity-1",
-    "title": "Welcome Statistics 422",
-    "section": "Group Activity 1",
-    "text": "Group Activity 1\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to get credit for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some graphs created by ggplot2.\nhttps://r-charts.com/ggplot2/ or https://r-graph-gallery.com/ggplot2-package.html\nIdeally, I would like you to examine either or both of these sites as a team and\nPlease choose the one plot from your group that you think is most memorable (can be good or not good), and have one team member share the graph on Campuswire and be prepared to tell us why your team chose it."
+    "objectID": "Syllabus.html#academic-dishonesty",
+    "href": "Syllabus.html#academic-dishonesty",
+    "title": "Syllabus",
+    "section": "Academic Dishonesty",
+    "text": "Academic Dishonesty\nAs Bruins, we uphold the UCLA Student Code of Conduct. Academic dishonesty means activities like plagiarism, unauthorized material used on exams, unauthorized collaborations etc. According to Senate Regulation A-306, if an instructor encounters a problem, the instructor must report it to the Dean of Students.\n\nhttps://www.deanofstudents.ucla.edu/Student-Conduct#10690514-student-conduct-code\nhttps://ucla.app.box.com/s/8xq1jyrvqhs9343e4rzyvporx9lt8u1g\n\n\nChatGPT policy\nYour instructor’s belief is ChatGPT should be used – wisely – as if it were an amazingly clever tutor or friend. But copying and pasting the code of the first example’s (below) ChatGPT response is not learning and chances are, you won’t remember how to do it if you do not do it regularly. Asking ChatGPT questions in the second way gives your mind the opportunity to develop the skills scaffolding and retain the knowledge long after this course is over.\n\n\n\n\n\n\n\nQuestion\nResponse\n\n\n\n\nPlease write some code in R that splits a dataset into test and training.\nTo split a dataset into training and test sets in R, you commonly use a function like createDataPartition from the caret package:  Using the caret package  First, install and load the caret package if you haven’t already:  install.packages(“caret”)  library(caret)  Next, use the createDataPartition function to create a list of indices for the training set, then use these indices to create the training and test sets:  # Load the necessary package library(caret) # Load or import your dataset (replace ‘your_dataset’ with your actual dataset)  # data &lt;- read.csv(“path/to/your/dataset.csv”)  # Create the data partition  set.seed(123) # Set seed for reproducibility  trainIndex &lt;- createDataPartition(data$your_target_variable, p = .8, list = FALSE, times = 1)  # Create training and test datasets trainData &lt;- data[ trainIndex,] testData &lt;- data[-trainIndex,] Replace your_target_variable with the name of the column that contains the target variable you’re interested in, and replace data with your dataset name.\n\n\nPlease teach me on how to write code using base R that splits a dataset into training and test with a 70-30 split - but don’t write the code for me, I want to learn how to think it through on my own.\nAbsolutely, I’d be glad to guide you on how to approach this!   1. Understanding the Data: - Before you begin, familiarize yourself with the dataset. Use functions like str(), head(), and summary() to understand the structure and contents of your data.  2. Setting a Seed: - To ensure that your results are reproducible, you will want to set a seed using the set.seed() function. This function controls the random number generator in R.  3. Determining the Number of Rows: - You need to know the total number of rows in your dataset to create the splits. The nrow() function can help you determine this.  4. Calculating Split Sizes: - Next, determine how many rows should go into your training and test sets. You’ll want 70% of the data to be in the training set and 30% in the test set. Use arithmetic operations to calculate the respective sizes.  5. Creating a Random Sample of Indices: - To create your training set, you’ll need to randomly select 70% of the indices (row numbers) from your dataset. You can use the sample() function to do this. Remember to use the total number of rows and the size of the training set as parameters in this function.  6. Subsetting the Dataset: - Once you have a vector of random indices, use it to subset your dataset into two parts: one for training and one for testing. In R, you can subset a data frame using square brackets []. You’ll use the vector of random indices to select rows for the training set, and the - operator to select the remaining rows for the test set.  7. Verifying Your Split: - After creating your training and test sets, verify that you’ve split the data correctly. Use the dim() function to check the dimensions of each set and ensure the split ratio is approximately 70-30. You can also use the head() function to quickly view the top rows of each set and ensure they look correct.   Remember to write your code step by step, verifying each part before moving on to the next, to avoid confusion and ensure accuracy. Once you are confident in your understanding of each step, try to write the code on your own. Good luck!\n\n\n\nChatGPT is also a wonderful tool to help you with subjects that are outside of your skill set which do not make sense for you to invest huge amounts of time or resources remembering/learning."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Statistics 422",
+    "objectID": "Syllabus.html#covid-19-health-and-safety",
+    "href": "Syllabus.html#covid-19-health-and-safety",
+    "title": "Syllabus",
+    "section": "COVID-19 health and safety",
+    "text": "COVID-19 health and safety\nIn compliance with Los Angeles County policies effective January 6 2023, UCLA strongly recommends indoor masking, regardless of vaccination status. Testing is also strongly encouraged. See\n\nhttps://covid-19.ucla.edu/covid-protocols-at-a-glance/\nhttp://publichealth.lacounty.gov/phcommon/public/media/mediapubHPdisplay.cfm\n\nSome of us might feel more comfortable wearing masks and continuing to social distance, for example, during small-group work in class or section. All of our preferences are reasonable, and it is important that we treat each others’ preferences with respect and care so that we each feel comfortable and prepared to learn in class. You can find the most current policies on campus requirements on the UCLA COVID-19 resources site https://covid-19.ucla.edu/."
+  },
+  {
+    "objectID": "Syllabus.html#accessible-education",
+    "href": "Syllabus.html#accessible-education",
+    "title": "Syllabus",
+    "section": "Accessible Education",
+    "text": "Accessible Education\nStudents with accessibility issues are welcome and encouraged to seek accommodation. Students needing academic accommodations based on a documented disability should contact the Center for Accessible Education (CAE) at (310)825-1501 or in person at Murphy Hall A255. In order to ensure accommodations, students need to contact CAE within the first two weeks of the term."
+  },
+  {
+    "objectID": "Syllabus.html#resources-for-students-dealing-with-financial-stress",
+    "href": "Syllabus.html#resources-for-students-dealing-with-financial-stress",
+    "title": "Syllabus",
+    "section": "Resources for Students Dealing with Financial Stress",
+    "text": "Resources for Students Dealing with Financial Stress\nLife is unpredictable and can create financial emergencies. If you find yourself in this situation, please seek assistance:\n• Bruin Shelter: http://www.bruinshelter.org/ Provides a safe, supportive environment for fellow college students experiencing homelessness by fostering a collaborative effort between universities, community-based organizations, and service providers.\n• The CPO Food Shelter: https://basicneeds.ucla.edu/services/cpo-food-closet Provides free food for any UCLA student who may be experiencing hunger and/or struggling to attain food due to financial hardships."
+  },
+  {
+    "objectID": "Syllabus.html#title-ix-resources",
+    "href": "Syllabus.html#title-ix-resources",
+    "title": "Syllabus",
+    "section": "Title IX Resources",
+    "text": "Title IX Resources\nUCLA prohibits gender discrimination, including sexual harassment, domestic and dating violence, sexual assault, and stalking. If you have experienced sexual harassment or sexual violence, there are a variety of resources to assist you.\n• CONFIDENTIAL RESOURCES: You can receive confidential support and advocacy at the CARE Advocacy Office for Sexual and Gender-Based Violence, 1st Floor Wooden Center West, (310) 206-2465. Counseling and Psychological Services (CAPS) also provides confidential counseling to all students and can be reached 24/7 at (310) 825-0768.\n• NON-CONFIDENTIAL RESOURCES: You can also report sexual violence or sexual harassment directly to the University’s Title IX Coordinator, 2241 Murphy Hall, titleix@conet.ucla.edu, (310) 206-3417. Reports to law enforcement can be made to UCPD at (310) 825-1491. These offices may be required to pursue an official investigation."
+  },
+  {
+    "objectID": "Syllabus.html#psychological-health-well-being-and-resilience",
+    "href": "Syllabus.html#psychological-health-well-being-and-resilience",
+    "title": "Syllabus",
+    "section": "Psychological Health, Well-Being and Resilience",
+    "text": "Psychological Health, Well-Being and Resilience\nUCLA is renowned for academic excellence, and yet we know that many students feel overwhelmed at times by demands to succeed academically, socially and personally. Our campus community is committed to helping all students thrive, learn to cope with stress, and build resilience. Remember, self-care is a skill that is critical to your long-term success. Here are some of the many resources available at UCLA to support you:\n• Counseling and Psychological Services (CAPS): https://www.counseling.ucla.edu/ Provides counseling and other psychological/mental health services to students. Walk-in hours are Monday-Thursday 8am-4:30pm and Friday 9am-4:30pm in John Wooden Center West. Crisis counseling is also available 24 hours/day at (310) 825-0768.\n• Ashe Student Health and Wellness Center: http://www.studenthealth.ucla.edu Provides high quality and accessible ambulatory healthcare and education by caring professionals to support the academic success and personal development of all UCLA students.\n• Healthy Campus Initiative (HCI): https://healthy.ucla.edu Provides links to a wide variety of resources for enhancing physical and psychological well-being, positive social interactions, healthy sleep, healthy eating, healthy physical activity and more.\n• Campus and Student Resilience: https://risecenter.ucla.edu/ Provides programs to promote resilience and trains students to help support their peers.\n• UCLA Recreation: https://www.recreation.ucla.edu/ Offers a broad array of services and programs including fitness, yoga, dance, martial arts, meditation, sports, and much more.\n• Equity, Diversity and Inclusion: https://equity.ucla.edu/ Committed to providing an equal learning, working and living environment at UCLA and supports a range of programs to promote these goals campus-wide."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/"
+    "text": "About this site"
   },
   {
     "objectID": "RRefresher.html",
@@ -161,10 +189,59 @@
     "text": "Five minute ggplot refresher\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y, color) as it relates to the features.\nThe “+” separates “layers”. Think of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is just about it. I do recommend you learn how to “facet” (condition) the plots:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nread “as a function of island”, if you wanted island on the rows, move to facet_grid()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\na better use of facet_grid\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe remaining functions deal with appearance such as labels, legends and maybe adding additional geoms:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistics 422",
     "section": "",
-    "text": "About this site"
+    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/"
+  },
+  {
+    "objectID": "Lecture01.html#late-afternoon-social",
+    "href": "Lecture01.html#late-afternoon-social",
+    "title": "Welcome Statistics 422",
+    "section": "Late afternoon social",
+    "text": "Late afternoon social\nLet’s use this time to interact & relax before getting started\n\n\nPlease gather in small groups (minimum 3 classmates, maximum 6)\nIf you don’t know someone please introduce yourself\nIf your group sees someone without a group, please extend an invitation to join"
+  },
+  {
+    "objectID": "Lecture01.html#section",
+    "href": "Lecture01.html#section",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "Instructor\nDr. Vivian Lew\n\nMath Sciences 8923 (neighbor is Nicolas Christou)\nBruinLearn e-mail is the best way to reach me\nNo discussion or TA or grader for this course\n\n\nOther Course Details\n\nMeet Once a Week Thursdays 6pm- 8:50pm\n\nPhysics and Astronomy Building 2748\n\nOffice Hours\n\nM 4pm - 6pm (MS 8923) & F 3pm-5pm (Zoom)\nWelcome to schedule Zoom appointment(s), most evenings & weekends too"
+  },
+  {
+    "objectID": "Lecture01.html#what-to-expect",
+    "href": "Lecture01.html#what-to-expect",
+    "title": "Welcome Statistics 422",
+    "section": "What to expect",
+    "text": "What to expect\n\nFormat: During Class\n\nWorkshop style - some lecturing, some small group activities, breaks\nInteractive - please bring your electronics (laptop, iPad, maybe phone)\n\n\n\n\nFormat: Outside of Class\n\nIndividual homework assignments, individual late mid-quarter project, individual final project\nEncourage interaction with me but more important, with each other"
+  },
+  {
+    "objectID": "Lecture01.html#what-to-expect-1",
+    "href": "Lecture01.html#what-to-expect-1",
+    "title": "Welcome Statistics 422",
+    "section": "What to expect",
+    "text": "What to expect\nDeveloping the scaffolding needed for understanding and building on one’s existing data visualization skills.\n\nAspects\n\nTranslating data and its relationships visually for others.\n\nLearning to structure and organize data for effective visualization.\n\nLearning about the different types of visual representation and their purposes.\nUnderstanding of Graphical Perception/perceived visual information and some of the cognitive principles involved.\nLearning to generate static and interactive visualizations\nKnowing how to present your visualizations in different media (print, website, video)"
+  },
+  {
+    "objectID": "Lecture01.html#what-to-expect-2",
+    "href": "Lecture01.html#what-to-expect-2",
+    "title": "Welcome Statistics 422",
+    "section": "What to expect",
+    "text": "What to expect\n\nProcess\n\nStart with an audience and an idea and find the data (not necessarily in that order)\nPrepare the data for visualization (e.g., clean, pivot)\nRepresent the data visually with various graphical elements (e.g., color, sizes, and shape)\nPost-process the data (e.g., decide whether interactivity would add power, post process a static visualization )\n\n\n\n\nTools\n\nR/ggplot2, Shiny; Python/matplotlib, Streamlit; Tableau"
+  },
+  {
+    "objectID": "Lecture01.html#what-to-expect-3",
+    "href": "Lecture01.html#what-to-expect-3",
+    "title": "Welcome Statistics 422",
+    "section": "What to expect",
+    "text": "What to expect\n\nGrading\n\n30% Attending class weekly with in-class team activity\n20% 4 individual homework assignments\n5% Campuswire participation\n20% Web App: (individual) Find your data, Design a page, Code and Video\n25% Final Project: (individual) Find your own data, Report, Code and Video\n\n\nThe data for the Web App can be the same, but ideally a simple dataset like iris for the Web App and something more closely related to your thesis (so something more complex) for your final project"
+  },
+  {
+    "objectID": "Lecture01.html#group-activity-1",
+    "href": "Lecture01.html#group-activity-1",
+    "title": "Welcome Statistics 422",
+    "section": "Group Activity 1",
+    "text": "Group Activity 1\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to get credit for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some graphs created by ggplot2.\nhttps://r-charts.com/ggplot2/ or https://r-graph-gallery.com/ggplot2-package.html\nIdeally, I would like you to examine either or both of these sites as a team and\nPlease choose the one plot from your group that you think is most memorable (can be good or not good), and have one team member share the graph on Campuswire and be prepared to tell us why your team chose it."
   }
 ]
