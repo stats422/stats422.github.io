@@ -7,7 +7,7 @@ $font-family-base: 'Montserrat', sans-serif;
 
 
 /*-- scss:rules --*/
-#quarto-sidebar {
+#quarto-sidebar.sidebar.collapse.collapse-horizontal.sidebar-navigation.docked.overflow-auto {
   background-color: #2774ae; 
   color: #ffd100;
 }
