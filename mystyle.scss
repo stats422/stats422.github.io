@@ -8,7 +8,10 @@ $font-family-base: 'Montserrat', sans-serif;
 
 /*-- scss:rules --*/
 .sidebar-title {
-  color: blue; // Change "blue" to any color you want
+  color: white; 
+}
+.nav-footer {
+  background-color: #ffd100; 
 }
 
 #webr-run-button-1.btn.btn-default.btn-webr,
