@@ -88,7 +88,7 @@
     "href": "RRefresher.html",
     "title": "R Refresher",
     "section": "",
-    "text": "This is an R Refresher adapted from Weisberg (2014) We will use packages ggplot2, knitr, dplyr and tidyr"
+    "text": "This is an R Refresher adapted from Weisberg (2014) We will use packages ggplot2, knitr, dplyr and tidyr. We will use packages ggplot2, knitr, dplyr and tidyr. Also data from the palmerpenguins library."
   },
   {
     "objectID": "RRefresher.html#dim",
