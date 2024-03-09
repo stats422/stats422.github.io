@@ -220,7 +220,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggthemes\")\nwebr::install(\"palmerpenguins\")\n\nlibrary(readr)\nlibrary(tidyverse)\nlibrary(knitr)\nlibrary(ggthemes)\nlibrary(palmerpenguins)","options":{"message":"false","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"false","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-1","out-height":""}},{"id":2,"code":"str(penguins)","options":{"message":"true","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"true","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-2","out-height":""}},{"id":3,"code":"ggplot(data = penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g))","options":{"message":"true","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"true","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-3","out-height":""}},{"id":4,"code":"ggplot(data = penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g)) +\n  geom_point() ","options":{"message":"false","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"false","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-4","out-height":""}},{"id":5,"code":"## Teams, make a different basic graphic - \n## Please choose different x and y variables or a different geom or both...\n\n\n","options":{"message":"true","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"true","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-5","out-height":""}},{"id":6,"code":"str(penguins)","options":{"message":"true","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"true","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-6","out-height":""}},{"id":7,"code":"my_penguins <- na.omit(penguins)","options":{"message":"true","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"true","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-7","out-height":""}},{"id":8,"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           color = sex)) +\n  geom_point() ","options":{"message":"true","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"true","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-8","out-height":""}},{"id":9,"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex)) +\n  geom_point() ","options":{"message":"true","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"true","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-9","out-height":""}},{"id":10,"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex,\n           color = sex)) +\n  geom_point() ","options":{"message":"true","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"true","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-10","out-height":""}},{"id":11,"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex,\n           color = sex)) +\n  geom_point(alpha = 0.25) ","options":{"message":"true","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"true","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-11","out-height":""}},{"id":12,"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex)) +\n  geom_point(aes(fill = sex), \n             alpha = 0.25, \n             shape = 21, \n             color = \"black\") ","options":{"message":"true","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"true","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-12","out-height":""}},{"id":13,"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_wrap(~ island)","options":{"message":"false","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"false","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-13","out-height":""}},{"id":14,"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_grid(rows = vars(island))","options":{"message":"false","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"false","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-14","out-height":""}},{"id":15,"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_grid(sex ~ island)","options":{"message":"false","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"false","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-15","out-height":""}},{"id":16,"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  labs(title = \"Palmer Penguin Populations\",\n       x = \"Flipper Length (mm)\",\n       y = \"Body Mass (g)\") +\n  theme_classic()","options":{"message":"false","classes":"","fig-width":7,"fig-cap":"","output":"true","context":"interactive","dpi":72,"results":"markup","warning":"false","fig-height":5,"autorun":"false","comment":"","out-width":"700px","label":"unnamed-chunk-16","out-height":""}}];
+globalThis.qwebrCellDetails = [{"id":1,"options":{"comment":"","warning":"false","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-1","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"false","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggthemes\")\nwebr::install(\"palmerpenguins\")\n\nlibrary(readr)\nlibrary(tidyverse)\nlibrary(knitr)\nlibrary(ggthemes)\nlibrary(palmerpenguins)"},{"id":2,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-2","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"str(penguins)"},{"id":3,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-3","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g))"},{"id":4,"options":{"comment":"","warning":"false","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-4","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"false","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g)) +\n  geom_point() "},{"id":5,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-5","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"## Teams, make a different basic graphic - \n## Please choose different x and y variables or a different geom or both...\n\n\n"},{"id":6,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-6","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"str(penguins)"},{"id":7,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-7","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"my_penguins <- na.omit(penguins)"},{"id":8,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-8","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           color = sex)) +\n  geom_point() "},{"id":9,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-9","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex)) +\n  geom_point() "},{"id":10,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-10","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex,\n           color = sex)) +\n  geom_point() "},{"id":11,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-11","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex,\n           color = sex)) +\n  geom_point(alpha = 0.25) "},{"id":12,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-12","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex)) +\n  geom_point(aes(fill = sex), \n             alpha = 0.25, \n             shape = 21, \n             color = \"black\") "},{"id":13,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-13","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, \n       aes(x = species))+\n  geom_bar() "},{"id":14,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-14","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, \n       aes(x = interaction(sex, species), \n           fill = island)) + \n  geom_bar(position = \"dodge\")"},{"id":15,"options":{"comment":"","warning":"true","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-15","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"true","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, aes(x = interaction(sex, species), fill = island)) + \n  geom_bar(position = \"dodge\") +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1)) "},{"id":16,"options":{"comment":"","warning":"false","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-16","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"false","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_wrap(~ island)"},{"id":17,"options":{"comment":"","warning":"false","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-17","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"false","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_grid(rows = vars(island))"},{"id":18,"options":{"comment":"","warning":"false","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-18","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"false","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  facet_grid(sex ~ island)"},{"id":19,"options":{"comment":"","warning":"false","autorun":"false","classes":"","out-width":"700px","label":"unnamed-chunk-19","dpi":72,"context":"interactive","results":"markup","out-height":"","message":"false","fig-cap":"","output":"true","fig-height":5,"fig-width":7},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  labs(title = \"Palmer Penguin Populations\",\n       x = \"Flipper Length (mm)\",\n       y = \"Body Mass (g)\") +\n  theme_classic()"}];
 
 </script><script type="module">
 // Declare startupMessageQWebR globally
@@ -943,7 +943,7 @@ globalThis.qwebrExecuteCode = async function (
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ggplot1.html">Activities</a></li><li class="breadcrumb-item"><a href="./ggplot1.html">ggplot part 1</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ggplot1.html">Activities</a></li><li class="breadcrumb-item"><a href="./ggplot1.html">Lecture 1 Activity 2</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -972,7 +972,7 @@ globalThis.qwebrExecuteCode = async function (
 <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
- <span class="menu-text">Course information</span></a>
+ <span class="menu-text">Start Here</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -1004,7 +1004,7 @@ globalThis.qwebrExecuteCode = async function (
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Lecture01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lect 01</span></a>
+ <span class="menu-text">Lecture 01</span></a>
   </div>
 </li>
       </ul>
@@ -1021,7 +1021,7 @@ globalThis.qwebrExecuteCode = async function (
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">ggplot part 1</span></a>
+ <span class="menu-text">Lecture 1 Activity 2</span></a>
   </div>
 </li>
       </ul>
@@ -1037,14 +1037,8 @@ globalThis.qwebrExecuteCode = async function (
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project/project-1.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./projects/project-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project 1 (web app)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project/project-2.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project 2 (final report)</span></a>
   </div>
 </li>
       </ul>
@@ -1060,26 +1054,8 @@ globalThis.qwebrExecuteCode = async function (
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw/hw-1.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./hw/hw-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HW 1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hw/hw-2.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW 2</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hw/hw-3.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW 3</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hw/hw-4.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">HW 4</span></a>
   </div>
 </li>
       </ul>
@@ -1351,17 +1327,23 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div id="qwebr-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>I do recommend you learn how to “facet” (condition) the plots:</p>
 <div id="qwebr-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>read “as a function of island”, if you wanted island on the rows, move to facet_grid()</p>
 <div id="qwebr-insertion-location-14"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>a better use of facet_grid</p>
 <div id="qwebr-insertion-location-15"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The remaining functions deal with appearance such as labels, legends and maybe adding additional geoms:</p>
+<p>I do recommend you learn how to “facet” (condition) the plots:</p>
 <div id="qwebr-insertion-location-16"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>read “as a function of island”, if you wanted island on the rows, move to facet_grid()</p>
+<div id="qwebr-insertion-location-17"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>a better use of facet_grid</p>
+<div id="qwebr-insertion-location-18"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The remaining functions deal with appearance such as labels, legends and maybe adding additional geoms:</p>
+<div id="qwebr-insertion-location-19"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
