@@ -11,7 +11,7 @@ $font-family-base: 'Montserrat', sans-serif;
   background-color: #2774ae; 
   color: #ffd100;
 }
-#quarto-sidebar.sidebar.collapse.collapse-horizontal.sidebar-navigation.docked.overflow-auto a {
+.sidebar-item {
   color: #ffd100; /* Yellow links */
 }
 .sidebar-title {
