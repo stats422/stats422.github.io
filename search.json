@@ -25,7 +25,7 @@
     "href": "Syllabus.html#grading",
     "title": "Syllabus",
     "section": "Grading",
-    "text": "Grading\nA letter grade is assigned upon the successful completion of this course. The breakdown is:\n\n30% (10 meetings) Attending which means\n\ncontributing to the class, this involves attending class regularly\nTEAM work during class meetings\n\n20% Four (Individual) Homework Assignments\n5% Campuswire - sharing and posting questions and answers, percentage assigned is related to your rep level as determined by Campuswire (e.g., rep level 1 = 1% and top rep level = 5%)\n20% (Individual) Web App: Find your data, Design a page, Code and Video\n25% (Individual) Final Project: Find your own data, Report, Code and Video\n\n\nLate Policy\nIf you submit your homework assignments before I start the grading, it’s not counted as late. Once I begin grading it is late and won’t be accepted for full credit (but I’ll still accept it for partial credit).\nThe Web App and Final Project should both be submitted by the end of Week 11 as grading will begin immediately after the deadline. I will still accept projects for partial credit."
+    "text": "Grading\nA letter grade is assigned upon the successful completion of this course. The breakdown is:\n\n30% (10 meetings) Attending which means\n\ncontributing to the class, this involves attending class regularly\nTEAM work during class meetings\n\n20% Four (Individual) Homework Assignments\n5% Campuswire - sharing and posting questions and answers, percentage assigned is related to your rep level as determined by Campuswire (e.g., rep level 1 = 1% and top rep level = 5%)\n20% (Individual) Web App: Find your data, Design a page, submit Code and Video for evaluation\n25% (Individual) Final Project: Find your own data, Write a Report, submit Code and Video for evaluation\n\n\nLate Policy\nIf you submit your homework assignments before I start the grading, it’s not counted as late. Once I begin grading it is late and won’t be accepted for full credit (but I’ll still accept it for partial credit).\nThe Web App and Final Project should both be submitted by the end of Week 11 as grading will begin immediately after the deadline. I will still accept projects for partial credit."
   },
   {
     "objectID": "Syllabus.html#course-outline-this-is-subject-to-change",
@@ -82,6 +82,27 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "ggplot1.html",
+    "href": "ggplot1.html",
+    "title": "ggplot part 1",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ggplot1.html#loading-libraries",
+    "href": "ggplot1.html#loading-libraries",
+    "title": "ggplot part 1",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ggplot1.html#five-minute-ggplot",
+    "href": "ggplot1.html#five-minute-ggplot",
+    "title": "ggplot part 1",
+    "section": "Five minute ggplot",
+    "text": "Five minute ggplot\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAT MINIMUM ggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y) as it relates to the features.\nThe “+” in ggplot separates “layers” of a graphic.\nThink of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is just about it. The rest of ggplot is about beautifying your graphic through additional options. Mapping the data to the aesthetic then is the most critical skill here.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nOk let’s slow down, identify the data types within the dataset\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand let’s fix some issues with missing values or we will get lots of warnings\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nHow do we work with non-numeric information (like gender)?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nI do recommend you learn how to “facet” (condition) the plots:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nread “as a function of island”, if you wanted island on the rows, move to facet_grid()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\na better use of facet_grid\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe remaining functions deal with appearance such as labels, legends and maybe adding additional geoms:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "RRefresher.html",
@@ -191,7 +212,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Statistics 422",
+    "title": "Welcome to Statistics 422",
     "section": "",
     "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/"
   },
@@ -214,7 +235,7 @@
     "href": "Lecture01.html#what-to-expect",
     "title": "Welcome Statistics 422",
     "section": "What to expect",
-    "text": "What to expect\n\nFormat: During Class\n\nWorkshop style - some lecturing, some small group activities, breaks\nInteractive - please bring your electronics (laptop, iPad, maybe phone)\n\n\n\n\nFormat: Outside of Class\n\nIndividual homework assignments, individual late mid-quarter project, individual final project\nEncourage interaction with me but more important, with each other"
+    "text": "What to expect\n\nFormat: During Class\n\nWorkshop style - some lecturing, some small group activities, breaks\nInteractive - please bring your electronics (laptop, iPad, maybe phone)\n\n\n\n\nFormat: Outside of Class\n\nIndividual homework assignments, individual late mid-quarter project, individual final project\nEncourage interaction with me but more important, with each other\nStats 422 Community interaction on Campuswire, perhaps examine the weekly data posted to Tidy Tuesday . . ."
   },
   {
     "objectID": "Lecture01.html#what-to-expect-1",
@@ -243,5 +264,82 @@
     "title": "Welcome Statistics 422",
     "section": "Group Activity 1",
     "text": "Group Activity 1\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to get credit for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some graphs created by ggplot2.\nhttps://r-charts.com/ggplot2/ or https://r-graph-gallery.com/ggplot2-package.html\nIdeally, I would like you to examine either or both of these sites as a team and\nPlease choose the one plot from your group that you think is most memorable (can be good or not good), and have one team member share the graph on Campuswire and be prepared to tell us why your team chose it."
+  },
+  {
+    "objectID": "Lecture01.html#data-visualization",
+    "href": "Lecture01.html#data-visualization",
+    "title": "Welcome Statistics 422",
+    "section": "Data visualization",
+    "text": "Data visualization\n\nUnderstanding and creating visual representations of data\nR is one of our tools and\nggplot2 is THE package"
+  },
+  {
+    "objectID": "Lecture01.html#section-1",
+    "href": "Lecture01.html#section-1",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "gg means “Grammar of Graphics”\nThe Grammar of Graphics was written by Leland Wilkinson in 1999.\nWilkinson detailed a comprehensive framework to describe and build a wide range of statistical graphics by breaking down the elements of graphics into a unified system."
+  },
+  {
+    "objectID": "Lecture01.html#grammar-of-graphics",
+    "href": "Lecture01.html#grammar-of-graphics",
+    "title": "Welcome Statistics 422",
+    "section": "Grammar of Graphics",
+    "text": "Grammar of Graphics\n\n\n\nSource: https://www.stat20.org/"
+  },
+  {
+    "objectID": "Lecture01.html#data",
+    "href": "Lecture01.html#data",
+    "title": "Welcome Statistics 422",
+    "section": "Data",
+    "text": "Data\n\nIn GG, data is the foundation\n\nAll graphical representation decisions rest on top of it\n\nAll the decisions are data-driven\n\nResult: meaningful and accurate visual representation of data\n\nAND a wide variety of graphics"
+  },
+  {
+    "objectID": "Lecture01.html#aesthetics-aesthetic-mappings",
+    "href": "Lecture01.html#aesthetics-aesthetic-mappings",
+    "title": "Welcome Statistics 422",
+    "section": "Aesthetics (Aesthetic Mappings)",
+    "text": "Aesthetics (Aesthetic Mappings)\n\nThese are the rules\n\nThey map (connect) data variables to the visual properties of the graphical elements\n\nx, y, color, size, and shape\n\nThe connection of data to graphical elements allow us to see/interpret patterns, trends, and anomalies within the data"
+  },
+  {
+    "objectID": "Lecture01.html#geometries-include",
+    "href": "Lecture01.html#geometries-include",
+    "title": "Welcome Statistics 422",
+    "section": "Geometries include",
+    "text": "Geometries include\n\nPoints, typically used for individual values\nLines, connect points in some defined order (e.g., time, location)\nBars, typically used for categories (e.g., pizza types)\nPolygons, use to represent areas (maps)\nPaths, fatter lines, used to represent flows (Sankey)"
+  },
+  {
+    "objectID": "Lecture01.html#from-the-ggplot2-cheatsheet",
+    "href": "Lecture01.html#from-the-ggplot2-cheatsheet",
+    "title": "Welcome Statistics 422",
+    "section": "from the ggplot2 cheatsheet",
+    "text": "from the ggplot2 cheatsheet"
+  },
+  {
+    "objectID": "Lecture01.html#facets-and-layers",
+    "href": "Lecture01.html#facets-and-layers",
+    "title": "Welcome Statistics 422",
+    "section": "Facets and Layers",
+    "text": "Facets and Layers\n\nConditioning the data\nsubsets are facets\nlayers combine multiple types of visualizations into a single graphic"
+  },
+  {
+    "objectID": "Lecture01.html#statistics",
+    "href": "Lecture01.html#statistics",
+    "title": "Welcome Statistics 422",
+    "section": "Statistics",
+    "text": "Statistics\n\nData can be summarized or modified prior to visualization\n\nAggregation (like sums or means),\nsmoothing\n\nCan clarify the underlying structure or relationships in data."
+  },
+  {
+    "objectID": "Lecture01.html#coordinates-and-scales",
+    "href": "Lecture01.html#coordinates-and-scales",
+    "title": "Welcome Statistics 422",
+    "section": "Coordinates and scales",
+    "text": "Coordinates and scales\n\nscaling (linear, logarithmic, etc.)\ncoordinate systems (Cartesian, polar, etc.).\nInfluence the position of data points and the interpretation."
+  },
+  {
+    "objectID": "Lecture01.html#themes",
+    "href": "Lecture01.html#themes",
+    "title": "Welcome Statistics 422",
+    "section": "Themes",
+    "text": "Themes\n\nthe overall “look”\nfonts, colors\nlabeling, legends, captioning\nlayout etc."
   }
 ]
