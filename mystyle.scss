@@ -9,10 +9,9 @@ $font-family-base: 'Montserrat', sans-serif;
 /*-- scss:rules --*/
 #quarto-sidebar.sidebar.collapse.collapse-horizontal.sidebar-navigation.docked.overflow-auto {
   background-color: #2774ae; 
-  color: #ffd100;
 }
-.sidebar-item li {
-  color: #ffd100; /* Yellow links */
+#quarto-sidebar.sidebar.collapse.collapse-horizontal.sidebar-navigation.docked.overflow-auto li {
+  color: #ffd100;
 }
 .sidebar-title {
   color: white; 
