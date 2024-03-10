@@ -151,7 +151,7 @@
     "href": "ggplot1.html#themes",
     "title": "ggplot part 1",
     "section": "Themes",
-    "text": "Themes\nThe remaining functions of ggplot deal with appearance such as labels, legends, tick marks, background color etc. etc.\np + coord_polar() +\n  theme(\n    legend.position = \"none\",\n    axis.text.y = element_blank(),\n    axis.ticks = element_blank(),\n    panel.background = element_rect(fill = \"white\", colour = \"black\"),\n    panel.grid.major = element_line(colour = \"black\"),\n    panel.grid.minor = element_blank(),\n    plot.background = element_rect(fill = \"white\", colour = \"black\")\n  )"
+    "text": "Themes\nThe remaining functions of ggplot deal with appearance such as labels, legends, tick marks, background color etc. etc.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "hw/hw-1.html",
