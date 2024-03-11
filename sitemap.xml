@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stats422.github.io/Syllabus.html</loc>
-    <lastmod>2024-03-10T09:51:41.480Z</lastmod>
+    <lastmod>2024-03-11T23:47:58.469Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/about.html</loc>
-    <lastmod>2024-03-10T09:51:40.327Z</lastmod>
+    <lastmod>2024-03-11T23:47:57.366Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/projects/project-1.html</loc>
-    <lastmod>2024-03-10T09:51:39.877Z</lastmod>
+    <lastmod>2024-03-11T23:47:56.916Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/ggplot1.html</loc>
-    <lastmod>2024-03-10T09:51:39.403Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/hw/hw-1.html</loc>
-    <lastmod>2024-03-10T09:51:37.718Z</lastmod>
+    <loc>https://stats422.github.io/ggplot2.html</loc>
+    <lastmod>2024-03-11T23:47:56.459Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/RRefresher.html</loc>
-    <lastmod>2024-03-10T09:51:38.474Z</lastmod>
+    <lastmod>2024-03-11T23:47:55.305Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats422.github.io/hw/hw-1.html</loc>
+    <lastmod>2024-03-11T23:47:54.569Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats422.github.io/ggplot1.html</loc>
+    <lastmod>2024-03-11T23:47:55.924Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/projects/project-2.html</loc>
-    <lastmod>2024-03-10T09:51:39.641Z</lastmod>
+    <lastmod>2024-03-11T23:47:56.697Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/index.html</loc>
-    <lastmod>2024-03-10T09:51:40.107Z</lastmod>
+    <lastmod>2024-03-11T23:47:57.146Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/Lecture01.html</loc>
-    <lastmod>2024-03-10T09:51:40.764Z</lastmod>
+    <lastmod>2024-03-11T23:47:57.756Z</lastmod>
   </url>
 </urlset>

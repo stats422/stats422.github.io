@@ -91,74 +91,25 @@
     "text": "To be filled out soon"
   },
   {
-    "objectID": "ggplot1.html",
-    "href": "ggplot1.html",
-    "title": "ggplot part 1",
+    "objectID": "ggplot2.html",
+    "href": "ggplot2.html",
+    "title": "ggplot part 2",
     "section": "",
     "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ggplot1.html#loading-libraries",
-    "href": "ggplot1.html#loading-libraries",
-    "title": "ggplot part 1",
+    "objectID": "ggplot2.html#loading-libraries",
+    "href": "ggplot2.html#loading-libraries",
+    "title": "ggplot part 2",
     "section": "",
     "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "ggplot1.html#five-minute-ggplot",
-    "href": "ggplot1.html#five-minute-ggplot",
-    "title": "ggplot part 1",
-    "section": "Five minute ggplot",
-    "text": "Five minute ggplot\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAT MINIMUM ggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y) as it relates to the features.\nThe “+” in ggplot separates “layers” of a graphic.\nThink of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is just about it. The rest of ggplot is about beautifying your graphic through additional options. Mapping the data to the aesthetic then is the most critical skill here.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nOk let’s slow down, identify the data types within the dataset\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand let’s fix some issues with missing values or we will get lots of warnings\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ggplot1.html#non-numeric-variables",
-    "href": "ggplot1.html#non-numeric-variables",
-    "title": "ggplot part 1",
-    "section": "Non-Numeric Variables",
-    "text": "Non-Numeric Variables\nHow do we work with non-numeric information (like gender)?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ggplot1.html#multiple-geoms",
-    "href": "ggplot1.html#multiple-geoms",
-    "title": "ggplot part 1",
-    "section": "Multiple Geoms",
-    "text": "Multiple Geoms\nYou might be asking - sometimes you put an aes( ) in the geom, sometimes not? Some would tell you it should only go in the geom() but that works best if you have multiple geoms:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGets messy though, this suggests an appearance issue, we get into themes (later)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGo badk to something simpler. Plotting categorical variables with different geoms.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nInteraction is a handy function, comining sex and species:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ggplot1.html#faceting",
-    "href": "ggplot1.html#faceting",
-    "title": "ggplot part 1",
-    "section": "Faceting",
-    "text": "Faceting\nI do recommend you learn how to “facet” (condition) the plots:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nread “as a function of island”, if you wanted island on the rows, move to facet_grid()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\na better use of facet_grid\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ggplot1.html#statistics",
-    "href": "ggplot1.html#statistics",
-    "title": "ggplot part 1",
-    "section": "Statistics",
-    "text": "Statistics\nSome of the geoms automatically applie a statistical transformation to the data, we need to do little except call them:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nbut others require additional work on our part\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nreturn to geom_bar"
-  },
-  {
-    "objectID": "ggplot1.html#scales-coordinate-flipping",
-    "href": "ggplot1.html#scales-coordinate-flipping",
-    "title": "ggplot part 1",
-    "section": "Scales + Coordinate flipping",
-    "text": "Scales + Coordinate flipping\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "ggplot1.html#themes",
-    "href": "ggplot1.html#themes",
-    "title": "ggplot part 1",
-    "section": "Themes",
-    "text": "Themes\nThe remaining functions of ggplot deal with appearance such as labels, legends, tick marks, background color etc. etc.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "hw/hw-1.html",
-    "href": "hw/hw-1.html",
-    "title": "hw-1",
-    "section": "",
-    "text": "Please upload your materials to be graded to BruinLearn"
+    "objectID": "ggplot2.html#geoms-in-the-details",
+    "href": "ggplot2.html#geoms-in-the-details",
+    "title": "ggplot part 2",
+    "section": "geoms in the details",
+    "text": "geoms in the details"
   },
   {
     "objectID": "RRefresher.html",
@@ -264,6 +215,83 @@
     "title": "R Refresher",
     "section": "Five minute ggplot refresher",
     "text": "Five minute ggplot refresher\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y, color) as it relates to the features.\nThe “+” separates “layers”. Think of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is just about it. I do recommend you learn how to “facet” (condition) the plots:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nread “as a function of island”, if you wanted island on the rows, move to facet_grid()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\na better use of facet_grid\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe remaining functions deal with appearance such as labels, legends and maybe adding additional geoms:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "hw/hw-1.html",
+    "href": "hw/hw-1.html",
+    "title": "hw-1",
+    "section": "",
+    "text": "Please upload your materials to be graded to BruinLearn"
+  },
+  {
+    "objectID": "ggplot1.html",
+    "href": "ggplot1.html",
+    "title": "ggplot part 1",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ggplot1.html#loading-libraries",
+    "href": "ggplot1.html#loading-libraries",
+    "title": "ggplot part 1",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ggplot1.html#five-minute-ggplot",
+    "href": "ggplot1.html#five-minute-ggplot",
+    "title": "ggplot part 1",
+    "section": "Five minute ggplot",
+    "text": "Five minute ggplot\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAT MINIMUM ggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y) as it relates to the features.\nThe “+” in ggplot separates “layers” of a graphic.\nThink of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is just about it. The rest of ggplot is about beautifying your graphic through additional options. Mapping the data to the aesthetic then is the most critical skill here.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ggplot1.html#ggplot-in-detail",
+    "href": "ggplot1.html#ggplot-in-detail",
+    "title": "ggplot part 1",
+    "section": "ggplot in detail",
+    "text": "ggplot in detail\nOk let’s slow down, identify the data types within the dataset\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand let’s fix some issues with missing values or we will get lots of warnings\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ggplot1.html#non-numeric-variables",
+    "href": "ggplot1.html#non-numeric-variables",
+    "title": "ggplot part 1",
+    "section": "Non-Numeric Variables",
+    "text": "Non-Numeric Variables\nHow do we work with non-numeric information (like gender)?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ggplot1.html#multiple-geoms",
+    "href": "ggplot1.html#multiple-geoms",
+    "title": "ggplot part 1",
+    "section": "Multiple Geoms",
+    "text": "Multiple Geoms\nYou might be asking - sometimes you put an aes( ) in the geom, sometimes not? Some would tell you it should only go in the geom() but that works best if you have multiple geoms:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGets messy though, this suggests an appearance issue, we get into themes (later)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGo badk to something simpler. Plotting categorical variables with different geoms.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nInteraction is a handy function, comining sex and species:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ggplot1.html#faceting",
+    "href": "ggplot1.html#faceting",
+    "title": "ggplot part 1",
+    "section": "Faceting",
+    "text": "Faceting\nI do recommend you learn how to “facet” (condition) the plots:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nread “as a function of island”, if you wanted island on the rows, move to facet_grid()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\na better use of facet_grid\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ggplot1.html#statistics",
+    "href": "ggplot1.html#statistics",
+    "title": "ggplot part 1",
+    "section": "Statistics",
+    "text": "Statistics\nSome of the geoms automatically applie a statistical transformation to the data, we need to do little except call them:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nbut others require additional work on our part\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nreturn to geom_bar"
+  },
+  {
+    "objectID": "ggplot1.html#scales-coordinate-flipping",
+    "href": "ggplot1.html#scales-coordinate-flipping",
+    "title": "ggplot part 1",
+    "section": "Scales + Coordinate flipping",
+    "text": "Scales + Coordinate flipping\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "ggplot1.html#themes",
+    "href": "ggplot1.html#themes",
+    "title": "ggplot part 1",
+    "section": "Themes",
+    "text": "Themes\nThe remaining functions of ggplot deal with appearance such as labels, legends, tick marks, background color etc. etc.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "projects/project-2.html",

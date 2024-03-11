@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.3.450">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="For Spring 2024 Stats 422">
-<title>Statistics 422 - ggplot part 1</title>
+<title>Statistics 422 - ggplot part 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -220,7 +220,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-1","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"false","message":"false","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggthemes\")\nwebr::install(\"palmerpenguins\")\n\nlibrary(readr)\nlibrary(tidyverse)\nlibrary(knitr)\nlibrary(ggthemes)\nlibrary(palmerpenguins)"},{"id":2,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-2","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"str(penguins)"},{"id":3,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-3","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g))"},{"id":4,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-4","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"false","message":"false","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g)) +\n  geom_point() "},{"id":5,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-5","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"## Teams, make a different basic graphic - \n## Please choose different x and y variables or a different geom or both...\n\n\n"},{"id":6,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-6","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"str(penguins)"},{"id":7,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-7","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"my_penguins <- na.omit(penguins)"},{"id":8,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-8","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           color = sex)) +\n  geom_point() "},{"id":9,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-9","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex)) +\n  geom_point() "},{"id":10,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-10","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex,\n           color = sex)) +\n  geom_point() "},{"id":11,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-11","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex,\n           color = sex)) +\n  geom_point(alpha = 0.25) "},{"id":12,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-12","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g,\n           size = sex)) +\n  geom_point(aes(fill = sex), \n             alpha = 0.25, \n             shape = 21, \n             color = \"black\") "},{"id":13,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-13","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(aes(color = species)) +\n  geom_smooth(aes(color = island), \n              method = \"lm\",\n              se = FALSE) "},{"id":14,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-14","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(aes(color = species)) +\n  geom_smooth(aes(color = island), \n              method = \"lm\",\n              se = FALSE) +\n  theme(legend.position = \"none\")"},{"id":15,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-15","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = species))+\n  geom_bar() "},{"id":16,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-16","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = interaction(sex, species), \n           fill = island)) + \n  geom_bar(color = \"black\")"},{"id":17,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-17","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = interaction(sex, species), \n           fill = island)) + \n  geom_bar(position = \"dodge\", \n           color = \"black\") +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1)) "},{"id":18,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-18","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"false","message":"false","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g)) +\n  geom_point(aes(color = species)) +\n  facet_wrap(~ island)"},{"id":19,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-19","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"false","message":"false","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g)) +\n  geom_point(aes(color = species)) +\n  facet_grid(rows = vars(island))"},{"id":20,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-20","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"false","message":"false","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = body_mass_g)) +\n  geom_point(aes(color = species)) +\n  facet_grid(sex ~ island)"},{"id":21,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-21","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"false","message":"false","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, \n           y = species)) +\n  geom_boxplot(color = \"black\", fill = 2:4)"},{"id":22,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-22","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, fill = sex)) +\n  geom_histogram()"},{"id":23,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-23","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(data = my_penguins, \n       aes(x = flipper_length_mm, fill = sex)) +\n  geom_histogram(position = \"identity\",\n                 binwidth = 5, \n                 alpha = 0.5)"},{"id":24,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-24","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(my_penguins, \n       aes(x = body_mass_g, \n           y = flipper_length_mm, \n           color = species)) +\n  geom_point() +\n  scale_color_manual(values = c(\"Adelie\" = \"blue\", \n                                \"Chinstrap\" = \"green\", \n                                \"Gentoo\" = \"red\")) "},{"id":25,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-25","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(my_penguins, aes(x = body_mass_g, y = flipper_length_mm)) +\n  geom_point(aes(color = species)) +\n  scale_x_log10() +\n  scale_y_log10()"},{"id":26,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-26","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"p <- ggplot(my_penguins, aes(x = species, fill = species)) +\n  geom_bar()\n\np + coord_flip()"},{"id":27,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-27","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"ggplot(my_penguins, aes(y = island, fill = island)) +\n  geom_bar()"},{"id":28,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-28","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"data <- as.data.frame(cbind(month.abb, co2[433:444]))\nnames(data) <- c(\"month\", \"co2\")\ndata$month <- factor(data$month, levels=month.abb)\n\np <- ggplot(data, aes(x = month, y = co2, fill = month)) +\n  geom_bar(stat = \"identity\") +\n  labs(title = \"CO2 Data 1995\", x = \"\", y = \"\") \n\np + coord_polar() "},{"id":29,"options":{"comment":"","context":"interactive","fig-height":5,"label":"unnamed-chunk-29","output":"true","results":"markup","dpi":72,"autorun":"false","fig-width":7,"warning":"true","message":"true","fig-cap":"","out-width":"700px","classes":"","out-height":""},"code":"p + coord_polar() +\n  theme(\n    legend.position = \"none\",\n    axis.text.y = element_blank(),\n    axis.ticks = element_blank(),\n    panel.background = element_rect(fill = \"white\", colour = \"black\"),\n    panel.grid.major = element_line(colour = \"black\"),\n    panel.grid.minor = element_blank(),\n    plot.background = element_rect(fill = \"white\", colour = \"black\")\n  )  "}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggthemes\")\nwebr::install(\"palmerpenguins\")\n\nlibrary(readr)\nlibrary(tidyverse)\nlibrary(knitr)\nlibrary(ggthemes)\nlibrary(palmerpenguins)","options":{"classes":"","context":"interactive","autorun":"false","message":"false","warning":"false","out-height":"","dpi":72,"label":"unnamed-chunk-1","results":"markup","output":"true","comment":"","fig-width":7,"fig-height":5,"out-width":"700px","fig-cap":""}}];
 
 </script><script type="module">
 // Declare startupMessageQWebR globally
@@ -932,8 +932,7 @@ globalThis.qwebrExecuteCode = async function (
 }
 
 </script>
-<meta property="og:title" content="Statistics 422 - ggplot part 1">
-<meta property="og:description" content="">
+<meta property="og:title" content="Statistics 422 - ggplot part 2">
 <meta property="og:site-name" content="Statistics 422">
 </head>
 <body class="nav-sidebar docked">
@@ -943,7 +942,9 @@ globalThis.qwebrExecuteCode = async function (
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ggplot1.html">Activities</a></li><li class="breadcrumb-item"><a href="./ggplot1.html">Lecture 1 Activity 2</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Statistics 422
+      </li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -1011,16 +1012,16 @@ globalThis.qwebrExecuteCode = async function (
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Activities</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ggplot1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ggplot1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1 Activity 2</span></a>
   </div>
 </li>
@@ -1098,14 +1099,7 @@ globalThis.qwebrExecuteCode = async function (
    
   <ul>
 <li><a href="#loading-libraries" id="toc-loading-libraries" class="nav-link active" data-scroll-target="#loading-libraries">Loading Libraries</a></li>
-  <li><a href="#five-minute-ggplot" id="toc-five-minute-ggplot" class="nav-link" data-scroll-target="#five-minute-ggplot">Five minute ggplot</a></li>
-  <li><a href="#ggplot-in-detail" id="toc-ggplot-in-detail" class="nav-link" data-scroll-target="#ggplot-in-detail">ggplot in detail</a></li>
-  <li><a href="#non-numeric-variables" id="toc-non-numeric-variables" class="nav-link" data-scroll-target="#non-numeric-variables">Non-Numeric Variables</a></li>
-  <li><a href="#multiple-geoms" id="toc-multiple-geoms" class="nav-link" data-scroll-target="#multiple-geoms">Multiple Geoms</a></li>
-  <li><a href="#faceting" id="toc-faceting" class="nav-link" data-scroll-target="#faceting">Faceting</a></li>
-  <li><a href="#statistics" id="toc-statistics" class="nav-link" data-scroll-target="#statistics">Statistics</a></li>
-  <li><a href="#scales-coordinate-flipping" id="toc-scales-coordinate-flipping" class="nav-link" data-scroll-target="#scales-coordinate-flipping">Scales + Coordinate flipping</a></li>
-  <li><a href="#themes" id="toc-themes" class="nav-link" data-scroll-target="#themes">Themes</a></li>
+  <li><a href="#geoms-in-the-details" id="toc-geoms-in-the-details" class="nav-link" data-scroll-target="#geoms-in-the-details">geoms in the details</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -1280,7 +1274,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
   
 }
 </script><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">ggplot part 1</h1>
+<h1 class="title">ggplot part 2</h1>
 </div>
 
 
@@ -1302,90 +1296,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header><section id="loading-libraries" class="level2"><h2 class="anchored" data-anchor-id="loading-libraries">Loading Libraries</h2>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="five-minute-ggplot" class="level2"><h2 class="anchored" data-anchor-id="five-minute-ggplot">Five minute ggplot</h2>
-<p>If there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins</p>
-<div id="qwebr-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>AT MINIMUM ggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified.</p>
-<div id="qwebr-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>No error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y) as it relates to the features.</p>
-<p>The “+” in ggplot separates “layers” of a graphic.</p>
-<p>Think of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.</p>
-<div id="qwebr-insertion-location-4"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>That is just about it. The rest of ggplot is about beautifying your graphic through additional options. Mapping the data to the aesthetic then is the most critical skill here.</p>
-<div id="qwebr-insertion-location-5"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="ggplot-in-detail" class="level2"><h2 class="anchored" data-anchor-id="ggplot-in-detail">ggplot in detail</h2>
-<p>Ok let’s slow down, identify the data types within the dataset</p>
-<div id="qwebr-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>and let’s fix some issues with missing values or we will get lots of warnings</p>
-<div id="qwebr-insertion-location-7"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="non-numeric-variables" class="level2"><h2 class="anchored" data-anchor-id="non-numeric-variables">Non-Numeric Variables</h2>
-<p>How do we work with non-numeric information (like gender)?</p>
-<div id="qwebr-insertion-location-8"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-9"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-10"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-11"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-12"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="multiple-geoms" class="level2"><h2 class="anchored" data-anchor-id="multiple-geoms">Multiple Geoms</h2>
-<p>You might be asking - sometimes you put an aes( ) in the geom, sometimes not? Some would tell you it should only go in the geom() but that works best if you have multiple geoms:</p>
-<div id="qwebr-insertion-location-13"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Gets messy though, this suggests an appearance issue, we get into themes (later)</p>
-<div id="qwebr-insertion-location-14"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Go badk to something simpler. Plotting categorical variables with different geoms.</p>
-<div id="qwebr-insertion-location-15"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Interaction is a handy function, comining sex and species:</p>
-<div id="qwebr-insertion-location-16"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-17"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="faceting" class="level2"><h2 class="anchored" data-anchor-id="faceting">Faceting</h2>
-<p>I do recommend you learn how to “facet” (condition) the plots:</p>
-<div id="qwebr-insertion-location-18"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>read “as a function of island”, if you wanted island on the rows, move to facet_grid()</p>
-<div id="qwebr-insertion-location-19"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>a better use of facet_grid</p>
-<div id="qwebr-insertion-location-20"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="statistics" class="level2"><h2 class="anchored" data-anchor-id="statistics">Statistics</h2>
-<p>Some of the geoms automatically applie a statistical transformation to the data, we need to do little except call them:</p>
-<div id="qwebr-insertion-location-21"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>but others require additional work on our part</p>
-<div id="qwebr-insertion-location-22"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-23"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>return to geom_bar</p>
-</section><section id="scales-coordinate-flipping" class="level2"><h2 class="anchored" data-anchor-id="scales-coordinate-flipping">Scales + Coordinate flipping</h2>
-<div id="qwebr-insertion-location-24"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-25"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-26"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-27"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-28"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="themes" class="level2"><h2 class="anchored" data-anchor-id="themes">Themes</h2>
-<p>The remaining functions of ggplot deal with appearance such as labels, legends, tick marks, background color etc. etc.</p>
-<div id="qwebr-insertion-location-29"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="geoms-in-the-details" class="level2"><h2 class="anchored" data-anchor-id="geoms-in-the-details">geoms in the details</h2>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
