@@ -185,7 +185,49 @@
     "href": "StoryTelling.html#section-4",
     "title": "Story Time",
     "section": "",
-    "text": "A data visualization with a story\n\nstories often center on life as it is/was and its patterns of change\n\n\nKinds of Data Viz stories\n\nThere are plenty, to name a few\n\nillustrate change\ncommunicate understanding\npurely descriptive\nposes solutions to a problem\n\nNeuroscientists tell us we forget bullet points, but we remember stories.\n\nSome applicable situations\n\nWe could identify some situations where Data Viz storytelling might apply:\n\nConvincing your committee your model is the best model\nPersuading your employer to apply your recommender system?\nHighlighting problems, finding something of interest (possible solution?)\n\nYour data visualizations are not expected to be perfect, it’s a process with a learning curve\n\nStrategic Storytelling with Data Visualization\n\nKeep things simple.\nEdit ruthlessly.\nBe authentic.\nDon’t communicate for yourself—communicate for your audience.\nThe story is not for you; the story is for them.\n\nMore on the Audience\n\nAlways keep your audience in mind. Give them a reason for spending time with you.\nThink about what will resonate with them and motivate them.\nAlso think about whether and when data will strengthen your story and integrate sensibly.\nMake the information presented specific and relevant to your audience.\n\nAdvice for Data Visualizations & their stories\n\nThe most beautiful data visualization runs the risk of falling flat without a compelling narrative.\nA strong story can overcome an imperfect data visualization.\nTHE IDEAL when effective visuals are combined with a powerful story.\n\nTactical advice\n\nIf someone were to only read the label and title of your data visualization, they should still know what it was about\nAll information presented should be self-reinforcing. The content reinforces the titles. The words reinforce the visual, Avoid extraneous or unrelated information.\nthe decision on what to drop is as important as the decision on what to keep.\nOutcome based story development (start with the takeaway and work backwards)\nGet others to comment/give feedback"
+    "text": "A data visualization with a story\n\nstories often center on life as it is/was and its patterns of change"
+  },
+  {
+    "objectID": "StoryTelling.html#section-5",
+    "href": "StoryTelling.html#section-5",
+    "title": "Story Time",
+    "section": "",
+    "text": "Kinds of Data Viz stories\n\nThere are plenty, to name a few\n\nillustrate change\ncommunicate understanding\npurely descriptive\nposes solutions to a problem\n\nNeuroscientists tell us we forget bullet points, but we remember stories."
+  },
+  {
+    "objectID": "StoryTelling.html#section-6",
+    "href": "StoryTelling.html#section-6",
+    "title": "Story Time",
+    "section": "",
+    "text": "Some applicable situations\n\nWe could identify some situations where Data Viz storytelling might apply:\n\nConvincing your committee your model is the best model\nPersuading your employer to apply your recommender system?\nHighlighting problems, finding something of interest (possible solution?)\n\nYour data visualizations are not expected to be perfect, it’s a process with a learning curve"
+  },
+  {
+    "objectID": "StoryTelling.html#section-7",
+    "href": "StoryTelling.html#section-7",
+    "title": "Story Time",
+    "section": "",
+    "text": "Strategic Storytelling with Data Visualization\n\nKeep things simple.\nEdit ruthlessly.\nBe authentic.\nDon’t communicate for yourself—communicate for your audience.\nThe story is not for you; the story is for them."
+  },
+  {
+    "objectID": "StoryTelling.html#section-8",
+    "href": "StoryTelling.html#section-8",
+    "title": "Story Time",
+    "section": "",
+    "text": "More on the Audience\n\nAlways keep your audience in mind. Give them a reason for spending time with you.\nThink about what will resonate with them and motivate them.\nAlso think about whether and when data will strengthen your story and integrate sensibly.\nMake the information presented specific and relevant to your audience."
+  },
+  {
+    "objectID": "StoryTelling.html#section-9",
+    "href": "StoryTelling.html#section-9",
+    "title": "Story Time",
+    "section": "",
+    "text": "Advice for Data Visualizations & their stories\n\nThe most beautiful data visualization runs the risk of falling flat without a compelling narrative.\nA strong story can overcome an imperfect data visualization.\nTHE IDEAL when effective visuals are combined with a powerful story."
+  },
+  {
+    "objectID": "StoryTelling.html#section-10",
+    "href": "StoryTelling.html#section-10",
+    "title": "Story Time",
+    "section": "",
+    "text": "Tactical advice on Data Visualizations\n\nIf someone were to only read the label and title of your data visualization, they should still know what it was about\nAll information presented should be self-reinforcing. The content reinforces the titles. The words reinforce the visual, Avoid extraneous or unrelated information.\nthe decision on what to drop is as important as the decision on what to keep.\nOutcome based story development (start with the takeaway and work backwards)\nGet others to comment/give feedback"
   },
   {
     "objectID": "ggplot1.html",
