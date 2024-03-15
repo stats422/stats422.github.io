@@ -164,7 +164,7 @@
     "href": "StoryTelling.html#section",
     "title": "Story Time",
     "section": "",
-    "text": "A Picture of Contrasts\n\nFive bullets on a slide vs A famous movie\nAdjusted for inflation, $1.2 Billion in US box office movie business\nQuote from Robert McGee on stories: “fulfill a profound human need to grasp the patterns of living not merely as an intellectual exercise, but within a very personal, emotional experience”"
+    "text": "A Picture of Contrasts\n\nFive bullets on a slide vs A famous movie\nAdjusted for inflation, $1.2 Billion in US box office movie business\nQuote from Robert McGee (2003 Harvard Business Review) on stories: “fulfill a profound human need to grasp the patterns of living not merely as an intellectual exercise, but within a very personal, emotional experience”"
   },
   {
     "objectID": "StoryTelling.html#section-1",
@@ -206,7 +206,7 @@
     "href": "StoryTelling.html#section-6",
     "title": "Story Time",
     "section": "",
-    "text": "Strategic Storytelling with Data Visualization\n\nKeep things simple.\nEdit ruthlessly.\nBe authentic.\nDon’t communicate for yourself—communicate for your audience.\nThe story is not for you; the story is for them."
+    "text": "Strategic Storytelling with Data Visualization\n\nKeep things simple.\nEdit ruthlessly.\nBe authentic.\nDon’t communicate for yourself—communicate for your audience.\nThe story is not for you; the story is for them. Help your audience to see what you see in the data."
   },
   {
     "objectID": "StoryTelling.html#section-7",
@@ -220,14 +220,14 @@
     "href": "StoryTelling.html#section-8",
     "title": "Story Time",
     "section": "",
-    "text": "Advice for Data Visualizations & their stories\n\nThe most beautiful data visualization runs the risk of falling flat without a compelling narrative.\nA strong story can overcome an imperfect data visualization.\nTHE IDEAL when effective visuals are combined with a powerful story."
+    "text": "Advice for Data Visualizations & their stories\n\nThe most beautiful data visualization runs the risk of falling flat without a compelling narrative.\nA strong story can overcome an imperfect data visualization.\nAim to display data in a way that makes the complex clear.\nTHE IDEAL when effective visuals are combined with a powerful story."
   },
   {
     "objectID": "StoryTelling.html#section-9",
     "href": "StoryTelling.html#section-9",
     "title": "Story Time",
     "section": "",
-    "text": "Tactical advice on Data Visualizations\n\nIf someone were to only read the label and title of your data visualization, they should still know what it was about\nAll information presented should be self-reinforcing. The content reinforces the titles. The words reinforce the visual, Avoid extraneous or unrelated information.\nthe decision on what to drop is as important as the decision on what to keep.\nOutcome based story development (start with the takeaway and work backwards)\nGet others to comment/give feedback"
+    "text": "Tactical advice on Data Visualizations\n\nIf someone were to only read the label and title of your data visualization, they should still know what it was about\nAll information presented should be self-reinforcing. The content reinforces the titles. The words reinforce the visual, Avoid extraneous or unrelated information.\nThe decision on what to drop is as important as the decision on what to keep.\nOutcome based story development (start with the takeaway and work backwards)\nAsk others to comment/give feedback"
   },
   {
     "objectID": "ggplot1.html",
@@ -499,11 +499,7 @@
     "href": "example-page.html",
     "title": "Example page",
     "section": "",
-    "text": "On this page, we set two options directly in the Quarto document. The rest of the options are coming from the _quarto.yml project file. These options are considered “global”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 3 Activity 1"
-    ]
+    "text": "On this page, we set two options directly in the Quarto document. The rest of the options are coming from the _quarto.yml project file. These options are considered “global”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "Lecture01.html#late-afternoon-social",
