@@ -48,7 +48,7 @@
     "href": "Syllabus.html#course-outline-this-is-subject-to-change",
     "title": "Syllabus",
     "section": "Course Outline (this is subject to change)",
-    "text": "Course Outline (this is subject to change)\n\n\n\nDate\nTopic\nReading\n\n\n\n\nWeek 1 4/4\nFirst Day business; ggplot2; story telling\nHealy Ch. 1/2; Knaflic - Storytelling with Data - Ch. 7\n\n\nWeek 2 4/11\nData Exploration/Analysis; Visualization Insights & Types\nWickham Ch. 10; Healy Ch. 3/4, Yau Ch. 3, Wilke - Fundamentals of Data Visualization - Ch. 5\n\n\nWeek 3 4/18\nReorganizing Data, Python Visualization Tools\nYau Ch.2, Wickham Ch. 5; Molin - Hands-On Data Analysis with Pandas\n\n\nWeek 4 4/25\nInteractive: R/Shiny\nWickham - Mastering Shiny\n\n\nWeek 5 5/2\nInteractive: Python tools\nRichards; 30 day challenge\n\n\nWeek 6 5/9\nWorking with Spatial Data\nHealy Ch. 7; Yau Ch. 8; Wilke Ch. 15\n\n\nWeek 7 5/16\nWorking with Time\nYau Ch. 4; Wilke Ch. 13 and Wilke Ch. 14\n\n\nWeek 8 5/23\nTableau for starters\nMilligan - Learning Tableau;Sleeper - Practical Tableau\n\n\nWeek 9 5/30\nGuest Lecture\n\n\n\nWeek 10 6/6\nAdvanced Visualizations with htmlwidgets\nBookdown Ch. 16, htmlwidgets for R - gallery, htmlwidgets for R - documentation, Introduction to HTML Widgets\n\n\nWeek 11 6/14\nCompletion of Web App and Final Report",
+    "text": "Course Outline (this is subject to change)\n\n\n\nDate\nTopic\nReading\n\n\n\n\nWeek 1 4/4\nFirst Day business; ggplot2; story telling\nHealy Ch. 1/2\n\n\nWeek 2 4/11\nData Exploration/Analysis; Visualization Insights & Types\nWickham Ch. 10; Healy Ch. 3/4, Yau Ch. 3, Wilke - Fundamentals of Data Visualization - Ch. 5\n\n\nWeek 3 4/18\nReorganizing Data, Python Visualization Tools\nYau Ch.2, Wickham Ch. 5; Molin - Hands-On Data Analysis with Pandas\n\n\nWeek 4 4/25\nInteractive: R/Shiny\nWickham - Mastering Shiny\n\n\nWeek 5 5/2\nInteractive: Python tools\nRichards; 30 day challenge\n\n\nWeek 6 5/9\nWorking with Spatial Data\nHealy Ch. 7; Yau Ch. 8; Wilke Ch. 15\n\n\nWeek 7 5/16\nWorking with Time\nYau Ch. 4; Wilke Ch. 13 and Wilke Ch. 14\n\n\nWeek 8 5/23\nTableau for starters\nMilligan - Learning Tableau;Sleeper - Practical Tableau\n\n\nWeek 9 5/30\nGuest Lecture\n\n\n\nWeek 10 6/6\nAdvanced Visualizations with htmlwidgets\nBookdown Ch. 16, htmlwidgets for R - gallery, htmlwidgets for R - documentation, Introduction to HTML Widgets\n\n\nWeek 11 6/14\nCompletion of Web App and Final Report",
     "crumbs": [
       "Start Here",
       "Syllabus"
@@ -121,33 +121,106 @@
     ]
   },
   {
-    "objectID": "example-page.html",
-    "href": "example-page.html",
-    "title": "Example page",
+    "objectID": "Lecture02.html#who-are-you-talking-to",
+    "href": "Lecture02.html#who-are-you-talking-to",
+    "title": "Lecture 02",
+    "section": "Who are you talking to?",
+    "text": "Who are you talking to?"
+  },
+  {
+    "objectID": "Lecture02.html#geoms-in-the-details",
+    "href": "Lecture02.html#geoms-in-the-details",
+    "title": "Lecture 02",
+    "section": "geoms in the details",
+    "text": "geoms in the details"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "On this page, we set two options directly in the Quarto document. The rest of the options are coming from the _quarto.yml project file. These options are considered “global”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "About this site"
+  },
+  {
+    "objectID": "projects/project-1.html",
+    "href": "projects/project-1.html",
+    "title": "project-1",
+    "section": "",
+    "text": "To be filled out soon",
     "crumbs": [
-      "Activities",
-      "Lecture 4 Activity 2"
+      "Projects",
+      "Project 1 (web app)"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to Statistics 422",
-    "section": "",
-    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
-    "crumbs": [
-      "Start Here",
-      "Overview"
-    ]
+    "objectID": "StoryTelling.html#a-story",
+    "href": "StoryTelling.html#a-story",
+    "title": "Story Time",
+    "section": "A Story",
+    "text": "A Story\nHere is one you might have seen\n\nIn 1912, Rose boards a ship, where she meets and falls in love with Jack, a poor artist, threatening her engagement to the wealthy Cal.\nAs their romance blossoms, they navigate social boundaries and personal freedoms aboard the luxurious ship.\nThe ship hits an iceberg, causing catastrophic damage and panic among passengers and crew as the ship begins to sink.\nJack and Rose fight for survival, facing both physical dangers and societal expectations in their desperate bid to stay together.\nThe tragedy ends with the sinking of the ship, with Jack sacrificing his life to save Rose, who survives to tell their story."
   },
   {
-    "objectID": "projects/project-2.html",
-    "href": "projects/project-2.html",
-    "title": "project-2",
-    "section": "",
-    "text": "To be filled out soon"
+    "objectID": "StoryTelling.html#a-picture-of-contrasts",
+    "href": "StoryTelling.html#a-picture-of-contrasts",
+    "title": "Story Time",
+    "section": "A Picture of Contrasts",
+    "text": "A Picture of Contrasts\n\nFive bullets on a slide vs A famous movie\nAdjusted for inflation, $1.2 Billion in US box office movie business\nQuote from Robert McGee on stories: “fulfill a profound human need to grasp the patterns of living not merely as an intellectual exercise, but within a very personal, emotional experience”"
+  },
+  {
+    "objectID": "StoryTelling.html#an-outline-for-tonight",
+    "href": "StoryTelling.html#an-outline-for-tonight",
+    "title": "Story Time",
+    "section": "An Outline for tonight",
+    "text": "An Outline for tonight\n\nGOAL: connect your ideas/analyses to your audience’s emotion\n\nSuggested solution: the best way - tell a compelling story\n\nHUH? Stories allow us to weave a lot of information into whatever we are presenting and you connect to your audience’s emotions and energy.\nTHIS IS NOT EASY TO DO! (but worth trying)\nREQUIREMENTS\n\nclear understanding of your material\nstorytelling skills to present ideas that connect with your audience\n\nRESULT - your ideas are REMEMBERED.\nIf you can capture the principles of good storytelling, then you get people applauding instead of yawning."
+  },
+  {
+    "objectID": "StoryTelling.html#a-data-visualization-with-a-story",
+    "href": "StoryTelling.html#a-data-visualization-with-a-story",
+    "title": "Story Time",
+    "section": "A data visualization with a story",
+    "text": "A data visualization with a story\n\nstories often center on life as it is/was and its patterns of change"
+  },
+  {
+    "objectID": "StoryTelling.html#kinds-of-data-viz-stories",
+    "href": "StoryTelling.html#kinds-of-data-viz-stories",
+    "title": "Story Time",
+    "section": "Kinds of Data Viz stories",
+    "text": "Kinds of Data Viz stories\n\nThere are plenty, to name a few\n\nillustrate change\ncommunicate understanding\npurely descriptive\nposes solutions to a problem\n\nNeuroscientists tell us we forget bullet points, but we remember stories."
+  },
+  {
+    "objectID": "StoryTelling.html#some-applicable-situations",
+    "href": "StoryTelling.html#some-applicable-situations",
+    "title": "Story Time",
+    "section": "Some applicable situations",
+    "text": "Some applicable situations\n\nWe could identify some situations where Data Viz storytelling might apply:\n\nConvincing your committee your model is the best model\nPersuading your employer to apply your recommender system?\nHighlighting problems, finding something of interest (possible solution?)\n\nYour data visualizations are not expected to be perfect, it’s a process with a learning curve"
+  },
+  {
+    "objectID": "StoryTelling.html#strategic-storytelling-with-data-visualization",
+    "href": "StoryTelling.html#strategic-storytelling-with-data-visualization",
+    "title": "Story Time",
+    "section": "Strategic Storytelling with Data Visualization",
+    "text": "Strategic Storytelling with Data Visualization\n\nKeep things simple.\nEdit ruthlessly.\nBe authentic.\nDon’t communicate for yourself—communicate for your audience.\nThe story is not for you; the story is for them."
+  },
+  {
+    "objectID": "StoryTelling.html#more-on-the-audience",
+    "href": "StoryTelling.html#more-on-the-audience",
+    "title": "Story Time",
+    "section": "More on the Audience",
+    "text": "More on the Audience\n\nAlways keep your audience in mind. Give them a reason for spending time with you.\nThink about what will resonate with them and motivate them.\nAlso think about whether and when data will strengthen your story and integrate sensibly.\nMake the information presented specific and relevant to your audience."
+  },
+  {
+    "objectID": "StoryTelling.html#advice-for-data-visualizations-their-stories",
+    "href": "StoryTelling.html#advice-for-data-visualizations-their-stories",
+    "title": "Story Time",
+    "section": "Advice for Data Visualizations & their stories",
+    "text": "Advice for Data Visualizations & their stories\n\nThe most beautiful data visualization runs the risk of falling flat without a compelling narrative.\nA strong story can overcome an imperfect data visualization.\nTHE IDEAL when effective visuals are combined with a powerful story."
+  },
+  {
+    "objectID": "StoryTelling.html#tactical-advice",
+    "href": "StoryTelling.html#tactical-advice",
+    "title": "Story Time",
+    "section": "Tactical advice",
+    "text": "Tactical advice\n\nIf someone were to only read the label and title of your data visualization, they should still know what it was about\nAll information presented should be self-reinforcing. The content reinforces the titles. The words reinforce the visual, Avoid extraneous or unrelated information.\nthe decision on what to drop is as important as the decision on what to keep.\nOutcome based story development (start with the takeaway and work backwards)\nGet others to comment/give feedback"
   },
   {
     "objectID": "ggplot1.html",
@@ -397,22 +470,33 @@
     "text": "geoms in the details"
   },
   {
-    "objectID": "projects/project-1.html",
-    "href": "projects/project-1.html",
-    "title": "project-1",
+    "objectID": "projects/project-2.html",
+    "href": "projects/project-2.html",
+    "title": "project-2",
     "section": "",
-    "text": "To be filled out soon",
+    "text": "To be filled out soon"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Statistics 422",
+    "section": "",
+    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
     "crumbs": [
-      "Projects",
-      "Project 1 (web app)"
+      "Start Here",
+      "Overview"
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "example-page.html",
+    "href": "example-page.html",
+    "title": "Example page",
     "section": "",
-    "text": "About this site"
+    "text": "On this page, we set two options directly in the Quarto document. The rest of the options are coming from the _quarto.yml project file. These options are considered “global”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 3 Activity 1"
+    ]
   },
   {
     "objectID": "Lecture01.html#late-afternoon-social",

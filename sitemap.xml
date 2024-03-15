@@ -2,19 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stats422.github.io/Syllabus.html</loc>
-    <lastmod>2024-03-09T05:11:42.390Z</lastmod>
+    <lastmod>2024-03-15T03:57:12.497Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/example-page.html</loc>
-    <lastmod>2024-03-12T20:41:57.631Z</lastmod>
+    <loc>https://stats422.github.io/Lecture02.html</loc>
+    <lastmod>2024-03-15T04:25:20.719Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/index.html</loc>
-    <lastmod>2024-03-09T05:07:55.882Z</lastmod>
+    <loc>https://stats422.github.io/about.html</loc>
+    <lastmod>2024-02-18T22:17:40.615Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/projects/project-2.html</loc>
-    <lastmod>2024-03-09T19:06:26.990Z</lastmod>
+    <loc>https://stats422.github.io/projects/project-1.html</loc>
+    <lastmod>2024-03-09T19:06:02.352Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats422.github.io/StoryTelling.html</loc>
+    <lastmod>2024-03-15T04:24:37.412Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/ggplot1.html</loc>
@@ -33,15 +37,19 @@
     <lastmod>2024-03-10T10:10:00.214Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/projects/project-1.html</loc>
-    <lastmod>2024-03-09T19:06:02.352Z</lastmod>
+    <loc>https://stats422.github.io/projects/project-2.html</loc>
+    <lastmod>2024-03-09T19:06:26.990Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/about.html</loc>
-    <lastmod>2024-02-18T22:17:40.615Z</lastmod>
+    <loc>https://stats422.github.io/index.html</loc>
+    <lastmod>2024-03-09T05:07:55.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats422.github.io/example-page.html</loc>
+    <lastmod>2024-03-12T20:41:57.631Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/Lecture01.html</loc>
-    <lastmod>2024-03-12T15:24:08.892Z</lastmod>
+    <lastmod>2024-03-15T04:27:07.253Z</lastmod>
   </url>
 </urlset>
