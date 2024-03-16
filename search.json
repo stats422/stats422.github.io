@@ -4,7 +4,7 @@
     "href": "Syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Introduction\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\nContact Info: vlew@stat.ucla.edu\nOffice Hours: M 4pm - 6pm (MS 8923) and F 3pm-5pm (Zoom) and you are welcome to schedule Zoom appointment(s), most evenings & weekends too\nMeeting Times and Locations: Th 6pm - 8:50pm Physics & Astronomy 2748\nThe purpose of Statistics 422 is to thorough understanding of the fundamentals of data visualization and a working knowledge of how to perform data visualization tasks in R, Python, Tableau and incorporate additional tools.",
+    "text": "Introduction\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\nContact Info: vlew@stat.ucla.edu\nOffice Hours: M 4pm - 6pm (MS 8923), Th after lecture, and F 3pm-5pm (Zoom). You are welcome to schedule Zoom appointment(s), most days, evenings & weekends too\nMeeting Times and Locations: Th 6pm - 8:50pm Physics & Astronomy 2748\nThe purpose of Statistics 422 is to provide you with a thorough understanding of the fundamentals of data visualization and a working knowledge of how to perform data visualization tasks in R, Python, Tableau and also incorporate supporting tools (e.g., GitHub).",
     "crumbs": [
       "Start Here",
       "Syllabus"
@@ -15,7 +15,7 @@
     "href": "Syllabus.html#proposed-learning-outcomes",
     "title": "Syllabus",
     "section": "Proposed Learning Outcomes",
-    "text": "Proposed Learning Outcomes\nThe overall goal of this course are to provide students with the foundations necessary for understanding and building on their existing data visualization skills. After this quarter, students will have:\n\nAn Understanding of different ways to visually represent data and familiarity with various types of charts and graphs (e.g., bar charts, line graphs, scatter plots, heat maps), and when and how to use them effectively to represent different kinds of data and relationships.\nAn understanding of data models: ways of structuring and organizing data for effective visualization. Understanding different types of data (quantitative, qualitative, spatial) and transformation and visual representation.\nAn understanding of Graphical Perception/perceived visual information. Some of the cognitive principles related to visual perception and using these principles to create compelling visualizations.\nGenerated interactive visualizations",
+    "text": "Proposed Learning Outcomes\nThe overall goal of this course are to provide students with the foundations necessary for understanding and building on their existing data visualization skills. After this quarter, students will have:\n\nAn Understanding of different ways to visually represent data and familiarity with various types of charts and graphs (e.g., bar charts, line graphs, scatter plots, heat maps), and when and how to use them effectively to represent different kinds of data and relationships.\nAn understanding of data models: ways of structuring and organizing data for effective visualization. Understanding different types of data (quantitative, qualitative, spatial) and transformation and visual representation.\nAn understanding of Graphical Perception/perceived visual information. Some of the cognitive principles related to visual perception and using these principles to create compelling visualizations.\nGenerated interactive visualizations\nWritten a reproducible report which conforms to UC Thesis formatting requirements and contains data visualizations. [Examples from the eScholarship Repository] ](https://escholarship.org/search?q=%22%20Master%20of%20Applied%20Statistics%22&campuses=ucla&sort=desc&type_of_work=dissertation)",
     "crumbs": [
       "Start Here",
       "Syllabus"
@@ -48,7 +48,7 @@
     "href": "Syllabus.html#course-outline-this-is-subject-to-change",
     "title": "Syllabus",
     "section": "Course Outline (this is subject to change)",
-    "text": "Course Outline (this is subject to change)\n\n\n\nDate\nTopic\nReading\n\n\n\n\nWeek 1 4/4\nFirst Day business; ggplot2; story telling\nHealy Ch. 1/2\n\n\nWeek 2 4/11\nData Exploration/Analysis; Visualization Insights & Types\nWickham Ch. 10; Healy Ch. 3/4, Yau Ch. 3, Wilke - Fundamentals of Data Visualization - Ch. 5\n\n\nWeek 3 4/18\nReorganizing Data, Python Visualization Tools\nYau Ch.2, Wickham Ch. 5; Molin - Hands-On Data Analysis with Pandas\n\n\nWeek 4 4/25\nInteractive: R/Shiny\nWickham - Mastering Shiny\n\n\nWeek 5 5/2\nInteractive: Python tools\nRichards; 30 day challenge\n\n\nWeek 6 5/9\nWorking with Spatial Data\nHealy Ch. 7; Yau Ch. 8; Wilke Ch. 15\n\n\nWeek 7 5/16\nWorking with Time\nYau Ch. 4; Wilke Ch. 13 and Wilke Ch. 14\n\n\nWeek 8 5/23\nTableau for starters\nMilligan - Learning Tableau;Sleeper - Practical Tableau\n\n\nWeek 9 5/30\nGuest Lecture\n\n\n\nWeek 10 6/6\nAdvanced Visualizations with htmlwidgets\nBookdown Ch. 16, htmlwidgets for R - gallery, htmlwidgets for R - documentation, Introduction to HTML Widgets\n\n\nWeek 11 6/14\nCompletion of Web App and Final Report",
+    "text": "Course Outline (this is subject to change)\n\n\n\nDate\nTopic\nReading\n\n\n\n\nWeek 1 4/4\nFirst Day business; ggplot2; story telling\nHealy Ch. 1/2\n\n\nWeek 2 4/11\nData Exploration/Analysis; Visualization Insights & Types\nWickham Ch. 10; Healy Ch. 3/4, Yau Ch. 3, Wilke - Fundamentals of Data Visualization - Ch. 5\n\n\nWeek 3 4/18\nReorganizing Data, Python Visualization Tools\nYau Ch.2, Wickham Ch. 5; Molin - Hands-On Data Analysis with Pandas\n\n\nWeek 4 4/25\nInteractive: R/Shiny\nWickham - Mastering Shiny\n\n\nWeek 5 5/2\nInteractive: Python tools\nRichards; 30 day challenge\n\n\nWeek 6 5/9\nWorking with Spatial Data\nHealy Ch. 7; Yau Ch. 8; Wilke Ch. 15\n\n\nWeek 7 5/16\nWorking with Time\nYau Ch. 4; Wilke Ch. 13 and Wilke Ch. 14\n\n\nWeek 8 5/23\nTableau for starters\nMilligan - Learning Tableau;Sleeper - Practical Tableau\n\n\nWeek 9 5/30\nGuest Lecture\n\n\n\nWeek 10 6/6\nTBD\n\n\n\nWeek 11 6/14\nCompletion of Web App and Final Report",
     "crumbs": [
       "Start Here",
       "Syllabus"
@@ -342,9 +342,31 @@
   {
     "objectID": "hw/hw-1.html",
     "href": "hw/hw-1.html",
-    "title": "hw-1",
+    "title": "Homework 1 - EDA and Data Visualization",
     "section": "",
-    "text": "Please upload your materials to be graded to BruinLearn",
+    "text": "Please upload your materials to be graded to BruinLearn only (not GitHub etc.)",
+    "crumbs": [
+      "Homework",
+      "HW 1"
+    ]
+  },
+  {
+    "objectID": "hw/hw-1.html#part-i---warm-up-explore-some-data-generate-a-simple-visualization",
+    "href": "hw/hw-1.html#part-i---warm-up-explore-some-data-generate-a-simple-visualization",
+    "title": "Homework 1 - EDA and Data Visualization",
+    "section": "Part I - Warm-up, explore some data, generate a simple visualization",
+    "text": "Part I - Warm-up, explore some data, generate a simple visualization",
+    "crumbs": [
+      "Homework",
+      "HW 1"
+    ]
+  },
+  {
+    "objectID": "hw/hw-1.html#part-ii---discover-your-own-data",
+    "href": "hw/hw-1.html#part-ii---discover-your-own-data",
+    "title": "Homework 1 - EDA and Data Visualization",
+    "section": "Part II - Discover your own data",
+    "text": "Part II - Discover your own data",
     "crumbs": [
       "Homework",
       "HW 1"
