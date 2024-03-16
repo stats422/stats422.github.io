@@ -227,7 +227,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"fig-width":7,"warning":"false","message":"false","context":"interactive","comment":"","label":"unnamed-chunk-1","autorun":"false","output":"true","dpi":72,"results":"markup","fig-cap":"","classes":"","fig-height":5,"out-height":"","out-width":"700px"},"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggthemes\")\n\nlibrary(readr)\nlibrary(knitr)\nlibrary(tidyverse)\nlibrary(ggthemes)"}];
+globalThis.qwebrCellDetails = [{"options":{"out-height":"","classes":"","fig-height":5,"warning":"false","message":"false","fig-width":7,"context":"interactive","output":"true","label":"unnamed-chunk-1","autorun":"false","results":"markup","comment":"","dpi":72,"out-width":"700px","fig-cap":""},"id":1,"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggthemes\")\n\nlibrary(readr)\nlibrary(knitr)\nlibrary(tidyverse)\nlibrary(ggthemes)"}];
 
 </script><script type="module">
 // Declare startupMessageQWebR globally
@@ -1001,9 +1001,19 @@ globalThis.qwebrExecuteCode = async function (
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Lectures</span></span>
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+ <span class="menu-text">Lecture 01</span>
   </li>
+      </ul>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
