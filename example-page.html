@@ -229,7 +229,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"id":1,"options":{"warning":"true","message":"true","read-only":"false","label":"","output":"true","results":"markup","autorun":"","context":"interactive","out-height":"","fig-cap":"","fig-height":5,"dpi":72,"classes":"","comment":"","fig-width":7,"out-width":"700px"},"code":"import pandas as pd \nimport numpy as np \n\ndf = pd.DataFrame(\n    {\n        \"A\": 1.0,\n        \"B\": pd.Timestamp(\"20130102\"),\n        \"C\": pd.Series(1, index=list(range(4)), dtype=\"float32\"),\n        \"D\": np.array([3] * 4, dtype=\"int32\"),\n        \"E\": pd.Categorical([\"test\", \"train\", \"test\", \"train\"]),\n        \"F\": \"foo\",\n    }\n)\n\n\ndf"}];
+globalThis.qpyodideCellDetails = [{"options":{"comment":"","warning":"true","fig-cap":"","fig-height":5,"autorun":"","context":"interactive","output":"true","read-only":"false","results":"markup","classes":"","out-width":"700px","label":"","message":"true","dpi":72,"fig-width":7,"out-height":""},"code":"import pandas as pd \nimport numpy as np \n\ndf = pd.DataFrame(\n    {\n        \"A\": 1.0,\n        \"B\": pd.Timestamp(\"20130102\"),\n        \"C\": pd.Series(1, index=list(range(4)), dtype=\"float32\"),\n        \"D\": np.array([3] * 4, dtype=\"int32\"),\n        \"E\": pd.Categorical([\"test\", \"train\", \"test\", \"train\"]),\n        \"F\": \"foo\",\n    }\n)\n\n\ndf","id":1}];
 
 
 </script>
@@ -536,6 +536,12 @@ globalThis._qpyodideGetInstance = function() {
  <span class="menu-text">Project 1 (web app)</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/project-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project 2 (report)</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -574,12 +580,6 @@ globalThis._qpyodideGetInstance = function() {
   <div class="sidebar-item-container"> 
   <a href="https://www.tidyverse.org/" class="sidebar-item-text sidebar-link" target="&quot;_blank&quot;">
  <span class="menu-text">Tidyverse</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://www.tidymodels.org/" class="sidebar-item-text sidebar-link" target="&quot;_blank&quot;">
- <span class="menu-text">Tidymodels</span></a>
   </div>
 </li>
       </ul>

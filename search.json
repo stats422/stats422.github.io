@@ -521,7 +521,11 @@
     "href": "projects/project-2.html",
     "title": "project-2",
     "section": "",
-    "text": "To be filled out soon"
+    "text": "To be filled out soon",
+    "crumbs": [
+      "Projects",
+      "Project 2 (report)"
+    ]
   },
   {
     "objectID": "index.html",
@@ -602,7 +606,7 @@
     "href": "Lecture01.html#section-1",
     "title": "Welcome Statistics 422",
     "section": "",
-    "text": "gg means “Grammar of Graphics”\nThe Grammar of Graphics was written by Leland Wilkinson in 1999.\nWilkinson detailed a comprehensive framework to describe and build a wide range of statistical graphics by breaking down the elements of graphics into a unified system."
+    "text": "It is part of the Tidyverse in R\n\n\ngg means “Grammar of Graphics”\nThe Grammar of Graphics was written by Leland Wilkinson in 1999.\nWilkinson detailed a comprehensive framework to describe and build a wide range of statistical graphics by breaking down the elements of graphics into a unified system."
   },
   {
     "objectID": "Lecture01.html#grammar-of-graphics",
