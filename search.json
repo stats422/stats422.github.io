@@ -560,7 +560,7 @@
     "href": "Lecture01.html#what-to-expect",
     "title": "Welcome Statistics 422",
     "section": "What to expect",
-    "text": "What to expect\n\nFormat: During Class\n\nWorkshop style - some lecturing, some small group activities, breaks\nInteractive - please bring your electronics (laptop, iPad, maybe phone)\n\n\n\n\nFormat: Outside of Class\n\nIndividual homework assignments, individual late mid-quarter project, individual final project\nEncourage interaction with me but more important, with each other\nStats 422 Community interaction on Campuswire, perhaps examine the weekly data posted to Tidy Tuesday . . ."
+    "text": "What to expect\n\nFormat: During Class\n\nWorkshop style - some lecturing, some small group activities, breaks\nInteractive - please bring your electronics (laptop, iPad, maybe phone)\n\nFormat: Outside of Class\n\nIndividual homework assignments, individual late mid-quarter project, individual final project\nEncourage interaction with me but more important, with each other\nStats 422 Community interaction on Campuswire, perhaps examine the weekly data posted to Tidy Tuesday"
   },
   {
     "objectID": "Lecture01.html#what-to-expect-1",
@@ -574,7 +574,7 @@
     "href": "Lecture01.html#what-to-expect-2",
     "title": "Welcome Statistics 422",
     "section": "What to expect",
-    "text": "What to expect\n\nProcess\n\nStart with an audience and an idea and find the data (not necessarily in that order)\nPrepare the data for visualization (e.g., clean, pivot)\nRepresent the data visually with various graphical elements (e.g., color, sizes, and shape)\nPost-process the data (e.g., decide whether interactivity would add power, post process a static visualization )\n\n\n\n\nTools\n\nR/ggplot2, Shiny; Python/matplotlib, Streamlit; Tableau"
+    "text": "What to expect\n\nProcess\n\nStart with an audience and an idea and find the data (not necessarily in that order)\nPrepare the data for visualization (e.g., clean, pivot)\nRepresent the data visually with various graphical elements (e.g., color, sizes, and shape)\nPost-process the data (e.g., decide whether interactivity would add power, post process a static visualization )\n\nTools\n\nR/ggplot2, Shiny; Python/matplotlib, Streamlit; Tableau"
   },
   {
     "objectID": "Lecture01.html#what-to-expect-3",
@@ -584,11 +584,11 @@
     "text": "What to expect\n\nGrading\n\n30% Attending class weekly with in-class team activity\n20% 4 individual homework assignments\n5% Campuswire participation\n20% Web App: (individual) Find your data, Design a page, Code and Video\n25% Final Project: (individual) Find your own data, Report, Code and Video\n\nThe data for the Web App can be the same, but ideally a simple dataset like iris for the Web App and something more closely related to your thesis (so something more complex) for your final project"
   },
   {
-    "objectID": "Lecture01.html#group-activity-1",
-    "href": "Lecture01.html#group-activity-1",
+    "objectID": "Lecture01.html#group-activity-1-15-20-minutes",
+    "href": "Lecture01.html#group-activity-1-15-20-minutes",
     "title": "Welcome Statistics 422",
-    "section": "Group Activity 1",
-    "text": "Group Activity 1\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to get credit for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some graphs created by ggplot2.\nhttps://r-charts.com/ggplot2/ or https://r-graph-gallery.com/ggplot2-package.html\nIdeally, I would like you to examine either or both of these sites as a team and\nPlease choose the one plot from your group that you think is most memorable (can be good or not good), and have one team member share the graph on Campuswire and be prepared to tell us why your team chose it."
+    "section": "Group Activity 1 (15-20 minutes)",
+    "text": "Group Activity 1 (15-20 minutes)\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to get credit for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some graphs created by ggplot2.\nhttps://r-charts.com/ggplot2/ or https://r-graph-gallery.com/ggplot2-package.html\nIdeally, I would like you to examine either or both of these sites as a team and\nPlease choose the one plot from your group that you think is most memorable (can be good or not good), and have one team member share the graph on Campuswire and be prepared to tell us why your team chose it."
   },
   {
     "objectID": "Lecture01.html#data-visualization",
@@ -616,14 +616,14 @@
     "href": "Lecture01.html#data",
     "title": "Welcome Statistics 422",
     "section": "Data",
-    "text": "Data\n\nIn GG, data is the foundation\n\nAll graphical representation decisions rest on top of it\n\nAll the decisions are data-driven\n\nResult: meaningful and accurate visual representation of data\n\nAND a wide variety of graphics"
+    "text": "Data\n\n\n\n\n\n\n\n\n\nIn GG, data is the foundation\n\nAll graphical representation decisions rest on top of it\n\nAll the decisions are data-driven\n\nResult: meaningful and accurate visual representation of data\n\nAND a wide variety of graphics"
   },
   {
     "objectID": "Lecture01.html#aesthetics-aesthetic-mappings",
     "href": "Lecture01.html#aesthetics-aesthetic-mappings",
     "title": "Welcome Statistics 422",
     "section": "Aesthetics (Aesthetic Mappings)",
-    "text": "Aesthetics (Aesthetic Mappings)\n\nThese are the rules\n\nThey map (connect) data variables to the visual properties of the graphical elements\n\nx, y, color, size, and shape\n\nThe connection of data to graphical elements allow us to see/interpret patterns, trends, and anomalies within the data"
+    "text": "Aesthetics (Aesthetic Mappings)\n\nThese are the rules\n\nThey map (connect) data variables to the visual properties of the graphical elements\n\nMost frequently - x, y, color, size, and shape\n\nThe connection of data to graphical elements allow us to see/interpret patterns, trends, and anomalies within the data"
   },
   {
     "objectID": "Lecture01.html#geometries-include",
@@ -644,7 +644,7 @@
     "href": "Lecture01.html#facets-and-layers",
     "title": "Welcome Statistics 422",
     "section": "Facets and Layers",
-    "text": "Facets and Layers\n\nConditioning the data\nsubsets are facets\nlayers combine multiple types of visualizations into a single graphic"
+    "text": "Facets and Layers\n\nConditioning the data\nSubsets are facets\nLayers combine multiple types of visualizations into a single graphic"
   },
   {
     "objectID": "Lecture01.html#statistics",
@@ -658,13 +658,13 @@
     "href": "Lecture01.html#coordinates-and-scales",
     "title": "Welcome Statistics 422",
     "section": "Coordinates and scales",
-    "text": "Coordinates and scales\n\nscaling (linear, logarithmic, etc.)\ncoordinate systems (Cartesian, polar, etc.).\nInfluence the position of data points and the interpretation."
+    "text": "Coordinates and scales\n\nScaling (linear, logarithmic, etc.)\nCoordinate systems (Cartesian, polar, etc.).\nThey influence the position of data points (and the interpretation)."
   },
   {
     "objectID": "Lecture01.html#themes",
     "href": "Lecture01.html#themes",
     "title": "Welcome Statistics 422",
     "section": "Themes",
-    "text": "Themes\n\nthe overall “look”\nfonts, colors\nlabeling, legends, captioning\nlayout etc."
+    "text": "Themes\n\nControl the overall “look” (styling) of the graphic\nfonts, colors\nlabeling, legends, captioning\nlayout etc."
   }
 ]
