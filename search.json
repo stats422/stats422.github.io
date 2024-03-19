@@ -37,7 +37,7 @@
     "href": "Syllabus.html#grading",
     "title": "Syllabus",
     "section": "Grading",
-    "text": "Grading\nA letter grade is assigned upon the successful completion of this course. The breakdown is:\n\n30% (10 meetings) Attending which means\n\ncontributing to the class, this involves attending class regularly\nTEAM work during class meetings\n\n20% Four (Individual) Homework Assignments\n5% Campuswire - sharing and posting questions and answers, percentage assigned is related to your rep level as determined by Campuswire (e.g., rep level 1 = 1% and top rep level = 5%)\n20% (Individual) Web App: Find your data, Design a page, submit Code and Video for evaluation\n25% (Individual) Final Project: Find your own data, Write a Report, submit Code and Video for evaluation\n\n\nLate Policy\nIf you submit your homework assignments before I start the grading, it’s not counted as late. After I begin grading, unsubmitted assignments are designated as late and can only receive partial credit.\nThe Web App and Final Project should both be submitted by the end of Week 11 as grading will begin immediately after the deadline. I will accept late submissions for partial credit.",
+    "text": "Grading\nA letter grade is assigned upon the successful completion of this course. The breakdown is:\n\n30% (10 meetings) Attending which means\n\ncontributing to the class, this involves attending class regularly\nTEAM work during class meetings\n\n20% Four (Individual) Homework Assignments\n5% Campuswire - sharing and posting questions and answers, percentage assigned is related to your rep level as determined by Campuswire (e.g., rep level 1 = 1% and top rep level = 5%)\n20% (Individual) Web App: Find your data, Design a page, submit Code and Video for evaluation\n25% (Individual) Final Project: Find your own data, Write a Report, submit Code and Video for evaluation\n\n\nLate Policy\nIf you submit your homework assignments after the due date but before I start the grading, the submission will not be not counted as late. After I begin grading, unsubmitted assignments will be designated as late and can only receive partial credit.\nThe Web App and Final Project should both be submitted by the end of Week 11 as grading will begin immediately after the deadline. I will accept late submissions for partial credit.",
     "crumbs": [
       "Start Here",
       "Syllabus"
@@ -200,6 +200,13 @@
     "title": "Story Time",
     "section": "",
     "text": "Some applicable situations\n\nWe could identify some situations where Data Viz storytelling might apply:\n\nConvincing your committee your model is the best model\n\nPersuading your employer to apply your recommender system\nExplaining to a prospective employer the visualization you created for the interview\nHighlighting problems, finding something of interest (possible solution?)"
+  },
+  {
+    "objectID": "StoryTelling.html#reassurance",
+    "href": "StoryTelling.html#reassurance",
+    "title": "Story Time",
+    "section": "Reassurance",
+    "text": "Reassurance\n\nThere is NO expectation of perfection in Stats 422\nGenerating data visualizations with ggplot has a learning curve\n\nEven if you use ChatGPT"
   },
   {
     "objectID": "StoryTelling.html#section-7",
