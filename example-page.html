@@ -229,7 +229,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"id":1,"options":{"fig-width":7,"warning":"true","classes":"","context":"interactive","message":"true","autorun":"","read-only":"false","out-width":"700px","fig-height":5,"out-height":"","comment":"","dpi":72,"label":"","output":"true","fig-cap":"","results":"markup"},"code":"import pandas as pd \nimport numpy as np \n\ndf = pd.DataFrame(\n    {\n        \"A\": 1.0,\n        \"B\": pd.Timestamp(\"20130102\"),\n        \"C\": pd.Series(1, index=list(range(4)), dtype=\"float32\"),\n        \"D\": np.array([3] * 4, dtype=\"int32\"),\n        \"E\": pd.Categorical([\"test\", \"train\", \"test\", \"train\"]),\n        \"F\": \"foo\",\n    }\n)\n\n\ndf"}];
+globalThis.qpyodideCellDetails = [{"options":{"warning":"true","label":"","fig-width":7,"comment":"","context":"interactive","fig-cap":"","classes":"","read-only":"false","out-height":"","dpi":72,"out-width":"700px","output":"true","fig-height":5,"results":"markup","message":"true","autorun":""},"code":"import pandas as pd \nimport numpy as np \n\ndf = pd.DataFrame(\n    {\n        \"A\": 1.0,\n        \"B\": pd.Timestamp(\"20130102\"),\n        \"C\": pd.Series(1, index=list(range(4)), dtype=\"float32\"),\n        \"D\": np.array([3] * 4, dtype=\"int32\"),\n        \"E\": pd.Categorical([\"test\", \"train\", \"test\", \"train\"]),\n        \"F\": \"foo\",\n    }\n)\n\n\ndf","id":1}];
 
 
 </script>
@@ -500,8 +500,11 @@ globalThis._qpyodideGetInstance = function() {
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">Lecture 01</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./Lecture01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 01</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">

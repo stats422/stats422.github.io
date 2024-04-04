@@ -568,132 +568,208 @@
     "href": "Lecture01.html#late-afternoon-social",
     "title": "Welcome Statistics 422",
     "section": "Late afternoon social",
-    "text": "Late afternoon social\nLet’s use this time to interact & relax before getting started\n\n\nPlease gather in small groups (minimum 3 classmates, maximum 6)\nIf you don’t know someone please introduce yourself\nIf your group sees someone without a group, please extend an invitation to join"
+    "text": "Late afternoon social\nLet’s use this time to interact & relax before getting started\n\n\nPlease gather in small groups (minimum 3 classmates, maximum 6)\nIf you don’t know someone please introduce yourself\nIf your group sees someone without a group, please extend an invitation to join",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#section",
     "href": "Lecture01.html#section",
     "title": "Welcome Statistics 422",
     "section": "",
-    "text": "Instructor\nDr. Vivian Lew\n\nMath Sciences 8923 (neighbor is Nicolas Christou)\nBruinLearn e-mail is the best way to reach me\nNo discussion or TA or grader for this course\n\n\nOther Course Details\n\nMeet Once a Week Thursdays 6pm- 8:50pm\n\nPhysics and Astronomy Building 2748\n\nOffice Hours\n\nM 4pm - 6pm (MS 8923) & F 3pm-5pm (Zoom)\nWelcome to schedule Zoom appointment(s), most evenings & weekends too"
+    "text": "Instructor\nDr. Vivian Lew\n\nMath Sciences 8923 (neighbor is Nicolas Christou)\nBruinLearn e-mail is the best way to reach me\nNo discussion or TA or grader for this course\n\n\nOther Course Details\n\nMeet Once a Week Thursdays 6pm- 8:50pm\n\nPhysics and Astronomy Building 2748\n\nOffice Hours\n\nM 4pm - 6pm (MS 8923) & F 3pm-5pm (Zoom)\nWelcome to schedule Zoom appointment(s), most evenings & weekends too",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#what-to-expect",
     "href": "Lecture01.html#what-to-expect",
     "title": "Welcome Statistics 422",
     "section": "What to expect",
-    "text": "What to expect\n\nFormat: During Class\n\nWorkshop style - some lecturing, some small group activities, breaks\nInteractive - please bring your electronics (laptop, iPad, maybe phone)\n\nFormat: Outside of Class\n\nIndividual homework assignments, individual late mid-quarter project, individual final project\nEncourage interaction with me but more important, with each other\nStats 422 Community interaction on Campuswire, perhaps examine the weekly data posted to Tidy Tuesday"
+    "text": "What to expect\n\nFormat: During Class\n\nWorkshop style - some lecturing, some small group activities, breaks\nInteractive - please bring your electronics (laptop, iPad, maybe phone)\n\nFormat: Outside of Class\n\nIndividual homework assignments, individual late mid-quarter project, individual final project\nEncourage interaction with me but more important, with each other\nStats 422 Community interaction on Campuswire, perhaps examine the weekly data posted to Tidy Tuesday",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#what-to-expect-1",
     "href": "Lecture01.html#what-to-expect-1",
     "title": "Welcome Statistics 422",
     "section": "What to expect",
-    "text": "What to expect\nDeveloping the scaffolding needed for understanding and building on one’s existing data visualization skills.\n\nAspects\n\nTranslating data and the relationships within visually for others.\n\nLearning to structure and organize data for effective visualization.\n\nLearning about the different types of visual representation and their purposes.\nUnderstanding of Graphical Perception/perceived visual information and some of the cognitive principles involved.\nLearning to generate static and interactive visualizations\nKnowing how to present your visualizations in different media (print, website, video)"
+    "text": "What to expect\nDeveloping the scaffolding needed for understanding and building on one’s existing data visualization skills.\n\nAspects\n\nTranslating data and the relationships within visually for others.\n\nLearning to structure and organize data for effective visualization.\n\nLearning about the different types of visual representation and their purposes.\nUnderstanding of Graphical Perception/perceived visual information and some of the cognitive principles involved.\nLearning to generate static and interactive visualizations\nKnowing how to present your visualizations in different media (print, website, video)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#what-to-expect-2",
     "href": "Lecture01.html#what-to-expect-2",
     "title": "Welcome Statistics 422",
     "section": "What to expect",
-    "text": "What to expect\n\nProcess\n\nStart with an audience and an idea and find the data (not necessarily in that order)\nPrepare the data for visualization (e.g., clean, pivot)\nRepresent the data visually with various graphical elements (e.g., color, sizes, and shape)\nPost-process the data (e.g., decide whether interactivity would add power, post process a static visualization )\n\nTools\n\nR/ggplot2, Shiny; Python/matplotlib, Streamlit; Tableau"
+    "text": "What to expect\n\nProcess\n\nStart with an audience and an idea and find the data (not necessarily in that order)\nPrepare the data for visualization (e.g., clean, pivot)\nRepresent the data visually with various graphical elements (e.g., color, sizes, and shape)\nPost-process the data (e.g., decide whether interactivity would add power, post process a static visualization )\n\nTools\n\nR/ggplot2, Shiny; Python/matplotlib, Streamlit; Tableau",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#what-is-not-covered",
     "href": "Lecture01.html#what-is-not-covered",
     "title": "Welcome Statistics 422",
     "section": "What is not covered",
-    "text": "What is not covered\n\nWhat is not there\n\nno instruction in JavaScript\nno instruction in HTML5\nno instruction in CSS\n\nIf any of you know a pro (someone paid to work with these regularly), I could arrange for a stipend if they want to come in as a guest speaker"
+    "text": "What is not covered\n\nWhat is not there\n\nno instruction in JavaScript\nno instruction in HTML5\nno instruction in CSS\n\nIf any of you know a pro (someone paid to work with these regularly), I could arrange for a stipend if they want to come in as a guest speaker",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#grading",
     "href": "Lecture01.html#grading",
     "title": "Welcome Statistics 422",
     "section": "Grading",
-    "text": "Grading\n\n30% Attending class weekly with in-class team activity\n20% 4 individual homework assignments\n5% Campuswire participation\n20% Web App: (individual) Find your data, Design a page, Code and Video\n25% Final Project: (individual) Find your own data, Report, Code and Video\nThe data for the Web App can be the same as the final project, but ideally a simple dataset like iris for the Web App and something more complex and more closely related to your thesis for your final project."
+    "text": "Grading\n\n30% Attending class weekly with in-class team activity\n20% 4 individual homework assignments\n5% Campuswire participation\n20% Web App: (individual) Find your data, Design a page, Code and Video\n25% Final Project: (individual) Find your own data, Report, Code and Video\nThe data for the Web App can be the same as the final project, but ideally a simple dataset like iris for the Web App and something more complex and more closely related to your thesis for your final project.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#group-activity-1-15-20-minutes",
     "href": "Lecture01.html#group-activity-1-15-20-minutes",
     "title": "Welcome Statistics 422",
     "section": "Group Activity 1 (15-20 minutes)",
-    "text": "Group Activity 1 (15-20 minutes)\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to get credit for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some graphs created by ggplot2.\nhttps://r-charts.com/ggplot2/ or more generally in R https://r-graph-gallery.com/index.html\nIdeally, I would like you to examine R graphics from one or both of these sites as a team and\nPlease choose the one plot from your group that you think is most memorable (can be good or not good), and have one team member share the graph on Campuswire and/or be prepared to tell us why your team chose it."
+    "text": "Group Activity 1 (15-20 minutes)\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to get credit for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some graphs created by ggplot2.\nhttps://r-charts.com/ggplot2/ or more generally in R https://r-graph-gallery.com/index.html\nIdeally, I would like you to examine R graphics from one or both of these sites as a team and\nPlease choose the one plot from your group that you think is most memorable (can be good or not good), and have one team member share the graph on Campuswire and/or be prepared to tell us why your team chose it.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#data-visualization",
     "href": "Lecture01.html#data-visualization",
     "title": "Welcome Statistics 422",
     "section": "Data visualization",
-    "text": "Data visualization\n\nUnderstanding and creating visual representations of data\nR is one of our tools and\nggplot2 is THE package"
+    "text": "Data visualization\n\nUnderstanding and creating visual representations of data\nR is one of our tools and\nggplot2 is THE package",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#section-1",
     "href": "Lecture01.html#section-1",
     "title": "Welcome Statistics 422",
     "section": "",
-    "text": "It is part of the Tidyverse in R\n\n\ngg means “Grammar of Graphics”\nThe Grammar of Graphics was written by Leland Wilkinson in 1999.\nWilkinson detailed a comprehensive framework to describe and build a wide range of statistical graphics by breaking down the elements of graphics into a unified system."
+    "text": "It is part of the Tidyverse in R\n\n\ngg means “Grammar of Graphics”\nThe Grammar of Graphics was written by Leland Wilkinson in 1999.\nWilkinson detailed a comprehensive framework to describe and build a wide range of statistical graphics by breaking down the elements of graphics into a unified system.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#grammar-of-graphics",
     "href": "Lecture01.html#grammar-of-graphics",
     "title": "Welcome Statistics 422",
     "section": "Grammar of Graphics",
-    "text": "Grammar of Graphics\n\n\n\nSource: https://www.stat20.org/"
+    "text": "Grammar of Graphics\n\n\n\nSource: https://www.stat20.org/",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#data",
     "href": "Lecture01.html#data",
     "title": "Welcome Statistics 422",
     "section": "Data",
-    "text": "Data\n\n\n\n\n\n\n\n\n\nIn GG, data is the foundation\n\nAll graphical representation decisions rest on top of it\n\nAll the decisions are data-driven\n\nResult: meaningful and accurate visual representation of data\n\nAND a wide variety of graphics"
+    "text": "Data\n\n\n\n\n\n\n\n\n\nIn GG, data is the foundation\n\nAll graphical representation decisions rest on top of it\n\nAll the decisions are data-driven\n\nResult: meaningful and accurate visual representation of data\n\nAND a wide variety of graphics",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#aesthetics-aesthetic-mappings",
     "href": "Lecture01.html#aesthetics-aesthetic-mappings",
     "title": "Welcome Statistics 422",
     "section": "Aesthetics (Aesthetic Mappings)",
-    "text": "Aesthetics (Aesthetic Mappings)\n\nThese are the rules\n\nThey map (connect) data variables to the visual properties of the graphical elements\n\nMost frequently - x, y, color, size, and shape\n\nThe connection of data to graphical elements allow us to see/interpret patterns, trends, and anomalies within the data"
+    "text": "Aesthetics (Aesthetic Mappings)\n\nThese are the rules\n\nThey map (connect) data variables to the visual properties of the graphical elements\n\nMost frequently - x, y, color, size, and shape\n\nThe connection of data to graphical elements allow us to see/interpret patterns, trends, and anomalies within the data",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#geometries-include",
     "href": "Lecture01.html#geometries-include",
     "title": "Welcome Statistics 422",
     "section": "Geometries include",
-    "text": "Geometries include\n\nPoints, typically used for individual values\nLines, connect points in some defined order (e.g., time, location)\nBars, typically used for categories (e.g., pizza types)\nPolygons, use to represent areas (maps)\nPaths, fatter lines, used to represent flows (Sankey)"
+    "text": "Geometries include\n\nPoints, typically used for individual values\nLines, connect points in some defined order (e.g., time, location)\nBars, typically used for categories (e.g., pizza types)\nPolygons, use to represent areas (maps)\nPaths, fatter lines, used to represent flows (Sankey)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#from-the-ggplot2-cheatsheet",
     "href": "Lecture01.html#from-the-ggplot2-cheatsheet",
     "title": "Welcome Statistics 422",
     "section": "from the ggplot2 cheatsheet",
-    "text": "from the ggplot2 cheatsheet"
+    "text": "from the ggplot2 cheatsheet",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#facets-and-layers",
     "href": "Lecture01.html#facets-and-layers",
     "title": "Welcome Statistics 422",
     "section": "Facets and Layers",
-    "text": "Facets and Layers\n\nConditioning the data\nSubsets are facets\nLayers combine multiple types of visualizations into a single graphic"
+    "text": "Facets and Layers\n\nConditioning the data\nSubsets are facets\nLayers combine multiple types of visualizations into a single graphic",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#statistics",
     "href": "Lecture01.html#statistics",
     "title": "Welcome Statistics 422",
     "section": "Statistics",
-    "text": "Statistics\n\nData can be summarized or modified prior to visualization\n\nAggregation (like sums or means),\nsmoothing\n\nCan clarify the underlying structure or relationships in data."
+    "text": "Statistics\n\nData can be summarized or modified prior to visualization\n\nAggregation (like sums or means),\nsmoothing\n\nCan clarify the underlying structure or relationships in data.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#coordinates-and-scales",
     "href": "Lecture01.html#coordinates-and-scales",
     "title": "Welcome Statistics 422",
     "section": "Coordinates and scales",
-    "text": "Coordinates and scales\n\nScaling (linear, logarithmic, etc.)\nCoordinate systems (Cartesian, polar, etc.).\nThey influence the position of data points (and the interpretation)."
+    "text": "Coordinates and scales\n\nScaling (linear, logarithmic, etc.)\nCoordinate systems (Cartesian, polar, etc.).\nThey influence the position of data points (and the interpretation).",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   },
   {
     "objectID": "Lecture01.html#themes",
     "href": "Lecture01.html#themes",
     "title": "Welcome Statistics 422",
     "section": "Themes",
-    "text": "Themes\n\nControl the overall “look” (styling) of the graphic\nfonts, colors\nlabeling, legends, captioning\nlayout etc."
+    "text": "Themes\n\nControl the overall “look” (styling) of the graphic\nfonts, colors\nlabeling, legends, captioning\nlayout etc.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
   }
 ]
