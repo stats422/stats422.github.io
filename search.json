@@ -263,7 +263,7 @@
     "href": "ggplot1.html#five-minute-ggplot",
     "title": "ggplot part 1",
     "section": "Five minute ggplot",
-    "text": "Five minute ggplot\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAT MINIMUM ggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y) as it relates to the features.\nThe “+” in ggplot separates “layers” of a graphic.\nThink of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is just about it. The rest of ggplot is about beautifying your graphic through additional options. Mapping the data to the aesthetic then is the most critical skill here.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Five minute ggplot\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAT MINIMUM ggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified. We will choose two numeric variables.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y) as it relates to the features.\nThe “+” in ggplot separates “layers” of a graphic.\nThink of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is about five minutes. The rest of ggplot is about beautifying your graphic through additional options. Mapping the data to the aesthetic then is the most critical skill here.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Activities",
       "Lecture 1 Activity 2"
@@ -318,7 +318,7 @@
     "href": "ggplot1.html#statistics",
     "title": "ggplot part 1",
     "section": "Statistics",
-    "text": "Statistics\nSome of the geoms automatically applie a statistical transformation to the data, we need to do little except call them:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nbut others require additional work on our part\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nreturn to geom_bar",
+    "text": "Statistics\nSome of the geoms automatically apply a statistical transformation to the data, we need to do little except call them:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nbut others require additional work on our part\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nreturn to geom_bar",
     "crumbs": [
       "Activities",
       "Lecture 1 Activity 2"
@@ -341,6 +341,17 @@
     "title": "ggplot part 1",
     "section": "Themes",
     "text": "Themes\nThe remaining functions of ggplot deal with appearance such as labels, legends, tick marks, background color etc. etc.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "ggplot1.html#team-challenge",
+    "href": "ggplot1.html#team-challenge",
+    "title": "ggplot part 1",
+    "section": "Team Challenge",
+    "text": "Team Challenge\nTeams - you can use penguins or choose your own data (and you don’t need to use this web app but you need to use ggplot).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nI’d like to see what you can do as teams in a short amount of time.",
     "crumbs": [
       "Activities",
       "Lecture 1 Activity 2"
