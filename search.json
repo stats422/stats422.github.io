@@ -578,7 +578,7 @@
     "href": "Lecture01.html#what-to-expect-1",
     "title": "Welcome Statistics 422",
     "section": "What to expect",
-    "text": "What to expect\nDeveloping the scaffolding needed for understanding and building on one’s existing data visualization skills.\n\nAspects\n\nTranslating data and its relationships visually for others.\n\nLearning to structure and organize data for effective visualization.\n\nLearning about the different types of visual representation and their purposes.\nUnderstanding of Graphical Perception/perceived visual information and some of the cognitive principles involved.\nLearning to generate static and interactive visualizations\nKnowing how to present your visualizations in different media (print, website, video)"
+    "text": "What to expect\nDeveloping the scaffolding needed for understanding and building on one’s existing data visualization skills.\n\nAspects\n\nTranslating data and the relationships within visually for others.\n\nLearning to structure and organize data for effective visualization.\n\nLearning about the different types of visual representation and their purposes.\nUnderstanding of Graphical Perception/perceived visual information and some of the cognitive principles involved.\nLearning to generate static and interactive visualizations\nKnowing how to present your visualizations in different media (print, website, video)"
   },
   {
     "objectID": "Lecture01.html#what-to-expect-2",
@@ -588,18 +588,25 @@
     "text": "What to expect\n\nProcess\n\nStart with an audience and an idea and find the data (not necessarily in that order)\nPrepare the data for visualization (e.g., clean, pivot)\nRepresent the data visually with various graphical elements (e.g., color, sizes, and shape)\nPost-process the data (e.g., decide whether interactivity would add power, post process a static visualization )\n\nTools\n\nR/ggplot2, Shiny; Python/matplotlib, Streamlit; Tableau"
   },
   {
-    "objectID": "Lecture01.html#what-to-expect-3",
-    "href": "Lecture01.html#what-to-expect-3",
+    "objectID": "Lecture01.html#what-is-not-covered",
+    "href": "Lecture01.html#what-is-not-covered",
     "title": "Welcome Statistics 422",
-    "section": "What to expect",
-    "text": "What to expect\n\nGrading\n\n30% Attending class weekly with in-class team activity\n20% 4 individual homework assignments\n5% Campuswire participation\n20% Web App: (individual) Find your data, Design a page, Code and Video\n25% Final Project: (individual) Find your own data, Report, Code and Video\n\nThe data for the Web App can be the same as the final project, but ideally a simple dataset like iris for the Web App and something more complex and more closely related to your thesis for your final project."
+    "section": "What is not covered",
+    "text": "What is not covered\n\nWhat is not there\n\nno instruction in JavaScript\nno instruction in HTML5\nno instruction in CSS\n\nIf any of you know a pro (someone paid to work with these regularly), I could arrange for a stipend if they want to come in as a guest speaker"
+  },
+  {
+    "objectID": "Lecture01.html#grading",
+    "href": "Lecture01.html#grading",
+    "title": "Welcome Statistics 422",
+    "section": "Grading",
+    "text": "Grading\n\n30% Attending class weekly with in-class team activity\n20% 4 individual homework assignments\n5% Campuswire participation\n20% Web App: (individual) Find your data, Design a page, Code and Video\n25% Final Project: (individual) Find your own data, Report, Code and Video\nThe data for the Web App can be the same as the final project, but ideally a simple dataset like iris for the Web App and something more complex and more closely related to your thesis for your final project."
   },
   {
     "objectID": "Lecture01.html#group-activity-1-15-20-minutes",
     "href": "Lecture01.html#group-activity-1-15-20-minutes",
     "title": "Welcome Statistics 422",
     "section": "Group Activity 1 (15-20 minutes)",
-    "text": "Group Activity 1 (15-20 minutes)\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to get credit for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some graphs created by ggplot2.\nhttps://r-charts.com/ggplot2/ or https://r-graph-gallery.com/ggplot2-package.html\nIdeally, I would like you to examine either or both of these sites as a team and\nPlease choose the one plot from your group that you think is most memorable (can be good or not good), and have one team member share the graph on Campuswire and be prepared to tell us why your team chose it."
+    "text": "Group Activity 1 (15-20 minutes)\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to get credit for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some graphs created by ggplot2.\nhttps://r-charts.com/ggplot2/ or more generally in R https://r-graph-gallery.com/index.html\nIdeally, I would like you to examine R graphics from one or both of these sites as a team and\nPlease choose the one plot from your group that you think is most memorable (can be good or not good), and have one team member share the graph on Campuswire and/or be prepared to tell us why your team chose it."
   },
   {
     "objectID": "Lecture01.html#data-visualization",
