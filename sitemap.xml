@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://stats422.github.io/Syllabus.html</loc>
-    <lastmod>2024-04-04T23:16:33.501Z</lastmod>
+    <loc>https://stats422.github.io/lectures/Lecture01.html</loc>
+    <lastmod>2024-04-04T23:19:55.068Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/Lecture02.html</loc>
-    <lastmod>2024-03-18T06:22:07.111Z</lastmod>
+    <loc>https://stats422.github.io/Syllabus.html</loc>
+    <lastmod>2024-04-05T16:33:12.075Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/about.html</loc>
@@ -21,23 +21,27 @@
     <lastmod>2024-04-04T19:05:04.110Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/ggplot1.html</loc>
+    <loc>https://stats422.github.io/activity/ggplot1.html</loc>
     <lastmod>2024-04-04T23:15:59.830Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/hw/hw-1.html</loc>
-    <lastmod>2024-03-18T06:44:47.125Z</lastmod>
+    <loc>https://stats422.github.io/activity/ikea.html</loc>
+    <lastmod>2024-04-06T16:42:44.171Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/hw/hw-2.html</loc>
     <lastmod>2024-03-16T22:21:37.119Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/RRefresher.html</loc>
+    <loc>https://stats422.github.io/hw/hw-1.html</loc>
+    <lastmod>2024-03-18T06:44:47.125Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats422.github.io/activity/RRefresher.html</loc>
     <lastmod>2024-03-08T20:45:45.716Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/ggplot2.html</loc>
+    <loc>https://stats422.github.io/activity/ggplot2.html</loc>
     <lastmod>2024-03-15T07:17:46.576Z</lastmod>
   </url>
   <url>
@@ -53,7 +57,7 @@
     <lastmod>2024-03-12T20:41:57.631Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/Lecture01.html</loc>
-    <lastmod>2024-04-04T23:19:55.068Z</lastmod>
+    <loc>https://stats422.github.io/lectures/Lecture02.html</loc>
+    <lastmod>2024-03-18T06:22:07.111Z</lastmod>
   </url>
 </urlset>
