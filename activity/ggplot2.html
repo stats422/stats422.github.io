@@ -227,7 +227,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggthemes\")\n\nlibrary(readr)\nlibrary(knitr)\nlibrary(tidyverse)\nlibrary(ggthemes)","id":1,"options":{"comment":"","output":"true","classes":"","context":"interactive","dpi":72,"results":"markup","message":"false","warning":"false","out-height":"","out-width":"700px","label":"unnamed-chunk-1","fig-cap":"","fig-width":7,"fig-height":5,"autorun":"false"}}];
+globalThis.qwebrCellDetails = [{"id":1,"options":{"autorun":"false","out-width":"700px","comment":"","context":"interactive","message":"false","output":"true","results":"markup","classes":"","warning":"false","label":"unnamed-chunk-1","fig-cap":"","fig-height":5,"dpi":72,"fig-width":7,"out-height":""},"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggthemes\")\n\nlibrary(readr)\nlibrary(knitr)\nlibrary(tidyverse)\nlibrary(ggthemes)"},{"id":2,"options":{"autorun":"false","out-width":"700px","comment":"","context":"interactive","message":"true","output":"true","results":"markup","classes":"","warning":"true","label":"unnamed-chunk-2","fig-cap":"","fig-height":5,"dpi":72,"fig-width":7,"out-height":""},"code":"husbands_wives <- read.csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/husbands_wives.csv\") |> as_tibble()"},{"id":3,"options":{"autorun":"false","out-width":"700px","comment":"","context":"interactive","message":"true","output":"true","results":"markup","classes":"","warning":"true","label":"unnamed-chunk-3","fig-cap":"","fig-height":5,"dpi":72,"fig-width":7,"out-height":""},"code":"## feel free to choose a different summary function\noptions(width = 140)\ncor(husbands_wives, use = \"pairwise.complete.obs\") "}];
 
 </script><script type="module">
 // Declare startupMessageQWebR globally
@@ -1015,6 +1015,12 @@ globalThis.qwebrExecuteCode = async function (
  <span class="menu-text">Lecture 01</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/Lecture02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 02</span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1106,7 +1112,9 @@ globalThis.qwebrExecuteCode = async function (
    
   <ul>
 <li><a href="#loading-libraries" id="toc-loading-libraries" class="nav-link active" data-scroll-target="#loading-libraries">Loading Libraries</a></li>
-  <li><a href="#geoms-in-the-details" id="toc-geoms-in-the-details" class="nav-link" data-scroll-target="#geoms-in-the-details">geoms in the details</a></li>
+  <li><a href="#the-details-are-in-the-aes-mappings" id="toc-the-details-are-in-the-aes-mappings" class="nav-link" data-scroll-target="#the-details-are-in-the-aes-mappings">the details are in the aes() mappings</a></li>
+  <li><a href="#example-read-the-data" id="toc-example-read-the-data" class="nav-link" data-scroll-target="#example-read-the-data">Example: Read the data</a></li>
+  <li><a href="#basic-examination" id="toc-basic-examination" class="nav-link" data-scroll-target="#basic-examination">Basic examination</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -1304,7 +1312,13 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header><section id="loading-libraries" class="level2"><h2 class="anchored" data-anchor-id="loading-libraries">Loading Libraries</h2>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="geoms-in-the-details" class="level2"><h2 class="anchored" data-anchor-id="geoms-in-the-details">geoms in the details</h2>
+</section><section id="the-details-are-in-the-aes-mappings" class="level2"><h2 class="anchored" data-anchor-id="the-details-are-in-the-aes-mappings">the details are in the aes() mappings</h2>
+</section><section id="example-read-the-data" class="level2"><h2 class="anchored" data-anchor-id="example-read-the-data">Example: Read the data</h2>
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="basic-examination" class="level2"><h2 class="anchored" data-anchor-id="basic-examination">Basic examination</h2>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
