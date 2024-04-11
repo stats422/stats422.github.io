@@ -227,7 +227,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"autorun":"false","out-width":"700px","comment":"","context":"interactive","message":"false","output":"true","results":"markup","classes":"","warning":"false","label":"unnamed-chunk-1","fig-cap":"","fig-height":5,"dpi":72,"fig-width":7,"out-height":""},"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggthemes\")\n\nlibrary(readr)\nlibrary(knitr)\nlibrary(tidyverse)\nlibrary(ggthemes)"},{"id":2,"options":{"autorun":"false","out-width":"700px","comment":"","context":"interactive","message":"true","output":"true","results":"markup","classes":"","warning":"true","label":"unnamed-chunk-2","fig-cap":"","fig-height":5,"dpi":72,"fig-width":7,"out-height":""},"code":"husbands_wives <- read.csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/husbands_wives.csv\") |> as_tibble()"},{"id":3,"options":{"autorun":"false","out-width":"700px","comment":"","context":"interactive","message":"true","output":"true","results":"markup","classes":"","warning":"true","label":"unnamed-chunk-3","fig-cap":"","fig-height":5,"dpi":72,"fig-width":7,"out-height":""},"code":"## feel free to choose a different summary function\noptions(width = 140)\ncor(husbands_wives, use = \"pairwise.complete.obs\") "}];
+globalThis.qwebrCellDetails = [{"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggthemes\")\nwebr::install(\"tidytuesdayR\")\n\noptions(dplyr.width = Inf)\n\nlibrary(readr)\nlibrary(knitr)\nlibrary(tidyverse)\nlibrary(ggthemes)\nlibrary(tidytuesdayR)","id":1,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"false","output":"true","comment":"","message":"false","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-1","autorun":"false"}},{"code":"ggplot(data = diamonds) +\n  geom_point(aes(x = carat, y = price),\n             alpha = 0.5,\n             color = \"blue\",\n             fill = \"gold\",\n             shape = 21)","id":2,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-2","autorun":"false"}},{"code":"options(width = 140)\n\nhusbands_wives <- read.csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/husbands_wives.csv\") |> as_tibble()\n\ntt_output = tt_load(\"2020-11-03\")\nikea = tt_output$ikea\n\nikea <- read.csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/ikea.csv\") |> as_tibble()\n\n\names <- read.csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/ames_small.csv\") |> as_tibble()","id":3,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-3","autorun":"false"}},{"code":"head(husbands_wives)","id":4,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-4","autorun":"false"}},{"code":"head(ikea)","id":5,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-5","autorun":"false"}},{"code":"head(ames)","id":6,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-6","autorun":"false"}},{"code":"## for a mixed dataframe\nnum_ikea <- ikea[unlist(lapply(ikea, is.numeric))]\ncor(num_ikea, use = \"pairwise.complete.obs\") ","id":7,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-7","autorun":"false"}},{"code":"summary(num_ikea)","id":8,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-8","autorun":"false"}},{"code":"# can we make this prettier or more useful?\nggplot(ikea) +\n  geom_boxplot(aes(x = category, y = price)) ","id":9,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-9","autorun":"false"}},{"code":"ikea %>% \n  group_by(other_colors) %>%\n  summarise(avg_price = mean(price, na.rm = TRUE)) %>%\n  print(n = Inf)","id":10,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-10","autorun":"false"}},{"code":"ikea %>% \n  group_by(category, other_colors) %>%\n  summarise(avg_price = mean(price, na.rm = TRUE)) %>%\n  arrange(other_colors, -avg_price) %>% \n  print(n = Inf)","id":11,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-11","autorun":"false"}},{"code":"options(width = 140)\ncor(husbands_wives, use = \"pairwise.complete.obs\") ","id":12,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-12","autorun":"false"}},{"code":"## Then try a visualization of the relationships\n\n ","id":13,"options":{"fig-cap":"","fig-height":5,"context":"interactive","results":"markup","out-height":"","classes":"","warning":"true","output":"true","comment":"","message":"true","out-width":"700px","fig-width":7,"dpi":72,"label":"unnamed-chunk-13","autorun":"false"}}];
 
 </script><script type="module">
 // Declare startupMessageQWebR globally
@@ -940,6 +940,7 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <meta property="og:title" content="Statistics 422 - ggplot part 2">
+<meta property="og:description" content="Homepage for STATS 422 - Data Visualization UCLA MASDS, Spring 2024.">
 <meta property="og:site_name" content="Statistics 422">
 </head>
 <body class="nav-sidebar docked">
@@ -949,9 +950,7 @@ globalThis.qwebrExecuteCode = async function (
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Statistics 422
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activity/ggplot1.html">Activities</a></li><li class="breadcrumb-item"><a href="../activity/ggplot2.html">Lecture 2 Activity</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -1025,17 +1024,23 @@ globalThis.qwebrExecuteCode = async function (
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Activities</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../activity/ggplot1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1 Activity 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activity/ggplot2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lecture 2 Activity</span></a>
   </div>
 </li>
       </ul>
@@ -1113,8 +1118,24 @@ globalThis.qwebrExecuteCode = async function (
   <ul>
 <li><a href="#loading-libraries" id="toc-loading-libraries" class="nav-link active" data-scroll-target="#loading-libraries">Loading Libraries</a></li>
   <li><a href="#the-details-are-in-the-aes-mappings" id="toc-the-details-are-in-the-aes-mappings" class="nav-link" data-scroll-target="#the-details-are-in-the-aes-mappings">the details are in the aes() mappings</a></li>
-  <li><a href="#example-read-the-data" id="toc-example-read-the-data" class="nav-link" data-scroll-target="#example-read-the-data">Example: Read the data</a></li>
+  <li><a href="#example-read-some-data" id="toc-example-read-some-data" class="nav-link" data-scroll-target="#example-read-some-data">Example: Read some data</a></li>
+  <li><a href="#discover-their-content" id="toc-discover-their-content" class="nav-link" data-scroll-target="#discover-their-content">Discover their content</a></li>
   <li><a href="#basic-examination" id="toc-basic-examination" class="nav-link" data-scroll-target="#basic-examination">Basic examination</a></li>
+  <li>
+<a href="#eda" id="toc-eda" class="nav-link" data-scroll-target="#eda">EDA</a>
+  <ul class="collapse">
+<li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a></li>
+  <li><a href="#other-things-you-can-do" id="toc-other-things-you-can-do" class="nav-link" data-scroll-target="#other-things-you-can-do">Other things you can do</a></li>
+  <li><a href="#check-distributions" id="toc-check-distributions" class="nav-link" data-scroll-target="#check-distributions">check distributions</a></li>
+  <li><a href="#exploratory-visualization" id="toc-exploratory-visualization" class="nav-link" data-scroll-target="#exploratory-visualization">Exploratory Visualization</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a>
+  <ul class="collapse">
+<li><a href="#correlation-analysis" id="toc-correlation-analysis" class="nav-link" data-scroll-target="#correlation-analysis">Correlation Analysis</a></li>
+  </ul>
+</li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -1288,7 +1309,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
   };
   
 }
-</script><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+</script><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activity/ggplot1.html">Activities</a></li><li class="breadcrumb-item"><a href="../activity/ggplot2.html">Lecture 2 Activity</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">ggplot part 2</h1>
 </div>
 
@@ -1313,15 +1334,73 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section><section id="the-details-are-in-the-aes-mappings" class="level2"><h2 class="anchored" data-anchor-id="the-details-are-in-the-aes-mappings">the details are in the aes() mappings</h2>
-</section><section id="example-read-the-data" class="level2"><h2 class="anchored" data-anchor-id="example-read-the-data">Example: Read the data</h2>
+<ul>
+<li>the aes() values commonly seen are: color, fill, shape, group, linetype</li>
+<li>typically only x and y are required (sometimes just x)</li>
+<li><a href="https://ggplot2.tidyverse.org/reference/aes.html">https://ggplot2.tidyverse.org/reference/aes.html</a></li>
+<li>and there are countless options BUT the individual geoms may only understand some of them:</li>
+</ul>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="basic-examination" class="level2"><h2 class="anchored" data-anchor-id="basic-examination">Basic examination</h2>
+<p>if we were to re-run it using geom_smooth and leaving everything else the same, we would see an error (but it would create our plot)</p>
+</section><section id="example-read-some-data" class="level2"><h2 class="anchored" data-anchor-id="example-read-some-data">Example: Read some data</h2>
+<p>Teams, you decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some</p>
 <div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="discover-their-content" class="level2"><h2 class="anchored" data-anchor-id="discover-their-content">Discover their content</h2>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="basic-examination" class="level2"><h2 class="anchored" data-anchor-id="basic-examination">Basic examination</h2>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="eda" class="level2"><h2 class="anchored" data-anchor-id="eda">EDA</h2>
+<p>EDA (exploratory data analysis) is very visual and your excellent graphical skills will be useful.</p>
+<section id="data-cleaning" class="level3"><h3 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h3>
+<p>There is none of that in our class (we will just delete), but missing values need a decision in your research (e.g., imputation, deletion).</p>
+<p>I will misuse summary() it’s handy (no need to load libraries)</p>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>and it reveals the NAs and some heavily rounded statistics. If you need to use a mean else, do not rely on summary() this is for a quick look at the basic statistics only.</p>
+</section><section id="other-things-you-can-do" class="level3"><h3 class="anchored" data-anchor-id="other-things-you-can-do">Other things you can do</h3>
+<ul>
+<li>Be sure each variable has been read as its correct type (numeric, non-numeric)</li>
+<li>Always check for duplicates - they can mess up any analysis</li>
+<li>Identify possible outliers in the data and decide what to do with them.</li>
+</ul>
+<div id="qwebr-insertion-location-9"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="check-distributions" class="level3"><h3 class="anchored" data-anchor-id="check-distributions">check distributions</h3>
+<ul>
+<li>Check the distribution and skewness of your data<br>
+</li>
+<li>Histograms maybe boxplots<br>
+</li>
+<li>and use group_by() in dplyr if your data has categorical information or numeric information with a limited number of unique values, group_by() is an important tool - example:</li>
+</ul>
+<div id="qwebr-insertion-location-10"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Reorganizing information with arrange() in dplryr may offer additional insight that is more difficult to recognize it its natural or alphabetically ordered format:</p>
+<div id="qwebr-insertion-location-11"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="exploratory-visualization" class="level3"><h3 class="anchored" data-anchor-id="exploratory-visualization">Exploratory Visualization</h3>
+<ul>
+<li><p>Univariate – so bar chart, histogram - here you are trying to understand the distribution.</p></li>
+<li><p>Bivariate or Multivariate – the scatter plot is the most basic but a boxplot, a heatmap, contour maps etc.</p></li>
+</ul></section></section><section id="example" class="level2"><h2 class="anchored" data-anchor-id="example">Example</h2>
+<section id="correlation-analysis" class="level3"><h3 class="anchored" data-anchor-id="correlation-analysis">Correlation Analysis</h3>
+<p>A correlation would be generated very early in the process of using data for research</p>
+<div id="qwebr-insertion-location-12"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>We would then move to a visualization of the relationship</p>
+<div id="qwebr-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");

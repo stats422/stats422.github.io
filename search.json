@@ -727,35 +727,88 @@
     "href": "activity/ggplot2.html",
     "title": "ggplot part 2",
     "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
   },
   {
     "objectID": "activity/ggplot2.html#loading-libraries",
     "href": "activity/ggplot2.html#loading-libraries",
     "title": "ggplot part 2",
     "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
   },
   {
     "objectID": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
     "href": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
     "title": "ggplot part 2",
     "section": "the details are in the aes() mappings",
-    "text": "the details are in the aes() mappings"
+    "text": "the details are in the aes() mappings\n\nthe aes() values commonly seen are: color, fill, shape, group, linetype\ntypically only x and y are required (sometimes just x)\nhttps://ggplot2.tidyverse.org/reference/aes.html\nand there are countless options BUT the individual geoms may only understand some of them:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nif we were to re-run it using geom_smooth and leaving everything else the same, we would see an error (but it would create our plot)",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
   },
   {
-    "objectID": "activity/ggplot2.html#example-read-the-data",
-    "href": "activity/ggplot2.html#example-read-the-data",
+    "objectID": "activity/ggplot2.html#example-read-some-data",
+    "href": "activity/ggplot2.html#example-read-some-data",
     "title": "ggplot part 2",
-    "section": "Example: Read the data",
-    "text": "Example: Read the data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "section": "Example: Read some data",
+    "text": "Example: Read some data\nTeams, you decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#discover-their-content",
+    "href": "activity/ggplot2.html#discover-their-content",
+    "title": "ggplot part 2",
+    "section": "Discover their content",
+    "text": "Discover their content\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
   },
   {
     "objectID": "activity/ggplot2.html#basic-examination",
     "href": "activity/ggplot2.html#basic-examination",
     "title": "ggplot part 2",
     "section": "Basic examination",
-    "text": "Basic examination\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Basic examination\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#eda",
+    "href": "activity/ggplot2.html#eda",
+    "title": "ggplot part 2",
+    "section": "EDA",
+    "text": "EDA\nEDA (exploratory data analysis) is very visual and your excellent graphical skills will be useful.\nData Cleaning\nThere is none of that in our class (we will just delete), but missing values need a decision in your research (e.g., imputation, deletion).\nI will misuse summary() it’s handy (no need to load libraries)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand it reveals the NAs and some heavily rounded statistics. If you need to use a mean else, do not rely on summary() this is for a quick look at the basic statistics only.\nOther things you can do\n\nBe sure each variable has been read as its correct type (numeric, non-numeric)\nAlways check for duplicates - they can mess up any analysis\nIdentify possible outliers in the data and decide what to do with them.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ncheck distributions\n\nCheck the distribution and skewness of your data\n\nHistograms maybe boxplots\n\nand use group_by() in dplyr if your data has categorical information or numeric information with a limited number of unique values, group_by() is an important tool - example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nReorganizing information with arrange() in dplryr may offer additional insight that is more difficult to recognize it its natural or alphabetically ordered format:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExploratory Visualization\n\nUnivariate – so bar chart, histogram - here you are trying to understand the distribution.\nBivariate or Multivariate – the scatter plot is the most basic but a boxplot, a heatmap, contour maps etc.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#example",
+    "href": "activity/ggplot2.html#example",
+    "title": "ggplot part 2",
+    "section": "Example",
+    "text": "Example\nCorrelation Analysis\nA correlation would be generated very early in the process of using data for research\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe would then move to a visualization of the relationship\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
   },
   {
     "objectID": "projects/project-2.html",
@@ -978,7 +1031,7 @@
     "href": "lectures/Lecture02.html#section-15",
     "title": "Lecture 02",
     "section": "",
-    "text": "Discrete & Continuous\n\nColflipped & orderedNotes\n\n\n\n\n\n\n\n\n\n\n\nList of 136\n $ line                            :List of 6\n  ..$ colour       : chr \"black\"\n  ..$ linewidth    : num 0.5\n  ..$ linetype     : num 1\n  ..$ lineend      : chr \"butt\"\n  ..$ arrow        : logi FALSE\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_line\" \"element\"\n $ rect                            :List of 5\n  ..$ fill         : chr \"white\"\n  ..$ colour       : chr \"black\"\n  ..$ linewidth    : num 0.5\n  ..$ linetype     : num 1\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_rect\" \"element\"\n $ text                            :List of 11\n  ..$ family       : chr \"\"\n  ..$ face         : chr \"plain\"\n  ..$ colour       : chr \"black\"\n  ..$ size         : num 11\n  ..$ hjust        : num 0.5\n  ..$ vjust        : num 0.5\n  ..$ angle        : num 0\n  ..$ lineheight   : num 0.9\n  ..$ margin       : 'margin' num [1:4] 0points 0points 0points 0points\n  .. ..- attr(*, \"unit\")= int 8\n  ..$ debug        : logi FALSE\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ title                           : NULL\n $ aspect.ratio                    : NULL\n $ axis.title                      : NULL\n $ axis.title.x                    :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : NULL\n  ..$ size         : NULL\n  ..$ hjust        : NULL\n  ..$ vjust        : num 1\n  ..$ angle        : NULL\n  ..$ lineheight   : NULL\n  ..$ margin       : 'margin' num [1:4] 2.75points 0points 0points 0points\n  .. ..- attr(*, \"unit\")= int 8\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ axis.title.x.top                :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : NULL\n  ..$ size         : NULL\n  ..$ hjust        : NULL\n  ..$ vjust        : num 0\n  ..$ angle        : NULL\n  ..$ lineheight   : NULL\n  ..$ margin       : 'margin' num [1:4] 0points 0points 2.75points 0points\n  .. ..- attr(*, \"unit\")= int 8\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ axis.title.x.bottom             : NULL\n $ axis.title.y                    :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : NULL\n  ..$ size         : NULL\n  ..$ hjust        : NULL\n  ..$ vjust        : num 1\n  ..$ angle        : num 90\n  ..$ lineheight   : NULL\n  ..$ margin       : 'margin' num [1:4] 0points 2.75points 0points 0points\n  .. ..- attr(*, \"unit\")= int 8\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ axis.title.y.left               : NULL\n $ axis.title.y.right              :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : NULL\n  ..$ size         : NULL\n  ..$ hjust        : NULL\n  ..$ vjust        : num 1\n  ..$ angle        : num -90\n  ..$ lineheight   : NULL\n  ..$ margin       : 'margin' num [1:4] 0points 0points 0points 2.75points\n  .. ..- attr(*, \"unit\")= int 8\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ axis.text                       :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : chr \"grey30\"\n  ..$ size         : 'rel' num 0.8\n  ..$ hjust        : NULL\n  ..$ vjust        : NULL\n  ..$ angle        : NULL\n  ..$ lineheight   : NULL\n  ..$ margin       : NULL\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ axis.text.x                     :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : NULL\n  ..$ size         : num 3\n  ..$ hjust        : NULL\n  ..$ vjust        : num 1\n  ..$ angle        : NULL\n  ..$ lineheight   : NULL\n  ..$ margin       : 'margin' num [1:4] 2.2points 0points 0points 0points\n  .. ..- attr(*, \"unit\")= int 8\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi FALSE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ axis.text.x.top                 :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : NULL\n  ..$ size         : NULL\n  ..$ hjust        : NULL\n  ..$ vjust        : num 0\n  ..$ angle        : NULL\n  ..$ lineheight   : NULL\n  ..$ margin       : 'margin' num [1:4] 0points 0points 2.2points 0points\n  .. ..- attr(*, \"unit\")= int 8\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ axis.text.x.bottom              : NULL\n $ axis.text.y                     :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : NULL\n  ..$ size         : NULL\n  ..$ hjust        : num 1\n  ..$ vjust        : NULL\n  ..$ angle        : NULL\n  ..$ lineheight   : NULL\n  ..$ margin       : 'margin' num [1:4] 0points 2.2points 0points 0points\n  .. ..- attr(*, \"unit\")= int 8\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ axis.text.y.left                : NULL\n $ axis.text.y.right               :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : NULL\n  ..$ size         : NULL\n  ..$ hjust        : num 0\n  ..$ vjust        : NULL\n  ..$ angle        : NULL\n  ..$ lineheight   : NULL\n  ..$ margin       : 'margin' num [1:4] 0points 0points 0points 2.2points\n  .. ..- attr(*, \"unit\")= int 8\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ axis.text.theta                 : NULL\n $ axis.text.r                     :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : NULL\n  ..$ size         : NULL\n  ..$ hjust        : num 0.5\n  ..$ vjust        : NULL\n  ..$ angle        : NULL\n  ..$ lineheight   : NULL\n  ..$ margin       : 'margin' num [1:4] 0points 2.2points 0points 2.2points\n  .. ..- attr(*, \"unit\")= int 8\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ axis.ticks                      :List of 6\n  ..$ colour       : chr \"grey20\"\n  ..$ linewidth    : NULL\n  ..$ linetype     : NULL\n  ..$ lineend      : NULL\n  ..$ arrow        : logi FALSE\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_line\" \"element\"\n $ axis.ticks.x                    : NULL\n $ axis.ticks.x.top                : NULL\n $ axis.ticks.x.bottom             : NULL\n $ axis.ticks.y                    : NULL\n $ axis.ticks.y.left               : NULL\n $ axis.ticks.y.right              : NULL\n $ axis.ticks.theta                : NULL\n $ axis.ticks.r                    : NULL\n $ axis.minor.ticks.x.top          : NULL\n $ axis.minor.ticks.x.bottom       : NULL\n $ axis.minor.ticks.y.left         : NULL\n $ axis.minor.ticks.y.right        : NULL\n $ axis.minor.ticks.theta          : NULL\n $ axis.minor.ticks.r              : NULL\n $ axis.ticks.length               : 'simpleUnit' num 2.75points\n  ..- attr(*, \"unit\")= int 8\n $ axis.ticks.length.x             : NULL\n $ axis.ticks.length.x.top         : NULL\n $ axis.ticks.length.x.bottom      : NULL\n $ axis.ticks.length.y             : NULL\n $ axis.ticks.length.y.left        : NULL\n $ axis.ticks.length.y.right       : NULL\n $ axis.ticks.length.theta         : NULL\n $ axis.ticks.length.r             : NULL\n $ axis.minor.ticks.length         : 'rel' num 0.75\n $ axis.minor.ticks.length.x       : NULL\n $ axis.minor.ticks.length.x.top   : NULL\n $ axis.minor.ticks.length.x.bottom: NULL\n $ axis.minor.ticks.length.y       : NULL\n $ axis.minor.ticks.length.y.left  : NULL\n $ axis.minor.ticks.length.y.right : NULL\n $ axis.minor.ticks.length.theta   : NULL\n $ axis.minor.ticks.length.r       : NULL\n $ axis.line                       :List of 6\n  ..$ colour       : chr \"black\"\n  ..$ linewidth    : 'rel' num 1\n  ..$ linetype     : NULL\n  ..$ lineend      : NULL\n  ..$ arrow        : logi FALSE\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_line\" \"element\"\n $ axis.line.x                     : NULL\n $ axis.line.x.top                 : NULL\n $ axis.line.x.bottom              : NULL\n $ axis.line.y                     : NULL\n $ axis.line.y.left                : NULL\n $ axis.line.y.right               : NULL\n $ axis.line.theta                 : NULL\n $ axis.line.r                     : NULL\n $ legend.background               :List of 5\n  ..$ fill         : NULL\n  ..$ colour       : logi NA\n  ..$ linewidth    : NULL\n  ..$ linetype     : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_rect\" \"element\"\n $ legend.margin                   : 'margin' num [1:4] 5.5points 5.5points 5.5points 5.5points\n  ..- attr(*, \"unit\")= int 8\n $ legend.spacing                  : 'simpleUnit' num 11points\n  ..- attr(*, \"unit\")= int 8\n $ legend.spacing.x                : NULL\n $ legend.spacing.y                : NULL\n $ legend.key                      : NULL\n $ legend.key.size                 : 'simpleUnit' num 1.2lines\n  ..- attr(*, \"unit\")= int 3\n $ legend.key.height               : NULL\n $ legend.key.width                : NULL\n $ legend.key.spacing              : 'simpleUnit' num 5.5points\n  ..- attr(*, \"unit\")= int 8\n $ legend.key.spacing.x            : NULL\n $ legend.key.spacing.y            : NULL\n $ legend.frame                    : NULL\n $ legend.ticks                    : NULL\n $ legend.ticks.length             : 'rel' num 0.2\n $ legend.axis.line                : NULL\n $ legend.text                     :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : NULL\n  ..$ size         : 'rel' num 0.8\n  ..$ hjust        : NULL\n  ..$ vjust        : NULL\n  ..$ angle        : NULL\n  ..$ lineheight   : NULL\n  ..$ margin       : NULL\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ legend.text.position            : NULL\n $ legend.title                    :List of 11\n  ..$ family       : NULL\n  ..$ face         : NULL\n  ..$ colour       : NULL\n  ..$ size         : NULL\n  ..$ hjust        : num 0\n  ..$ vjust        : NULL\n  ..$ angle        : NULL\n  ..$ lineheight   : NULL\n  ..$ margin       : NULL\n  ..$ debug        : NULL\n  ..$ inherit.blank: logi TRUE\n  ..- attr(*, \"class\")= chr [1:2] \"element_text\" \"element\"\n $ legend.title.position           : NULL\n $ legend.position                 : chr \"none\"\n $ legend.position.inside          : NULL\n $ legend.direction                : NULL\n $ legend.byrow                    : NULL\n $ legend.justification            : chr \"center\"\n $ legend.justification.top        : NULL\n $ legend.justification.bottom     : NULL\n $ legend.justification.left       : NULL\n $ legend.justification.right      : NULL\n $ legend.justification.inside     : NULL\n $ legend.location                 : NULL\n $ legend.box                      : NULL\n $ legend.box.just                 : NULL\n $ legend.box.margin               : 'margin' num [1:4] 0cm 0cm 0cm 0cm\n  ..- attr(*, \"unit\")= int 1\n $ legend.box.background           : list()\n  ..- attr(*, \"class\")= chr [1:2] \"element_blank\" \"element\"\n $ legend.box.spacing              : 'simpleUnit' num 11points\n  ..- attr(*, \"unit\")= int 8\n  [list output truncated]\n - attr(*, \"class\")= chr [1:2] \"theme\" \"gg\"\n - attr(*, \"complete\")= logi TRUE\n - attr(*, \"validate\")= logi TRUE\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngeom_col requires x and y values. \n\nThe heights of the bars represent __values__ \nin the data\n\nThe trick to ordering is to utilize factors",
+    "text": "Discrete & Continuous\n\nColflipped & orderedNotes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngeom_col requires x and y values. \n\nThe heights of the bars represent __values__ \nin the data\n\nThe trick to ordering is to utilize factors",
     "crumbs": [
       "Lectures",
       "Lecture 02"
