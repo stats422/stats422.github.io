@@ -4,18 +4,18 @@
     "href": "lectures/Lecture02Rcode.html",
     "title": "Lecture 2 R Code",
     "section": "",
-    "text": "#| label: setup #| message: false #| echo: true # load packages ## ————————————————–\nlibrary(tidyverse)\nlibrary(readr)\nlibrary(viridis)\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.align = \"center\", # center align figures\n  fig.asp = 0.618,      # the golden ratio\n  fig.retina = 3,       # dpi multiplier for displaying HTML output on retina\n  fig.height = 4,        # 4 inches\n  dpi = 200             # higher is crisper\n)",
+    "text": "library(tidyverse)\nlibrary(readr)\nlibrary(viridis)\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.align = \"center\", # center align figures\n  fig.asp = 0.618,      # the golden ratio\n  fig.retina = 3,       # dpi multiplier for displaying HTML output on retina\n  fig.height = 4,        # 4 inches\n  dpi = 200             # higher is crisper\n)",
     "crumbs": [
       "Lectures",
       "Lecture 02 R Code"
     ]
   },
   {
-    "objectID": "lectures/Lecture02Rcode.html#section",
-    "href": "lectures/Lecture02Rcode.html#section",
+    "objectID": "lectures/Lecture02Rcode.html#setup",
+    "href": "lectures/Lecture02Rcode.html#setup",
     "title": "Lecture 2 R Code",
     "section": "",
-    "text": "#| label: setup #| message: false #| echo: true # load packages ## ————————————————–\nlibrary(tidyverse)\nlibrary(readr)\nlibrary(viridis)\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.align = \"center\", # center align figures\n  fig.asp = 0.618,      # the golden ratio\n  fig.retina = 3,       # dpi multiplier for displaying HTML output on retina\n  fig.height = 4,        # 4 inches\n  dpi = 200             # higher is crisper\n)",
+    "text": "library(tidyverse)\nlibrary(readr)\nlibrary(viridis)\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.align = \"center\", # center align figures\n  fig.asp = 0.618,      # the golden ratio\n  fig.retina = 3,       # dpi multiplier for displaying HTML output on retina\n  fig.height = 4,        # 4 inches\n  dpi = 200             # higher is crisper\n)",
     "crumbs": [
       "Lectures",
       "Lecture 02 R Code"
@@ -26,18 +26,7 @@
     "href": "lectures/Lecture02Rcode.html#one-continuous-variable",
     "title": "Lecture 2 R Code",
     "section": "One Continuous variable",
-    "text": "One Continuous variable",
-    "crumbs": [
-      "Lectures",
-      "Lecture 02 R Code"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture02Rcode.html#section-1",
-    "href": "lectures/Lecture02Rcode.html#section-1",
-    "title": "Lecture 2 R Code",
-    "section": "————————————————–",
-    "text": "————————————————–\n#| message: false #| fig-width: 4.25 ## ————————————————–\nmovies &lt;- read_csv(\"movies.csv\") \nmovies &lt;- movies %&gt;% filter(budget &gt; 100000000)\n\nggplot(data = movies, aes(x = gross)) +\n  geom_area(stat = \"bin\",\n            fill = \"skyblue\", \n            alpha = 0.5, \n            color = \"blue\") +  # Area under the curve\n  labs(title = \"Gross receipts\",\n       x = \"Gross receipts\") +\n  theme_classic()\n\n## --------------------------------------------------\n#| fig-width: 4.25\nggplot(data = movies, aes(x = gross, fill = rating)) +\n  geom_area(stat = \"bin\",\n            alpha = 0.5) +  \n  labs(title = \"Gross receipts by rating\",\n       x = \"Gross receipts\") +\n  theme_classic()\n\n\n## --------------------------------------------------\n#| fig-width: 4.25\nggplot(data = movies) +\n  geom_density(aes(x = year, color = rating)) +\n  labs(title = \"Movies with $100mil+ budgets\") +\n  xlab(\"Year\") + \n  theme_classic()\n\n\n\n## --------------------------------------------------\n#| fig-width: 4\noptions(scipen = 9999999)\nmovies_a &lt;- movies %&gt;% filter(genre == \"Animation\")\nggplot(data = movies_a) +\n  geom_dotplot(aes(x = budget, fill = rating)) +\n  labs(title = \"Animation Films\") +\n  xlab(\"Budget\") + \n  theme_classic()\n\n\n## --------------------------------------------------\n#| fig-width: 4\nggplot(data = movies_a) +\n  geom_dotplot(aes(x = budget, fill = rating),\n               position = \"jitter\",\n               binwidth = 5000000) +\n  labs(title = \"Animation Films\") +\n  xlab(\"Budget\") + \n  theme_classic()\n\n\n## --------------------------------------------------\n#| fig-width: 4.25\n#| message: false\n#| warning: false\nggplot(movies, aes(x = budget, color = rating)) +\n  geom_freqpoly(binwidth = 7000000) +\n  labs(title = \"Frequency Polygon\",\n       x = \"Scores\",\n       y = \"Frequency\") +\n  theme_minimal()\n\n\n## --------------------------------------------------\n#| fig-width: 4.2\n#| message: false\n#| warning: false\nmovies &lt;- read_csv(\"movies.csv\") \nggplot(movies, aes(x = score)) +\n  geom_histogram(color = \"blue\", fill = \"gold\") +\n  labs(title = \"Histogram\",\n       x = \"Scores\",\n       y = \"Frequency\") +\n  theme_minimal()",
+    "text": "One Continuous variable\n\n## --------------------------------------------------\n#| message: false\n#| fig-width: 4.25\n## --------------------------------------------------\n\n\nmovies &lt;- read_csv(\"movies.csv\") \nmovies &lt;- movies %&gt;% filter(budget &gt; 100000000)\n\nggplot(data = movies, aes(x = gross)) +\n  geom_area(stat = \"bin\",\n            fill = \"skyblue\", \n            alpha = 0.5, \n            color = \"blue\") +  # Area under the curve\n  labs(title = \"Gross receipts\",\n       x = \"Gross receipts\") +\n  theme_classic()\n\n## --------------------------------------------------\n#| fig-width: 4.25\nggplot(data = movies, aes(x = gross, fill = rating)) +\n  geom_area(stat = \"bin\",\n            alpha = 0.5) +  \n  labs(title = \"Gross receipts by rating\",\n       x = \"Gross receipts\") +\n  theme_classic()\n\n\n## --------------------------------------------------\n#| fig-width: 4.25\nggplot(data = movies) +\n  geom_density(aes(x = year, color = rating)) +\n  labs(title = \"Movies with $100mil+ budgets\") +\n  xlab(\"Year\") + \n  theme_classic()\n\n\n\n## --------------------------------------------------\n#| fig-width: 4\noptions(scipen = 9999999)\nmovies_a &lt;- movies %&gt;% filter(genre == \"Animation\")\nggplot(data = movies_a) +\n  geom_dotplot(aes(x = budget, fill = rating)) +\n  labs(title = \"Animation Films\") +\n  xlab(\"Budget\") + \n  theme_classic()\n\n\n## --------------------------------------------------\n#| fig-width: 4\nggplot(data = movies_a) +\n  geom_dotplot(aes(x = budget, fill = rating),\n               position = \"jitter\",\n               binwidth = 5000000) +\n  labs(title = \"Animation Films\") +\n  xlab(\"Budget\") + \n  theme_classic()\n\n\n## --------------------------------------------------\n#| fig-width: 4.25\n#| message: false\n#| warning: false\nggplot(movies, aes(x = budget, color = rating)) +\n  geom_freqpoly(binwidth = 7000000) +\n  labs(title = \"Frequency Polygon\",\n       x = \"Scores\",\n       y = \"Frequency\") +\n  theme_minimal()\n\n\n## --------------------------------------------------\n#| fig-width: 4.2\n#| message: false\n#| warning: false\nmovies &lt;- read_csv(\"movies.csv\") \nggplot(movies, aes(x = score)) +\n  geom_histogram(color = \"blue\", fill = \"gold\") +\n  labs(title = \"Histogram\",\n       x = \"Scores\",\n       y = \"Frequency\") +\n  theme_minimal()",
     "crumbs": [
       "Lectures",
       "Lecture 02 R Code"

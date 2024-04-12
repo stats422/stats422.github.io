@@ -71,7 +71,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Statistics 422 - Lecture 2 R Code">
-<meta property="og:description" content="Homepage for STATS 422 - Data Visualization UCLA MASDS, Spring 2024.">
 <meta property="og:site_name" content="Statistics 422">
 </head>
 
@@ -262,9 +261,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">————————————————–</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
   <li><a href="#one-continuous-variable" id="toc-one-continuous-variable" class="nav-link" data-scroll-target="#one-continuous-variable">One Continuous variable</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">————————————————–</a></li>
   <li><a href="#one-discrete-variable" id="toc-one-discrete-variable" class="nav-link" data-scroll-target="#one-discrete-variable">One Discrete Variable</a></li>
   <li><a href="#two-continuous-variables" id="toc-two-continuous-variables" class="nav-link" data-scroll-target="#two-continuous-variables">Two Continuous Variables</a></li>
   <li><a href="#two-continuous-variables-1" id="toc-two-continuous-variables-1" class="nav-link" data-scroll-target="#two-continuous-variables-1">Two Continuous Variables</a></li>
@@ -311,9 +309,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">————————————————–</h2>
-<p>#| label: setup #| message: false #| echo: true # load packages ## ————————————————–</p>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <pre><code>library(tidyverse)
 library(readr)
 library(viridis)
@@ -329,11 +326,14 @@ knitr::opts_chunk$set(
 </section>
 <section id="one-continuous-variable" class="level2">
 <h2 class="anchored" data-anchor-id="one-continuous-variable">One Continuous variable</h2>
-</section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">————————————————–</h2>
-<p>#| message: false #| fig-width: 4.25 ## ————————————————–</p>
-<pre><code>movies &lt;- read_csv("movies.csv") 
+<pre><code>
+## --------------------------------------------------
+#| message: false
+#| fig-width: 4.25
+## --------------------------------------------------
+
+
+movies &lt;- read_csv("movies.csv") 
 movies &lt;- movies %&gt;% filter(budget &gt; 100000000)
 
 ggplot(data = movies, aes(x = gross)) +
