@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Due 4/27/2024">
+<meta name="author" content="Stats 422">
 
-<title>Statistics 422 - hw-2</title>
+<title>Statistics 422 - Lecture 2 R Code</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Statistics 422 - hw-2">
+<meta property="og:title" content="Statistics 422 - Lecture 2 R Code">
 <meta property="og:description" content="Homepage for STATS 422 - Data Visualization UCLA MASDS, Spring 2024.">
 <meta property="og:site_name" content="Statistics 422">
 </head>
@@ -84,9 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Statistics 422
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/Lecture01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/Lecture02Rcode.html">Lecture 02 R Code</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -141,13 +139,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Lectures</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/Lecture01.html" class="sidebar-item-text sidebar-link">
@@ -162,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/Lecture02Rcode.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/Lecture02Rcode.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lecture 02 R Code</span></a>
   </div>
 </li>
@@ -264,16 +262,33 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">————————————————–</a></li>
+  <li><a href="#one-continuous-variable" id="toc-one-continuous-variable" class="nav-link" data-scroll-target="#one-continuous-variable">One Continuous variable</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">————————————————–</a></li>
+  <li><a href="#one-discrete-variable" id="toc-one-discrete-variable" class="nav-link" data-scroll-target="#one-discrete-variable">One Discrete Variable</a></li>
+  <li><a href="#two-continuous-variables" id="toc-two-continuous-variables" class="nav-link" data-scroll-target="#two-continuous-variables">Two Continuous Variables</a></li>
+  <li><a href="#two-continuous-variables-1" id="toc-two-continuous-variables-1" class="nav-link" data-scroll-target="#two-continuous-variables-1">Two Continuous Variables</a></li>
+  <li><a href="#two-continuous-variables-2" id="toc-two-continuous-variables-2" class="nav-link" data-scroll-target="#two-continuous-variables-2">Two Continuous Variables</a></li>
+  <li><a href="#discrete-continuous" id="toc-discrete-continuous" class="nav-link" data-scroll-target="#discrete-continuous">Discrete &amp; Continuous</a>
+  <ul class="collapse">
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  </ul></li>
+  <li><a href="#one-discreteone-continuous-contd" id="toc-one-discreteone-continuous-contd" class="nav-link" data-scroll-target="#one-discreteone-continuous-contd">One Discrete/One Continuous (cont’d)</a></li>
+  <li><a href="#one-discreteone-continuous-contd-1" id="toc-one-discreteone-continuous-contd-1" class="nav-link" data-scroll-target="#one-discreteone-continuous-contd-1">One Discrete/One Continuous (cont’d)</a></li>
+  <li><a href="#two-continuous-variables-3" id="toc-two-continuous-variables-3" class="nav-link" data-scroll-target="#two-continuous-variables-3">Two Continuous Variables</a></li>
+  <li><a href="#two-continuous-variables-4" id="toc-two-continuous-variables-4" class="nav-link" data-scroll-target="#two-continuous-variables-4">Two Continuous Variables</a></li>
+  <li><a href="#two-continuous-variables-5" id="toc-two-continuous-variables-5" class="nav-link" data-scroll-target="#two-continuous-variables-5">Two Continuous Variables</a></li>
+  <li><a href="#two-discrete-variables" id="toc-two-discrete-variables" class="nav-link" data-scroll-target="#two-discrete-variables">Two Discrete Variables?</a></li>
+  <li><a href="#two-discrete-variables-1" id="toc-two-discrete-variables-1" class="nav-link" data-scroll-target="#two-discrete-variables-1">Two Discrete Variables?</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/Lecture01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/Lecture02Rcode.html">Lecture 02 R Code</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">hw-2</h1>
+<h1 class="title">Lecture 2 R Code</h1>
 </div>
 
 
@@ -283,7 +298,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Due 4/27/2024 </p>
+             <p>Stats 422 </p>
           </div>
   </div>
     
@@ -296,10 +311,655 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Please upload your materials to be graded to BruinLearn only (not GitHub etc.)</p>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>This assignment is not ready yet</p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">————————————————–</h2>
+<p>#| label: setup #| message: false #| echo: true # load packages ## ————————————————–</p>
+<pre><code>library(tidyverse)
+library(readr)
+library(viridis)
+
+# set figure parameters for knitr
+knitr::opts_chunk$set(
+  fig.align = "center", # center align figures
+  fig.asp = 0.618,      # the golden ratio
+  fig.retina = 3,       # dpi multiplier for displaying HTML output on retina
+  fig.height = 4,        # 4 inches
+  dpi = 200             # higher is crisper
+)</code></pre>
+</section>
+<section id="one-continuous-variable" class="level2">
+<h2 class="anchored" data-anchor-id="one-continuous-variable">One Continuous variable</h2>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">————————————————–</h2>
+<p>#| message: false #| fig-width: 4.25 ## ————————————————–</p>
+<pre><code>movies &lt;- read_csv("movies.csv") 
+movies &lt;- movies %&gt;% filter(budget &gt; 100000000)
+
+ggplot(data = movies, aes(x = gross)) +
+  geom_area(stat = "bin",
+            fill = "skyblue", 
+            alpha = 0.5, 
+            color = "blue") +  # Area under the curve
+  labs(title = "Gross receipts",
+       x = "Gross receipts") +
+  theme_classic()
+
+## --------------------------------------------------
+#| fig-width: 4.25
+ggplot(data = movies, aes(x = gross, fill = rating)) +
+  geom_area(stat = "bin",
+            alpha = 0.5) +  
+  labs(title = "Gross receipts by rating",
+       x = "Gross receipts") +
+  theme_classic()
+
+
+## --------------------------------------------------
+#| fig-width: 4.25
+ggplot(data = movies) +
+  geom_density(aes(x = year, color = rating)) +
+  labs(title = "Movies with $100mil+ budgets") +
+  xlab("Year") + 
+  theme_classic()
+
+
+
+## --------------------------------------------------
+#| fig-width: 4
+options(scipen = 9999999)
+movies_a &lt;- movies %&gt;% filter(genre == "Animation")
+ggplot(data = movies_a) +
+  geom_dotplot(aes(x = budget, fill = rating)) +
+  labs(title = "Animation Films") +
+  xlab("Budget") + 
+  theme_classic()
+
+
+## --------------------------------------------------
+#| fig-width: 4
+ggplot(data = movies_a) +
+  geom_dotplot(aes(x = budget, fill = rating),
+               position = "jitter",
+               binwidth = 5000000) +
+  labs(title = "Animation Films") +
+  xlab("Budget") + 
+  theme_classic()
+
+
+## --------------------------------------------------
+#| fig-width: 4.25
+#| message: false
+#| warning: false
+ggplot(movies, aes(x = budget, color = rating)) +
+  geom_freqpoly(binwidth = 7000000) +
+  labs(title = "Frequency Polygon",
+       x = "Scores",
+       y = "Frequency") +
+  theme_minimal()
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+#| message: false
+#| warning: false
+movies &lt;- read_csv("movies.csv") 
+ggplot(movies, aes(x = score)) +
+  geom_histogram(color = "blue", fill = "gold") +
+  labs(title = "Histogram",
+       x = "Scores",
+       y = "Frequency") +
+  theme_minimal()</code></pre>
+</section>
+<section id="one-discrete-variable" class="level1">
+<h1>One Discrete Variable</h1>
+<pre><code>## --------------------------------------------------
+#| fig-width: 4.2
+#| message: false
+#| warning: false
+movies_b &lt;- movies %&gt;% filter(gross &gt; 750000000)
+
+
+ggplot(movies_b, aes(x = reorder(genre, genre, function(x)-length(x)))) +
+  geom_bar(fill = "green") +
+  labs(title = "Bar Plot of Genre with gross &gt; $750mil",
+       x = "Genre",
+       y = "Frequency") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(size = 12, angle = 30, hjust = 1))  
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+#| message: false
+#| warning: false
+movies_high &lt;- movies %&gt;% filter(gross &gt; 750000000)
+
+
+ggplot(movies_high, aes(x = reorder(genre, genre, function(x)-length(x)),
+                   y = ..prop..,
+                   group = 1)) + # group = 1 sums to 1
+  geom_bar(fill = "green") +
+  labs(title = "Ordered Bar Plot of Genre",
+       x = "Genre",
+       y = "Proportion") +
+  theme_classic() +
+  theme(axis.text.x = element_text(size = 12, angle = 30, hjust = 1))  
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+ggplot(movies_high, aes(x = reorder(genre, genre, function(x)-length(x)),
+                   y = ..prop..,
+                   group = 1)) + # group = 1 sums to 1
+  geom_bar(fill = "green") +
+  labs(title = "Ordered Bar Plot of Genre",
+       x = "Genre",
+       y = "Proportion") +
+  coord_flip() +
+  theme_classic()
+
+
+## --------------------------------------------------
+#| fig-width: 4
+movies_tabulated &lt;- movies_high %&gt;%
+  count(genre, name = "count")
+
+ggplot(data = movies_tabulated, aes(x="", y=count, fill=genre)) +
+  geom_bar(stat="identity", width = 0.75) + # vary width for size of hole
+  coord_polar(theta="y") +  # for circular plot
+  theme(panel.grid = element_blank(),  
+        axis.text = element_blank(), 
+        axis.title = element_blank(), 
+        axis.ticks = element_blank()) +
+  annotate("text", x = 0, y = 0, label = "") # for the hole</code></pre>
+</section>
+<section id="two-continuous-variables" class="level1">
+<h1>Two Continuous Variables</h1>
+<pre><code>## --------------------------------------------------
+#| fig-width: 4.2
+#| message: false
+#| warning: false
+soybeans &lt;- read_csv("soybeans.csv") 
+soybeans &lt;- soybeans %&gt;% select(-2)
+
+ggplot(soybeans, aes(x = NS, y = GY)) +
+  geom_point() +
+  labs(title = "Scatterplot Soybean Yields",
+       x = "Number of Grains Per Plant",
+       y = "Grain Yield per Acre") +
+  theme_classic() 
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+cls &lt;- kmeans(x = soybeans, centers = 3)
+soybeans$cluster &lt;- as.character(cls$cluster)
+
+ggplot() +
+  geom_point(data = soybeans, 
+             mapping = aes(x = NS,
+                           y = GY,
+                           color = cluster),
+             size = 3)
+
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+cls &lt;- kmeans(x = soybeans, centers = 3)
+soybeans$cluster &lt;- as.character(cls$cluster)
+
+ggplot() +
+  geom_point(data = soybeans, aes(x = NS,y = GY, color = cluster), size = 2) +
+  geom_point(aes(x = cls$centers[, "NS"], 
+                                  y = cls$centers[, "GY"]),
+                                  color = "black", size = 4) +
+  theme_minimal()
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+ggplot(soybeans, aes(x=NS, y=GY, size = Repetition, color = GY)) +
+    geom_point(alpha=0.5) +
+    scale_size(range = c(1, 16), name="") +
+    scale_color_viridis() +
+    theme_light() +
+    theme(legend.position = "none")</code></pre>
+</section>
+<section id="two-continuous-variables-1" class="level1">
+<h1>Two Continuous Variables</h1>
+<pre><code>## --------------------------------------------------
+#| fig-width: 4.2
+#| message: false
+#| warning: false
+q &lt;- seq(0.00, 1, by = 0.25)
+
+p &lt;- ggplot(soybeans, aes(x = NS, y = GY)) +
+  geom_point() 
+
+p + geom_quantile(quantiles = q) +
+  labs(title = "Quantile Reg + Scatterplot Soybean Yields",
+       x = "Number of Grains Per Plant",
+       y = "Grain Yield per Acre") +
+  theme_classic() 
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+#| message: false
+#| warning: false
+movies_g &lt;- movies %&gt;% filter(gross &gt; 500000000)
+
+
+ggplot(movies_g, aes(x = budget, y = gross)) +
+  geom_point(color = "gold", alpha = 0.3) +
+  geom_rug(color = "blue") +
+  labs(title = "Plot of budget with gross ",
+       x = "Budget",
+       y = "Gross") +
+  theme_classic() +
+  theme(axis.text = element_text(size = 6,  hjust = 1))  
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+#| message: false
+#| warning: false
+
+
+ggplot(movies_g, aes(x = budget, y = gross)) +
+  geom_point(color = "gold", alpha = 0.3) +
+  geom_rug(color = "blue") +
+  geom_smooth() +
+  labs(title = "Plot of budget with gross ",
+       x = "Budget",
+       y = "Gross") +
+  theme_classic() +
+  theme(axis.text = element_text(size = 6,  hjust = 1))  
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+#| message: false
+#| warning: false
+
+ggplot(movies_g, aes(x = budget, y = gross)) +
+  geom_point(color = "gold", alpha = 0.3) +
+  geom_rug(color = "blue") +
+  geom_smooth(method = "lm") +
+  labs(title = "Plot of budget with gross ",
+       x = "Budget",
+       y = "Gross") +
+  theme_classic() +
+  theme(axis.text = element_text(size = 6,  hjust = 1))  </code></pre>
+</section>
+<section id="two-continuous-variables-2" class="level1">
+<h1>Two Continuous Variables</h1>
+<pre><code>## --------------------------------------------------
+#| fig-width: 4.5
+library(maps)
+
+df &lt;- data.frame(x = state.center$x, 
+                 y = state.center$y,
+                 state = state.name)
+
+p &lt;- ggplot(df, aes(x = x, y = y)) + 
+       geom_polygon(data = map_data("state"),
+                    color = "black",
+                    aes(x = long, y = lat,
+                        fill = map_data("state")$region,
+                        group = group)) +
+       xlab("Longitude X") +
+       ylab("Latitude Y") +
+       guides(fill = "none") +  # no legend
+       theme_classic()
+p
+
+
+## --------------------------------------------------
+#| fig-width: 4.5
+p + 
+  geom_text(aes(label = state), size = 2)
+
+
+## --------------------------------------------------
+#| fig-width: 4.5
+
+p + geom_label(aes(label = state), size = 1.5)
+
+
+## --------------------------------------------------
+#| fig-width: 4.5
+
+library(ggrepel)
+p + 
+  geom_label_repel(aes(label = state), 
+                   size = 1.5, max.overlaps = 25)</code></pre>
+</section>
+<section id="discrete-continuous" class="level1">
+<h1>Discrete &amp; Continuous</h1>
+<pre><code>## --------------------------------------------------
+#| fig-width: 4.2
+yelpextract %&gt;% 
+  group_by(Cuisine) %&gt;% 
+  summarize(mean_stars = mean(stars, na.rm=TRUE)) %&gt;% 
+  ggplot() + 
+  geom_col(aes(x=Cuisine, y=mean_stars), fill = "lightskyblue") +
+  ylab("Average Star Rating") +
+  xlab("Cuisine")
+  theme_classic() +
+  theme(legend.position = "none", 
+        axis.text.x  = element_text(size = 3)) 
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+data &lt;- for101a %&gt;%
+  group_by(Cuisine) %&gt;%
+  summarize(mean_stars = mean(stars, na.rm = TRUE)) %&gt;%
+  mutate(Cuisine = factor(Cuisine, levels = Cuisine[order(mean_stars)]))  # Order levels using mean_stars
+
+ggplot(data, aes(x=Cuisine, y=mean_stars)) + 
+  geom_col(fill = "lightskyblue") +
+  ylab("Average Star Rating") +
+  coord_flip() +
+  theme_classic() +
+  theme(legend.position = "none", axis.text.y  = element_text(size = 10)) 
+
+</code></pre>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<ul>
+<li><p>geom_col requires x and y values.</p></li>
+<li><p>The heights of the bars represent <strong>values</strong> in the data</p></li>
+<li><p>The trick to ordering is to utilize factors</p></li>
+</ul>
+</section>
+</section>
+<section id="one-discreteone-continuous-contd" class="level1">
+<h1>One Discrete/One Continuous (cont’d)</h1>
+<pre><code>## --------------------------------------------------
+#| results: hide
+#| warning: false
+#| message: false
+library(tidytuesdayR)
+tt_output &lt;- tt_load("2020-11-03") %&gt;%
+  suppressMessages()
+ikea &lt;- tt_output$ikea %&gt;% filter(category %in% c("Wardrobes", "Sofas &amp; armchairs", "Beds"))
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+
+ggplot(data = ikea) +
+  geom_boxplot(aes(x = category, y = price)) +
+  theme_light()
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+ggplot(data = ikea) +
+  geom_boxplot(aes(x = category, 
+                   y = price,
+                   fill = category),
+               color = "black") +
+  coord_flip() +
+  theme_light() +
+  theme(legend.position = "none")
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+ggplot(data = ikea) +
+  geom_boxplot(aes(x = interaction(category, other_colors),
+                   y = price,
+                   fill = category),
+               color = "black") +
+  coord_flip() +
+  theme_light() +
+  theme(legend.position = "none")
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+ggplot(data = ikea) +
+  geom_boxplot(aes(x = interaction(other_colors, category),
+                   y = price,
+                   fill = category),
+               color = "black") +
+  xlab("Colors/Category") +
+  coord_flip() +
+  theme_light() +
+  theme(legend.position = "none")</code></pre>
+</section>
+<section id="one-discreteone-continuous-contd-1" class="level1">
+<h1>One Discrete/One Continuous (cont’d)</h1>
+<pre><code>## --------------------------------------------------
+#| fig-width: 4.2
+
+ggplot(data = ikea) +
+  geom_violin(aes(x = category, y = price)) +
+  theme_light()
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+ggplot(data = ikea) +
+  geom_violin(aes(x = category, 
+                   y = price,
+                   fill = category),
+               color = "black") +
+  coord_flip() +
+  theme_light() +
+  theme(legend.position = "none")
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+ggplot(data = ikea) +
+  geom_violin(aes(x = interaction(category, other_colors),
+                   y = price,
+                   fill = category),
+               color = "black") +
+  coord_flip() +
+  theme_light() +
+  theme(legend.position = "none")
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+ggplot(data = ikea) +
+  geom_violin(aes(x = interaction(other_colors, category),
+                   y = price,
+                   fill = category),
+               color = "black",
+              draw_quantiles =  c(0.10, 0.25, 0.5, 0.75, 0.90)) +
+  coord_flip() +
+  xlab("Colors/Category") +
+  theme_light() +
+  theme(legend.position = "none")
+</code></pre>
+</section>
+<section id="two-continuous-variables-3" class="level1">
+<h1>Two Continuous Variables</h1>
+<pre><code>## --------------------------------------------------
+#| fig-width: 4.2
+#| message: false
+#| warning: false
+stolen &lt;- read_csv("stolen.csv") 
+
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+ggplot(stolen, aes(x = LON, y = LAT)) +
+ geom_point() +
+ geom_density_2d()
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+ggplot(stolen, aes(x = LON, y = LAT)) +
+ geom_point() +
+ geom_density_2d_filled(alpha = 0.5) +
+  xlab("Longitude") +
+  ylab("Latitude") +
+  theme_light() +
+  theme(axis.text  = element_text(size = 5),
+        axis.title = element_text(size=6,face="bold"), # change axis label size
+        legend.key.size = unit(0.4, 'cm'), #change legend key size
+        legend.key.height = unit(0.4, 'cm'), #change legend key height
+        legend.key.width = unit(0.4, 'cm'), #change legend key width
+        legend.title = element_text(size=5), #change legend title font size
+        legend.text = element_text(size=4)) #change legend text font size
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+ggplot(stolen, aes(x = LON, y = LAT)) +
+  geom_point() +
+  geom_density_2d_filled(alpha = 0.5, color = "black") +
+  theme_light() +
+  theme(axis.text  = element_text(size = 5),
+        axis.title = element_text(size=6,face="bold"), # change axis label size
+        legend.key.size = unit(0.4, 'cm'), #change legend key size
+        legend.key.height = unit(0.4, 'cm'), #change legend key height
+        legend.key.width = unit(0.4, 'cm'), #change legend key width
+        legend.title = element_text(size=5), #change legend title font size
+        legend.text = element_text(size=4)) #change legend text font size
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+stolen$month_cat &lt;- month(stolen$`DATE OCC`, 
+                          label = TRUE) |&gt; as.character()
+
+stolen &lt;- stolen %&gt;% filter(month_cat %in% c("Jan", "Feb","Mar")) %&gt;% mutate(month = factor(month_cat, levels = c("Jan", "Feb","Mar")))
+
+
+ggplot(stolen, aes(x = LON, y = LAT)) +
+  geom_point() +
+  geom_density_2d(aes(color = month)) +
+  facet_wrap(~ month) +
+  theme(legend.position = "none",
+        axis.text.x  = element_text(size = 4))</code></pre>
+</section>
+<section id="two-continuous-variables-4" class="level1">
+<h1>Two Continuous Variables</h1>
+<pre><code>## --------------------------------------------------
+#| fig-width: 4.2
+
+movies &lt;- read_csv("movies.csv",
+                    show_col_types = FALSE) 
+
+ggplot(data = movies, aes(x = year, y = score, color = votes)) +
+  geom_hex(color = "white") +
+  scale_fill_viridis_c() +
+  theme_minimal()
+
+
+## --------------------------------------------------
+#| fig-width: 4.2
+
+p &lt;- ggplot(movies, aes(x=votes,y=score)) +
+  geom_hex() +
+  scale_fill_viridis_c() +
+  labs(title = "Distribution of Scores by votes",
+       x = "votes",
+       y = "score",
+       fill = "# of movies") +
+  theme_bw()
+
+p</code></pre>
+</section>
+<section id="two-continuous-variables-5" class="level1">
+<h1>Two Continuous Variables</h1>
+<pre><code>## --------------------------------------------------
+#| message: false
+#| fig-width: 4.25
+tsla &lt;- read_csv("TSLA.csv")
+ggplot() + # allow for multiple data, aes
+  geom_area(data = tsla, 
+            aes(x = Date, y = Volume),
+            fill = "skyblue", 
+            alpha = 0.5, 
+            color = "blue") +  # Area under the curve
+  labs(title = "geom_area, stock trading volume",
+       x = "Date",
+       y = "Volume") +
+  theme_classic()
+
+
+## --------------------------------------------------
+#| message: false
+#| fig-width: 4.25
+movies_l &lt;- movies %&gt;% 
+  filter(genre %in% c("Action","Animation", "Comedy", "Drama")) %&gt;% 
+  group_by(year, genre) %&gt;% 
+  mutate(median_budget = median(budget, na.rm = TRUE))
+ggplot(data = movies_l) + # allow for multiple  aes
+  geom_line(aes(x = year, 
+                y = median_budget, 
+                color = genre)) +  # line plot
+  labs(title = "geom_line example",
+       x = "Date",
+       y = "budget") +
+  theme_classic()</code></pre>
+</section>
+<section id="two-discrete-variables" class="level1">
+<h1>Two Discrete Variables?</h1>
+<pre><code>## --------------------------------------------------
+#| fig-width: 4.25
+movies_t &lt;- movies %&gt;% 
+  filter(genre %in% c("Action","Animation", "Comedy", "Drama",
+                      "Biography", "Adventure", "Crime", "Horror")) %&gt;%   
+  group_by(year, genre) %&gt;% 
+  mutate(total_budget = sd(budget, na.rm = TRUE))
+
+ggplot(data = movies_t) + # allow for multiple data, aes
+  geom_tile(aes(x = year, y = genre, fill = total_budget)) + 
+  labs(title = "geom_tile example",
+       x = "year",
+       y = "genre") +
+  scale_fill_viridis() +
+  theme_classic()</code></pre>
+</section>
+<section id="two-discrete-variables-1" class="level1">
+<h1>Two Discrete Variables?</h1>
+<pre><code>## --------------------------------------------------
+#| message: false
+#| fig-width: 4.25
+aapl &lt;- read_csv("AAPL.csv")
+aapl2023 &lt;- aapl %&gt;% 
+  mutate(Year = year(Date), 
+         Month = month(Date),
+         Day = yday(Date),
+         DOW = wday(Date, label = TRUE)) %&gt;%
+  filter(Year &gt; 2020)
+
+ggplot(data = aapl2023) + 
+  geom_tile(aes(x = Day, y = DOW, fill = Close),
+            height = 1, width = 10,
+            color = "white")+ 
+  scale_fill_viridis()  +  
+  scale_y_discrete(limits=rev, expand = c(0, 4)) +
+  facet_wrap(~ Year, ncol = 1) +
+  labs(title = "geom_tile, AAPL close 2021-2023",
+       x = "",
+       y = "") +
+  theme_void()</code></pre>
 
 
 </section>

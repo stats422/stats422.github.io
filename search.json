@@ -1,843 +1,58 @@
 [
   {
-    "objectID": "lectures/Lecture01.html#late-afternoon-social",
-    "href": "lectures/Lecture01.html#late-afternoon-social",
-    "title": "Welcome Statistics 422",
-    "section": "Late afternoon social",
-    "text": "Late afternoon social\nLet’s use this time to interact & relax before getting started\n\n\nPlease gather in small groups (minimum 3 classmates, maximum 6)\nIf you don’t know someone please introduce yourself\nIf your group sees someone without a group, please extend an invitation to join",
+    "objectID": "lectures/Lecture02Rcode.html",
+    "href": "lectures/Lecture02Rcode.html",
+    "title": "Lecture 2 R Code",
+    "section": "",
+    "text": "#| label: setup #| message: false #| echo: true # load packages ## ————————————————–\nlibrary(tidyverse)\nlibrary(readr)\nlibrary(viridis)\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.align = \"center\", # center align figures\n  fig.asp = 0.618,      # the golden ratio\n  fig.retina = 3,       # dpi multiplier for displaying HTML output on retina\n  fig.height = 4,        # 4 inches\n  dpi = 200             # higher is crisper\n)",
     "crumbs": [
       "Lectures",
-      "Lecture 01"
+      "Lecture 02 R Code"
     ]
   },
   {
-    "objectID": "lectures/Lecture01.html#section",
-    "href": "lectures/Lecture01.html#section",
-    "title": "Welcome Statistics 422",
+    "objectID": "lectures/Lecture02Rcode.html#section",
+    "href": "lectures/Lecture02Rcode.html#section",
+    "title": "Lecture 2 R Code",
     "section": "",
-    "text": "Instructor\nDr. Vivian Lew\n\nMath Sciences 8923 (neighbor is Nicolas Christou)\nBruinLearn e-mail is the best way to reach me\nNo discussion or TA or grader for this course\n\n\nOther Course Details\n\nMeet Once a Week Thursdays 6pm- 8:50pm\n\nPhysics and Astronomy Building 2748\n\nOffice Hours\n\nM 4pm - 6pm (MS 8923) & F 3pm-5pm (Zoom)\nWelcome to schedule Zoom appointment(s), most evenings & weekends too",
+    "text": "#| label: setup #| message: false #| echo: true # load packages ## ————————————————–\nlibrary(tidyverse)\nlibrary(readr)\nlibrary(viridis)\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.align = \"center\", # center align figures\n  fig.asp = 0.618,      # the golden ratio\n  fig.retina = 3,       # dpi multiplier for displaying HTML output on retina\n  fig.height = 4,        # 4 inches\n  dpi = 200             # higher is crisper\n)",
     "crumbs": [
       "Lectures",
-      "Lecture 01"
+      "Lecture 02 R Code"
     ]
   },
   {
-    "objectID": "lectures/Lecture01.html#what-to-expect",
-    "href": "lectures/Lecture01.html#what-to-expect",
-    "title": "Welcome Statistics 422",
-    "section": "What to expect",
-    "text": "What to expect\n\nFormat: During Class\n\nWorkshop style - some lecturing, some small group activities, breaks\nInteractive - please bring your electronics (laptop, iPad, maybe phone)\n\nFormat: Outside of Class\n\nIndividual homework assignments, individual late mid-quarter project, individual final project\nEncourage interaction with me but more important, with each other\nStats 422 Community interaction on Campuswire, perhaps examine the weekly data posted to Tidy Tuesday",
+    "objectID": "lectures/Lecture02Rcode.html#one-continuous-variable",
+    "href": "lectures/Lecture02Rcode.html#one-continuous-variable",
+    "title": "Lecture 2 R Code",
+    "section": "One Continuous variable",
+    "text": "One Continuous variable",
     "crumbs": [
       "Lectures",
-      "Lecture 01"
+      "Lecture 02 R Code"
     ]
   },
   {
-    "objectID": "lectures/Lecture01.html#what-to-expect-1",
-    "href": "lectures/Lecture01.html#what-to-expect-1",
-    "title": "Welcome Statistics 422",
-    "section": "What to expect",
-    "text": "What to expect\nDeveloping the scaffolding needed for understanding and building on one’s existing data visualization skills.\n\nAspects\n\nTranslating data and the relationships within visually for others.\n\nLearning to structure and organize data for effective visualization.\n\nLearning about the different types of visual representation and their purposes.\nUnderstanding of Graphical Perception/perceived visual information and some of the cognitive principles involved.\nLearning to generate static and interactive visualizations\nKnowing how to present your visualizations in different media (print, website, video)",
+    "objectID": "lectures/Lecture02Rcode.html#section-1",
+    "href": "lectures/Lecture02Rcode.html#section-1",
+    "title": "Lecture 2 R Code",
+    "section": "————————————————–",
+    "text": "————————————————–\n#| message: false #| fig-width: 4.25 ## ————————————————–\nmovies &lt;- read_csv(\"movies.csv\") \nmovies &lt;- movies %&gt;% filter(budget &gt; 100000000)\n\nggplot(data = movies, aes(x = gross)) +\n  geom_area(stat = \"bin\",\n            fill = \"skyblue\", \n            alpha = 0.5, \n            color = \"blue\") +  # Area under the curve\n  labs(title = \"Gross receipts\",\n       x = \"Gross receipts\") +\n  theme_classic()\n\n## --------------------------------------------------\n#| fig-width: 4.25\nggplot(data = movies, aes(x = gross, fill = rating)) +\n  geom_area(stat = \"bin\",\n            alpha = 0.5) +  \n  labs(title = \"Gross receipts by rating\",\n       x = \"Gross receipts\") +\n  theme_classic()\n\n\n## --------------------------------------------------\n#| fig-width: 4.25\nggplot(data = movies) +\n  geom_density(aes(x = year, color = rating)) +\n  labs(title = \"Movies with $100mil+ budgets\") +\n  xlab(\"Year\") + \n  theme_classic()\n\n\n\n## --------------------------------------------------\n#| fig-width: 4\noptions(scipen = 9999999)\nmovies_a &lt;- movies %&gt;% filter(genre == \"Animation\")\nggplot(data = movies_a) +\n  geom_dotplot(aes(x = budget, fill = rating)) +\n  labs(title = \"Animation Films\") +\n  xlab(\"Budget\") + \n  theme_classic()\n\n\n## --------------------------------------------------\n#| fig-width: 4\nggplot(data = movies_a) +\n  geom_dotplot(aes(x = budget, fill = rating),\n               position = \"jitter\",\n               binwidth = 5000000) +\n  labs(title = \"Animation Films\") +\n  xlab(\"Budget\") + \n  theme_classic()\n\n\n## --------------------------------------------------\n#| fig-width: 4.25\n#| message: false\n#| warning: false\nggplot(movies, aes(x = budget, color = rating)) +\n  geom_freqpoly(binwidth = 7000000) +\n  labs(title = \"Frequency Polygon\",\n       x = \"Scores\",\n       y = \"Frequency\") +\n  theme_minimal()\n\n\n## --------------------------------------------------\n#| fig-width: 4.2\n#| message: false\n#| warning: false\nmovies &lt;- read_csv(\"movies.csv\") \nggplot(movies, aes(x = score)) +\n  geom_histogram(color = \"blue\", fill = \"gold\") +\n  labs(title = \"Histogram\",\n       x = \"Scores\",\n       y = \"Frequency\") +\n  theme_minimal()",
     "crumbs": [
       "Lectures",
-      "Lecture 01"
+      "Lecture 02 R Code"
     ]
   },
   {
-    "objectID": "lectures/Lecture01.html#what-to-expect-2",
-    "href": "lectures/Lecture01.html#what-to-expect-2",
-    "title": "Welcome Statistics 422",
-    "section": "What to expect",
-    "text": "What to expect\n\nProcess\n\nStart with an audience and an idea and find the data (not necessarily in that order)\nPrepare the data for visualization (e.g., clean, pivot)\nRepresent the data visually with various graphical elements (e.g., color, sizes, and shape)\nPost-process the data (e.g., decide whether interactivity would add power, post process a static visualization )\n\nTools\n\nR/ggplot2, Shiny; Python/matplotlib, Streamlit; Tableau",
+    "objectID": "lectures/Lecture02Rcode.html#notes",
+    "href": "lectures/Lecture02Rcode.html#notes",
+    "title": "Lecture 2 R Code",
+    "section": "Notes",
+    "text": "Notes\n\ngeom_col requires x and y values.\nThe heights of the bars represent values in the data\nThe trick to ordering is to utilize factors",
     "crumbs": [
       "Lectures",
-      "Lecture 01"
+      "Lecture 02 R Code"
     ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#what-is-not-covered",
-    "href": "lectures/Lecture01.html#what-is-not-covered",
-    "title": "Welcome Statistics 422",
-    "section": "What is not covered",
-    "text": "What is not covered\n\nWhat is not there\n\nno instruction in JavaScript\nno instruction in HTML5\nno instruction in CSS\n\nIf any of you know a pro (someone paid to work with these regularly), I could arrange for a stipend if they want to come in as a guest speaker",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#grading",
-    "href": "lectures/Lecture01.html#grading",
-    "title": "Welcome Statistics 422",
-    "section": "Grading",
-    "text": "Grading\n\n30% Attending class weekly with in-class team activity\n20% 4 individual homework assignments\n5% Campuswire participation\n20% Web App: (individual) Find your data, Design a page, Code and Video\n25% Final Project: (individual) Find your own data, Report, Code and Video\nThe data for the Web App can be the same as the final project, but ideally a simple dataset like iris for the Web App and something more complex and more closely related to your thesis for your final project.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#group-activity-1-15-20-minutes",
-    "href": "lectures/Lecture01.html#group-activity-1-15-20-minutes",
-    "title": "Welcome Statistics 422",
-    "section": "Group Activity 1 (15-20 minutes)",
-    "text": "Group Activity 1 (15-20 minutes)\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to get credit for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some graphs created by ggplot2.\nhttps://r-charts.com/ggplot2/ or more generally in R https://r-graph-gallery.com/index.html\nIdeally, I would like you to examine R graphics from one or both of these sites as a team and\nPlease choose the one plot from your group that you think is most memorable (can be good or not good), and have one team member share the graph on Campuswire and/or be prepared to tell us why your team chose it.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#data-visualization",
-    "href": "lectures/Lecture01.html#data-visualization",
-    "title": "Welcome Statistics 422",
-    "section": "Data visualization",
-    "text": "Data visualization\n\nUnderstanding and creating visual representations of data\nR is one of our tools and\nggplot2 is THE package",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#section-1",
-    "href": "lectures/Lecture01.html#section-1",
-    "title": "Welcome Statistics 422",
-    "section": "",
-    "text": "It is part of the Tidyverse in R\n\n\ngg means “Grammar of Graphics”\nThe Grammar of Graphics was written by Leland Wilkinson in 1999.\nWilkinson detailed a comprehensive framework to describe and build a wide range of statistical graphics by breaking down the elements of graphics into a unified system.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#grammar-of-graphics",
-    "href": "lectures/Lecture01.html#grammar-of-graphics",
-    "title": "Welcome Statistics 422",
-    "section": "Grammar of Graphics",
-    "text": "Grammar of Graphics\n\n\n\nSource: https://www.stat20.org/",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#data",
-    "href": "lectures/Lecture01.html#data",
-    "title": "Welcome Statistics 422",
-    "section": "Data",
-    "text": "Data\n\n\n\n\n\n\n\n\n\nIn GG, data is the foundation\n\nAll graphical representation decisions rest on top of it\n\nAll the decisions are data-driven\n\nResult: meaningful and accurate visual representation of data\n\nAND a wide variety of graphics",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#aesthetics-aesthetic-mappings",
-    "href": "lectures/Lecture01.html#aesthetics-aesthetic-mappings",
-    "title": "Welcome Statistics 422",
-    "section": "Aesthetics (Aesthetic Mappings)",
-    "text": "Aesthetics (Aesthetic Mappings)\n\nThese are the rules\n\nThey map (connect) data variables to the visual properties of the graphical elements\n\nMost frequently - x, y, color, size, and shape\n\nThe connection of data to graphical elements allow us to see/interpret patterns, trends, and anomalies within the data",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#geometries-include",
-    "href": "lectures/Lecture01.html#geometries-include",
-    "title": "Welcome Statistics 422",
-    "section": "Geometries include",
-    "text": "Geometries include\n\nPoints, typically used for individual values\nLines, connect points in some defined order (e.g., time, location)\nBars, typically used for categories (e.g., pizza types)\nPolygons, use to represent areas (maps)\nPaths, fatter lines, used to represent flows (Sankey)",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#from-the-ggplot2-cheatsheet",
-    "href": "lectures/Lecture01.html#from-the-ggplot2-cheatsheet",
-    "title": "Welcome Statistics 422",
-    "section": "from the ggplot2 cheatsheet",
-    "text": "from the ggplot2 cheatsheet",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#facets-and-layers",
-    "href": "lectures/Lecture01.html#facets-and-layers",
-    "title": "Welcome Statistics 422",
-    "section": "Facets and Layers",
-    "text": "Facets and Layers\n\nConditioning the data\nSubsets are facets\nLayers combine multiple types of visualizations into a single graphic",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#statistics",
-    "href": "lectures/Lecture01.html#statistics",
-    "title": "Welcome Statistics 422",
-    "section": "Statistics",
-    "text": "Statistics\n\nData can be summarized or modified prior to visualization\n\nAggregation (like sums or means),\nsmoothing\n\nCan clarify the underlying structure or relationships in data.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#coordinates-and-scales",
-    "href": "lectures/Lecture01.html#coordinates-and-scales",
-    "title": "Welcome Statistics 422",
-    "section": "Coordinates and scales",
-    "text": "Coordinates and scales\n\nScaling (linear, logarithmic, etc.)\nCoordinate systems (Cartesian, polar, etc.).\nThey influence the position of data points (and the interpretation).",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "lectures/Lecture01.html#themes",
-    "href": "lectures/Lecture01.html#themes",
-    "title": "Welcome Statistics 422",
-    "section": "Themes",
-    "text": "Themes\n\nControl the overall “look” (styling) of the graphic\nfonts, colors\nlabeling, legends, captioning\nlayout etc.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 01"
-    ]
-  },
-  {
-    "objectID": "Syllabus.html",
-    "href": "Syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Introduction\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\nContact Info: vlew@stat.ucla.edu\nOffice Hours: M 4pm - 6pm (MS 8923), Th after lecture, and F 3pm-5pm (Zoom). You are welcome to schedule Zoom appointment(s), most days, evenings & weekends too\nMeeting Times and Locations: Th 6pm - 8:50pm Physics & Astronomy 2748\nThe purpose of Statistics 422 is to provide you with a thorough understanding of the fundamentals of data visualization and a working knowledge of how to perform data visualization tasks in R, Python, Tableau and also incorporate supporting tools (e.g., GitHub).",
-    "crumbs": [
-      "Start Here",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "Syllabus.html#proposed-learning-outcomes",
-    "href": "Syllabus.html#proposed-learning-outcomes",
-    "title": "Syllabus",
-    "section": "Proposed Learning Outcomes",
-    "text": "Proposed Learning Outcomes\nThe overall goal of this course are to provide students with the foundations necessary for understanding and building on their existing data visualization skills. After this quarter, students will have:\n\nAn Understanding of different ways to visually represent data and familiarity with various types of charts and graphs (e.g., bar charts, line graphs, scatter plots, heat maps), and when and how to use them effectively to represent different kinds of data and relationships.\nAn understanding of data models: ways of structuring and organizing data for effective visualization. Understanding different types of data (quantitative, qualitative, spatial) and transformation and visual representation.\nAn understanding of Graphical Perception/perceived visual information. Some of the cognitive principles related to visual perception and using these principles to create compelling visualizations.\nGenerated interactive visualizations\nWritten a reproducible report which conforms to UC Thesis formatting requirements and contains data visualizations. Examples from the eScholarship Repository",
-    "crumbs": [
-      "Start Here",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "Syllabus.html#course-materials-resources",
-    "href": "Syllabus.html#course-materials-resources",
-    "title": "Syllabus",
-    "section": "Course Materials & Resources",
-    "text": "Course Materials & Resources\nAll course related materials are posted to BruinLearn (https://bruinlearn.ucla.edu/courses/180429), all assignments are uploaded to that site as well typically in the form of PDF files, photographs or recordings. Official course grades are found online on myUCLA only. Other materials used:\n\nHealy, Kieran. Data visualization: a practical introduction. Princeton University Press, 2018.\n\n\nSoftware\nWe will try to strike a balance given the many choices available to us. All of these are free:\n\nR https://www.r-project.org/\n\nggplot2 https://ggplot2.tidyverse.org/\n\nShiny https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html\n\n\nPython https://www.python.org/\n\nTableau https://softwarecentral.ucla.edu/tableau\n\n\n\nOptional Sites\nA GitHub presence is strongly encouraged but not required. Example https://stats422.github.io/\nQuarto is useful but not required. https://quarto.org/\nOverleaf is useful but not required. https://www.overleaf.com/\nO’Reilly library access https://www.oreilly.com/library-access/\nPython Graph Gallery https://python-graph-gallery.com/\n\n\nOptional materials\n\nTufte, Edward R. The visual display of quantitative information. 2nd Ed. Cheshire, CT: Graphics press, 2001.\nYau, Nathan. Visualize this: the FlowingData guide to design, visualization, and statistics. John Wiley & Sons, 2011.\nWickham, Hadley. et. al. R for Data Science, 2nd Edition O’Reilly Media, Inc. 2023\nTidyTuesday",
-    "crumbs": [
-      "Start Here",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "Syllabus.html#grading",
-    "href": "Syllabus.html#grading",
-    "title": "Syllabus",
-    "section": "Grading",
-    "text": "Grading\nA letter grade is assigned upon the successful completion of this course. The breakdown is:\n\n30% (10 meetings) Attending which means\n\ncontributing to the class, this involves attending class regularly\nTEAM work during class meetings\n\n20% Four (Individual) Homework Assignments\n5% Campuswire - sharing and posting questions and answers, percentage assigned is related to your rep level as determined by Campuswire (e.g., rep level 1 = 1% and top rep level = 5%)\n20% (Individual) Web App: Find your data, Design a page, submit Code and Video for evaluation\n25% (Individual) Final Project: Find your own data, Write a Report, submit Code and Video for evaluation\n\n\n\n\ngrading\n\n\n\nLate Policy\nIf you submit your homework assignments after the due date but before I start the grading, the submission will not be not counted as late. After I begin grading, unsubmitted assignments will be designated as late and can only receive partial credit.\nThe Web App and Final Project should both be submitted by the end of Week 11 as grading will begin immediately after the deadline. I will accept late submissions for partial credit.",
-    "crumbs": [
-      "Start Here",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "Syllabus.html#course-outline-this-is-subject-to-change",
-    "href": "Syllabus.html#course-outline-this-is-subject-to-change",
-    "title": "Syllabus",
-    "section": "Course Outline (this is subject to change)",
-    "text": "Course Outline (this is subject to change)\n\n\n\nDate\nTopic\nReading\n\n\n\n\nWeek 1 4/4\nFirst Day business; ggplot2; story telling\nHealy Ch. 1 and Ch. 2\n\n\nWeek 2 4/11\nData Exploration/Analysis; Visualization Insights & Types\nWickham Ch. 10; Healy Ch. 3 and Ch. 4, Yau Ch. 3, Wilke - Fundamentals of Data Visualization - Ch. 5\n\n\nWeek 3 4/18\nReorganizing Data, Python Visualization Tools\nYau Ch.2, Wickham Ch. 5; Molin - Hands-On Data Analysis with Pandas\n\n\nWeek 4 4/25\nInteractive: R/Shiny\nWickham - Mastering Shiny\n\n\nWeek 5 5/2\nInteractive: Python tools\nRichards; 30 day challenge\n\n\nWeek 6 5/9\nWorking with Spatial Data\nHealy Ch. 7; Yau Ch. 8; Wilke Ch. 15\n\n\nWeek 7 5/16\nWorking with Time\nYau Ch. 4; Wilke Ch. 13 and Wilke Ch. 14\n\n\nWeek 8 5/23\nTableau for starters\nMilligan - Learning Tableau;Sleeper - Practical Tableau\n\n\nWeek 9 5/30\nGuest Lecture\n\n\n\nWeek 10 6/6\nTBD\n\n\n\nWeek 11 6/14\nCompletion of Web App and Final Report",
-    "crumbs": [
-      "Start Here",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "Syllabus.html#academic-dishonesty",
-    "href": "Syllabus.html#academic-dishonesty",
-    "title": "Syllabus",
-    "section": "Academic Dishonesty",
-    "text": "Academic Dishonesty\nAs Bruins, we uphold the UCLA Student Code of Conduct. Academic dishonesty means activities like plagiarism, unauthorized material used on exams, unauthorized collaborations etc. According to Senate Regulation A-306, if an instructor encounters a problem, the instructor must report it to the Dean of Students.\n\nhttps://www.deanofstudents.ucla.edu/Student-Conduct#10690514-student-conduct-code\nhttps://ucla.app.box.com/s/8xq1jyrvqhs9343e4rzyvporx9lt8u1g\n\n\nChatGPT policy\nYour instructor’s belief is ChatGPT should be used – wisely – as if it were an amazingly clever tutor or friend. But copying and pasting the code of the first example’s (below) ChatGPT response is not learning and chances are, you won’t remember how to do it if you do not do it regularly. Asking ChatGPT questions in the second way gives your mind the opportunity to develop the skills scaffolding and retain the knowledge long after this course is over.\n\n\n\n\n\n\n\nQuestion\nResponse\n\n\n\n\nPlease write some code in R that splits a dataset into test and training.\nTo split a dataset into training and test sets in R, you commonly use a function like createDataPartition from the caret package:  Using the caret package  First, install and load the caret package if you haven’t already:  install.packages(“caret”)  library(caret)  Next, use the createDataPartition function to create a list of indices for the training set, then use these indices to create the training and test sets:  # Load the necessary package library(caret) # Load or import your dataset (replace ‘your_dataset’ with your actual dataset)  # data &lt;- read.csv(“path/to/your/dataset.csv”)  # Create the data partition  set.seed(123) # Set seed for reproducibility  trainIndex &lt;- createDataPartition(data$your_target_variable, p = .8, list = FALSE, times = 1)  # Create training and test datasets trainData &lt;- data[ trainIndex,] testData &lt;- data[-trainIndex,] Replace your_target_variable with the name of the column that contains the target variable you’re interested in, and replace data with your dataset name.\n\n\nPlease teach me on how to write code using base R that splits a dataset into training and test with a 70-30 split - but don’t write the code for me, I want to learn how to think it through on my own.\nAbsolutely, I’d be glad to guide you on how to approach this!   1. Understanding the Data: - Before you begin, familiarize yourself with the dataset. Use functions like str(), head(), and summary() to understand the structure and contents of your data.  2. Setting a Seed: - To ensure that your results are reproducible, you will want to set a seed using the set.seed() function. This function controls the random number generator in R.  3. Determining the Number of Rows: - You need to know the total number of rows in your dataset to create the splits. The nrow() function can help you determine this.  4. Calculating Split Sizes: - Next, determine how many rows should go into your training and test sets. You’ll want 70% of the data to be in the training set and 30% in the test set. Use arithmetic operations to calculate the respective sizes.  5. Creating a Random Sample of Indices: - To create your training set, you’ll need to randomly select 70% of the indices (row numbers) from your dataset. You can use the sample() function to do this. Remember to use the total number of rows and the size of the training set as parameters in this function.  6. Subsetting the Dataset: - Once you have a vector of random indices, use it to subset your dataset into two parts: one for training and one for testing. In R, you can subset a data frame using square brackets []. You’ll use the vector of random indices to select rows for the training set, and the - operator to select the remaining rows for the test set.  7. Verifying Your Split: - After creating your training and test sets, verify that you’ve split the data correctly. Use the dim() function to check the dimensions of each set and ensure the split ratio is approximately 70-30. You can also use the head() function to quickly view the top rows of each set and ensure they look correct.   Remember to write your code step by step, verifying each part before moving on to the next, to avoid confusion and ensure accuracy. Once you are confident in your understanding of each step, try to write the code on your own. Good luck!\n\n\n\nChatGPT is also a wonderful tool to help you with subjects that are outside of your skill set which do not make sense for you to invest huge amounts of time or resources remembering/learning.",
-    "crumbs": [
-      "Start Here",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "Syllabus.html#covid-19-health-and-safety",
-    "href": "Syllabus.html#covid-19-health-and-safety",
-    "title": "Syllabus",
-    "section": "COVID-19 health and safety",
-    "text": "COVID-19 health and safety\nIn compliance with Los Angeles County policies effective January 6 2023, UCLA strongly recommends indoor masking, regardless of vaccination status. Testing is also strongly encouraged. See\n\nhttps://covid-19.ucla.edu/covid-protocols-at-a-glance/\nhttp://publichealth.lacounty.gov/phcommon/public/media/mediapubHPdisplay.cfm\n\nSome of us might feel more comfortable wearing masks and continuing to social distance, for example, during small-group work in class or section. All of our preferences are reasonable, and it is important that we treat each others’ preferences with respect and care so that we each feel comfortable and prepared to learn in class. You can find the most current policies on campus requirements on the UCLA COVID-19 resources site https://covid-19.ucla.edu/.",
-    "crumbs": [
-      "Start Here",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "Syllabus.html#accessible-education",
-    "href": "Syllabus.html#accessible-education",
-    "title": "Syllabus",
-    "section": "Accessible Education",
-    "text": "Accessible Education\nStudents with accessibility issues are welcome and encouraged to seek accommodation. Students needing academic accommodations based on a documented disability should contact the Center for Accessible Education (CAE) at (310)825-1501 or in person at Murphy Hall A255. In order to ensure accommodations, students need to contact CAE within the first two weeks of the term.",
-    "crumbs": [
-      "Start Here",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "Syllabus.html#resources-for-students-dealing-with-financial-stress",
-    "href": "Syllabus.html#resources-for-students-dealing-with-financial-stress",
-    "title": "Syllabus",
-    "section": "Resources for Students Dealing with Financial Stress",
-    "text": "Resources for Students Dealing with Financial Stress\nLife is unpredictable and can create financial emergencies. If you find yourself in this situation, please seek assistance:\n• Bruin Shelter: http://www.bruinshelter.org/ Provides a safe, supportive environment for fellow college students experiencing homelessness by fostering a collaborative effort between universities, community-based organizations, and service providers.\n• The CPO Food Shelter: https://basicneeds.ucla.edu/services/cpo-food-closet Provides free food for any UCLA student who may be experiencing hunger and/or struggling to attain food due to financial hardships.",
-    "crumbs": [
-      "Start Here",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "Syllabus.html#title-ix-resources",
-    "href": "Syllabus.html#title-ix-resources",
-    "title": "Syllabus",
-    "section": "Title IX Resources",
-    "text": "Title IX Resources\nUCLA prohibits gender discrimination, including sexual harassment, domestic and dating violence, sexual assault, and stalking. If you have experienced sexual harassment or sexual violence, there are a variety of resources to assist you.\n• CONFIDENTIAL RESOURCES: You can receive confidential support and advocacy at the CARE Advocacy Office for Sexual and Gender-Based Violence, 1st Floor Wooden Center West, (310) 206-2465. Counseling and Psychological Services (CAPS) also provides confidential counseling to all students and can be reached 24/7 at (310) 825-0768.\n• NON-CONFIDENTIAL RESOURCES: You can also report sexual violence or sexual harassment directly to the University’s Title IX Coordinator, 2241 Murphy Hall, titleix@conet.ucla.edu, (310) 206-3417. Reports to law enforcement can be made to UCPD at (310) 825-1491. These offices may be required to pursue an official investigation.",
-    "crumbs": [
-      "Start Here",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "Syllabus.html#psychological-health-well-being-and-resilience",
-    "href": "Syllabus.html#psychological-health-well-being-and-resilience",
-    "title": "Syllabus",
-    "section": "Psychological Health, Well-Being and Resilience",
-    "text": "Psychological Health, Well-Being and Resilience\nUCLA is renowned for academic excellence, and yet we know that many students feel overwhelmed at times by demands to succeed academically, socially and personally. Our campus community is committed to helping all students thrive, learn to cope with stress, and build resilience. Remember, self-care is a skill that is critical to your long-term success. Here are some of the many resources available at UCLA to support you:\n• Counseling and Psychological Services (CAPS): https://www.counseling.ucla.edu/ Provides counseling and other psychological/mental health services to students. Walk-in hours are Monday-Thursday 8am-4:30pm and Friday 9am-4:30pm in John Wooden Center West. Crisis counseling is also available 24 hours/day at (310) 825-0768.\n• Ashe Student Health and Wellness Center: http://www.studenthealth.ucla.edu Provides high quality and accessible ambulatory healthcare and education by caring professionals to support the academic success and personal development of all UCLA students.\n• Healthy Campus Initiative (HCI): https://healthy.ucla.edu Provides links to a wide variety of resources for enhancing physical and psychological well-being, positive social interactions, healthy sleep, healthy eating, healthy physical activity and more.\n• Campus and Student Resilience: https://risecenter.ucla.edu/ Provides programs to promote resilience and trains students to help support their peers.\n• UCLA Recreation: https://www.recreation.ucla.edu/ Offers a broad array of services and programs including fitness, yoga, dance, martial arts, meditation, sports, and much more.\n• Equity, Diversity and Inclusion: https://equity.ucla.edu/ Committed to providing an equal learning, working and living environment at UCLA and supports a range of programs to promote these goals campus-wide.",
-    "crumbs": [
-      "Start Here",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "projects/project-1.html",
-    "href": "projects/project-1.html",
-    "title": "project-1",
-    "section": "",
-    "text": "To be filled out soon",
-    "crumbs": [
-      "Projects",
-      "Project 1 (web app)"
-    ]
-  },
-  {
-    "objectID": "StoryTelling.html#a-story",
-    "href": "StoryTelling.html#a-story",
-    "title": "Story Time",
-    "section": "A story",
-    "text": "A story\n\nHere is one you might all know\n\nIn 1912, Rose boards a ship, where she meets and falls in love with Jack, a poor artist, threatening her engagement to the wealthy Cal.\nAs their romance blossoms, they navigate social boundaries and personal freedoms aboard the luxurious ship.\nThe ship hits an iceberg, causing catastrophic damage and panic among passengers and crew as the ship begins to sink.\nJack and Rose fight for survival, facing both physical dangers and societal expectations in their desperate bid to stay together.\nTragically, it ends with the sinking of the ship, with Jack sacrificing his life to save Rose, who survives to tell their story."
-  },
-  {
-    "objectID": "StoryTelling.html#section",
-    "href": "StoryTelling.html#section",
-    "title": "Story Time",
-    "section": "",
-    "text": "A Picture of Contrasts\n\nFive bullets on a slide vs A famous movie\nAdjusted for inflation, $1.2 Billion in US box office movie business\nQuote from Robert McGee (2003 Harvard Business Review) on stories: “fulfill a profound human need to grasp the patterns of living not merely as an intellectual exercise, but within a very personal, emotional experience”"
-  },
-  {
-    "objectID": "StoryTelling.html#section-1",
-    "href": "StoryTelling.html#section-1",
-    "title": "Story Time",
-    "section": "",
-    "text": "An Outline to close out tonight\n\nGOAL: connect your ideas/analyses to your audience’s emotion\n\nSuggested solution: the best way - tell a compelling story\n\nWhat?\n\nStories allow us to weave a lot of information into whatever we are presenting\nand allows you to connect to your audience’s emotions and energy.\n\nTHIS IS NOT EASY TO DO! (practice makes perfect)"
-  },
-  {
-    "objectID": "StoryTelling.html#section-2",
-    "href": "StoryTelling.html#section-2",
-    "title": "Story Time",
-    "section": "",
-    "text": "An Outline to close out tonight (cont’d)\n\nREQUIREMENTS\n\nclear understanding of your material\nstorytelling skills to present ideas that connect with your audience\n\nRESULT - your ideas are REMEMBERED.\nIf you can capture the principles of good storytelling, then you get people applauding instead of yawning."
-  },
-  {
-    "objectID": "StoryTelling.html#section-3",
-    "href": "StoryTelling.html#section-3",
-    "title": "Story Time",
-    "section": "",
-    "text": "If we have time (if not, check Campuswire)\n\n\n\nIKEA data\n\n\nSuppose you were interviewing with IKEA or consulting with them\nI’d like you to examine the data with an interview in mind\nWith the specific goal of building a visualization from it (no programming necessary)"
-  },
-  {
-    "objectID": "StoryTelling.html#section-4",
-    "href": "StoryTelling.html#section-4",
-    "title": "Story Time",
-    "section": "",
-    "text": "A data visualization with a story\n\nstories often center on life as it is/was and its patterns of change"
-  },
-  {
-    "objectID": "StoryTelling.html#section-5",
-    "href": "StoryTelling.html#section-5",
-    "title": "Story Time",
-    "section": "",
-    "text": "Categories of Data Viz stories\n\nThere are plenty, to name a few\n\nillustrate change\n\ncommunicate understanding\n\npurely descriptive\n\nposes solutions to a problem\n\n\nNeuroscientists tell us we forget bullet points, but we remember stories."
-  },
-  {
-    "objectID": "StoryTelling.html#section-6",
-    "href": "StoryTelling.html#section-6",
-    "title": "Story Time",
-    "section": "",
-    "text": "Some applicable situations\n\nWe could identify some situations where Data Viz storytelling might apply:\n\nConvincing your committee your model is the best model\n\nPersuading your employer to apply your recommender system\nExplaining to a prospective employer the visualization you created for the interview\nHighlighting problems, finding something of interest (possible solution?)"
-  },
-  {
-    "objectID": "StoryTelling.html#reassurance",
-    "href": "StoryTelling.html#reassurance",
-    "title": "Story Time",
-    "section": "Reassurance",
-    "text": "Reassurance\n\nThere is NO expectation of perfection in Stats 422\nGenerating data visualizations with ggplot has a learning curve\n\nEven if you use ChatGPT"
-  },
-  {
-    "objectID": "StoryTelling.html#section-7",
-    "href": "StoryTelling.html#section-7",
-    "title": "Story Time",
-    "section": "",
-    "text": "Strategic Storytelling with Data Visualization\n\nKeep it simple\nEdit ruthlessly\nBe genuine\nDon’t communicate for yourself — communicate for your audience.\nThe story you are telling is not for you; the story is for them. Help your audience to see what you see in the data."
-  },
-  {
-    "objectID": "StoryTelling.html#section-8",
-    "href": "StoryTelling.html#section-8",
-    "title": "Story Time",
-    "section": "",
-    "text": "More on the Audience\n\nAlways keep your audience in mind. Give them a reason for spending time with you.\nThink about what will resonate with them and motivate them.\nAlso think about whether and when data will strengthen your story and integrate data sensibly.\nMake the information presented specific and relevant to your audience."
-  },
-  {
-    "objectID": "StoryTelling.html#section-9",
-    "href": "StoryTelling.html#section-9",
-    "title": "Story Time",
-    "section": "",
-    "text": "Advice for Data Visualizations & their stories\n\nEven the most beautiful data visualization might fail if it does not possess a compelling story/narrative.\nA strong story will overcome a weak data visualization.\nAim to display data in such a way that makes the complex clear.\nTHE IDEAL - when effective visuals are combined with a powerful story."
-  },
-  {
-    "objectID": "StoryTelling.html#section-10",
-    "href": "StoryTelling.html#section-10",
-    "title": "Story Time",
-    "section": "",
-    "text": "Tactical advice on Data Visualizations\n\nIf someone were to only read the label and title of your data visualization, they should still know what it was about\nAll information presented should be self-reinforcing. The content reinforces the titles. The words reinforce the visual, Avoid extraneous or unrelated information.\nThe decision on what to drop is as important as the decision on what to keep.\nOutcome based story development (start with the takeaway and work backwards)\nAsk others to comment/give feedback"
-  },
-  {
-    "objectID": "activity/ggplot1.html",
-    "href": "activity/ggplot1.html",
-    "title": "ggplot part 1",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 1 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot1.html#loading-libraries",
-    "href": "activity/ggplot1.html#loading-libraries",
-    "title": "ggplot part 1",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 1 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot1.html#five-minute-ggplot",
-    "href": "activity/ggplot1.html#five-minute-ggplot",
-    "title": "ggplot part 1",
-    "section": "Five minute ggplot",
-    "text": "Five minute ggplot\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAT MINIMUM ggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified. We will choose two numeric variables.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y) as it relates to the features.\nThe “+” in ggplot separates “layers” of a graphic.\nThink of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is about five minutes. The rest of ggplot is about beautifying your graphic through additional options. Mapping the data to the aesthetic then is the most critical skill here.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 1 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot1.html#ggplot-in-detail",
-    "href": "activity/ggplot1.html#ggplot-in-detail",
-    "title": "ggplot part 1",
-    "section": "ggplot in detail",
-    "text": "ggplot in detail\nOk let’s slow down, identify the data types within the dataset\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand let’s fix some issues with missing values or we will get lots of warnings\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 1 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot1.html#non-numeric-variables",
-    "href": "activity/ggplot1.html#non-numeric-variables",
-    "title": "ggplot part 1",
-    "section": "Non-Numeric Variables",
-    "text": "Non-Numeric Variables\nHow do we work with non-numeric information (like gender)?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 1 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot1.html#multiple-geoms",
-    "href": "activity/ggplot1.html#multiple-geoms",
-    "title": "ggplot part 1",
-    "section": "Multiple Geoms",
-    "text": "Multiple Geoms\nYou might be asking - sometimes you put an aes( ) in the geom, sometimes not? Some would tell you it should only go in the geom() but that works best if you have multiple geoms:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGets messy though, this suggests an appearance issue, we get into themes (later)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGo badk to something simpler. Plotting categorical variables with different geoms.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nInteraction is a handy function, comining sex and species:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 1 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot1.html#faceting",
-    "href": "activity/ggplot1.html#faceting",
-    "title": "ggplot part 1",
-    "section": "Faceting",
-    "text": "Faceting\nI do recommend you learn how to “facet” (condition) the plots:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nread “as a function of island”, if you wanted island on the rows, move to facet_grid()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\na better use of facet_grid\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 1 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot1.html#statistics",
-    "href": "activity/ggplot1.html#statistics",
-    "title": "ggplot part 1",
-    "section": "Statistics",
-    "text": "Statistics\nSome of the geoms automatically apply a statistical transformation to the data, we need to do little except call them:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nbut others require additional work on our part\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nreturn to geom_bar",
-    "crumbs": [
-      "Activities",
-      "Lecture 1 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot1.html#scales-coordinate-flipping",
-    "href": "activity/ggplot1.html#scales-coordinate-flipping",
-    "title": "ggplot part 1",
-    "section": "Scales + Coordinate flipping",
-    "text": "Scales + Coordinate flipping\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 1 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot1.html#themes",
-    "href": "activity/ggplot1.html#themes",
-    "title": "ggplot part 1",
-    "section": "Themes",
-    "text": "Themes\nThe remaining functions of ggplot deal with appearance such as labels, legends, tick marks, background color etc. etc.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 1 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot1.html#team-challenge",
-    "href": "activity/ggplot1.html#team-challenge",
-    "title": "ggplot part 1",
-    "section": "Team Challenge",
-    "text": "Team Challenge\nTeams - you can use penguins or choose your own data (and you don’t need to use this web app but you need to use ggplot).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nI’d like to see what you can do as teams in a short amount of time.",
-    "crumbs": [
-      "Activities",
-      "Lecture 1 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ikea.html",
-    "href": "activity/ikea.html",
-    "title": "Tidy Tuesday IKEA example",
-    "section": "",
-    "text": "import os\nimport pandas as pd\nfrom plotnine import *\nimport numpy as np\n\n\ndf = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-11-03/ikea.csv')\ndf\n\n\n\n\n\n\n\n\n\nUnnamed: 0\nitem_id\nname\ncategory\nprice\nold_price\nsellable_online\nlink\nother_colors\nshort_description\ndesigner\ndepth\nheight\nwidth\n\n\n\n\n0\n0\n90420332\nFREKVENS\nBar furniture\n265.0\nNo old price\nTrue\nhttps://www.ikea.com/sa/en/p/frekvens-bar-tabl...\nNo\nBar table, in/outdoor, 51x51 cm\nNicholai Wiig Hansen\nNaN\n99.0\n51.0\n\n\n1\n1\n368814\nNORDVIKEN\nBar furniture\n995.0\nNo old price\nFalse\nhttps://www.ikea.com/sa/en/p/nordviken-bar-tab...\nNo\nBar table, 140x80 cm\nFrancis Cayouette\nNaN\n105.0\n80.0\n\n\n2\n2\n9333523\nNORDVIKEN / NORDVIKEN\nBar furniture\n2095.0\nNo old price\nFalse\nhttps://www.ikea.com/sa/en/p/nordviken-nordvik...\nNo\nBar table and 4 bar stools\nFrancis Cayouette\nNaN\nNaN\nNaN\n\n\n3\n3\n80155205\nSTIG\nBar furniture\n69.0\nNo old price\nTrue\nhttps://www.ikea.com/sa/en/p/stig-bar-stool-wi...\nYes\nBar stool with backrest, 74 cm\nHenrik Preutz\n50.0\n100.0\n60.0\n\n\n4\n4\n30180504\nNORBERG\nBar furniture\n225.0\nNo old price\nTrue\nhttps://www.ikea.com/sa/en/p/norberg-wall-moun...\nNo\nWall-mounted drop-leaf table, ...\nMarcus Arvonen\n60.0\n43.0\n74.0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n3689\n3689\n99157902\nELVARLI\nWardrobes\n750.0\nSR 820\nTrue\nhttps://www.ikea.com/sa/en/p/elvarli-1-section...\nNo\n1 section, 92x51x222-350 cm\nEhlén Johansson\n50.0\nNaN\n91.0\n\n\n3690\n3690\n9158152\nELVARLI\nWardrobes\n1572.0\nSR 1,755\nTrue\nhttps://www.ikea.com/sa/en/p/elvarli-2-section...\nNo\n2 sections, 135x51x222-350 cm\nEhlén Johansson\n50.0\nNaN\n135.0\n\n\n3691\n3691\n59157541\nELVARLI\nWardrobes\n924.0\nSR 1,050\nTrue\nhttps://www.ikea.com/sa/en/p/elvarli-2-section...\nNo\n2 sections, 175x51x222-350 cm\nEhlén Johansson\n50.0\nNaN\n175.0\n\n\n3692\n3692\n89157573\nELVARLI\nWardrobes\n2745.0\nSR 3,130\nTrue\nhttps://www.ikea.com/sa/en/p/elvarli-3-section...\nNo\n3 sections, 178x51x222-350 cm\nEhlén Johansson\n50.0\nNaN\n178.0\n\n\n3693\n3693\n69157376\nELVARLI\nWardrobes\n1231.0\nSR 1,535\nTrue\nhttps://www.ikea.com/sa/en/p/elvarli-2-section...\nNo\n2 sections, 175x51x222-350 cm\nEhlén Johansson\n50.0\nNaN\n175.0\n\n\n\n\n3694 rows × 14 columns\n\n\n\n\n\nikea = df.copy()\nikea.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 3694 entries, 0 to 3693\nData columns (total 14 columns):\n #   Column             Non-Null Count  Dtype  \n---  ------             --------------  -----  \n 0   Unnamed: 0         3694 non-null   int64  \n 1   item_id            3694 non-null   int64  \n 2   name               3694 non-null   object \n 3   category           3694 non-null   object \n 4   price              3694 non-null   float64\n 5   old_price          3694 non-null   object \n 6   sellable_online    3694 non-null   bool   \n 7   link               3694 non-null   object \n 8   other_colors       3694 non-null   object \n 9   short_description  3694 non-null   object \n 10  designer           3694 non-null   object \n 11  depth              2231 non-null   float64\n 12  height             2706 non-null   float64\n 13  width              3105 non-null   float64\ndtypes: bool(1), float64(4), int64(2), object(7)\nmemory usage: 378.9+ KB"
-  },
-  {
-    "objectID": "hw/hw-2.html",
-    "href": "hw/hw-2.html",
-    "title": "hw-2",
-    "section": "",
-    "text": "Please upload your materials to be graded to BruinLearn only (not GitHub etc.)\n\nIntroduction\nThis assignment is not ready yet"
-  },
-  {
-    "objectID": "hw/hw-1.html",
-    "href": "hw/hw-1.html",
-    "title": "Homework 1 - EDA and Data Visualization",
-    "section": "",
-    "text": "Please upload your materials to be graded to BruinLearn only (not GitHub etc.)",
-    "crumbs": [
-      "Homework",
-      "HW 1"
-    ]
-  },
-  {
-    "objectID": "hw/hw-1.html#part-i---assemble-your-toolkit",
-    "href": "hw/hw-1.html#part-i---assemble-your-toolkit",
-    "title": "Homework 1 - EDA and Data Visualization",
-    "section": "Part I - Assemble Your Toolkit",
-    "text": "Part I - Assemble Your Toolkit\nI’d like you to film (you could use Zoom to record) a navigation through your toolkit and submit that as completion of Part I of this homework assignment.\n\nIf you don’t already, you probably should have your own site where you can display your current work. Here are examples that are easily completed using Quarto (you can use the editor in RStudio)\n\n\nA previous TA\nAn undergrad\nMine\n\nB. You should have access to R (it’s free)\nC. You should have access to Python (it’s free)\nD. And Tableau (free to currently enrolled students)",
-    "crumbs": [
-      "Homework",
-      "HW 1"
-    ]
-  },
-  {
-    "objectID": "hw/hw-1.html#part-ii-explore-some-data-generate-a-simple-visualization-and-talk-about-it.",
-    "href": "hw/hw-1.html#part-ii-explore-some-data-generate-a-simple-visualization-and-talk-about-it.",
-    "title": "Homework 1 - EDA and Data Visualization",
-    "section": "Part II Explore some data, generate a simple visualization and talk about it.",
-    "text": "Part II Explore some data, generate a simple visualization and talk about it.\nWe will use the centenarians dataset from tidytuesday:\nhttps://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-05-30/readme.md\n\nPlease create a histogram, a density and a boxplot of the age variable. You can use ggplot or something else. What is more important here is “the story”. If you had to use one of these graphics to talk about age in this dataset to your coworkers/supervisors/thesis advisor, which one would you prefer to use and why?\nPlease create one new visualization of age and add a second variable. So for example, you could add gender and compare boxplots of age. Whatever you choose to do, keep the storytelling aspect in mind. Do some visualizations work better than others? Do they make talking about the relationship between age and second variable easier?\nPlease video record your answers to A and B as if you were presenting your findings. I should be able to see the graphic you decided to talk about and you should be able to discuss briefly why you chose the one you presented and not one of the others.",
-    "crumbs": [
-      "Homework",
-      "HW 1"
-    ]
-  },
-  {
-    "objectID": "hw/hw-1.html#part-iii---discover-and-explore-data-of-your-choosing-submit-one-simple-visualization-and-write-about-it-and-the-process-of-arriving-at-it.",
-    "href": "hw/hw-1.html#part-iii---discover-and-explore-data-of-your-choosing-submit-one-simple-visualization-and-write-about-it-and-the-process-of-arriving-at-it.",
-    "title": "Homework 1 - EDA and Data Visualization",
-    "section": "Part III - Discover and explore data of your choosing, submit ONE simple visualization, and write about it and the process of arriving at it.",
-    "text": "Part III - Discover and explore data of your choosing, submit ONE simple visualization, and write about it and the process of arriving at it.\n\nIf you are currently working on your MASDS thesis, perhaps use its data for this part, if not, perhaps something you might use for your thesis or just something you like thinking/talking/writing about.\nData you cannot use: iris, diamonds, penguins, Titanic, anything from tidytuesday (unless your thesis advisor has already approved the use of any of those).\nYou may use ChatGPT or some other chatbot to help you.\n\n\nThe visualization should be thesis quality (you can examine MASDS theses online for a sense of what that means, the bar is not high but I would hope you would aim high) Examples from the eScholarship Repository\nThe visualization should contain a minimum of two features (variables, fields, whatever you like to call them). Example: in part II use we used age and gender.\nYou should be able to write about what you tried (you do not need to show any of the rejects unless you want to for shock/surprise/contrast) and why you didn’t like it or didn’t choose it. There is no bad answer here, I want you to see/hear your internal decision making with respect to data visualization. Perhaps just a few sentences.\nYou should be able to tell a brief story about the one visualization you chose for Part III. Perhaps a short paragraph.\nPlease submit a single PDF with the graphic of B and your answers to C and D with it.\n\nThis is due by the end of Week 2 (Saturday April 13th 11:59pm).",
-    "crumbs": [
-      "Homework",
-      "HW 1"
-    ]
-  },
-  {
-    "objectID": "activity/RRefresher.html",
-    "href": "activity/RRefresher.html",
-    "title": "R Refresher",
-    "section": "",
-    "text": "This is an R Refresher adapted from Weisberg (2014) We will use packages ggplot2, knitr, dplyr and tidyr. We will use packages ggplot2, knitr, dplyr and tidyr. Also data from the palmerpenguins library."
-  },
-  {
-    "objectID": "activity/RRefresher.html#dim",
-    "href": "activity/RRefresher.html#dim",
-    "title": "R Refresher",
-    "section": "dim()",
-    "text": "dim()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "activity/RRefresher.html#head",
-    "href": "activity/RRefresher.html#head",
-    "title": "R Refresher",
-    "section": "head()",
-    "text": "head()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "activity/RRefresher.html#summary",
-    "href": "activity/RRefresher.html#summary",
-    "title": "R Refresher",
-    "section": "summary()",
-    "text": "summary()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSummary is being abused here. While it is fast and gives us the count of NA (missing), do consider that rounding error could occur for the summary statistics. Functions for computing stats like mean( ) can be found elsewhere:"
-  },
-  {
-    "objectID": "activity/RRefresher.html#descriptive-basics",
-    "href": "activity/RRefresher.html#descriptive-basics",
-    "title": "R Refresher",
-    "section": "descriptive basics",
-    "text": "descriptive basics\nChallenge (and working with webR), in teams, please compute the following for the variable birth_year in the starwars data:\n\nmean,\nsd,\nfive number summary,\ndeciles,\nthe number of missing values\nand a count (number) of unique birth years\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "activity/RRefresher.html#conditioninggrouping",
-    "href": "activity/RRefresher.html#conditioninggrouping",
-    "title": "R Refresher",
-    "section": "conditioning/grouping",
-    "text": "conditioning/grouping\nWe will use more of this later in the course, but for now, you should possess these fundamental data handling skills:\nin base R\nWe could use some basic character manipulation to make the result a little more compact. Here’s the issue:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe variable hair_color is a little too granular, let’s propose a simple fix, just keep first mention of hair color:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow let’s examine mass (weight) by hair_color and gender in base R:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nusing dplyr with a little tidyr\nThis is a preferred alternative to the base R solution because (1) it has more options and (2) you don’t lose as much information. First some data preparation, similar to the base R solution\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIf we were to stop after the summarize() below we would have a “long”/“tall” result suitable for data visualization and other functions, but it’s a little difficult to make comparisons as tabled results:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBy using .groups = “drop” and a pivot_wider() (from tidyr) we arrive at a comparable outcome, notice the missing categories:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will delve into more data handling in the future."
-  },
-  {
-    "objectID": "activity/RRefresher.html#locally",
-    "href": "activity/RRefresher.html#locally",
-    "title": "R Refresher",
-    "section": "locally",
-    "text": "locally\nThis is the general format for reading data in base R (won’t run on this website, you’ll need to try it in R on your own computer)\nmy_data0 &lt;- read.table(\"filename\", header=TRUE,\nna.strings=\"NA\", sep = \"\")\nThere are modifications to this basic code, for example, read.csv() is just a alias of read.table() with sep = “,” as a default. We can use it in concert with file.choose() to allow you to select files from your local drive (won’t work here, just an example)\nmy_data1 &lt;- read.csv(file.choose(), header=TRUE,\nna.strings=\"NA\")"
-  },
-  {
-    "objectID": "activity/RRefresher.html#remotely",
-    "href": "activity/RRefresher.html#remotely",
-    "title": "R Refresher",
-    "section": "remotely",
-    "text": "remotely\nWe can also read data from a website, note the use of read.table() with sep = “,”:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnother good first step involves examining the structure of the object:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThis will help identify numeric and non-numeric data.\nWe could load an additional package, readr, to allow us to read additional data formats such as Excel files (this is something you can do in section or in an assignment)"
-  },
-  {
-    "objectID": "activity/RRefresher.html#examples",
-    "href": "activity/RRefresher.html#examples",
-    "title": "R Refresher",
-    "section": "Examples",
-    "text": "Examples\nnormal\nThe normal distribution’s root is “norm”. The function pnorm() takes a quantile and returns a probability of observing a value less than or equal to 1.96 in a standard normal distribution:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can change the pnorm defaults to accommodate a different situation, here, SAT scores combined math/verbal:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nqnorm() answers the question - given a probability what is the value of the associated quantile?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ndnorm() - returns the height of the probability density function at points specified by the programmer. In the normal distribution, points farther from the mean have lower density\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nt\nThere are other distributions with different root names, but the same four letter identifier holds\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nchi-square\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nan additional density example and our bridge to visualization\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTest yourself/your team\nPlease try generating values from another distribution (e.g., F, Poisson), you can find a longer list of distributions here: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Distributions.html\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "activity/RRefresher.html#saving-graphics",
-    "href": "activity/RRefresher.html#saving-graphics",
-    "title": "R Refresher",
-    "section": "saving graphics",
-    "text": "saving graphics\nWe can output graphics by using the GUI or directly in our code (will only run locally):\npdf(\"myhist.pdf\", height=5, width=5)\nhist(rnorm(100))\ndev.off()"
-  },
-  {
-    "objectID": "activity/RRefresher.html#plot-in-base-r",
-    "href": "activity/RRefresher.html#plot-in-base-r",
-    "title": "R Refresher",
-    "section": "plot() in base R",
-    "text": "plot() in base R\nBase R’s plot() function is a reasonable starting point and convenient:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "activity/RRefresher.html#ggplot",
-    "href": "activity/RRefresher.html#ggplot",
-    "title": "R Refresher",
-    "section": "ggplot( )",
-    "text": "ggplot( )\nWe have more data visualization power with ggplot. We could add straight lines (AKA fit linear models) for each species and for overall\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "activity/RRefresher.html#plot-within-a-for-loop",
-    "href": "activity/RRefresher.html#plot-within-a-for-loop",
-    "title": "R Refresher",
-    "section": "plot() within a for loop",
-    "text": "plot() within a for loop\nAnother example, first using base R to plot 4 graphs in a single window:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "activity/RRefresher.html#tidyverse-style",
-    "href": "activity/RRefresher.html#tidyverse-style",
-    "title": "R Refresher",
-    "section": "Tidyverse style",
-    "text": "Tidyverse style\nWe can do the same with ggplot, but it requires more data handling\nFirst, pivot the data from wide to long/tall:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAlways check your results:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nggplot will be much happier with “long” (AKA “tall” maybe also “stacked”)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can calculate the correlations for each set, the group_by() function combined with summarize in dplyr is very useful for that.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "activity/RRefresher.html#five-minute-ggplot-refresher",
-    "href": "activity/RRefresher.html#five-minute-ggplot-refresher",
-    "title": "R Refresher",
-    "section": "Five minute ggplot refresher",
-    "text": "Five minute ggplot refresher\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y, color) as it relates to the features.\nThe “+” separates “layers”. Think of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is just about it. I do recommend you learn how to “facet” (condition) the plots:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nread “as a function of island”, if you wanted island on the rows, move to facet_grid()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\na better use of facet_grid\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe remaining functions deal with appearance such as labels, legends and maybe adding additional geoms:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "activity/ggplot2.html",
-    "href": "activity/ggplot2.html",
-    "title": "ggplot part 2",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 2 Activity"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot2.html#loading-libraries",
-    "href": "activity/ggplot2.html#loading-libraries",
-    "title": "ggplot part 2",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 2 Activity"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
-    "href": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
-    "title": "ggplot part 2",
-    "section": "the details are in the aes() mappings",
-    "text": "the details are in the aes() mappings\n\nthe aes() values commonly seen are: color, fill, shape, group, linetype\ntypically only x and y are required (sometimes just x)\nhttps://ggplot2.tidyverse.org/reference/aes.html\nand there are countless options BUT the individual geoms may only understand some of them:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nif we were to re-run it using geom_smooth and leaving everything else the same, we would see an error (but it would create our plot)",
-    "crumbs": [
-      "Activities",
-      "Lecture 2 Activity"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot2.html#example-read-some-data",
-    "href": "activity/ggplot2.html#example-read-some-data",
-    "title": "ggplot part 2",
-    "section": "Example: Read some data",
-    "text": "Example: Read some data\nTeams, you decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 2 Activity"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot2.html#discover-their-content",
-    "href": "activity/ggplot2.html#discover-their-content",
-    "title": "ggplot part 2",
-    "section": "Discover their content",
-    "text": "Discover their content\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 2 Activity"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot2.html#basic-examination",
-    "href": "activity/ggplot2.html#basic-examination",
-    "title": "ggplot part 2",
-    "section": "Basic examination",
-    "text": "Basic examination\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 2 Activity"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot2.html#eda",
-    "href": "activity/ggplot2.html#eda",
-    "title": "ggplot part 2",
-    "section": "EDA",
-    "text": "EDA\nEDA (exploratory data analysis) is very visual and your excellent graphical skills will be useful.\nData Cleaning\nThere is none of that in our class (we will just delete), but missing values need a decision in your research (e.g., imputation, deletion).\nI will misuse summary() it’s handy (no need to load libraries)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand it reveals the NAs and some heavily rounded statistics. If you need to use a mean else, do not rely on summary() this is for a quick look at the basic statistics only.\nOther things you can do\n\nBe sure each variable has been read as its correct type (numeric, non-numeric)\nAlways check for duplicates - they can mess up any analysis\nIdentify possible outliers in the data and decide what to do with them.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ncheck distributions\n\nCheck the distribution and skewness of your data\n\nHistograms maybe boxplots\n\nand use group_by() in dplyr if your data has categorical information or numeric information with a limited number of unique values, group_by() is an important tool - example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nReorganizing information with arrange() in dplryr may offer additional insight that is more difficult to recognize it its natural or alphabetically ordered format:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExploratory Visualization\n\nUnivariate – so bar chart, histogram - here you are trying to understand the distribution.\nBivariate or Multivariate – the scatter plot is the most basic but a boxplot, a heatmap, contour maps etc.",
-    "crumbs": [
-      "Activities",
-      "Lecture 2 Activity"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot2.html#example",
-    "href": "activity/ggplot2.html#example",
-    "title": "ggplot part 2",
-    "section": "Example",
-    "text": "Example\nCorrelation Analysis\nA correlation would be generated very early in the process of using data for research\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe would then move to a visualization of the relationship\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 2 Activity"
-    ]
-  },
-  {
-    "objectID": "projects/project-2.html",
-    "href": "projects/project-2.html",
-    "title": "project-2",
-    "section": "",
-    "text": "To be filled out soon",
-    "crumbs": [
-      "Projects",
-      "Project 2 (report)"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to Statistics 422",
-    "section": "",
-    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
-    "crumbs": [
-      "Start Here",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "example-page.html",
-    "href": "example-page.html",
-    "title": "Example page",
-    "section": "",
-    "text": "On this page, we set two options directly in the Quarto document. The rest of the options are coming from the _quarto.yml project file. These options are considered “global”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/Lecture02.html#announcements",
@@ -1123,6 +338,846 @@
     "crumbs": [
       "Lectures",
       "Lecture 02"
+    ]
+  },
+  {
+    "objectID": "example-page.html",
+    "href": "example-page.html",
+    "title": "Example page",
+    "section": "",
+    "text": "On this page, we set two options directly in the Quarto document. The rest of the options are coming from the _quarto.yml project file. These options are considered “global”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Statistics 422",
+    "section": "",
+    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
+    "crumbs": [
+      "Start Here",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "projects/project-2.html",
+    "href": "projects/project-2.html",
+    "title": "project-2",
+    "section": "",
+    "text": "To be filled out soon",
+    "crumbs": [
+      "Projects",
+      "Project 2 (report)"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html",
+    "href": "activity/ggplot2.html",
+    "title": "ggplot part 2",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#loading-libraries",
+    "href": "activity/ggplot2.html#loading-libraries",
+    "title": "ggplot part 2",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
+    "href": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
+    "title": "ggplot part 2",
+    "section": "the details are in the aes() mappings",
+    "text": "the details are in the aes() mappings\n\nthe aes() values commonly seen are: color, fill, shape, group, linetype\ntypically only x and y are required (sometimes just x)\nhttps://ggplot2.tidyverse.org/reference/aes.html\nand there are countless options BUT the individual geoms may only understand some of them:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nif we were to re-run it using geom_smooth and leaving everything else the same, we would see an error (but it would create our plot)",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#example-read-some-data",
+    "href": "activity/ggplot2.html#example-read-some-data",
+    "title": "ggplot part 2",
+    "section": "Example: Read some data",
+    "text": "Example: Read some data\nTeams, you decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#discover-their-content",
+    "href": "activity/ggplot2.html#discover-their-content",
+    "title": "ggplot part 2",
+    "section": "Discover their content",
+    "text": "Discover their content\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#basic-examination",
+    "href": "activity/ggplot2.html#basic-examination",
+    "title": "ggplot part 2",
+    "section": "Basic examination",
+    "text": "Basic examination\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#eda",
+    "href": "activity/ggplot2.html#eda",
+    "title": "ggplot part 2",
+    "section": "EDA",
+    "text": "EDA\nEDA (exploratory data analysis) is very visual and your excellent graphical skills will be useful.\nData Cleaning\nThere is none of that in our class (we will just delete), but missing values need a decision in your research (e.g., imputation, deletion).\nI will misuse summary() it’s handy (no need to load libraries)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand it reveals the NAs and some heavily rounded statistics. If you need to use a mean else, do not rely on summary() this is for a quick look at the basic statistics only.\nOther things you can do\n\nBe sure each variable has been read as its correct type (numeric, non-numeric)\nAlways check for duplicates - they can mess up any analysis\nIdentify possible outliers in the data and decide what to do with them.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ncheck distributions\n\nCheck the distribution and skewness of your data\n\nHistograms maybe boxplots\n\nand use group_by() in dplyr if your data has categorical information or numeric information with a limited number of unique values, group_by() is an important tool - example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nReorganizing information with arrange() in dplryr may offer additional insight that is more difficult to recognize it its natural or alphabetically ordered format:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExploratory Visualization\n\nUnivariate – so bar chart, histogram - here you are trying to understand the distribution.\nBivariate or Multivariate – the scatter plot is the most basic but a boxplot, a heatmap, contour maps etc.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#example",
+    "href": "activity/ggplot2.html#example",
+    "title": "ggplot part 2",
+    "section": "Example",
+    "text": "Example\nCorrelation Analysis\nA correlation would be generated very early in the process of using data for research\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe would then move to a visualization of the relationship\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity"
+    ]
+  },
+  {
+    "objectID": "activity/RRefresher.html",
+    "href": "activity/RRefresher.html",
+    "title": "R Refresher",
+    "section": "",
+    "text": "This is an R Refresher adapted from Weisberg (2014) We will use packages ggplot2, knitr, dplyr and tidyr. We will use packages ggplot2, knitr, dplyr and tidyr. Also data from the palmerpenguins library."
+  },
+  {
+    "objectID": "activity/RRefresher.html#dim",
+    "href": "activity/RRefresher.html#dim",
+    "title": "R Refresher",
+    "section": "dim()",
+    "text": "dim()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/RRefresher.html#head",
+    "href": "activity/RRefresher.html#head",
+    "title": "R Refresher",
+    "section": "head()",
+    "text": "head()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/RRefresher.html#summary",
+    "href": "activity/RRefresher.html#summary",
+    "title": "R Refresher",
+    "section": "summary()",
+    "text": "summary()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSummary is being abused here. While it is fast and gives us the count of NA (missing), do consider that rounding error could occur for the summary statistics. Functions for computing stats like mean( ) can be found elsewhere:"
+  },
+  {
+    "objectID": "activity/RRefresher.html#descriptive-basics",
+    "href": "activity/RRefresher.html#descriptive-basics",
+    "title": "R Refresher",
+    "section": "descriptive basics",
+    "text": "descriptive basics\nChallenge (and working with webR), in teams, please compute the following for the variable birth_year in the starwars data:\n\nmean,\nsd,\nfive number summary,\ndeciles,\nthe number of missing values\nand a count (number) of unique birth years\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/RRefresher.html#conditioninggrouping",
+    "href": "activity/RRefresher.html#conditioninggrouping",
+    "title": "R Refresher",
+    "section": "conditioning/grouping",
+    "text": "conditioning/grouping\nWe will use more of this later in the course, but for now, you should possess these fundamental data handling skills:\nin base R\nWe could use some basic character manipulation to make the result a little more compact. Here’s the issue:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe variable hair_color is a little too granular, let’s propose a simple fix, just keep first mention of hair color:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow let’s examine mass (weight) by hair_color and gender in base R:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nusing dplyr with a little tidyr\nThis is a preferred alternative to the base R solution because (1) it has more options and (2) you don’t lose as much information. First some data preparation, similar to the base R solution\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIf we were to stop after the summarize() below we would have a “long”/“tall” result suitable for data visualization and other functions, but it’s a little difficult to make comparisons as tabled results:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBy using .groups = “drop” and a pivot_wider() (from tidyr) we arrive at a comparable outcome, notice the missing categories:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will delve into more data handling in the future."
+  },
+  {
+    "objectID": "activity/RRefresher.html#locally",
+    "href": "activity/RRefresher.html#locally",
+    "title": "R Refresher",
+    "section": "locally",
+    "text": "locally\nThis is the general format for reading data in base R (won’t run on this website, you’ll need to try it in R on your own computer)\nmy_data0 &lt;- read.table(\"filename\", header=TRUE,\nna.strings=\"NA\", sep = \"\")\nThere are modifications to this basic code, for example, read.csv() is just a alias of read.table() with sep = “,” as a default. We can use it in concert with file.choose() to allow you to select files from your local drive (won’t work here, just an example)\nmy_data1 &lt;- read.csv(file.choose(), header=TRUE,\nna.strings=\"NA\")"
+  },
+  {
+    "objectID": "activity/RRefresher.html#remotely",
+    "href": "activity/RRefresher.html#remotely",
+    "title": "R Refresher",
+    "section": "remotely",
+    "text": "remotely\nWe can also read data from a website, note the use of read.table() with sep = “,”:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnother good first step involves examining the structure of the object:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThis will help identify numeric and non-numeric data.\nWe could load an additional package, readr, to allow us to read additional data formats such as Excel files (this is something you can do in section or in an assignment)"
+  },
+  {
+    "objectID": "activity/RRefresher.html#examples",
+    "href": "activity/RRefresher.html#examples",
+    "title": "R Refresher",
+    "section": "Examples",
+    "text": "Examples\nnormal\nThe normal distribution’s root is “norm”. The function pnorm() takes a quantile and returns a probability of observing a value less than or equal to 1.96 in a standard normal distribution:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can change the pnorm defaults to accommodate a different situation, here, SAT scores combined math/verbal:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nqnorm() answers the question - given a probability what is the value of the associated quantile?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ndnorm() - returns the height of the probability density function at points specified by the programmer. In the normal distribution, points farther from the mean have lower density\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nt\nThere are other distributions with different root names, but the same four letter identifier holds\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nchi-square\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nan additional density example and our bridge to visualization\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTest yourself/your team\nPlease try generating values from another distribution (e.g., F, Poisson), you can find a longer list of distributions here: https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Distributions.html\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/RRefresher.html#saving-graphics",
+    "href": "activity/RRefresher.html#saving-graphics",
+    "title": "R Refresher",
+    "section": "saving graphics",
+    "text": "saving graphics\nWe can output graphics by using the GUI or directly in our code (will only run locally):\npdf(\"myhist.pdf\", height=5, width=5)\nhist(rnorm(100))\ndev.off()"
+  },
+  {
+    "objectID": "activity/RRefresher.html#plot-in-base-r",
+    "href": "activity/RRefresher.html#plot-in-base-r",
+    "title": "R Refresher",
+    "section": "plot() in base R",
+    "text": "plot() in base R\nBase R’s plot() function is a reasonable starting point and convenient:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/RRefresher.html#ggplot",
+    "href": "activity/RRefresher.html#ggplot",
+    "title": "R Refresher",
+    "section": "ggplot( )",
+    "text": "ggplot( )\nWe have more data visualization power with ggplot. We could add straight lines (AKA fit linear models) for each species and for overall\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/RRefresher.html#plot-within-a-for-loop",
+    "href": "activity/RRefresher.html#plot-within-a-for-loop",
+    "title": "R Refresher",
+    "section": "plot() within a for loop",
+    "text": "plot() within a for loop\nAnother example, first using base R to plot 4 graphs in a single window:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/RRefresher.html#tidyverse-style",
+    "href": "activity/RRefresher.html#tidyverse-style",
+    "title": "R Refresher",
+    "section": "Tidyverse style",
+    "text": "Tidyverse style\nWe can do the same with ggplot, but it requires more data handling\nFirst, pivot the data from wide to long/tall:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAlways check your results:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nggplot will be much happier with “long” (AKA “tall” maybe also “stacked”)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can calculate the correlations for each set, the group_by() function combined with summarize in dplyr is very useful for that.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/RRefresher.html#five-minute-ggplot-refresher",
+    "href": "activity/RRefresher.html#five-minute-ggplot-refresher",
+    "title": "R Refresher",
+    "section": "Five minute ggplot refresher",
+    "text": "Five minute ggplot refresher\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y, color) as it relates to the features.\nThe “+” separates “layers”. Think of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is just about it. I do recommend you learn how to “facet” (condition) the plots:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nread “as a function of island”, if you wanted island on the rows, move to facet_grid()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\na better use of facet_grid\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe remaining functions deal with appearance such as labels, legends and maybe adding additional geoms:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "hw/hw-1.html",
+    "href": "hw/hw-1.html",
+    "title": "Homework 1 - EDA and Data Visualization",
+    "section": "",
+    "text": "Please upload your materials to be graded to BruinLearn only (not GitHub etc.)",
+    "crumbs": [
+      "Homework",
+      "HW 1"
+    ]
+  },
+  {
+    "objectID": "hw/hw-1.html#part-i---assemble-your-toolkit",
+    "href": "hw/hw-1.html#part-i---assemble-your-toolkit",
+    "title": "Homework 1 - EDA and Data Visualization",
+    "section": "Part I - Assemble Your Toolkit",
+    "text": "Part I - Assemble Your Toolkit\nI’d like you to film (you could use Zoom to record) a navigation through your toolkit and submit that as completion of Part I of this homework assignment.\n\nIf you don’t already, you probably should have your own site where you can display your current work. Here are examples that are easily completed using Quarto (you can use the editor in RStudio)\n\n\nA previous TA\nAn undergrad\nMine\n\nB. You should have access to R (it’s free)\nC. You should have access to Python (it’s free)\nD. And Tableau (free to currently enrolled students)",
+    "crumbs": [
+      "Homework",
+      "HW 1"
+    ]
+  },
+  {
+    "objectID": "hw/hw-1.html#part-ii-explore-some-data-generate-a-simple-visualization-and-talk-about-it.",
+    "href": "hw/hw-1.html#part-ii-explore-some-data-generate-a-simple-visualization-and-talk-about-it.",
+    "title": "Homework 1 - EDA and Data Visualization",
+    "section": "Part II Explore some data, generate a simple visualization and talk about it.",
+    "text": "Part II Explore some data, generate a simple visualization and talk about it.\nWe will use the centenarians dataset from tidytuesday:\nhttps://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-05-30/readme.md\n\nPlease create a histogram, a density and a boxplot of the age variable. You can use ggplot or something else. What is more important here is “the story”. If you had to use one of these graphics to talk about age in this dataset to your coworkers/supervisors/thesis advisor, which one would you prefer to use and why?\nPlease create one new visualization of age and add a second variable. So for example, you could add gender and compare boxplots of age. Whatever you choose to do, keep the storytelling aspect in mind. Do some visualizations work better than others? Do they make talking about the relationship between age and second variable easier?\nPlease video record your answers to A and B as if you were presenting your findings. I should be able to see the graphic you decided to talk about and you should be able to discuss briefly why you chose the one you presented and not one of the others.",
+    "crumbs": [
+      "Homework",
+      "HW 1"
+    ]
+  },
+  {
+    "objectID": "hw/hw-1.html#part-iii---discover-and-explore-data-of-your-choosing-submit-one-simple-visualization-and-write-about-it-and-the-process-of-arriving-at-it.",
+    "href": "hw/hw-1.html#part-iii---discover-and-explore-data-of-your-choosing-submit-one-simple-visualization-and-write-about-it-and-the-process-of-arriving-at-it.",
+    "title": "Homework 1 - EDA and Data Visualization",
+    "section": "Part III - Discover and explore data of your choosing, submit ONE simple visualization, and write about it and the process of arriving at it.",
+    "text": "Part III - Discover and explore data of your choosing, submit ONE simple visualization, and write about it and the process of arriving at it.\n\nIf you are currently working on your MASDS thesis, perhaps use its data for this part, if not, perhaps something you might use for your thesis or just something you like thinking/talking/writing about.\nData you cannot use: iris, diamonds, penguins, Titanic, anything from tidytuesday (unless your thesis advisor has already approved the use of any of those).\nYou may use ChatGPT or some other chatbot to help you.\n\n\nThe visualization should be thesis quality (you can examine MASDS theses online for a sense of what that means, the bar is not high but I would hope you would aim high) Examples from the eScholarship Repository\nThe visualization should contain a minimum of two features (variables, fields, whatever you like to call them). Example: in part II use we used age and gender.\nYou should be able to write about what you tried (you do not need to show any of the rejects unless you want to for shock/surprise/contrast) and why you didn’t like it or didn’t choose it. There is no bad answer here, I want you to see/hear your internal decision making with respect to data visualization. Perhaps just a few sentences.\nYou should be able to tell a brief story about the one visualization you chose for Part III. Perhaps a short paragraph.\nPlease submit a single PDF with the graphic of B and your answers to C and D with it.\n\nThis is due by the end of Week 2 (Saturday April 13th 11:59pm).",
+    "crumbs": [
+      "Homework",
+      "HW 1"
+    ]
+  },
+  {
+    "objectID": "hw/hw-2.html",
+    "href": "hw/hw-2.html",
+    "title": "hw-2",
+    "section": "",
+    "text": "Please upload your materials to be graded to BruinLearn only (not GitHub etc.)\n\nIntroduction\nThis assignment is not ready yet"
+  },
+  {
+    "objectID": "activity/ikea.html",
+    "href": "activity/ikea.html",
+    "title": "Tidy Tuesday IKEA example",
+    "section": "",
+    "text": "import os\nimport pandas as pd\nfrom plotnine import *\nimport numpy as np\n\n\ndf = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-11-03/ikea.csv')\ndf\n\n\n\n\n\n\n\n\n\nUnnamed: 0\nitem_id\nname\ncategory\nprice\nold_price\nsellable_online\nlink\nother_colors\nshort_description\ndesigner\ndepth\nheight\nwidth\n\n\n\n\n0\n0\n90420332\nFREKVENS\nBar furniture\n265.0\nNo old price\nTrue\nhttps://www.ikea.com/sa/en/p/frekvens-bar-tabl...\nNo\nBar table, in/outdoor, 51x51 cm\nNicholai Wiig Hansen\nNaN\n99.0\n51.0\n\n\n1\n1\n368814\nNORDVIKEN\nBar furniture\n995.0\nNo old price\nFalse\nhttps://www.ikea.com/sa/en/p/nordviken-bar-tab...\nNo\nBar table, 140x80 cm\nFrancis Cayouette\nNaN\n105.0\n80.0\n\n\n2\n2\n9333523\nNORDVIKEN / NORDVIKEN\nBar furniture\n2095.0\nNo old price\nFalse\nhttps://www.ikea.com/sa/en/p/nordviken-nordvik...\nNo\nBar table and 4 bar stools\nFrancis Cayouette\nNaN\nNaN\nNaN\n\n\n3\n3\n80155205\nSTIG\nBar furniture\n69.0\nNo old price\nTrue\nhttps://www.ikea.com/sa/en/p/stig-bar-stool-wi...\nYes\nBar stool with backrest, 74 cm\nHenrik Preutz\n50.0\n100.0\n60.0\n\n\n4\n4\n30180504\nNORBERG\nBar furniture\n225.0\nNo old price\nTrue\nhttps://www.ikea.com/sa/en/p/norberg-wall-moun...\nNo\nWall-mounted drop-leaf table, ...\nMarcus Arvonen\n60.0\n43.0\n74.0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n3689\n3689\n99157902\nELVARLI\nWardrobes\n750.0\nSR 820\nTrue\nhttps://www.ikea.com/sa/en/p/elvarli-1-section...\nNo\n1 section, 92x51x222-350 cm\nEhlén Johansson\n50.0\nNaN\n91.0\n\n\n3690\n3690\n9158152\nELVARLI\nWardrobes\n1572.0\nSR 1,755\nTrue\nhttps://www.ikea.com/sa/en/p/elvarli-2-section...\nNo\n2 sections, 135x51x222-350 cm\nEhlén Johansson\n50.0\nNaN\n135.0\n\n\n3691\n3691\n59157541\nELVARLI\nWardrobes\n924.0\nSR 1,050\nTrue\nhttps://www.ikea.com/sa/en/p/elvarli-2-section...\nNo\n2 sections, 175x51x222-350 cm\nEhlén Johansson\n50.0\nNaN\n175.0\n\n\n3692\n3692\n89157573\nELVARLI\nWardrobes\n2745.0\nSR 3,130\nTrue\nhttps://www.ikea.com/sa/en/p/elvarli-3-section...\nNo\n3 sections, 178x51x222-350 cm\nEhlén Johansson\n50.0\nNaN\n178.0\n\n\n3693\n3693\n69157376\nELVARLI\nWardrobes\n1231.0\nSR 1,535\nTrue\nhttps://www.ikea.com/sa/en/p/elvarli-2-section...\nNo\n2 sections, 175x51x222-350 cm\nEhlén Johansson\n50.0\nNaN\n175.0\n\n\n\n\n3694 rows × 14 columns\n\n\n\n\n\nikea = df.copy()\nikea.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 3694 entries, 0 to 3693\nData columns (total 14 columns):\n #   Column             Non-Null Count  Dtype  \n---  ------             --------------  -----  \n 0   Unnamed: 0         3694 non-null   int64  \n 1   item_id            3694 non-null   int64  \n 2   name               3694 non-null   object \n 3   category           3694 non-null   object \n 4   price              3694 non-null   float64\n 5   old_price          3694 non-null   object \n 6   sellable_online    3694 non-null   bool   \n 7   link               3694 non-null   object \n 8   other_colors       3694 non-null   object \n 9   short_description  3694 non-null   object \n 10  designer           3694 non-null   object \n 11  depth              2231 non-null   float64\n 12  height             2706 non-null   float64\n 13  width              3105 non-null   float64\ndtypes: bool(1), float64(4), int64(2), object(7)\nmemory usage: 378.9+ KB"
+  },
+  {
+    "objectID": "activity/ggplot1.html",
+    "href": "activity/ggplot1.html",
+    "title": "ggplot part 1",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#loading-libraries",
+    "href": "activity/ggplot1.html#loading-libraries",
+    "title": "ggplot part 1",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#five-minute-ggplot",
+    "href": "activity/ggplot1.html#five-minute-ggplot",
+    "title": "ggplot part 1",
+    "section": "Five minute ggplot",
+    "text": "Five minute ggplot\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAT MINIMUM ggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified. We will choose two numeric variables.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y) as it relates to the features.\nThe “+” in ggplot separates “layers” of a graphic.\nThink of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is about five minutes. The rest of ggplot is about beautifying your graphic through additional options. Mapping the data to the aesthetic then is the most critical skill here.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#ggplot-in-detail",
+    "href": "activity/ggplot1.html#ggplot-in-detail",
+    "title": "ggplot part 1",
+    "section": "ggplot in detail",
+    "text": "ggplot in detail\nOk let’s slow down, identify the data types within the dataset\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand let’s fix some issues with missing values or we will get lots of warnings\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#non-numeric-variables",
+    "href": "activity/ggplot1.html#non-numeric-variables",
+    "title": "ggplot part 1",
+    "section": "Non-Numeric Variables",
+    "text": "Non-Numeric Variables\nHow do we work with non-numeric information (like gender)?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#multiple-geoms",
+    "href": "activity/ggplot1.html#multiple-geoms",
+    "title": "ggplot part 1",
+    "section": "Multiple Geoms",
+    "text": "Multiple Geoms\nYou might be asking - sometimes you put an aes( ) in the geom, sometimes not? Some would tell you it should only go in the geom() but that works best if you have multiple geoms:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGets messy though, this suggests an appearance issue, we get into themes (later)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGo badk to something simpler. Plotting categorical variables with different geoms.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nInteraction is a handy function, comining sex and species:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#faceting",
+    "href": "activity/ggplot1.html#faceting",
+    "title": "ggplot part 1",
+    "section": "Faceting",
+    "text": "Faceting\nI do recommend you learn how to “facet” (condition) the plots:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nread “as a function of island”, if you wanted island on the rows, move to facet_grid()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\na better use of facet_grid\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#statistics",
+    "href": "activity/ggplot1.html#statistics",
+    "title": "ggplot part 1",
+    "section": "Statistics",
+    "text": "Statistics\nSome of the geoms automatically apply a statistical transformation to the data, we need to do little except call them:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nbut others require additional work on our part\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nreturn to geom_bar",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#scales-coordinate-flipping",
+    "href": "activity/ggplot1.html#scales-coordinate-flipping",
+    "title": "ggplot part 1",
+    "section": "Scales + Coordinate flipping",
+    "text": "Scales + Coordinate flipping\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#themes",
+    "href": "activity/ggplot1.html#themes",
+    "title": "ggplot part 1",
+    "section": "Themes",
+    "text": "Themes\nThe remaining functions of ggplot deal with appearance such as labels, legends, tick marks, background color etc. etc.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#team-challenge",
+    "href": "activity/ggplot1.html#team-challenge",
+    "title": "ggplot part 1",
+    "section": "Team Challenge",
+    "text": "Team Challenge\nTeams - you can use penguins or choose your own data (and you don’t need to use this web app but you need to use ggplot).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nI’d like to see what you can do as teams in a short amount of time.",
+    "crumbs": [
+      "Activities",
+      "Lecture 1 Activity 2"
+    ]
+  },
+  {
+    "objectID": "StoryTelling.html#a-story",
+    "href": "StoryTelling.html#a-story",
+    "title": "Story Time",
+    "section": "A story",
+    "text": "A story\n\nHere is one you might all know\n\nIn 1912, Rose boards a ship, where she meets and falls in love with Jack, a poor artist, threatening her engagement to the wealthy Cal.\nAs their romance blossoms, they navigate social boundaries and personal freedoms aboard the luxurious ship.\nThe ship hits an iceberg, causing catastrophic damage and panic among passengers and crew as the ship begins to sink.\nJack and Rose fight for survival, facing both physical dangers and societal expectations in their desperate bid to stay together.\nTragically, it ends with the sinking of the ship, with Jack sacrificing his life to save Rose, who survives to tell their story."
+  },
+  {
+    "objectID": "StoryTelling.html#section",
+    "href": "StoryTelling.html#section",
+    "title": "Story Time",
+    "section": "",
+    "text": "A Picture of Contrasts\n\nFive bullets on a slide vs A famous movie\nAdjusted for inflation, $1.2 Billion in US box office movie business\nQuote from Robert McGee (2003 Harvard Business Review) on stories: “fulfill a profound human need to grasp the patterns of living not merely as an intellectual exercise, but within a very personal, emotional experience”"
+  },
+  {
+    "objectID": "StoryTelling.html#section-1",
+    "href": "StoryTelling.html#section-1",
+    "title": "Story Time",
+    "section": "",
+    "text": "An Outline to close out tonight\n\nGOAL: connect your ideas/analyses to your audience’s emotion\n\nSuggested solution: the best way - tell a compelling story\n\nWhat?\n\nStories allow us to weave a lot of information into whatever we are presenting\nand allows you to connect to your audience’s emotions and energy.\n\nTHIS IS NOT EASY TO DO! (practice makes perfect)"
+  },
+  {
+    "objectID": "StoryTelling.html#section-2",
+    "href": "StoryTelling.html#section-2",
+    "title": "Story Time",
+    "section": "",
+    "text": "An Outline to close out tonight (cont’d)\n\nREQUIREMENTS\n\nclear understanding of your material\nstorytelling skills to present ideas that connect with your audience\n\nRESULT - your ideas are REMEMBERED.\nIf you can capture the principles of good storytelling, then you get people applauding instead of yawning."
+  },
+  {
+    "objectID": "StoryTelling.html#section-3",
+    "href": "StoryTelling.html#section-3",
+    "title": "Story Time",
+    "section": "",
+    "text": "If we have time (if not, check Campuswire)\n\n\n\nIKEA data\n\n\nSuppose you were interviewing with IKEA or consulting with them\nI’d like you to examine the data with an interview in mind\nWith the specific goal of building a visualization from it (no programming necessary)"
+  },
+  {
+    "objectID": "StoryTelling.html#section-4",
+    "href": "StoryTelling.html#section-4",
+    "title": "Story Time",
+    "section": "",
+    "text": "A data visualization with a story\n\nstories often center on life as it is/was and its patterns of change"
+  },
+  {
+    "objectID": "StoryTelling.html#section-5",
+    "href": "StoryTelling.html#section-5",
+    "title": "Story Time",
+    "section": "",
+    "text": "Categories of Data Viz stories\n\nThere are plenty, to name a few\n\nillustrate change\n\ncommunicate understanding\n\npurely descriptive\n\nposes solutions to a problem\n\n\nNeuroscientists tell us we forget bullet points, but we remember stories."
+  },
+  {
+    "objectID": "StoryTelling.html#section-6",
+    "href": "StoryTelling.html#section-6",
+    "title": "Story Time",
+    "section": "",
+    "text": "Some applicable situations\n\nWe could identify some situations where Data Viz storytelling might apply:\n\nConvincing your committee your model is the best model\n\nPersuading your employer to apply your recommender system\nExplaining to a prospective employer the visualization you created for the interview\nHighlighting problems, finding something of interest (possible solution?)"
+  },
+  {
+    "objectID": "StoryTelling.html#reassurance",
+    "href": "StoryTelling.html#reassurance",
+    "title": "Story Time",
+    "section": "Reassurance",
+    "text": "Reassurance\n\nThere is NO expectation of perfection in Stats 422\nGenerating data visualizations with ggplot has a learning curve\n\nEven if you use ChatGPT"
+  },
+  {
+    "objectID": "StoryTelling.html#section-7",
+    "href": "StoryTelling.html#section-7",
+    "title": "Story Time",
+    "section": "",
+    "text": "Strategic Storytelling with Data Visualization\n\nKeep it simple\nEdit ruthlessly\nBe genuine\nDon’t communicate for yourself — communicate for your audience.\nThe story you are telling is not for you; the story is for them. Help your audience to see what you see in the data."
+  },
+  {
+    "objectID": "StoryTelling.html#section-8",
+    "href": "StoryTelling.html#section-8",
+    "title": "Story Time",
+    "section": "",
+    "text": "More on the Audience\n\nAlways keep your audience in mind. Give them a reason for spending time with you.\nThink about what will resonate with them and motivate them.\nAlso think about whether and when data will strengthen your story and integrate data sensibly.\nMake the information presented specific and relevant to your audience."
+  },
+  {
+    "objectID": "StoryTelling.html#section-9",
+    "href": "StoryTelling.html#section-9",
+    "title": "Story Time",
+    "section": "",
+    "text": "Advice for Data Visualizations & their stories\n\nEven the most beautiful data visualization might fail if it does not possess a compelling story/narrative.\nA strong story will overcome a weak data visualization.\nAim to display data in such a way that makes the complex clear.\nTHE IDEAL - when effective visuals are combined with a powerful story."
+  },
+  {
+    "objectID": "StoryTelling.html#section-10",
+    "href": "StoryTelling.html#section-10",
+    "title": "Story Time",
+    "section": "",
+    "text": "Tactical advice on Data Visualizations\n\nIf someone were to only read the label and title of your data visualization, they should still know what it was about\nAll information presented should be self-reinforcing. The content reinforces the titles. The words reinforce the visual, Avoid extraneous or unrelated information.\nThe decision on what to drop is as important as the decision on what to keep.\nOutcome based story development (start with the takeaway and work backwards)\nAsk others to comment/give feedback"
+  },
+  {
+    "objectID": "projects/project-1.html",
+    "href": "projects/project-1.html",
+    "title": "project-1",
+    "section": "",
+    "text": "To be filled out soon",
+    "crumbs": [
+      "Projects",
+      "Project 1 (web app)"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "Syllabus.html",
+    "href": "Syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Introduction\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\nContact Info: vlew@stat.ucla.edu\nOffice Hours: M 4pm - 6pm (MS 8923), Th after lecture, and F 3pm-5pm (Zoom). You are welcome to schedule Zoom appointment(s), most days, evenings & weekends too\nMeeting Times and Locations: Th 6pm - 8:50pm Physics & Astronomy 2748\nThe purpose of Statistics 422 is to provide you with a thorough understanding of the fundamentals of data visualization and a working knowledge of how to perform data visualization tasks in R, Python, Tableau and also incorporate supporting tools (e.g., GitHub).",
+    "crumbs": [
+      "Start Here",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "Syllabus.html#proposed-learning-outcomes",
+    "href": "Syllabus.html#proposed-learning-outcomes",
+    "title": "Syllabus",
+    "section": "Proposed Learning Outcomes",
+    "text": "Proposed Learning Outcomes\nThe overall goal of this course are to provide students with the foundations necessary for understanding and building on their existing data visualization skills. After this quarter, students will have:\n\nAn Understanding of different ways to visually represent data and familiarity with various types of charts and graphs (e.g., bar charts, line graphs, scatter plots, heat maps), and when and how to use them effectively to represent different kinds of data and relationships.\nAn understanding of data models: ways of structuring and organizing data for effective visualization. Understanding different types of data (quantitative, qualitative, spatial) and transformation and visual representation.\nAn understanding of Graphical Perception/perceived visual information. Some of the cognitive principles related to visual perception and using these principles to create compelling visualizations.\nGenerated interactive visualizations\nWritten a reproducible report which conforms to UC Thesis formatting requirements and contains data visualizations. Examples from the eScholarship Repository",
+    "crumbs": [
+      "Start Here",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "Syllabus.html#course-materials-resources",
+    "href": "Syllabus.html#course-materials-resources",
+    "title": "Syllabus",
+    "section": "Course Materials & Resources",
+    "text": "Course Materials & Resources\nAll course related materials are posted to BruinLearn (https://bruinlearn.ucla.edu/courses/180429), all assignments are uploaded to that site as well typically in the form of PDF files, photographs or recordings. Official course grades are found online on myUCLA only. Other materials used:\n\nHealy, Kieran. Data visualization: a practical introduction. Princeton University Press, 2018.\n\n\nSoftware\nWe will try to strike a balance given the many choices available to us. All of these are free:\n\nR https://www.r-project.org/\n\nggplot2 https://ggplot2.tidyverse.org/\n\nShiny https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html\n\n\nPython https://www.python.org/\n\nTableau https://softwarecentral.ucla.edu/tableau\n\n\n\nOptional Sites\nA GitHub presence is strongly encouraged but not required. Example https://stats422.github.io/\nQuarto is useful but not required. https://quarto.org/\nOverleaf is useful but not required. https://www.overleaf.com/\nO’Reilly library access https://www.oreilly.com/library-access/\nPython Graph Gallery https://python-graph-gallery.com/\n\n\nOptional materials\n\nTufte, Edward R. The visual display of quantitative information. 2nd Ed. Cheshire, CT: Graphics press, 2001.\nYau, Nathan. Visualize this: the FlowingData guide to design, visualization, and statistics. John Wiley & Sons, 2011.\nWickham, Hadley. et. al. R for Data Science, 2nd Edition O’Reilly Media, Inc. 2023\nTidyTuesday",
+    "crumbs": [
+      "Start Here",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "Syllabus.html#grading",
+    "href": "Syllabus.html#grading",
+    "title": "Syllabus",
+    "section": "Grading",
+    "text": "Grading\nA letter grade is assigned upon the successful completion of this course. The breakdown is:\n\n30% (10 meetings) Attending which means\n\ncontributing to the class, this involves attending class regularly\nTEAM work during class meetings\n\n20% Four (Individual) Homework Assignments\n5% Campuswire - sharing and posting questions and answers, percentage assigned is related to your rep level as determined by Campuswire (e.g., rep level 1 = 1% and top rep level = 5%)\n20% (Individual) Web App: Find your data, Design a page, submit Code and Video for evaluation\n25% (Individual) Final Project: Find your own data, Write a Report, submit Code and Video for evaluation\n\n\n\n\ngrading\n\n\n\nLate Policy\nIf you submit your homework assignments after the due date but before I start the grading, the submission will not be not counted as late. After I begin grading, unsubmitted assignments will be designated as late and can only receive partial credit.\nThe Web App and Final Project should both be submitted by the end of Week 11 as grading will begin immediately after the deadline. I will accept late submissions for partial credit.",
+    "crumbs": [
+      "Start Here",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "Syllabus.html#course-outline-this-is-subject-to-change",
+    "href": "Syllabus.html#course-outline-this-is-subject-to-change",
+    "title": "Syllabus",
+    "section": "Course Outline (this is subject to change)",
+    "text": "Course Outline (this is subject to change)\n\n\n\nDate\nTopic\nReading\n\n\n\n\nWeek 1 4/4\nFirst Day business; ggplot2; story telling\nHealy Ch. 1 and Ch. 2\n\n\nWeek 2 4/11\nData Exploration/Analysis; Visualization Insights & Types\nWickham Ch. 10; Healy Ch. 3 and Ch. 4, Yau Ch. 3, Wilke - Fundamentals of Data Visualization - Ch. 5\n\n\nWeek 3 4/18\nReorganizing Data, Python Visualization Tools\nYau Ch.2, Wickham Ch. 5; Molin - Hands-On Data Analysis with Pandas\n\n\nWeek 4 4/25\nInteractive: R/Shiny\nWickham - Mastering Shiny\n\n\nWeek 5 5/2\nInteractive: Python tools\nRichards; 30 day challenge\n\n\nWeek 6 5/9\nWorking with Spatial Data\nHealy Ch. 7; Yau Ch. 8; Wilke Ch. 15\n\n\nWeek 7 5/16\nWorking with Time\nYau Ch. 4; Wilke Ch. 13 and Wilke Ch. 14\n\n\nWeek 8 5/23\nTableau for starters\nMilligan - Learning Tableau;Sleeper - Practical Tableau\n\n\nWeek 9 5/30\nGuest Lecture\n\n\n\nWeek 10 6/6\nTBD\n\n\n\nWeek 11 6/14\nCompletion of Web App and Final Report",
+    "crumbs": [
+      "Start Here",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "Syllabus.html#academic-dishonesty",
+    "href": "Syllabus.html#academic-dishonesty",
+    "title": "Syllabus",
+    "section": "Academic Dishonesty",
+    "text": "Academic Dishonesty\nAs Bruins, we uphold the UCLA Student Code of Conduct. Academic dishonesty means activities like plagiarism, unauthorized material used on exams, unauthorized collaborations etc. According to Senate Regulation A-306, if an instructor encounters a problem, the instructor must report it to the Dean of Students.\n\nhttps://www.deanofstudents.ucla.edu/Student-Conduct#10690514-student-conduct-code\nhttps://ucla.app.box.com/s/8xq1jyrvqhs9343e4rzyvporx9lt8u1g\n\n\nChatGPT policy\nYour instructor’s belief is ChatGPT should be used – wisely – as if it were an amazingly clever tutor or friend. But copying and pasting the code of the first example’s (below) ChatGPT response is not learning and chances are, you won’t remember how to do it if you do not do it regularly. Asking ChatGPT questions in the second way gives your mind the opportunity to develop the skills scaffolding and retain the knowledge long after this course is over.\n\n\n\n\n\n\n\nQuestion\nResponse\n\n\n\n\nPlease write some code in R that splits a dataset into test and training.\nTo split a dataset into training and test sets in R, you commonly use a function like createDataPartition from the caret package:  Using the caret package  First, install and load the caret package if you haven’t already:  install.packages(“caret”)  library(caret)  Next, use the createDataPartition function to create a list of indices for the training set, then use these indices to create the training and test sets:  # Load the necessary package library(caret) # Load or import your dataset (replace ‘your_dataset’ with your actual dataset)  # data &lt;- read.csv(“path/to/your/dataset.csv”)  # Create the data partition  set.seed(123) # Set seed for reproducibility  trainIndex &lt;- createDataPartition(data$your_target_variable, p = .8, list = FALSE, times = 1)  # Create training and test datasets trainData &lt;- data[ trainIndex,] testData &lt;- data[-trainIndex,] Replace your_target_variable with the name of the column that contains the target variable you’re interested in, and replace data with your dataset name.\n\n\nPlease teach me on how to write code using base R that splits a dataset into training and test with a 70-30 split - but don’t write the code for me, I want to learn how to think it through on my own.\nAbsolutely, I’d be glad to guide you on how to approach this!   1. Understanding the Data: - Before you begin, familiarize yourself with the dataset. Use functions like str(), head(), and summary() to understand the structure and contents of your data.  2. Setting a Seed: - To ensure that your results are reproducible, you will want to set a seed using the set.seed() function. This function controls the random number generator in R.  3. Determining the Number of Rows: - You need to know the total number of rows in your dataset to create the splits. The nrow() function can help you determine this.  4. Calculating Split Sizes: - Next, determine how many rows should go into your training and test sets. You’ll want 70% of the data to be in the training set and 30% in the test set. Use arithmetic operations to calculate the respective sizes.  5. Creating a Random Sample of Indices: - To create your training set, you’ll need to randomly select 70% of the indices (row numbers) from your dataset. You can use the sample() function to do this. Remember to use the total number of rows and the size of the training set as parameters in this function.  6. Subsetting the Dataset: - Once you have a vector of random indices, use it to subset your dataset into two parts: one for training and one for testing. In R, you can subset a data frame using square brackets []. You’ll use the vector of random indices to select rows for the training set, and the - operator to select the remaining rows for the test set.  7. Verifying Your Split: - After creating your training and test sets, verify that you’ve split the data correctly. Use the dim() function to check the dimensions of each set and ensure the split ratio is approximately 70-30. You can also use the head() function to quickly view the top rows of each set and ensure they look correct.   Remember to write your code step by step, verifying each part before moving on to the next, to avoid confusion and ensure accuracy. Once you are confident in your understanding of each step, try to write the code on your own. Good luck!\n\n\n\nChatGPT is also a wonderful tool to help you with subjects that are outside of your skill set which do not make sense for you to invest huge amounts of time or resources remembering/learning.",
+    "crumbs": [
+      "Start Here",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "Syllabus.html#covid-19-health-and-safety",
+    "href": "Syllabus.html#covid-19-health-and-safety",
+    "title": "Syllabus",
+    "section": "COVID-19 health and safety",
+    "text": "COVID-19 health and safety\nIn compliance with Los Angeles County policies effective January 6 2023, UCLA strongly recommends indoor masking, regardless of vaccination status. Testing is also strongly encouraged. See\n\nhttps://covid-19.ucla.edu/covid-protocols-at-a-glance/\nhttp://publichealth.lacounty.gov/phcommon/public/media/mediapubHPdisplay.cfm\n\nSome of us might feel more comfortable wearing masks and continuing to social distance, for example, during small-group work in class or section. All of our preferences are reasonable, and it is important that we treat each others’ preferences with respect and care so that we each feel comfortable and prepared to learn in class. You can find the most current policies on campus requirements on the UCLA COVID-19 resources site https://covid-19.ucla.edu/.",
+    "crumbs": [
+      "Start Here",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "Syllabus.html#accessible-education",
+    "href": "Syllabus.html#accessible-education",
+    "title": "Syllabus",
+    "section": "Accessible Education",
+    "text": "Accessible Education\nStudents with accessibility issues are welcome and encouraged to seek accommodation. Students needing academic accommodations based on a documented disability should contact the Center for Accessible Education (CAE) at (310)825-1501 or in person at Murphy Hall A255. In order to ensure accommodations, students need to contact CAE within the first two weeks of the term.",
+    "crumbs": [
+      "Start Here",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "Syllabus.html#resources-for-students-dealing-with-financial-stress",
+    "href": "Syllabus.html#resources-for-students-dealing-with-financial-stress",
+    "title": "Syllabus",
+    "section": "Resources for Students Dealing with Financial Stress",
+    "text": "Resources for Students Dealing with Financial Stress\nLife is unpredictable and can create financial emergencies. If you find yourself in this situation, please seek assistance:\n• Bruin Shelter: http://www.bruinshelter.org/ Provides a safe, supportive environment for fellow college students experiencing homelessness by fostering a collaborative effort between universities, community-based organizations, and service providers.\n• The CPO Food Shelter: https://basicneeds.ucla.edu/services/cpo-food-closet Provides free food for any UCLA student who may be experiencing hunger and/or struggling to attain food due to financial hardships.",
+    "crumbs": [
+      "Start Here",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "Syllabus.html#title-ix-resources",
+    "href": "Syllabus.html#title-ix-resources",
+    "title": "Syllabus",
+    "section": "Title IX Resources",
+    "text": "Title IX Resources\nUCLA prohibits gender discrimination, including sexual harassment, domestic and dating violence, sexual assault, and stalking. If you have experienced sexual harassment or sexual violence, there are a variety of resources to assist you.\n• CONFIDENTIAL RESOURCES: You can receive confidential support and advocacy at the CARE Advocacy Office for Sexual and Gender-Based Violence, 1st Floor Wooden Center West, (310) 206-2465. Counseling and Psychological Services (CAPS) also provides confidential counseling to all students and can be reached 24/7 at (310) 825-0768.\n• NON-CONFIDENTIAL RESOURCES: You can also report sexual violence or sexual harassment directly to the University’s Title IX Coordinator, 2241 Murphy Hall, titleix@conet.ucla.edu, (310) 206-3417. Reports to law enforcement can be made to UCPD at (310) 825-1491. These offices may be required to pursue an official investigation.",
+    "crumbs": [
+      "Start Here",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "Syllabus.html#psychological-health-well-being-and-resilience",
+    "href": "Syllabus.html#psychological-health-well-being-and-resilience",
+    "title": "Syllabus",
+    "section": "Psychological Health, Well-Being and Resilience",
+    "text": "Psychological Health, Well-Being and Resilience\nUCLA is renowned for academic excellence, and yet we know that many students feel overwhelmed at times by demands to succeed academically, socially and personally. Our campus community is committed to helping all students thrive, learn to cope with stress, and build resilience. Remember, self-care is a skill that is critical to your long-term success. Here are some of the many resources available at UCLA to support you:\n• Counseling and Psychological Services (CAPS): https://www.counseling.ucla.edu/ Provides counseling and other psychological/mental health services to students. Walk-in hours are Monday-Thursday 8am-4:30pm and Friday 9am-4:30pm in John Wooden Center West. Crisis counseling is also available 24 hours/day at (310) 825-0768.\n• Ashe Student Health and Wellness Center: http://www.studenthealth.ucla.edu Provides high quality and accessible ambulatory healthcare and education by caring professionals to support the academic success and personal development of all UCLA students.\n• Healthy Campus Initiative (HCI): https://healthy.ucla.edu Provides links to a wide variety of resources for enhancing physical and psychological well-being, positive social interactions, healthy sleep, healthy eating, healthy physical activity and more.\n• Campus and Student Resilience: https://risecenter.ucla.edu/ Provides programs to promote resilience and trains students to help support their peers.\n• UCLA Recreation: https://www.recreation.ucla.edu/ Offers a broad array of services and programs including fitness, yoga, dance, martial arts, meditation, sports, and much more.\n• Equity, Diversity and Inclusion: https://equity.ucla.edu/ Committed to providing an equal learning, working and living environment at UCLA and supports a range of programs to promote these goals campus-wide.",
+    "crumbs": [
+      "Start Here",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#late-afternoon-social",
+    "href": "lectures/Lecture01.html#late-afternoon-social",
+    "title": "Welcome Statistics 422",
+    "section": "Late afternoon social",
+    "text": "Late afternoon social\nLet’s use this time to interact & relax before getting started\n\n\nPlease gather in small groups (minimum 3 classmates, maximum 6)\nIf you don’t know someone please introduce yourself\nIf your group sees someone without a group, please extend an invitation to join",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section",
+    "href": "lectures/Lecture01.html#section",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "Instructor\nDr. Vivian Lew\n\nMath Sciences 8923 (neighbor is Nicolas Christou)\nBruinLearn e-mail is the best way to reach me\nNo discussion or TA or grader for this course\n\n\nOther Course Details\n\nMeet Once a Week Thursdays 6pm- 8:50pm\n\nPhysics and Astronomy Building 2748\n\nOffice Hours\n\nM 4pm - 6pm (MS 8923) & F 3pm-5pm (Zoom)\nWelcome to schedule Zoom appointment(s), most evenings & weekends too",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#what-to-expect",
+    "href": "lectures/Lecture01.html#what-to-expect",
+    "title": "Welcome Statistics 422",
+    "section": "What to expect",
+    "text": "What to expect\n\nFormat: During Class\n\nWorkshop style - some lecturing, some small group activities, breaks\nInteractive - please bring your electronics (laptop, iPad, maybe phone)\n\nFormat: Outside of Class\n\nIndividual homework assignments, individual late mid-quarter project, individual final project\nEncourage interaction with me but more important, with each other\nStats 422 Community interaction on Campuswire, perhaps examine the weekly data posted to Tidy Tuesday",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#what-to-expect-1",
+    "href": "lectures/Lecture01.html#what-to-expect-1",
+    "title": "Welcome Statistics 422",
+    "section": "What to expect",
+    "text": "What to expect\nDeveloping the scaffolding needed for understanding and building on one’s existing data visualization skills.\n\nAspects\n\nTranslating data and the relationships within visually for others.\n\nLearning to structure and organize data for effective visualization.\n\nLearning about the different types of visual representation and their purposes.\nUnderstanding of Graphical Perception/perceived visual information and some of the cognitive principles involved.\nLearning to generate static and interactive visualizations\nKnowing how to present your visualizations in different media (print, website, video)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#what-to-expect-2",
+    "href": "lectures/Lecture01.html#what-to-expect-2",
+    "title": "Welcome Statistics 422",
+    "section": "What to expect",
+    "text": "What to expect\n\nProcess\n\nStart with an audience and an idea and find the data (not necessarily in that order)\nPrepare the data for visualization (e.g., clean, pivot)\nRepresent the data visually with various graphical elements (e.g., color, sizes, and shape)\nPost-process the data (e.g., decide whether interactivity would add power, post process a static visualization )\n\nTools\n\nR/ggplot2, Shiny; Python/matplotlib, Streamlit; Tableau",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#what-is-not-covered",
+    "href": "lectures/Lecture01.html#what-is-not-covered",
+    "title": "Welcome Statistics 422",
+    "section": "What is not covered",
+    "text": "What is not covered\n\nWhat is not there\n\nno instruction in JavaScript\nno instruction in HTML5\nno instruction in CSS\n\nIf any of you know a pro (someone paid to work with these regularly), I could arrange for a stipend if they want to come in as a guest speaker",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#grading",
+    "href": "lectures/Lecture01.html#grading",
+    "title": "Welcome Statistics 422",
+    "section": "Grading",
+    "text": "Grading\n\n30% Attending class weekly with in-class team activity\n20% 4 individual homework assignments\n5% Campuswire participation\n20% Web App: (individual) Find your data, Design a page, Code and Video\n25% Final Project: (individual) Find your own data, Report, Code and Video\nThe data for the Web App can be the same as the final project, but ideally a simple dataset like iris for the Web App and something more complex and more closely related to your thesis for your final project.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#group-activity-1-15-20-minutes",
+    "href": "lectures/Lecture01.html#group-activity-1-15-20-minutes",
+    "title": "Welcome Statistics 422",
+    "section": "Group Activity 1 (15-20 minutes)",
+    "text": "Group Activity 1 (15-20 minutes)\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to get credit for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some graphs created by ggplot2.\nhttps://r-charts.com/ggplot2/ or more generally in R https://r-graph-gallery.com/index.html\nIdeally, I would like you to examine R graphics from one or both of these sites as a team and\nPlease choose the one plot from your group that you think is most memorable (can be good or not good), and have one team member share the graph on Campuswire and/or be prepared to tell us why your team chose it.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#data-visualization",
+    "href": "lectures/Lecture01.html#data-visualization",
+    "title": "Welcome Statistics 422",
+    "section": "Data visualization",
+    "text": "Data visualization\n\nUnderstanding and creating visual representations of data\nR is one of our tools and\nggplot2 is THE package",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-1",
+    "href": "lectures/Lecture01.html#section-1",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "It is part of the Tidyverse in R\n\n\ngg means “Grammar of Graphics”\nThe Grammar of Graphics was written by Leland Wilkinson in 1999.\nWilkinson detailed a comprehensive framework to describe and build a wide range of statistical graphics by breaking down the elements of graphics into a unified system.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#grammar-of-graphics",
+    "href": "lectures/Lecture01.html#grammar-of-graphics",
+    "title": "Welcome Statistics 422",
+    "section": "Grammar of Graphics",
+    "text": "Grammar of Graphics\n\n\n\nSource: https://www.stat20.org/",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#data",
+    "href": "lectures/Lecture01.html#data",
+    "title": "Welcome Statistics 422",
+    "section": "Data",
+    "text": "Data\n\n\n\n\n\n\n\n\n\nIn GG, data is the foundation\n\nAll graphical representation decisions rest on top of it\n\nAll the decisions are data-driven\n\nResult: meaningful and accurate visual representation of data\n\nAND a wide variety of graphics",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#aesthetics-aesthetic-mappings",
+    "href": "lectures/Lecture01.html#aesthetics-aesthetic-mappings",
+    "title": "Welcome Statistics 422",
+    "section": "Aesthetics (Aesthetic Mappings)",
+    "text": "Aesthetics (Aesthetic Mappings)\n\nThese are the rules\n\nThey map (connect) data variables to the visual properties of the graphical elements\n\nMost frequently - x, y, color, size, and shape\n\nThe connection of data to graphical elements allow us to see/interpret patterns, trends, and anomalies within the data",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#geometries-include",
+    "href": "lectures/Lecture01.html#geometries-include",
+    "title": "Welcome Statistics 422",
+    "section": "Geometries include",
+    "text": "Geometries include\n\nPoints, typically used for individual values\nLines, connect points in some defined order (e.g., time, location)\nBars, typically used for categories (e.g., pizza types)\nPolygons, use to represent areas (maps)\nPaths, fatter lines, used to represent flows (Sankey)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#from-the-ggplot2-cheatsheet",
+    "href": "lectures/Lecture01.html#from-the-ggplot2-cheatsheet",
+    "title": "Welcome Statistics 422",
+    "section": "from the ggplot2 cheatsheet",
+    "text": "from the ggplot2 cheatsheet",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#facets-and-layers",
+    "href": "lectures/Lecture01.html#facets-and-layers",
+    "title": "Welcome Statistics 422",
+    "section": "Facets and Layers",
+    "text": "Facets and Layers\n\nConditioning the data\nSubsets are facets\nLayers combine multiple types of visualizations into a single graphic",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#statistics",
+    "href": "lectures/Lecture01.html#statistics",
+    "title": "Welcome Statistics 422",
+    "section": "Statistics",
+    "text": "Statistics\n\nData can be summarized or modified prior to visualization\n\nAggregation (like sums or means),\nsmoothing\n\nCan clarify the underlying structure or relationships in data.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#coordinates-and-scales",
+    "href": "lectures/Lecture01.html#coordinates-and-scales",
+    "title": "Welcome Statistics 422",
+    "section": "Coordinates and scales",
+    "text": "Coordinates and scales\n\nScaling (linear, logarithmic, etc.)\nCoordinate systems (Cartesian, polar, etc.).\nThey influence the position of data points (and the interpretation).",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#themes",
+    "href": "lectures/Lecture01.html#themes",
+    "title": "Welcome Statistics 422",
+    "section": "Themes",
+    "text": "Themes\n\nControl the overall “look” (styling) of the graphic\nfonts, colors\nlabeling, legends, captioning\nlayout etc.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
     ]
   }
 ]
