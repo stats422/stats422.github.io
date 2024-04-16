@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.551">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-<meta name="author" content="Due 4/27/2024">
-
-<title>Statistics 422 - hw-2</title>
+<title>Statistics 422 - Homework 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,8 +17,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -40,8 +69,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -68,38 +96,27 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
-<meta property="og:title" content="Statistics 422 - hw-2">
+<meta property="og:title" content="Statistics 422 - Homework 2">
 <meta property="og:description" content="Homepage for STATS 422 - Data Visualization UCLA MASDS, Spring 2024.">
 <meta property="og:site_name" content="Statistics 422">
 </head>
-
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Statistics 422
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/hw-1.html">Homework</a></li><li class="breadcrumb-item"><a href="../hw/hw-2.html">HW 2</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Statistics 422</a> 
         <div class="sidebar-tools-main tools-wide">
@@ -116,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">Start Here</span></a>
@@ -124,8 +141,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -138,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
@@ -147,8 +164,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/Lecture01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 01</span></a>
@@ -167,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
@@ -176,8 +193,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../activity/ggplot1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1 Activity 2</span></a>
@@ -190,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
@@ -199,8 +216,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../projects/project-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project 1 (web app)</span></a>
@@ -213,24 +230,30 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">Homework</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../hw/hw-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HW 1</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">HW 2</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
@@ -239,8 +262,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://r4ds.hadley.nz/" class="sidebar-item-text sidebar-link" target="&quot;_blank&quot;">
  <span class="menu-text">R for Data Science</span></a>
@@ -253,39 +276,52 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+<li><a href="#about-the-data-used" id="toc-about-the-data-used" class="nav-link active" data-scroll-target="#about-the-data-used">About the data used</a></li>
+  <li>
+<a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem 1</a>
+  <ul class="collapse">
+<li><a href="#graphic-1" id="toc-graphic-1" class="nav-link" data-scroll-target="#graphic-1">Graphic 1</a></li>
+  <li><a href="#graphic-2" id="toc-graphic-2" class="nav-link" data-scroll-target="#graphic-2">Graphic 2</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  <li>
+<a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a>
+  <ul class="collapse">
+<li><a href="#movies" id="toc-movies" class="nav-link" data-scroll-target="#movies">movies</a></li>
+  <li><a href="#stock-prices" id="toc-stock-prices" class="nav-link" data-scroll-target="#stock-prices">Stock prices</a></li>
+  </ul>
+</li>
+  <li><a href="#what-to-turn-in" id="toc-what-to-turn-in" class="nav-link" data-scroll-target="#what-to-turn-in">What to turn in</a></li>
+  <li>
+<a href="#extra-stuff" id="toc-extra-stuff" class="nav-link" data-scroll-target="#extra-stuff">Extra stuff</a>
+  <ul class="collapse">
+<li><a href="#barplots" id="toc-barplots" class="nav-link" data-scroll-target="#barplots">Barplots</a></li>
+  <li><a href="#basic-circle-with-labels" id="toc-basic-circle-with-labels" class="nav-link" data-scroll-target="#basic-circle-with-labels">basic circle with labels</a></li>
+  <li><a href="#donut-from-lecture-2" id="toc-donut-from-lecture-2" class="nav-link" data-scroll-target="#donut-from-lecture-2">Donut from lecture 2</a></li>
+  <li><a href="#advanced-with-coord_polar" id="toc-advanced-with-coord_polar" class="nav-link" data-scroll-target="#advanced-with-coord_polar">advanced with coord_polar()</a></li>
+  </ul>
+</li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">hw-2</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/hw-1.html">Homework</a></li><li class="breadcrumb-item"><a href="../hw/hw-2.html">HW 2</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">Homework 2</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Due 4/27/2024 </p>
-          </div>
-  </div>
     
   
     
@@ -293,19 +329,455 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
+</header><section id="about-the-data-used" class="level2"><h2 class="anchored" data-anchor-id="about-the-data-used">About the data used</h2>
+<p>Problem 1 - The LA90024_Buildings.RData (you can download this in Week 3 of BruinLearn) has some information on buildings in the 90024 Zip Code (Westwood in Los Angeles) that you may find interesting.</p>
+<p>Problem 2 - Just some numeric X &amp; Y data used as a example, but the homework problem should use the building data from Problem 1. you can supply your own data if you want for this problem.</p>
+<p>Problem 3 - For geom_hex() used movies taken from an IMDB database (originally from Kaggle). For geom_tile() data were obtained from <a href="https://finance.yahoo.com/quote/TSLA/history">Yahoo Finance TSLA as an example</a> but using AAPL here. You can use the movie data or try a different stock (like TSLA) or stocks (would require more data handling but if its your area of interest, why not?)</p>
+</section><section id="problem-1" class="level2"><h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
+<p>Pleae examine the next two graphics, what are things that we can do to make our visualizations tell a more compelling story? You can try programming your response (preferred) or provide a hand drawn sketch. Any language is acceptable.</p>
+<section id="graphic-1" class="level3"><h3 class="anchored" data-anchor-id="graphic-1">Graphic 1</h3>
+<p>Here is a graphic of Floor_Area (building size) and CO2 emissions (a measure of pollution or warming), how could we improve this to make its story more interesting or useful (feel free to examine the distribution of the x and y variables individually if it helps)?</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">LA90024_Buildings</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">Floor_Area</span>, </span>
+<span>                 y <span class="op">=</span> <span class="va">CO2_Emissions</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"CO2 emissions by Floor Area"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Floor Area"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ylab</span><span class="op">(</span><span class="st">"CO_2 Emissions"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="graphic-2" class="level3"><h3 class="anchored" data-anchor-id="graphic-2">Graphic 2</h3>
+<p>Here is a graphic of Floor_Area (building size) and Water Usage. Again, what can we do to make this a little more useful to others? What is the story in here?</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">LA90024_Buildings</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">Floor_Area</span>, </span>
+<span>                 y <span class="op">=</span> <span class="va">Water_Use</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Water Usage by Floor Area"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Floor Area"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ylab</span><span class="op">(</span><span class="st">"Water Use"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="problem-2" class="level2"><h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>Suppose you have been asked to model either CO2 emission or Water Use (Y - but just choose one) on Floor Area (X). A regression type of line is what we would like to see, but three forms</p>
+<ol type="1">
+<li>One regression line for your x, y plot</li>
+<li>Multiple regression lines based on a third variable</li>
+<li>Use of a smoother, one or more lines is fine</li>
+</ol>
+<p>here are examples using a different x &amp; y relationship</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="problem-3" class="level2"><h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<p>More work with heatmaps. I’d like you to try either a geom_hex or a geom_tile (of course you could do both, but one is fine). Both X and Y here are numeric in all of these examples but ordered factors should work (so if you want to use something like a sports related dataset with teamnames etc.). You can use the data I used (least preferred) or supply your own from your thesis or other interests (most preferred) OR use something like diamonds, iris, etc. (in the middle)</p>
+<p>A trick is to use scale_fill_gradientn() to build your own colors scheme. I’ll show you the basic code and then what you want to is modify it some way.</p>
+<section id="movies" class="level3"><h3 class="anchored" data-anchor-id="movies">movies</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/movies.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 7551 Columns: 15
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (9): name, rating, genre, released, director, writer, star, country, com...
+dbl (6): year, score, votes, budget, gross, runtime
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<p>A basic geom_hex() style heat map, added color = “white” to give it a border otherwise it is really unattractive (very dark by default)</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">movies</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">score</span><span class="op">)</span> <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_hex</span><span class="op">(</span>color <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Adding a scale_fill_gradientn() (your homework part is to figure out how to make it work). I did something simple and used the rainbow() function, like rainbow(4) to generate this color scheme.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>If we remove color= “white” from geom_hex(), we obtain a softer more “watercolor” effect in ggplot:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="stock-prices" class="level3"><h3 class="anchored" data-anchor-id="stock-prices">Stock prices</h3>
+<p>For this stock market graphic, handling the dates correctly is key. So this second graph is more a data management issue.</p>
+<p>Since there are lots of dates, use lubridate and try to maximize the information extracted from a date. The following gives us week of the year, day of the week (Monday = 1) and year.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">AAPL</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/AAPL.csv"</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
+<span>  <span class="fu">mutate</span><span class="op">(</span>week <span class="op">=</span> <span class="fu">isoweek</span><span class="op">(</span><span class="va">Date</span><span class="op">)</span>,</span>
+<span>         wday <span class="op">=</span> <span class="fu">wday</span><span class="op">(</span><span class="va">Date</span>, week_start <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,</span>
+<span>         year <span class="op">=</span> <span class="fu">year</span><span class="op">(</span><span class="va">Date</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>geom_tile() is another good heatmap generator in R. Like geom_hex (or any other graphic) adding color will be key but getting the basic aes() is just as important:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data<span class="op">=</span> <span class="va">AAPL</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">week</span>, </span>
+<span>                       y <span class="op">=</span> <span class="va">wday</span>, </span>
+<span>                       fill <span class="op">=</span> <span class="va">Close</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_tile</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This is where faceting is so useful and using a color to create borders can be helpful especially when presenting information. Still ugly and five times as much now…</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data<span class="op">=</span> <span class="va">AAPL</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">week</span>, </span>
+<span>                       y <span class="op">=</span> <span class="va">wday</span>, </span>
+<span>                       fill <span class="op">=</span> <span class="va">Close</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_tile</span><span class="op">(</span>color <span class="op">=</span> <span class="st">'white'</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">year</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Faceting has lots of options. One option is think of the graphic as a storyboard and to use the scrolling idea to your advantage. This will also make each graphic wider which will help with the x-axis labels:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data<span class="op">=</span> <span class="va">AAPL</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">week</span>, </span>
+<span>                       y <span class="op">=</span> <span class="va">wday</span>, </span>
+<span>                       fill <span class="op">=</span> <span class="va">Close</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_tile</span><span class="op">(</span>color <span class="op">=</span> <span class="st">'white'</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">year</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Lastly, add a scale_file_gradientn (chose your own colors) to make the graphic more lively.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Additional suggestions, you can always modify theme to help readability:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="fu">theme</span><span class="op">(</span>axis.text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">6</span><span class="op">)</span>,</span>
+<span>        axis.title <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">8</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You might even add something like a weekly statistic or a monthly one to your graph within year. You would need to perform some additional data handling though.</p>
+</section></section><section id="what-to-turn-in" class="level2"><h2 class="anchored" data-anchor-id="what-to-turn-in">What to turn in</h2>
+<p>Your resulting graphics for 1, 2 and 3 and a copy of the code that produced them.</p>
+</section><section id="extra-stuff" class="level2"><h2 class="anchored" data-anchor-id="extra-stuff">Extra stuff</h2>
+<section id="barplots" class="level3"><h3 class="anchored" data-anchor-id="barplots">Barplots</h3>
+<p>They look dull but are so modifiable and more important – everyone understands them.</p>
+<p>I wanted to add a problem on modified barplots, but it got too involved because great barplots involve intensive modification and data handling.</p>
+<p>So, instead, here are a few examples, the last one taken directly from a professional on the internet and modified so that you can run and modify it on your own versions of R:</p>
+</section><section id="basic-circle-with-labels" class="level3"><h3 class="anchored" data-anchor-id="basic-circle-with-labels">basic circle with labels</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Libraries</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span> </span>
+<span><span class="co"># Create dataset</span></span>
+<span><span class="va">ikea</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/ikea.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ikea_group</span> <span class="op">&lt;-</span> <span class="va">ikea</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">category</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_price <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">price</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/row_number.html">row_number</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Get the name and the y position of each label</span></span>
+<span><span class="va">label_data</span> <span class="op">&lt;-</span> <span class="va">ikea_group</span></span>
+<span> </span>
+<span><span class="co"># calculate the ANGLE of the labels</span></span>
+<span><span class="va">number_of_bar</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">label_data</span><span class="op">)</span></span>
+<span><span class="va">angle</span> <span class="op">&lt;-</span>  <span class="fl">90</span> <span class="op">-</span> <span class="fl">360</span> <span class="op">*</span> <span class="op">(</span><span class="va">label_data</span><span class="op">$</span><span class="va">id</span><span class="op">-</span><span class="fl">0.5</span><span class="op">)</span> <span class="op">/</span><span class="va">number_of_bar</span>     <span class="co"># Subtract 0.5 because the letter must have the angle of the center of the bars. Not extreme right(1) or extreme left (0)</span></span>
+<span> </span>
+<span><span class="co"># calculate the alignment of labels: right or left</span></span>
+<span><span class="co"># On the left part of the plot, my labels have currently an angle &lt; -90</span></span>
+<span><span class="va">label_data</span><span class="op">$</span><span class="va">hjust</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">angle</span> <span class="op">&lt;</span> <span class="op">-</span><span class="fl">90</span>, <span class="fl">1</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span> </span>
+<span><span class="co"># flip angle to make them readable</span></span>
+<span><span class="va">label_data</span><span class="op">$</span><span class="va">angle</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">angle</span> <span class="op">&lt;</span> <span class="op">-</span><span class="fl">90</span>, <span class="va">angle</span><span class="op">+</span><span class="fl">180</span>, <span class="va">angle</span><span class="op">)</span></span>
+<span><span class="co"># ----- ------------------------------------------- ---- #</span></span>
+<span></span>
+<span></span>
+<span> </span>
+<span><span class="co"># Make the plot</span></span>
+<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">ikea_group</span>, </span>
+<span>            <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">id</span><span class="op">)</span>, </span>
+<span>                y<span class="op">=</span><span class="va">mean_price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>       </span>
+<span>              </span>
+<span><span class="co"># Note that id is a factor. If x is numeric, there is some space between the first bar and axis</span></span>
+<span>  </span>
+<span>  <span class="co"># the bars with a blue color</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat<span class="op">=</span><span class="st">"identity"</span>, </span>
+<span>           color <span class="op">=</span> <span class="st">"black"</span>, <span class="co"># outline</span></span>
+<span>           fill<span class="op">=</span><span class="fu"><a href="https://scales.r-lib.org/reference/alpha.html">alpha</a></span><span class="op">(</span><span class="st">"blue"</span>, <span class="fl">0.3</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Limits of the plot = very important. The negative value controls the size of the inner circle, the positive one is useful to add extra space over each bar</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/lims.html">ylim</a></span><span class="op">(</span><span class="op">-</span><span class="fl">100</span>, <span class="fl">3500</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># Customize the theme: no axis title and no cartesian grid on the backgroud</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    axis.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    axis.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    panel.grid <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    plot.margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span>,<span class="fl">4</span><span class="op">)</span>, <span class="st">"cm"</span><span class="op">)</span> <span class="co"># Remove margin around plot</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co"># This makes the coordinate polar instead of cartesian.</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_polar</a></span><span class="op">(</span>start <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">+</span></span>
+<span></span>
+<span>  <span class="co"># add labels</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">label_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">id</span>, y<span class="op">=</span><span class="va">mean_price</span><span class="op">+</span><span class="fl">10</span>, label<span class="op">=</span><span class="va">category</span>, hjust<span class="op">=</span><span class="va">hjust</span><span class="op">)</span>, color<span class="op">=</span><span class="st">"black"</span>, fontface<span class="op">=</span><span class="st">"bold"</span>,alpha<span class="op">=</span><span class="fl">0.6</span>, size<span class="op">=</span><span class="fl">2.5</span>, angle<span class="op">=</span> <span class="va">label_data</span><span class="op">$</span><span class="va">angle</span>, inherit.aes <span class="op">=</span> <span class="cn">FALSE</span> <span class="op">)</span> <span class="co"># inherit.aes very important because the original aes is in the ggplot function and not the geom.</span></span>
+<span></span>
+<span><span class="va">p</span> <span class="co"># show the graphic</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="donut-from-lecture-2" class="level3"><h3 class="anchored" data-anchor-id="donut-from-lecture-2">Donut from lecture 2</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">ikea_group</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">""</span>, y<span class="op">=</span><span class="va">mean_price</span>, fill<span class="op">=</span><span class="va">category</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat<span class="op">=</span><span class="st">"identity"</span>, width <span class="op">=</span> <span class="fl">0.75</span>, color <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span> <span class="op">+</span> <span class="co"># vary width for size of hole</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_polar</a></span><span class="op">(</span>theta<span class="op">=</span><span class="st">"y"</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># for circular plot</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span>,</span>
+<span>        legend.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size<span class="op">=</span><span class="fl">5</span><span class="op">)</span>,</span>
+<span>        legend.key.size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">0.4</span>, <span class="st">'cm'</span><span class="op">)</span>, </span>
+<span>        legend.title<span class="op">=</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        panel.grid <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,  </span>
+<span>        axis.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>, </span>
+<span>        axis.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>, </span>
+<span>        axis.ticks <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span><span class="st">"text"</span>, x <span class="op">=</span> <span class="fl">0</span>, y <span class="op">=</span> <span class="fl">0</span>, label <span class="op">=</span> <span class="st">""</span><span class="op">)</span> <span class="co"># for the hole</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="advanced-with-coord_polar" class="level3"><h3 class="anchored" data-anchor-id="advanced-with-coord_polar">advanced with coord_polar()</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#tidytuesday winner November 2020</span></span>
+<span><span class="co">#data on washington hiking routes scraped by tidyx</span></span>
+<span><span class="co">#script by tobias stalder</span></span>
+<span><span class="co">#nov 2020</span></span>
+<span><span class="co">#tobias-stalder.netlify.app</span></span>
+<span></span>
+<span></span>
+<span></span>
+<span><span class="co"># load libraries ----------------------------------------------------------</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/thebioengineer/tidytuesdayR">tidytuesdayR</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://stringr.tidyverse.org">stringr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org">scales</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># load data ---------------------------------------------------------------</span></span>
+<span></span>
+<span><span class="va">tt_output</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tidytuesdayR/man/tt_load.html">tt_load</a></span><span class="op">(</span><span class="st">"2020-11-24"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Downloading file 1 of 1: `hike_data.rds`</code></pre>
+</div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">hike_data</span> <span class="op">&lt;-</span> <span class="va">tt_output</span><span class="op">$</span><span class="va">hike_data</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># data manipulation -------------------------------------------------------</span></span>
+<span></span>
+<span><span class="co">#1) extract 'region' (entry before "--" of location data)</span></span>
+<span><span class="fu"><a href="https://stringr.tidyverse.org/reference/word.html">word</a></span><span class="op">(</span><span class="va">hike_data</span><span class="op">$</span><span class="va">location</span>,<span class="fl">1</span>,sep <span class="op">=</span> <span class="st">" -- "</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">hike_data</span><span class="op">$</span><span class="va">region</span></span>
+<span><span class="va">hike_data</span><span class="op">$</span><span class="va">region</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">hike_data</span><span class="op">$</span><span class="va">region</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#2)extract miles</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/strsplit.html">strsplit</a></span><span class="op">(</span><span class="va">hike_data</span><span class="op">$</span><span class="va">length</span>, <span class="st">" "</span><span class="op">)</span>, <span class="st">"[["</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">hike_data</span><span class="op">$</span><span class="va">length_num</span></span>
+<span></span>
+<span><span class="co">#3) transform everything necessary to numeric type</span></span>
+<span><span class="va">hike_data</span><span class="op">$</span><span class="va">gain</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">hike_data</span><span class="op">$</span><span class="va">gain</span><span class="op">)</span></span>
+<span><span class="va">hike_data</span><span class="op">$</span><span class="va">highpoint</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">hike_data</span><span class="op">$</span><span class="va">highpoint</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/row.names.html">row.names</a></span><span class="op">(</span><span class="va">hike_data</span><span class="op">)</span><span class="op">)</span><span class="op">-&gt;</span> <span class="va">hike_data</span><span class="op">$</span><span class="va">trackNr</span></span>
+<span></span>
+<span><span class="va">hike_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">hike_data</span><span class="op">)</span> <span class="co">#convert to dataframe (could also be done anywhere before)</span></span>
+<span></span>
+<span></span>
+<span></span>
+<span><span class="co">#4) Calculate cummulative length, mean(gain)</span></span>
+<span><span class="va">summary_stats</span> <span class="op">&lt;-</span> <span class="va">hike_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">region</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>sum_length <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">length_num</span><span class="op">)</span>,</span>
+<span>            mean_gain <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">gain</span><span class="op">)</span>,<span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>mean_gain <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">mean_gain</span>, digits <span class="op">=</span> <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#5) cummulative nr of tracks per region.</span></span>
+<span><span class="va">trackNrs</span> <span class="op">&lt;-</span> <span class="va">hike_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">region</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span>  <span class="co">#we can just count the number of entries here since 1 row = 1 track.</span></span>
+<span></span>
+<span><span class="co">#6) join nr of tracks back to summary_stats</span></span>
+<span><span class="va">summary_all</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">summary_stats</span>, <span class="va">trackNrs</span>, by <span class="op">=</span> <span class="st">"region"</span><span class="op">)</span> </span>
+<span></span>
+<span></span>
+<span><span class="co"># data visualisation ------------------------------------------------------</span></span>
+<span></span>
+<span><span class="co">#ggplot2</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">summary_all</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co">#make custom panel grid</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="fl">0</span>, color <span class="op">=</span> <span class="st">"lightgrey"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="fl">1000</span>, color <span class="op">=</span> <span class="st">"lightgrey"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="fl">2000</span>, color <span class="op">=</span> <span class="st">"lightgrey"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="fl">3000</span>, color <span class="op">=</span> <span class="st">"lightgrey"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html">reorder</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_wrap.html">str_wrap</a></span><span class="op">(</span><span class="va">region</span>,<span class="fl">5</span><span class="op">)</span>,<span class="va">sum_length</span><span class="op">)</span>, <span class="co">#is numeric</span></span>
+<span>    y <span class="op">=</span> <span class="va">sum_length</span>, <span class="co">#is numeric</span></span>
+<span>    fill <span class="op">=</span> <span class="va">n</span><span class="op">)</span>, <span class="co">#is a factor</span></span>
+<span>    position <span class="op">=</span> <span class="st">"dodge2"</span>,</span>
+<span>    show.legend <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>    alpha <span class="op">=</span> <span class="fl">.9</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co">#new fill and legend title for number of tracks per region</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_fill_gradientn</a></span><span class="op">(</span><span class="st">"Amount of Tracks"</span>,</span>
+<span>                       colours <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span> <span class="st">"#6C5B7B"</span>,<span class="st">"#C06C84"</span>,<span class="st">"#F67280"</span>,<span class="st">"#F8B195"</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co">#mean gain per region</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html">reorder</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_wrap.html">str_wrap</a></span><span class="op">(</span><span class="va">region</span>,<span class="fl">5</span><span class="op">)</span>,<span class="va">sum_length</span><span class="op">)</span>,</span>
+<span>                 y <span class="op">=</span> <span class="va">mean_gain</span><span class="op">)</span>,</span>
+<span>             size <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>             color <span class="op">=</span> <span class="st">"gray12"</span><span class="op">)</span><span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co">#lollipop shaft for mean gain per region</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html">reorder</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_wrap.html">str_wrap</a></span><span class="op">(</span><span class="va">region</span>,<span class="fl">5</span><span class="op">)</span>,<span class="va">sum_length</span><span class="op">)</span>,</span>
+<span>    y <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>    xend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html">reorder</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_wrap.html">str_wrap</a></span><span class="op">(</span><span class="va">region</span>,<span class="fl">5</span><span class="op">)</span>,<span class="va">sum_length</span><span class="op">)</span>,</span>
+<span>    yend <span class="op">=</span> <span class="fl">3000</span><span class="op">)</span>,</span>
+<span>    linetype <span class="op">=</span> <span class="st">"dashed"</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"gray12"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  </span>
+<span>  <span class="co">#annotate the bars and the lollipops so the reader understands the scaling</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">11</span>, y <span class="op">=</span> <span class="fl">1300</span>,</span>
+<span>           label <span class="op">=</span> <span class="st">"Mean Elevation Gain\n[FASL]"</span>,</span>
+<span>           geom <span class="op">=</span> <span class="st">"text"</span>,</span>
+<span>           angle <span class="op">=</span> <span class="op">-</span><span class="fl">67.5</span>,</span>
+<span>           color <span class="op">=</span> <span class="st">"gray12"</span>,</span>
+<span>           size <span class="op">=</span> <span class="fl">2.5</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="co"># family = "Bell MT"</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">11</span>, y <span class="op">=</span> <span class="fl">3150</span>,</span>
+<span>           label <span class="op">=</span> <span class="st">"Cummulative Length [FT]"</span>,</span>
+<span>           geom <span class="op">=</span> <span class="st">"text"</span>,</span>
+<span>           angle <span class="op">=</span> <span class="fl">23</span>,</span>
+<span>           color <span class="op">=</span> <span class="st">"gray12"</span>,</span>
+<span>           size <span class="op">=</span> <span class="fl">2.5</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="co">#,family = "Bell MT"</span></span>
+<span>  <span class="co">#annotate custom scale inside plot</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">11.7</span>, y <span class="op">=</span><span class="fl">1100</span>, label <span class="op">=</span> <span class="st">"1000"</span>, geom <span class="op">=</span> <span class="st">"text"</span>, color <span class="op">=</span> <span class="st">"gray12"</span>, family <span class="op">=</span> <span class="st">"Bell MT"</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">11.7</span>, y <span class="op">=</span><span class="fl">2100</span>, label <span class="op">=</span> <span class="st">"2000"</span>, geom <span class="op">=</span> <span class="st">"text"</span>, color <span class="op">=</span> <span class="st">"gray12"</span>, family <span class="op">=</span> <span class="st">"Bell MT"</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">11.7</span>, y <span class="op">=</span><span class="fl">3100</span>, label <span class="op">=</span> <span class="st">"3000"</span>, geom <span class="op">=</span> <span class="st">"text"</span>, color <span class="op">=</span> <span class="st">"gray12"</span>, family <span class="op">=</span> <span class="st">"Bell MT"</span><span class="op">)</span><span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co">#scale y axis so bars don't start in the center</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1500</span>, <span class="fl">3500</span><span class="op">)</span>,</span>
+<span>                     expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0</span><span class="op">)</span>,</span>
+<span>                     breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1000</span>, <span class="fl">2000</span>, <span class="fl">3000</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co">#add title, subtitle &amp; caption</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"\nHiking Locations in Washington"</span>,</span>
+<span>       subtitle <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"\nThis Visualisation shows the cummulative length of tracks,"</span>,</span>
+<span>                        <span class="st">"the amount of tracks and the mean gain in elevation per location.\n"</span>,</span>
+<span>                        <span class="st">"If you are an experienced hiker, you might want to go"</span>,</span>
+<span>                        <span class="st">"to the North Cascades since there are a lot of tracks,"</span>,</span>
+<span>                        <span class="st">"higher elevations and total length to overcome."</span>,</span>
+<span>                        sep <span class="op">=</span> <span class="st">"\n"</span><span class="op">)</span>,</span>
+<span>       caption <span class="op">=</span> <span class="st">"\n\nData Visualisation by Tobias Stalder\ntobias-stalder.netlify.app\nSource: TidyX Crew (Ellis Hughes, Patrick Ward)\nLink to Data: github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-11-24/readme.md"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co">#transform to polar coordinate system</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_polar</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="co">#theming</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span>,</span>
+<span>        axis.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        axis.ticks <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        axis.text.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"gray12"</span>,</span>
+<span>                                   size <span class="op">=</span> <span class="fl">12</span><span class="op">)</span>,</span>
+<span>        panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"white"</span>,</span>
+<span>                                        color <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span>,</span>
+<span>        panel.grid <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        panel.grid.major.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"gray12"</span>,</span>
+<span>                            family <span class="op">=</span> <span class="st">"Bell MT"</span><span class="op">)</span>,</span>
+<span>        plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>face <span class="op">=</span> <span class="st">"bold"</span>,</span>
+<span>                                  size <span class="op">=</span> <span class="fl">25</span>,</span>
+<span>                                  hjust <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span>,</span>
+<span>        plot.subtitle <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">14</span>,</span>
+<span>                                     hjust <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span>,</span>
+<span>        plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>                                    hjust <span class="op">=</span> <span class="fl">.5</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guides.html">guides</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guide_coloursteps.html">guide_colorsteps</a></span><span class="op">(</span>barwidth <span class="op">=</span> <span class="fl">15</span>,</span>
+<span>                                 barheight <span class="op">=</span> <span class="fl">.5</span>, </span>
+<span>                                 title.position <span class="op">=</span> <span class="st">"top"</span>,</span>
+<span>                                 title.hjust <span class="op">=</span> <span class="fl">.5</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="hw-2_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1400"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
-<p>Please upload your materials to be graded to BruinLearn only (not GitHub etc.)</p>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>This assignment is not ready yet</p>
-
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -859,8 +1331,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2024, Vivian L.</p>
 </div>   
@@ -872,8 +1343,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
