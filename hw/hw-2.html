@@ -400,8 +400,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section><section id="problem-3" class="level2"><h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
-<p>More work with heatmaps. I’d like you to try either a geom_hex or a geom_tile (of course you could do both, but one is fine). Both X and Y here are numeric in all of these examples but ordered factors should work (so if you want to use something like a sports related dataset with teamnames etc.). You can use the data I used (least preferred) or supply your own from your thesis or other interests (most preferred) OR use something like diamonds, iris, etc. (in the middle)</p>
-<p>A trick is to use scale_fill_gradientn() to build your own colors scheme. I’ll show you the basic code and then what you want to is modify it some way.</p>
+<p>More work with heatmaps. I’d like you to try either a geom_hex() or a geom_tile() (of course you could create both, but one is fine). Both X and Y here are numeric in all of these examples but ordered factors should work (so if you want to use something like a sports-related dataset with teamnames etc. it’s do-able).</p>
+<p>You can use the data I used (least preferred) or supply your own from your thesis or other interests (most preferred) OR use something like diamonds, iris, etc. (somewhere in the middle)</p>
+<p>A trick is to use scale_fill_gradientn() to build your own colors scheme. I will show you the basic code for these and then what you should do for homework is modify it some way that makes it more pleasing to you (something you might want in your thesis for example).</p>
 <section id="movies" class="level3"><h3 class="anchored" data-anchor-id="movies">movies</h3>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/movies.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -427,7 +428,7 @@ dbl (6): year, score, votes, budget, gross, runtime
 </div>
 </div>
 </div>
-<p>Adding a scale_fill_gradientn() (your homework part is to figure out how to make it work). I did something simple and used the rainbow() function, like rainbow(4) to generate this color scheme.</p>
+<p>Adding a scale_fill_gradientn() (your homework part is to figure out how to color a heatmap). I programmed something simple and used the rainbow() function, like rainbow(4) to generate this color scheme.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -446,15 +447,15 @@ dbl (6): year, score, votes, budget, gross, runtime
 </div>
 </div>
 </section><section id="stock-prices" class="level3"><h3 class="anchored" data-anchor-id="stock-prices">Stock prices</h3>
-<p>For this stock market graphic, handling the dates correctly is key. So this second graph is more a data management issue.</p>
-<p>Since there are lots of dates, use lubridate and try to maximize the information extracted from a date. The following gives us week of the year, day of the week (Monday = 1) and year.</p>
+<p>For this stock market graphic, handling the dates correctly is key. So this second graph is more a data management issue. (if the truth be told, data graphics is all about having envisioned a graphic then handling the data to make the graphic real)</p>
+<p>Since there are many dates, use lubridate (part of Tidyverse) and try to maximize the information extracted from the dates. The following code gives us week of the year, day of the week (Monday = 1) and year.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">AAPL</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/AAPL.csv"</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
 <span>  <span class="fu">mutate</span><span class="op">(</span>week <span class="op">=</span> <span class="fu">isoweek</span><span class="op">(</span><span class="va">Date</span><span class="op">)</span>,</span>
 <span>         wday <span class="op">=</span> <span class="fu">wday</span><span class="op">(</span><span class="va">Date</span>, week_start <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,</span>
 <span>         year <span class="op">=</span> <span class="fu">year</span><span class="op">(</span><span class="va">Date</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>geom_tile() is another good heatmap generator in R. Like geom_hex (or any other graphic) adding color will be key but getting the basic aes() is just as important:</p>
+<p>geom_tile() is another good heatmap generator in R. Like geom_hex (or any other graphic) adding color will be key but supplying the basic aes() specification is just as important:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data<span class="op">=</span> <span class="va">AAPL</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">week</span>, </span>
 <span>                       y <span class="op">=</span> <span class="va">wday</span>, </span>
@@ -467,7 +468,7 @@ dbl (6): year, score, votes, budget, gross, runtime
 </div>
 </div>
 </div>
-<p>This is where faceting is so useful and using a color to create borders can be helpful especially when presenting information. Still ugly and five times as much now…</p>
+<p>This is where faceting is so useful and using a color to create borders can be helpful especially when presenting information. Still ugly and five times as ugly now… BUT a story is emerging.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data<span class="op">=</span> <span class="va">AAPL</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">week</span>, </span>
 <span>                       y <span class="op">=</span> <span class="va">wday</span>, </span>
@@ -481,7 +482,7 @@ dbl (6): year, score, votes, budget, gross, runtime
 </div>
 </div>
 </div>
-<p>Faceting has lots of options. One option is think of the graphic as a storyboard and to use the scrolling idea to your advantage. This will also make each graphic wider which will help with the x-axis labels:</p>
+<p>Faceting has lots of options. One option is conceptualize the graphic as a kind of storyboard and to use the vertical scrolling (easier) to your advantage. You see vertical scrolling used effectively in news stories or photojournalism. Choosing a single column will also make each graphic wider which will help with the x-axis labels (the wider dimension):</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data<span class="op">=</span> <span class="va">AAPL</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">week</span>, </span>
 <span>                       y <span class="op">=</span> <span class="va">wday</span>, </span>
