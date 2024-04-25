@@ -227,7 +227,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"dpi":72,"out-width":"700px","label":"unnamed-chunk-1","comment":"","message":"false","warning":"false","results":"markup","autorun":"false","fig-cap":"","output":"true","context":"interactive","fig-height":5,"fig-width":7,"out-height":"","classes":""},"code":"# please press run code \nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"httpuv\")\n\nlibrary(readr)\nlibrary(knitr)\nlibrary(tidyverse)\nlibrary(httpuv)"},{"id":2,"options":{"dpi":72,"out-width":"700px","label":"unnamed-chunk-2","comment":"","message":"true","warning":"true","results":"markup","autorun":"false","fig-cap":"","output":"true","context":"interactive","fig-height":5,"fig-width":7,"out-height":"","classes":""},"code":"httpuv::runStaticServer(\"site/\")"}];
+globalThis.qwebrCellDetails = [{"code":"# please press run code \nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"httpuv\")\n\nlibrary(readr)\nlibrary(knitr)\nlibrary(tidyverse)\nlibrary(httpuv)","options":{"classes":"","warning":"false","output":"true","dpi":72,"out-width":"700px","fig-height":5,"out-height":"","label":"unnamed-chunk-1","comment":"","context":"interactive","message":"false","fig-cap":"","fig-width":7,"autorun":"false","results":"markup"},"id":1},{"code":"httpuv::runStaticServer(\"site/\")","options":{"classes":"","warning":"true","output":"true","dpi":72,"out-width":"700px","fig-height":5,"out-height":"","label":"unnamed-chunk-2","comment":"","context":"interactive","message":"true","fig-cap":"","fig-width":7,"autorun":"false","results":"markup"},"id":2}];
 
 </script><script type="module">
 // Declare startupMessageQWebR globally
@@ -1037,6 +1037,12 @@ globalThis.qwebrExecuteCode = async function (
   <div class="sidebar-item-container"> 
   <a href="../lectures/Lecture03python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 03 Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/Lecture04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 04 Shiny</span></a>
   </div>
 </li>
       </ul>

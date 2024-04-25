@@ -671,228 +671,675 @@
     ]
   },
   {
+    "objectID": "lectures/Lecture04.html#aside-uiux",
+    "href": "lectures/Lecture04.html#aside-uiux",
+    "title": "Lecture 04",
+    "section": "Aside UI/UX",
+    "text": "Aside UI/UX\n\nInterface design starts with user experience (UX) research and design.\nUnderstand the target audience think what will create the best experience\n\nPhysical needs\nCognitive needs\nPleasing appearance\n\nHave an idea about what is most likely to work with the target audience",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#aside-uiux-1",
+    "href": "lectures/Lecture04.html#aside-uiux-1",
+    "title": "Lecture 04",
+    "section": "Aside UI/UX",
+    "text": "Aside UI/UX\n\nUI is user interface the focus is on the actual graphical and interactive elements of the web app\nMenus, the navigation systems, buttons, tabs ec.\nUI design is what the user uses and sees when using an application",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#concept---simplicity",
+    "href": "lectures/Lecture04.html#concept---simplicity",
+    "title": "Lecture 04",
+    "section": "Concept - Simplicity",
+    "text": "Concept - Simplicity\n\nKeep the visualizations uncluttered.\nElements of the graphic should contribute to the viewer’s understanding of the data\n\nThe visualization will be clearer\nand more effective.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#simplicity---avoid-too-many-graphics",
+    "href": "lectures/Lecture04.html#simplicity---avoid-too-many-graphics",
+    "title": "Lecture 04",
+    "section": "Simplicity - avoid too many graphics",
+    "text": "Simplicity - avoid too many graphics\n\nExcessive decorative graphics lead to distraction\n\nunnecessary background images\nornate font styles\ndecorative borders\n\n\n\nif addtional graphics do not offer additional information or context for your main graphic/story, consider leaving them out",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#simplicity---avoid-too-much-data",
+    "href": "lectures/Lecture04.html#simplicity---avoid-too-much-data",
+    "title": "Lecture 04",
+    "section": "Simplicity - avoid too much data",
+    "text": "Simplicity - avoid too much data\n\nOmit data that is not relevant to the analysis or story\n\nBeware of confusing the audience.\nIf you are talking about trends over time, proably shouldn’t display individual data points (use lines)\nThe extra data will not contribute to understanding the trend.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#simplicity---avoid-overdoing-color",
+    "href": "lectures/Lecture04.html#simplicity---avoid-overdoing-color",
+    "title": "Lecture 04",
+    "section": "Simplicity - avoid overdoing color",
+    "text": "Simplicity - avoid overdoing color\n\nUsing too many colors or very bright colors can lead to visual confusion.\nUse color to highlight significant data points\nUse color to highlight important categories\n\n\nThink twice before using color only to make a graph colorful.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#simplicity---avoid-too-many-dimensions",
+    "href": "lectures/Lecture04.html#simplicity---avoid-too-many-dimensions",
+    "title": "Lecture 04",
+    "section": "Simplicity - avoid too many dimensions",
+    "text": "Simplicity - avoid too many dimensions\n\nAdding a third dimension to a visualization can complicate the interpretation.\n\nUsing a 3D chart where a 2D chart is acceptable may make it more difficult for others to interpret your chart/see your story.\nHumans don’t process those kinds of images as well as they process simpler (e.g. bar chart) designs.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#simplicity---avoid-unnecessary-labels",
+    "href": "lectures/Lecture04.html#simplicity---avoid-unnecessary-labels",
+    "title": "Lecture 04",
+    "section": "Simplicity - avoid unnecessary labels",
+    "text": "Simplicity - avoid unnecessary labels\n\nToo many labels can clutter a visualization.\nDon’t need to label every single data point\nTry grouping labels if you really need them",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#concept---balance",
+    "href": "lectures/Lecture04.html#concept---balance",
+    "title": "Lecture 04",
+    "section": "Concept - Balance",
+    "text": "Concept - Balance\n\nIdea - the elements of a graphic have different “weights” (perception)\n\nDifferent graphical elements have the power to draw attention differently\nBe mindful of size, color, texture, and position",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#balance---size",
+    "href": "lectures/Lecture04.html#balance---size",
+    "title": "Lecture 04",
+    "section": "Balance - Size",
+    "text": "Balance - Size\n\nLarger elements draw more attention than smaller ones\nTherefore, label key information in larger fonts\nPlot important data with bigger markers",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
     "objectID": "lectures/Lecture04.html#section",
     "href": "lectures/Lecture04.html#section",
     "title": "Lecture 04",
     "section": "",
-    "text": "What is Shiny?\n\nR Shiny is used for creating interactive web applications in R. Your users can change what they see by interacting with Shiny.\nIt isn’t really for us, it’s for others to interactively explore our data. Our users do not need to know R.\nWe can also use R Shiny to analyze data and create graphics and summaries - but the point is it is to be shared with others on the internet.\nIf your data updates, Shiny can automatically update the data. This means users always see the most current information.\nAs the designers of an R Shiny app, we design it to allow other uses to select predefined options or filters. We can design a Shiny app to look and behave exactly how we want!"
+    "text": "Balance - Color\n\nBright colors and/or high contrast colors draw more attention than muted colors.\n\na bright red point on a graph will draw the eye faster than a pale blue one\n\nFlat color backgrounds in particular, can help to create simple designs\n\nThey can reduce visual clutter and distractions which helps data points, lines, and labels to stand out.\nCan unify different elements of a visualization when there are multiple types of data representations (e.g., bars, lines, and points) in the same graphic",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#balance---complexity",
+    "href": "lectures/Lecture04.html#balance---complexity",
+    "title": "Lecture 04",
+    "section": "Balance - Complexity",
+    "text": "Balance - Complexity\n\nComplex graphical elements in shape or texture attract more attention than simple ones.\nA data point represented by a complex icon might stand out more than one represented by a simple circle.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#balance---position",
+    "href": "lectures/Lecture04.html#balance---position",
+    "title": "Lecture 04",
+    "section": "Balance - Position",
+    "text": "Balance - Position\n\nGraphical elements placed in the center are often perceived as “heavier” than those near the edges.\nIn the US (and other left to right reading nations) graphical elements placed in the top left area can get more attention.\nThe opposite is true of nations where reading runs from right to left.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#balance---quantity",
+    "href": "lectures/Lecture04.html#balance---quantity",
+    "title": "Lecture 04",
+    "section": "Balance - Quantity",
+    "text": "Balance - Quantity\n\nMany small graphical elements grouped together can collectively hold more visual weight than one large graphical element.\nThis is relevant for visualizations like scatter plots and heat maps.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#concept---alignmentflow",
+    "href": "lectures/Lecture04.html#concept---alignmentflow",
+    "title": "Lecture 04",
+    "section": "Concept - Alignment/Flow",
+    "text": "Concept - Alignment/Flow\n\nIt’s not just about text\nAll elements in a graphic should work together to create an organized appearance\n\nThis helps lead a viewer’s eye through your story/data\n\nStrategic placement and organization of all visual elements within a graph, dashboard, or any infographic helps clarity and cohesion.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#checklist---alignmentflow",
+    "href": "lectures/Lecture04.html#checklist---alignmentflow",
+    "title": "Lecture 04",
+    "section": "Checklist - Alignment/Flow",
+    "text": "Checklist - Alignment/Flow\n\nAligning text and labels for easily correlation with values\nTitles and subtitles in a consistent position\nMultiple graphical comparisons? - use parallel axes and uniform scales if posible",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#concept---uniformity",
+    "href": "lectures/Lecture04.html#concept---uniformity",
+    "title": "Lecture 04",
+    "section": "Concept - Uniformity",
+    "text": "Concept - Uniformity\n\nTo help your viewer focus on interpretation and understanding your story, you reduce the cognitive load by:\nsimilar color schemes\nconsistent axes\nrecurring shapes or symbols\n\n\nYou do not want them spending time figuring out what each element represents each time they look at a visualization in your report/thesis/etc.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#considerations",
+    "href": "lectures/Lecture04.html#considerations",
+    "title": "Lecture 04",
+    "section": "Considerations",
+    "text": "Considerations\nAlways Focus on the Message!\n\nBefore adding additional elements:\n\nask if it helps communicate the core message\n\nWatch your use of White Space\n\nEffective use of white space can reduce clutter\nEffective use of white space can focus attention on the story.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#considerations-1",
+    "href": "lectures/Lecture04.html#considerations-1",
+    "title": "Lecture 04",
+    "section": "Considerations",
+    "text": "Considerations\n\nDesign a visualization so that the most important information catches the viewer’s eye first\nThen follow it with the secondary details\nThis can be accomplished through good use of size, color, and placement.\nKeep the focus on the story that you are trying to “tell”",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-1",
     "href": "lectures/Lecture04.html#section-1",
     "title": "Lecture 04",
     "section": "",
-    "text": "How does Shiny work?\n\nWe use R to write the code for what the Shiny app should do with the data, e.g. compute summary stats, draw graphs, etc.\nWe also use R to design what the app will look like example — where the buttons, graphs, and sliders will be placed on a screen.\nThe R Shiny function converts your code into a web app that can be accessed through a browser"
+    "text": "What is Shiny?\n\nR Shiny is used for creating interactive web applications in R. Users can change what they see using Shiny.\nShiny is for others to interactively explore our data. Users do not need to know R.\nShiny can be used to analyze data and create graphics and summaries - but the point is it is typically built for others.\nIf your data updates, Shiny can automatically update the data. This means users always see the most current information.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-2",
     "href": "lectures/Lecture04.html#section-2",
     "title": "Lecture 04",
     "section": "",
-    "text": "In RStudio\nSelect File-New File-Shiny Web App"
+    "text": "How does Shiny work?\n\nWe use R to write the code for what the Shiny app should do with the data, e.g. compute summary stats, draw graphs, etc.\nWe also use R to design what the app will look like.\n\nexample — where the buttons, graphs, and sliders will be placed on a screen.\n\nThe R Shiny function converts your code into a web app that can be accessed through a browser",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-3",
     "href": "lectures/Lecture04.html#section-3",
     "title": "Lecture 04",
     "section": "",
-    "text": "Set Up - choices\nChoose a name, choose a single file (app.R when just starting out), choose a location on your local drive to store your app"
+    "text": "Creating a Shiny app using RStudio\nSelect File-New File-Shiny Web App",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-4",
     "href": "lectures/Lecture04.html#section-4",
     "title": "Lecture 04",
     "section": "",
-    "text": "In RStudio\nThere should now be a new folder with an RStudio created demo file in it. Click on “Run App” in the source windown"
+    "text": "Set Up - choices\nChoose a name, choose a single file (app.R when just starting out), choose a location on your local drive to store your app",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-5",
     "href": "lectures/Lecture04.html#section-5",
     "title": "Lecture 04",
     "section": "",
-    "text": "In RStudio\nIf you run the app (green triangle icon on the upper right) the default Old Faithful Shiny app should pop up"
+    "text": "In RStudio\nThere should now be a new folder with an RStudio created demo file in it. Click on “Run App” in the source windown",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-6",
     "href": "lectures/Lecture04.html#section-6",
     "title": "Lecture 04",
     "section": "",
-    "text": "In RStudio\nYou can open it in your browser to get a better look"
+    "text": "In RStudio\nIf you run the app (green triangle icon on the upper right) the default Old Faithful Shiny app should pop up",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-7",
     "href": "lectures/Lecture04.html#section-7",
     "title": "Lecture 04",
     "section": "",
-    "text": "Steps/Logic of App.R\n\n\n\n\n\nWe call up the library(Shiny)\nand start with the construction of a user interface UI\nthe first step is to create a top level page layout"
+    "text": "In RStudio\nYou can open it in your browser to get a better look",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-8",
     "href": "lectures/Lecture04.html#section-8",
     "title": "Lecture 04",
     "section": "",
-    "text": "Steps/Logic of App.R (cont’d)\n\nShiny apps are hierarchical and logical\nIn their demo, fluidPage() function is used to create a fluid layout for Shiny web applications.\nWith fluid layout the page will automatically adjust its layout to fit the size of the user’s browser window.\nThis makes the user interface responsive and adaptable to different screen sizes making the Shiny app more appealing"
+    "text": "If your team has R, library(shiny) then try\nrunExample(\"01_hello\")      # a histogram\nrunExample(\"02_text\")       # tables and data frames\nrunExample(\"03_reactivity\") # a reactive expression\nrunExample(\"04_mpg\")        # global variables\nrunExample(\"05_sliders\")    # slider bars\nrunExample(\"06_tabsets\")    # tabbed panels\nrunExample(\"07_widgets\")    # help text and submit buttons\nrunExample(\"08_html\")       # Shiny app built from HTML\nrunExample(\"09_upload\")     # file upload wizard\nrunExample(\"10_download\")   # file download wizard\nrunExample(\"11_timer\")      # an automated timer",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-9",
     "href": "lectures/Lecture04.html#section-9",
     "title": "Lecture 04",
     "section": "",
-    "text": "Steps/Logic of App.R (cont’d)\n\n\n\n\n\nInside the page layout, panels are used to place controls and content\nHere we have a sidebar layout whichs divides the screen into a main panel (output) and a sidebar panel (input)"
+    "text": "If your teams want to try Shiny on Webr\nhttps://georgestagg.github.io/duckdb-flights-shinylive/\nIt would make a good final project for your webapp to get this running:\nhttps://github.com/posit-dev/r-shinylive?tab=readme-ov-file",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-10",
     "href": "lectures/Lecture04.html#section-10",
     "title": "Lecture 04",
     "section": "",
-    "text": "Steps/Logic of App.R (cont’d)\n\n\n\n\n\nHere we see the server side of the Shiny app\nThis is where the computations, data manipulation, and reactive connections between the UI inputs and server outputs happen"
+    "text": "Shiny galleries\nhttps://shiny.posit.co/r/gallery/#feature-demos\nhttps://shiny.posit.co/r/gallery/#user-showcase",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-11",
     "href": "lectures/Lecture04.html#section-11",
     "title": "Lecture 04",
     "section": "",
-    "text": "Taking it all apart\n\nI have an example file that does nothing. It is named Shiny0_proof.R\nIt exists to give you the absolute minimum that is needed to make Shiny run"
+    "text": "Steps/Logic of App.R\n\n\n\n\n\nWe call up the library(Shiny)\nand start with the construction of a user interface UI\nthe first step is to create a top level page layout",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-12",
     "href": "lectures/Lecture04.html#section-12",
     "title": "Lecture 04",
     "section": "",
-    "text": "In RStudio\n\nThe blank window is correct, now we will expand on it."
+    "text": "Steps/Logic of App.R (cont’d)\n\nShiny apps are hierarchical and logical\nIn their demo, fluidPage() function is used to create a fluid layout for Shiny web applications.\nWith fluid layout the page will automatically adjust its layout to fit the size of the user’s browser window.\nThis makes the user interface responsive and adaptable to different screen sizes making the Shiny app more appealing",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-13",
     "href": "lectures/Lecture04.html#section-13",
     "title": "Lecture 04",
     "section": "",
-    "text": "Websites\n\nhttps://shiny.posit.co/ Homepage\nhttps://github.com/rstudio/shiny GitHub\nhttps://github.com/rstudio/shiny Mastering Shiny (online text)"
+    "text": "Steps/Logic of App.R (cont’d)\n\n\n\n\n\nInside the page layout, panels are used to place controls and content\nHere we have a sidebar layout whichs divides the screen into a main panel (output) and a sidebar panel (input)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-14",
     "href": "lectures/Lecture04.html#section-14",
     "title": "Lecture 04",
     "section": "",
-    "text": "Cheatsheet for Shiny\n\nIn “Building an App” it lays out the structure for you."
+    "text": "Steps/Logic of App.R (cont’d)\n\n\n\n\n\nHere we see the server side of the Shiny app\nThis is where the computations, data manipulation, and reactive connections between the UI inputs and server outputs happen",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-15",
     "href": "lectures/Lecture04.html#section-15",
     "title": "Lecture 04",
     "section": "",
-    "text": "UI Input Choices"
+    "text": "Takeaways\n\nShiny apps have a UI that accepts input and displays output\nThe UI passess the input to the server\nShiny apps have a server that receives input from the UI and generates output that is passed bak to the UI for display\nProcess using shinyApp(ui = ui, server = server) at the end",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-16",
     "href": "lectures/Lecture04.html#section-16",
     "title": "Lecture 04",
     "section": "",
-    "text": "UI Closeup (shiny1_ui_only.R)\n\ntitlePanel() and sliderInput() notice the comma just before h1()"
+    "text": "Taking it all apart\n\nI have an example file that does nothing. It is named Shiny0_proof.R\nIt exists to give you the absolute minimum that is needed to make Shiny run",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-17",
     "href": "lectures/Lecture04.html#section-17",
     "title": "Lecture 04",
     "section": "",
-    "text": "UI Closeup (shiny1_ui_only.R) (cont’d)\n\nvarious text control"
+    "text": "In RStudio\n\nThe blank window is correct, now we will expand on it.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-18",
     "href": "lectures/Lecture04.html#section-18",
     "title": "Lecture 04",
     "section": "",
-    "text": "UI Closeup Result\n\nRendered Result"
+    "text": "Websites\n\nhttps://shiny.posit.co/ Homepage\nhttps://github.com/rstudio/shiny GitHub\nhttps://github.com/rstudio/shiny Mastering Shiny (online text)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-19",
     "href": "lectures/Lecture04.html#section-19",
     "title": "Lecture 04",
     "section": "",
-    "text": "UI Closeup with image and bullets"
+    "text": "Cheatsheet for Shiny\n\nIn “Building an App” it lays out the structure for you.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-20",
     "href": "lectures/Lecture04.html#section-20",
     "title": "Lecture 04",
     "section": "",
-    "text": "UI Closeup with image and bullets result"
+    "text": "UI Input Choices",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-21",
     "href": "lectures/Lecture04.html#section-21",
     "title": "Lecture 04",
     "section": "",
-    "text": "The UI is an HTML document\n ## ### Remainder of shiny1_ui_only.R"
+    "text": "UI Closeup (shiny1_ui_only.R)\n\ntitlePanel() and sliderInput() notice the comma just before h1()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-22",
     "href": "lectures/Lecture04.html#section-22",
     "title": "Lecture 04",
     "section": "",
-    "text": "At this point\n\nThere is no data, moving the slider just moves the slider\nThere is user input being collected, but the input isn’t being processed\nThe ui ends with the close parenthesis (note no comma)\nWe have not given instructions to the server for output\nshinyApp(ui = ui, server = server) runs and we have a Shiny app"
+    "text": "UI Closeup (shiny1_ui_only.R) (cont’d)\n\nvarious text control",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-23",
     "href": "lectures/Lecture04.html#section-23",
     "title": "Lecture 04",
     "section": "",
-    "text": "Build Server side with render & output\n\nSee shiny2-ui_server_output.R\nThe remainder of Shiny is rendering input then results are output."
+    "text": "UI Closeup Result\n\nRendered Result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-24",
     "href": "lectures/Lecture04.html#section-24",
     "title": "Lecture 04",
     "section": "",
-    "text": "UI modified\n\n\n\nIn shiny2-ui_server_output.R, user input will be passed to the server and rendered.\n\nUI changes a bit with some output functions - plotOutput(), textOutput(), DTOutput() and tableOutput()\nThe output functions will be connected to render functions"
+    "text": "UI Closeup with image and bullets",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-25",
     "href": "lectures/Lecture04.html#section-25",
     "title": "Lecture 04",
     "section": "",
-    "text": "A closer look\n\n\n\nThere are four render-output pairs,\nthe rendering occurs in server\nthe first of the render functions here has a variable passed to it from ui:"
+    "text": "UI Closeup with image and bullets result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-26",
     "href": "lectures/Lecture04.html#section-26",
     "title": "Lecture 04",
     "section": "",
-    "text": "Notes on user input and render\n\nWithin the {} in renderPlot() is the R code that will build a histogram\nOnly R code in the server portion, notice, just hist() from base R no html etc.\nAccess the input values with input$\nThe “num” in input$num is the value assigned to inputID in the sliderInput of the UI"
+    "text": "The UI is an HTML document",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-27",
     "href": "lectures/Lecture04.html#section-27",
     "title": "Lecture 04",
     "section": "",
-    "text": "render-output notes\n\n\n\n\n\nserver is a function then built using render functions,\nthe output contains values which are passed back to UI\nSome values could originate from the server side"
+    "text": "Remainder of shiny1_ui_only.R",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-28",
     "href": "lectures/Lecture04.html#section-28",
     "title": "Lecture 04",
     "section": "",
-    "text": "Result"
+    "text": "At this point\n\nThere is no data, moving the slider just moves the slider\nThere is user input being collected, but the input isn’t being processed\nThe ui ends with the close parenthesis (note no comma)\nWe have not given instructions to the server for output\nshinyApp(ui = ui, server = server) runs and we have a Shiny app",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-29",
     "href": "lectures/Lecture04.html#section-29",
     "title": "Lecture 04",
     "section": "",
-    "text": "Result"
+    "text": "Build Server side with render & output\n\nSee shiny2-ui_server_output.R\nThe remainder of Shiny is rendering input then results are output.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-30",
     "href": "lectures/Lecture04.html#section-30",
     "title": "Lecture 04",
     "section": "",
-    "text": "Ready to Publish?\n\nNot that I would publish this, but I could.\nPublishing options, see publishing Shiny\nYou can also have users download your app.R\nex. runGist(\"8ad7b367f0d4d9947a94c5387900b2bd\") make sure your Shiny app has a standard name like app.R and not my non-standard ones."
+    "text": "UI modified\n\n\n\nIn shiny2-ui_server_output.R, user input will be passed to the server and rendered.\n\nUI changes a bit with some output functions - plotOutput(), textOutput(), DTOutput() and tableOutput()\nThe output functions will be connected to render functions",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "lectures/Lecture04.html#section-31",
     "href": "lectures/Lecture04.html#section-31",
     "title": "Lecture 04",
     "section": "",
-    "text": "Example\n\nI have access to earthquake data in Southern California\nI can create a Shiny app so my users could select a specific time frame and map the earthquakes.\nThey might adjust their choices to see data from different years, or click on the map to get different information about a particular are."
+    "text": "A closer look\n\n\n\nThere are four render-output pairs,\nthe rendering occurs in server\nthe first of the render functions here has a variable passed to it from ui:",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#section-32",
+    "href": "lectures/Lecture04.html#section-32",
+    "title": "Lecture 04",
+    "section": "",
+    "text": "Notes on user input and render\n\nWithin the {} in renderPlot() is the R code that will build a histogram\nOnly R code in the server portion, notice, just hist() from base R no html etc.\nAccess the input values with input$\nThe “num” in input$num is the value assigned to inputID in the sliderInput of the UI",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#section-33",
+    "href": "lectures/Lecture04.html#section-33",
+    "title": "Lecture 04",
+    "section": "",
+    "text": "render-output notes\n\n\n\n\n\nserver is a function built using render functions\nthe output contains values which are passed back to UI\nsome values could originate from the server side (e.g. generated values)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#section-34",
+    "href": "lectures/Lecture04.html#section-34",
+    "title": "Lecture 04",
+    "section": "",
+    "text": "render-output and ui together",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#section-35",
+    "href": "lectures/Lecture04.html#section-35",
+    "title": "Lecture 04",
+    "section": "",
+    "text": "Result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#section-36",
+    "href": "lectures/Lecture04.html#section-36",
+    "title": "Lecture 04",
+    "section": "",
+    "text": "Result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#section-37",
+    "href": "lectures/Lecture04.html#section-37",
+    "title": "Lecture 04",
+    "section": "",
+    "text": "Ready to Publish?\n\nNot that I would publish my example tonight, but I could.\nPublishing options, see publishing Shiny\nYou can also have users download your app.R see this example from GitHub\nex. runGist(\"8ad7b367f0d4d9947a94c5387900b2bd\") make sure your Shiny app has a standard name like app.R and not my non-standard ones.\nRuns in R, need library(shiny) active",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#section-38",
+    "href": "lectures/Lecture04.html#section-38",
+    "title": "Lecture 04",
+    "section": "",
+    "text": "My Gist Example\n\nI have access to earthquake data in Southern California\nI can create a Shiny app so my users could select a specific time frame and map the earthquakes.\nThey might adjust their choices to see data from different years, or click on the map to get different information about a particular are.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#section-39",
+    "href": "lectures/Lecture04.html#section-39",
+    "title": "Lecture 04",
+    "section": "",
+    "text": "Running Gist\n\nAn anonymous way to post files online, GitHub has a pasteboard at gist.github.com.\n\nCopy and paste your app.R files to the gist web page.\nSAVE the URL that GitHub gives the gist\n\nA user can launch the app with runGist(\"\\&lt;gist number\\&gt;\")\n“&lt;gist number&gt;” is the number that appears at the end the URL",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#section-40",
+    "href": "lectures/Lecture04.html#section-40",
+    "title": "Lecture 04",
+    "section": "",
+    "text": "Recall Storytelling but now with tools like Shiny\n\nA good story is vital for making data relatable and engaging.\nWho is the audience? Who will use your creation? (e.g., executives, analysts).\nOutline the key message or story.\nUse something like Post-Its & Sharpies to help",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#section-41",
+    "href": "lectures/Lecture04.html#section-41",
+    "title": "Lecture 04",
+    "section": "",
+    "text": "Applying Design Features from earlier\n\nClarity & focus\nYou may need to guide people through your data (tabs?)\nYou may need to keep their attention (size, color, etc.)\nUse a consistent design\nStart with a simple interface and elaborate",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture04.html#section-42",
+    "href": "lectures/Lecture04.html#section-42",
+    "title": "Lecture 04",
+    "section": "",
+    "text": "Do we have time? teams?\n\nUse Post-Its to map out a simple Shiny layout on a wall or board.\nEach Post-It will represent a component of your layout (chart, table, filter, etc.).\nArrange the Post-Its to create tell a story that “flows”.\nTalk about it - can your whole team see the story?\nThis is pointing us to homework 3 and your web app. Sharing a story.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 04 Shiny"
+    ]
   },
   {
     "objectID": "Syllabus.html",
@@ -1418,6 +1865,55 @@
       "Homework",
       "HW 2"
     ]
+  },
+  {
+    "objectID": "hw/hw-3.html",
+    "href": "hw/hw-3.html",
+    "title": "Homework 2",
+    "section": "",
+    "text": "Problem 1 - The LA90024_Buildings.RData (you can download this in Week 3 of BruinLearn) has some information on buildings in the 90024 Zip Code (Westwood in Los Angeles) that you may find interesting.\nProblem 2 - Just some numeric X & Y data used as a example, but the homework problem should use the building data from Problem 1. you can supply your own data if you want for this problem.\nProblem 3 - For geom_hex() used movies taken from an IMDB database (originally from Kaggle). For geom_tile() data were obtained from Yahoo Finance TSLA as an example but using AAPL here. You can use the movie data or try a different stock (like TSLA) or stocks (would require more data handling but if its your area of interest, why not?)"
+  },
+  {
+    "objectID": "hw/hw-3.html#about-the-data-used",
+    "href": "hw/hw-3.html#about-the-data-used",
+    "title": "Homework 2",
+    "section": "",
+    "text": "Problem 1 - The LA90024_Buildings.RData (you can download this in Week 3 of BruinLearn) has some information on buildings in the 90024 Zip Code (Westwood in Los Angeles) that you may find interesting.\nProblem 2 - Just some numeric X & Y data used as a example, but the homework problem should use the building data from Problem 1. you can supply your own data if you want for this problem.\nProblem 3 - For geom_hex() used movies taken from an IMDB database (originally from Kaggle). For geom_tile() data were obtained from Yahoo Finance TSLA as an example but using AAPL here. You can use the movie data or try a different stock (like TSLA) or stocks (would require more data handling but if its your area of interest, why not?)"
+  },
+  {
+    "objectID": "hw/hw-3.html#problem-1",
+    "href": "hw/hw-3.html#problem-1",
+    "title": "Homework 2",
+    "section": "Problem 1",
+    "text": "Problem 1\nPleae examine the next two graphics, what are things that we can do to make our visualizations tell a more compelling story? You can try programming your response (preferred) or provide a hand drawn sketch. Any language is acceptable.\nGraphic 1\nHere is a graphic of Floor_Area (building size) and CO2 emissions (a measure of pollution or warming), how could we improve this to make its story more interesting or useful (feel free to examine the distribution of the x and y variables individually if it helps)?\n\nggplot(data = LA90024_Buildings) +\n  geom_point(aes(x = Floor_Area, \n                 y = CO2_Emissions)) +\n  labs(title = \"CO2 emissions by Floor Area\") +\n  xlab(\"Floor Area\") +\n  ylab(\"CO_2 Emissions\")\n\n\n\n\n\n\n\nGraphic 2\nHere is a graphic of Floor_Area (building size) and Water Usage. Again, what can we do to make this a little more useful to others? What is the story in here?\n\nggplot(data = LA90024_Buildings) +\n  geom_point(aes(x = Floor_Area, \n                 y = Water_Use)) +\n  labs(title = \"Water Usage by Floor Area\") +\n  xlab(\"Floor Area\") +\n  ylab(\"Water Use\")"
+  },
+  {
+    "objectID": "hw/hw-3.html#problem-2",
+    "href": "hw/hw-3.html#problem-2",
+    "title": "Homework 2",
+    "section": "Problem 2",
+    "text": "Problem 2\nSuppose you have been asked to model either CO2 emission or Water Use (Y - but just choose one) on Floor Area (X). A regression type of line is what we would like to see, but three forms\n\nOne regression line for your x, y plot\nMultiple regression lines based on a third variable\nUse of a smoother, one or more lines is fine\n\nhere are examples using a different x & y relationship"
+  },
+  {
+    "objectID": "hw/hw-3.html#problem-3",
+    "href": "hw/hw-3.html#problem-3",
+    "title": "Homework 2",
+    "section": "Problem 3",
+    "text": "Problem 3\nMore work with heatmaps. I’d like you to try either a geom_hex() or a geom_tile() (of course you could create both, but one is fine). Both X and Y here are numeric in all of these examples but ordered factors should work (so if you want to use something like a sports-related dataset with teamnames etc. it’s do-able).\nYou can use the data I used (least preferred) or supply your own from your thesis or other interests (most preferred) OR use something like diamonds, iris, etc. (somewhere in the middle)\nA trick is to use scale_fill_gradientn() to build your own colors scheme. I will show you the basic code for these and then what you should do for homework is modify it some way that makes it more pleasing to you (something you might want in your thesis for example).\nmovies\n\nmovies &lt;- read_csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/movies.csv\")\n\nRows: 7551 Columns: 15\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (9): name, rating, genre, released, director, writer, star, country, com...\ndbl (6): year, score, votes, budget, gross, runtime\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nA basic geom_hex() style heat map, added color = “white” to give it a border otherwise it is really unattractive (very dark by default)\n\nggplot(movies, aes(x = year, y = score) ) +\n  geom_hex(color = \"white\")\n\n\n\n\n\n\n\nAdding a scale_fill_gradientn() (your homework part is to figure out how to color a heatmap). I programmed something simple and used the rainbow() function, like rainbow(4) to generate this color scheme.\n\n\n\n\n\n\n\n\nIf we remove color= “white” from geom_hex(), we obtain a softer more “watercolor” effect in ggplot:\n\n\n\n\n\n\n\n\nStock prices\nFor this stock market graphic, handling the dates correctly is key. So this second graph is more a data management issue. (if the truth be told, data graphics is all about having envisioned a graphic then handling the data to make the graphic real)\nSince there are many dates, use lubridate (part of Tidyverse) and try to maximize the information extracted from the dates. The following code gives us week of the year, day of the week (Monday = 1) and year.\n\nAAPL &lt;- read_csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/AAPL.csv\") %&gt;% \n  mutate(week = isoweek(Date),\n         wday = wday(Date, week_start = 1),\n         year = year(Date))\n\ngeom_tile() is another good heatmap generator in R. Like geom_hex (or any other graphic) adding color will be key but supplying the basic aes() specification is just as important:\n\nggplot(data= AAPL, aes(x = week, \n                       y = wday, \n                       fill = Close)) +\n  geom_tile()\n\n\n\n\n\n\n\nThis is where faceting is so useful and using a color to create borders can be helpful especially when presenting information. Still ugly and five times as ugly now… BUT a story is emerging.\n\nggplot(data= AAPL, aes(x = week, \n                       y = wday, \n                       fill = Close)) +\n  geom_tile(color = 'white') +\n  facet_wrap(~ year) \n\n\n\n\n\n\n\nFaceting has lots of options. One option is conceptualize the graphic as a kind of storyboard and to use the vertical scrolling (easier) to your advantage. You see vertical scrolling used effectively in news stories or photojournalism. Choosing a single column will also make each graphic wider which will help with the x-axis labels (the wider dimension):\n\nggplot(data= AAPL, aes(x = week, \n                       y = wday, \n                       fill = Close)) +\n  geom_tile(color = 'white') +\n  facet_wrap(~ year, ncol = 1) \n\n\n\n\n\n\n\nLastly, add a scale_file_gradientn (chose your own colors) to make the graphic more lively.\n\n\n\n\n\n\n\n\nAdditional suggestions, you can always modify theme to help readability:\n\n  theme(axis.text = element_text(size = 6),\n        axis.title = element_text(size = 8, face = \"bold\"))\n\nYou might even add something like a weekly statistic or a monthly one to your graph within year. You would need to perform some additional data handling though."
+  },
+  {
+    "objectID": "hw/hw-3.html#what-to-turn-in",
+    "href": "hw/hw-3.html#what-to-turn-in",
+    "title": "Homework 2",
+    "section": "What to turn in",
+    "text": "What to turn in\nYour resulting graphics for 1, 2 and 3 and a copy of the code that produced them."
+  },
+  {
+    "objectID": "hw/hw-3.html#extra-stuff",
+    "href": "hw/hw-3.html#extra-stuff",
+    "title": "Homework 2",
+    "section": "Extra stuff",
+    "text": "Extra stuff\nBarplots\nThey look dull but are so modifiable and more important – everyone understands them.\nI wanted to add a problem on modified barplots, but it got too involved because great barplots involve intensive modification and data handling.\nSo, instead, here are a few examples, the last one taken directly from a professional on the internet and modified so that you can run and modify it on your own versions of R:\nbasic circle with labels\n\n# Libraries\nlibrary(tidyverse)\n \n# Create dataset\nikea &lt;- read_csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/ikea.csv\")\n\nikea_group &lt;- ikea %&gt;%\n  group_by(category) %&gt;%\n  summarise(mean_price = mean(price, na.rm = TRUE)) %&gt;%\n  mutate(id = row_number()) %&gt;%\n  ungroup()\n\n# Get the name and the y position of each label\nlabel_data &lt;- ikea_group\n \n# calculate the ANGLE of the labels\nnumber_of_bar &lt;- nrow(label_data)\nangle &lt;-  90 - 360 * (label_data$id-0.5) /number_of_bar     # Subtract 0.5 because the letter must have the angle of the center of the bars. Not extreme right(1) or extreme left (0)\n \n# calculate the alignment of labels: right or left\n# On the left part of the plot, my labels have currently an angle &lt; -90\nlabel_data$hjust &lt;-ifelse(angle &lt; -90, 1, 0)\n \n# flip angle to make them readable\nlabel_data$angle&lt;-ifelse(angle &lt; -90, angle+180, angle)\n# ----- ------------------------------------------- ---- #\n\n\n \n# Make the plot\np &lt;- ggplot(ikea_group, \n            aes(x=as.factor(id), \n                y=mean_price)) +       \n              \n# Note that id is a factor. If x is numeric, there is some space between the first bar and axis\n  \n  # the bars with a blue color\n  geom_bar(stat=\"identity\", \n           color = \"black\", # outline\n           fill=alpha(\"blue\", 0.3)) +\n  \n  # Limits of the plot = very important. The negative value controls the size of the inner circle, the positive one is useful to add extra space over each bar\n  ylim(-200, 3500) +\n  \n  # Customize the theme: no axis title and no cartesian grid on the backgroud\n  theme_minimal() +\n  theme(\n    axis.text = element_blank(),\n    axis.title = element_blank(),\n    panel.grid = element_blank(),\n    plot.margin = unit(rep(-2,4), \"cm\") # Remove margin around plot\n  ) +\n  \n  # This makes the coordinate polar instead of cartesian.\n  coord_polar(start = 0) +\n\n  # add labels\n    geom_text(data=label_data, aes(x=id, y=mean_price+10, label=category, hjust=hjust), color=\"black\", fontface=\"bold\",alpha=0.6, size=2.5, angle= label_data$angle, inherit.aes = FALSE ) # inherit.aes very important because the original aes is in the ggplot function and not the geom.\n\np # show the graphic\n\n\n\n\n\n\n\nDonut from lecture 2\n\nggplot(data = ikea_group, aes(x=\"\", y=mean_price, fill=category)) +\n  geom_bar(stat=\"identity\", width = 0.75, color = \"black\") + # vary width for size of hole\n  coord_polar(theta=\"y\") +  # for circular plot\n  theme(legend.position = \"bottom\",\n        legend.text = element_text(size=5),\n        legend.key.size = unit(0.4, 'cm'), \n        legend.title=element_blank(),\n        panel.grid = element_blank(),  \n        axis.text = element_blank(), \n        axis.title = element_blank(), \n        axis.ticks = element_blank()) +\n  annotate(\"text\", x = 0, y = 0, label = \"\") # for the hole\n\n\n\n\n\n\n\nadvanced with coord_polar()\n\n#tidytuesday winner November 2020\n#data on washington hiking routes scraped by tidyx\n#script by tobias stalder\n#nov 2020\n#tobias-stalder.netlify.app\n\n\n\n# load libraries ----------------------------------------------------------\nlibrary(tidytuesdayR)\nlibrary(stringr)\nlibrary(scales)\n\n# load data ---------------------------------------------------------------\n\ntt_output &lt;- tt_load(\"2020-11-24\")\n\n\n    Downloading file 1 of 1: `hike_data.rds`\n\nhike_data &lt;- tt_output$hike_data\n\n\n# data manipulation -------------------------------------------------------\n\n#1) extract 'region' (entry before \"--\" of location data)\nword(hike_data$location,1,sep = \" -- \") -&gt; hike_data$region\nhike_data$region &lt;- as.factor(hike_data$region)\n\n#2)extract miles\nas.numeric(sapply(strsplit(hike_data$length, \" \"), \"[[\", 1)) -&gt; hike_data$length_num\n\n#3) transform everything necessary to numeric type\nhike_data$gain &lt;- as.numeric(hike_data$gain)\nhike_data$highpoint &lt;- as.numeric(hike_data$highpoint)\nas.numeric(row.names(hike_data))-&gt; hike_data$trackNr\n\nhike_data &lt;- data.frame(hike_data) #convert to dataframe (could also be done anywhere before)\n\n\n\n#4) Calculate cummulative length, mean(gain)\nsummary_stats &lt;- hike_data %&gt;%\n  group_by(region) %&gt;%\n  summarise(sum_length = sum(length_num),\n            mean_gain = mean(gain),) %&gt;%\n  mutate(mean_gain = round(mean_gain, digits = 0))\n\n#5) cummulative nr of tracks per region.\ntrackNrs &lt;- hike_data %&gt;%\n  group_by(region) %&gt;%\n  count()  #we can just count the number of entries here since 1 row = 1 track.\n\n#6) join nr of tracks back to summary_stats\nsummary_all &lt;- left_join(summary_stats, trackNrs, by = \"region\") \n\n\n# data visualisation ------------------------------------------------------\n\n#ggplot2\nggplot(summary_all) +\n  \n  #make custom panel grid\n  geom_hline(yintercept = 0, color = \"lightgrey\") +\n  geom_hline(yintercept = 1000, color = \"lightgrey\") +\n  geom_hline(yintercept = 2000, color = \"lightgrey\") +\n  geom_hline(yintercept = 3000, color = \"lightgrey\") +\n  \n  geom_col(aes(\n    x = reorder(str_wrap(region,5),sum_length), #is numeric\n    y = sum_length, #is numeric\n    fill = n), #is a factor\n    position = \"dodge2\",\n    show.legend = TRUE,\n    alpha = .9) +\n  \n  #new fill and legend title for number of tracks per region\n  scale_fill_gradientn(\"Amount of Tracks\",\n                       colours = c( \"#6C5B7B\",\"#C06C84\",\"#F67280\",\"#F8B195\"))+\n  \n  #mean gain per region\n  geom_point(aes(x = reorder(str_wrap(region,5),sum_length),\n                 y = mean_gain),\n             size = 3,\n             color = \"gray12\")+\n  \n  #lollipop shaft for mean gain per region\n  geom_segment(aes(\n    x = reorder(str_wrap(region,5),sum_length),\n    y = 0,\n    xend = reorder(str_wrap(region,5),sum_length),\n    yend = 3000),\n    linetype = \"dashed\",\n    color = \"gray12\") +\n  \n  \n  #annotate the bars and the lollipops so the reader understands the scaling\n  annotate(x = 11, y = 1300,\n           label = \"Mean Elevation Gain\\n[FASL]\",\n           geom = \"text\",\n           angle = -67.5,\n           color = \"gray12\",\n           size = 2.5)+\n  # family = \"Bell MT\"\n  annotate(x = 11, y = 3150,\n           label = \"Cummulative Length [FT]\",\n           geom = \"text\",\n           angle = 23,\n           color = \"gray12\",\n           size = 2.5)+\n  #,family = \"Bell MT\"\n  #annotate custom scale inside plot\n  annotate(x = 11.7, y =1100, label = \"1000\", geom = \"text\", color = \"gray12\", family = \"Bell MT\")+\n  annotate(x = 11.7, y =2100, label = \"2000\", geom = \"text\", color = \"gray12\", family = \"Bell MT\")+\n  annotate(x = 11.7, y =3100, label = \"3000\", geom = \"text\", color = \"gray12\", family = \"Bell MT\")+\n  \n  #scale y axis so bars don't start in the center\n  scale_y_continuous(limits = c(-1500, 3500),\n                     expand = c(0,0),\n                     breaks = c(0, 1000, 2000, 3000))+\n  \n  #add title, subtitle & caption\n  labs(title = \"\\nHiking Locations in Washington\",\n       subtitle = paste(\"\\nThis Visualisation shows the cummulative length of tracks,\",\n                        \"the amount of tracks and the mean gain in elevation per location.\\n\",\n                        \"If you are an experienced hiker, you might want to go\",\n                        \"to the North Cascades since there are a lot of tracks,\",\n                        \"higher elevations and total length to overcome.\",\n                        sep = \"\\n\"),\n       caption = \"\\n\\nData Visualisation by Tobias Stalder\\ntobias-stalder.netlify.app\\nSource: TidyX Crew (Ellis Hughes, Patrick Ward)\\nLink to Data: github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-11-24/readme.md\") +\n  \n  #transform to polar coordinate system\n  coord_polar() +\n  \n  #theming\n  theme(legend.position = \"bottom\",\n        axis.title = element_blank(),\n        axis.ticks = element_blank(),\n        axis.text.y = element_blank(),\n        axis.text.x = element_text(color = \"gray12\",\n                                   size = 12),\n        panel.background = element_rect(fill = \"white\",\n                                        color = \"white\"),\n        panel.grid = element_blank(),\n        panel.grid.major.x = element_blank(),\n        text = element_text(color = \"gray12\",\n                            family = \"Bell MT\"),\n        plot.title = element_text(face = \"bold\",\n                                  size = 25,\n                                  hjust = 0.05),\n        plot.subtitle = element_text(size = 14,\n                                     hjust = 0.05),\n        plot.caption = element_text(size = 10,\n                                    hjust = .5))+\n  \n  guides(fill = guide_colorsteps(barwidth = 15,\n                                 barheight = .5, \n                                 title.position = \"top\",\n                                 title.hjust = .5))"
   },
   {
     "objectID": "hw/hw-1.html",
