@@ -1,0 +1,1 @@
+[{"name":"app.R","content":"# Copy \"Hello World\" from `{shiny}`\nsystem.file(\"examples\", \"01_hello\", package=\"shiny\") |>\n  fs::dir_copy(\"myapp\", overwrite = TRUE)","type":"text"}]
