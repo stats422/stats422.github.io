@@ -1871,7 +1871,11 @@
     "href": "hw/hw-3.html",
     "title": "Homework 3",
     "section": "",
-    "text": "What to turn in\nDue: anytime from 5/18 - 5/25/2024\nYou will be turning in brief (one page is fine, longer is OK too) draft of your plan for a final web app. Of course you can change your mind, but the point of Homework 3 is to get you thinking about it. A PDF is fine or a link to a document, whatever I can read, I’ll accept.\n\n\nAssignment\nI will ask you to fill these in\n\nTopic/Goal\n\nPlease answer the question “this is my topic for a web app” or “this is the goal of my web app”. So for example, “The goal of my southern California earthquake web app is to make customized visualizations of earthquake activity accessible to a non-technical audience. I also want the user to be able to download the data they choose for further process”\n\nData\n\nThe data set you plan to use. So for me, I am using the Southern California earthquake catalog from Caltech. See https://scedc.caltech.edu/\n\nLayout\n\nYou could handsketch a picture of your plan or provide an outline. Continuing my earthquake example (apologies for the lousy artwork,but hey, you know it’s mine…):"
+    "text": "What to turn in\nDue: anytime from 5/18 - 5/25/2024\nYou will be turning in brief (one page is fine, longer is OK too) draft of your plan for a final web app. Of course you can change your mind, but the point of Homework 3 is to get you thinking about it. A PDF is fine or a link to a document, whatever I can read, I’ll accept.\n\n\nAssignment\nI will ask you to fill these in\n\nTopic/Goal\n\nPlease answer the question “this is my topic for a web app” or “this is the goal of my web app”. So for example, “The goal of my southern California earthquake web app is to make customized visualizations of earthquake activity accessible to a non-technical audience. I also want the user to be able to download the data they choose for further process”\n\nData\n\nThe data set you plan to use. So for me, I am using the Southern California earthquake catalog from Caltech. See https://scedc.caltech.edu/\n\nLayout\n\nYou could handsketch a picture of your plan or provide an outline. Continuing my earthquake example (apologies for the lousy artwork,but hey, you know it’s mine…):",
+    "crumbs": [
+      "Homework",
+      "HW 3"
+    ]
   },
   {
     "objectID": "hw/hw-1.html",

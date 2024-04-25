@@ -229,7 +229,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"options":{"out-height":"","label":"","message":"true","comment":"","results":"markup","autorun":"","output":"true","warning":"true","fig-height":5,"context":"interactive","dpi":72,"out-width":"700px","fig-cap":"","read-only":"false","fig-width":7,"classes":""},"id":1,"code":"import pandas as pd \nimport numpy as np \n\ndf = pd.DataFrame(\n    {\n        \"A\": 1.0,\n        \"B\": pd.Timestamp(\"20130102\"),\n        \"C\": pd.Series(1, index=list(range(4)), dtype=\"float32\"),\n        \"D\": np.array([3] * 4, dtype=\"int32\"),\n        \"E\": pd.Categorical([\"test\", \"train\", \"test\", \"train\"]),\n        \"F\": \"foo\",\n    }\n)\n\n\ndf"}];
+globalThis.qpyodideCellDetails = [{"id":1,"code":"import pandas as pd \nimport numpy as np \n\ndf = pd.DataFrame(\n    {\n        \"A\": 1.0,\n        \"B\": pd.Timestamp(\"20130102\"),\n        \"C\": pd.Series(1, index=list(range(4)), dtype=\"float32\"),\n        \"D\": np.array([3] * 4, dtype=\"int32\"),\n        \"E\": pd.Categorical([\"test\", \"train\", \"test\", \"train\"]),\n        \"F\": \"foo\",\n    }\n)\n\n\ndf","options":{"dpi":72,"fig-height":5,"warning":"true","context":"interactive","fig-cap":"","out-width":"700px","read-only":"false","autorun":"","results":"markup","message":"true","classes":"","label":"","comment":"","output":"true","out-height":"","fig-width":7}}];
 
 
 </script>
@@ -614,6 +614,12 @@ globalThis._qpyodideGetInstance = function() {
   <div class="sidebar-item-container"> 
   <a href="./hw/hw-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HW 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw/hw-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW 3</span></a>
   </div>
 </li>
       </ul>
