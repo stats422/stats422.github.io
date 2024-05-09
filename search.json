@@ -1983,11 +1983,44 @@
     ]
   },
   {
-    "objectID": "activity/Week06mapping.html#try-a-map",
-    "href": "activity/Week06mapping.html#try-a-map",
+    "objectID": "activity/Week06mapping.html#try-a-map-in-ggplot",
+    "href": "activity/Week06mapping.html#try-a-map-in-ggplot",
     "title": "Week 6 Mapping",
-    "section": "Try a map",
-    "text": "Try a map\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "section": "Try a map in ggplot",
+    "text": "Try a map in ggplot\nThis should work, all we are creating is a scatterplot\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 6 Activity Mapping"
+    ]
+  },
+  {
+    "objectID": "activity/Week06mapping.html#use-sf",
+    "href": "activity/Week06mapping.html#use-sf",
+    "title": "Week 6 Mapping",
+    "section": "Use sf",
+    "text": "Use sf\nGive an ordinary dataset a crs and make it spatial feature object\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 6 Activity Mapping"
+    ]
+  },
+  {
+    "objectID": "activity/Week06mapping.html#using-st_read-with-a-remote-geojson",
+    "href": "activity/Week06mapping.html#using-st_read-with-a-remote-geojson",
+    "title": "Week 6 Mapping",
+    "section": "Using st_read with a remote geojson",
+    "text": "Using st_read with a remote geojson\nIf this works, we have a chance\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 6 Activity Mapping"
+    ]
+  },
+  {
+    "objectID": "activity/Week06mapping.html#try-a-map-in-leaflet-doesnt-work-unfortunately",
+    "href": "activity/Week06mapping.html#try-a-map-in-leaflet-doesnt-work-unfortunately",
+    "title": "Week 6 Mapping",
+    "section": "Try a map in Leaflet (doesn’t work unfortunately)",
+    "text": "Try a map in Leaflet (doesn’t work unfortunately)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Activities",
       "Lecture 6 Activity Mapping"

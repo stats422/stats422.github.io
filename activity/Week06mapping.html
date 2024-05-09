@@ -227,7 +227,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"sf\")\nwebr::install(\"ggspatial\")\nwebr::install(\"knitr\")\nwebr::install(\"maptiles\")\nwebr::install(\"tidyterra\")\nwebr::install(\"maps\")\nwebr::install(\"leaflet\")\n\nlibrary(readr)\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(ggspatial)\nlibrary(knitr)\nlibrary(maptiles) # extra maps\nlibrary(tidyterra) # extra geoms\nlibrary(maps)\nlibrary(leaflet)\noptions(dplyr.width = Inf, dplyr.print_max = 1e9,  width = 144)","options":{"autorun":"false","classes":"","fig-cap":"","fig-height":5,"comment":"","output":"true","results":"markup","dpi":72,"warning":"false","label":"unnamed-chunk-1","out-width":"700px","fig-width":7,"context":"interactive","message":"false","out-height":""},"id":1},{"code":"innout <- read.csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/innout_lat_longs.csv\")\nhead(innout)","options":{"autorun":"false","classes":"","fig-cap":"","fig-height":5,"comment":"","output":"true","results":"markup","dpi":72,"warning":"true","label":"unnamed-chunk-2","out-width":"700px","fig-width":7,"context":"interactive","message":"true","out-height":""},"id":2},{"code":"m <- leaflet() |>\n  addTiles() |>\n  addMarkers(lng = -118.442506,\n             lat = 34.069649,\n             popup = \"UCLA\")\nm  # Print the map","options":{"autorun":"false","classes":"","fig-cap":"","fig-height":5,"comment":"","output":"true","results":"markup","dpi":72,"warning":"true","label":"unnamed-chunk-3","out-width":"700px","fig-width":7,"context":"interactive","message":"true","out-height":""},"id":3}];
+globalThis.qwebrCellDetails = [{"options":{"comment":"","context":"interactive","dpi":72,"out-width":"700px","output":"true","fig-cap":"","out-height":"","fig-height":5,"autorun":"false","fig-width":7,"message":"false","warning":"false","label":"unnamed-chunk-1","results":"markup","classes":""},"id":1,"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"sf\")\nwebr::install(\"ggspatial\")\nwebr::install(\"knitr\")\nwebr::install(\"maptiles\")\nwebr::install(\"tidyterra\")\nwebr::install(\"maps\")\nwebr::install(\"leaflet\")\n\nlibrary(readr)\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(ggspatial)\nlibrary(knitr)\nlibrary(maptiles) # extra maps\nlibrary(tidyterra) # extra geoms\nlibrary(maps)\nlibrary(leaflet)\noptions(dplyr.width = Inf, dplyr.print_max = 1e9,  width = 144)"},{"options":{"comment":"","context":"interactive","dpi":72,"out-width":"700px","output":"true","fig-cap":"","out-height":"","fig-height":5,"autorun":"false","fig-width":7,"message":"true","warning":"true","label":"unnamed-chunk-2","results":"markup","classes":""},"id":2,"code":"innout <- read.csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/innout_lat_longs.csv\")\nhead(innout)"},{"options":{"comment":"","context":"interactive","dpi":72,"out-width":"700px","output":"true","fig-cap":"","out-height":"","fig-height":5,"autorun":"false","fig-width":7,"message":"true","warning":"true","label":"unnamed-chunk-3","results":"markup","classes":""},"id":3,"code":"ggplot(innout, \n       aes(x = longitude, y = latitude)) +\n         geom_point() +\n         theme_classic() +\n         theme(legend.position = \"none\")"},{"options":{"comment":"","context":"interactive","dpi":72,"out-width":"700px","output":"true","fig-cap":"","out-height":"","fig-height":5,"autorun":"false","fig-width":7,"message":"true","warning":"true","label":"unnamed-chunk-4","results":"markup","classes":""},"id":4,"code":"points_sf <- st_as_sf(innout, \n                      coords = c(\"longitude\", \"latitude\"), \n                      crs = 4326,\n                      remove = FALSE)"},{"options":{"comment":"","context":"interactive","dpi":72,"out-width":"700px","output":"true","fig-cap":"","out-height":"","fig-height":5,"autorun":"false","fig-width":7,"message":"true","warning":"true","label":"unnamed-chunk-5","results":"markup","classes":""},"id":5,"code":"basemap <- st_read(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/LA_Times_Neighborhood_Boundaries.geojson\")"},{"options":{"comment":"","context":"interactive","dpi":72,"out-width":"700px","output":"true","fig-cap":"","out-height":"","fig-height":5,"autorun":"false","fig-width":7,"message":"true","warning":"true","label":"unnamed-chunk-6","results":"markup","classes":""},"id":6,"code":"# won't work on the web\nm <- leaflet() |>\n  addTiles() |>\n  addMarkers(lng = -118.442506,\n             lat = 34.069649,\n             popup = \"UCLA\")\nm  # Print the map"}];
 
 </script><script type="module">
 // Declare startupMessageQWebR globally
@@ -940,6 +940,7 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <meta property="og:title" content="Statistics 422 - Week 6 Mapping">
+<meta property="og:description" content="Homepage for STATS 422 - Data Visualization UCLA MASDS, Spring 2024.">
 <meta property="og:site_name" content="Statistics 422">
 </head>
 <body class="nav-sidebar docked">
@@ -1177,7 +1178,10 @@ globalThis.qwebrExecuteCode = async function (
   <ul>
 <li><a href="#loading-libraries" id="toc-loading-libraries" class="nav-link active" data-scroll-target="#loading-libraries">Loading Libraries</a></li>
   <li><a href="#example-read-the-data" id="toc-example-read-the-data" class="nav-link" data-scroll-target="#example-read-the-data">Example: Read the data</a></li>
-  <li><a href="#try-a-map" id="toc-try-a-map" class="nav-link" data-scroll-target="#try-a-map">Try a map</a></li>
+  <li><a href="#try-a-map-in-ggplot" id="toc-try-a-map-in-ggplot" class="nav-link" data-scroll-target="#try-a-map-in-ggplot">Try a map in ggplot</a></li>
+  <li><a href="#use-sf" id="toc-use-sf" class="nav-link" data-scroll-target="#use-sf">Use sf</a></li>
+  <li><a href="#using-st_read-with-a-remote-geojson" id="toc-using-st_read-with-a-remote-geojson" class="nav-link" data-scroll-target="#using-st_read-with-a-remote-geojson">Using st_read with a remote geojson</a></li>
+  <li><a href="#try-a-map-in-leaflet-doesnt-work-unfortunately" id="toc-try-a-map-in-leaflet-doesnt-work-unfortunately" class="nav-link" data-scroll-target="#try-a-map-in-leaflet-doesnt-work-unfortunately">Try a map in Leaflet (doesn’t work unfortunately)</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -1378,8 +1382,20 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </section><section id="example-read-the-data" class="level2"><h2 class="anchored" data-anchor-id="example-read-the-data">Example: Read the data</h2>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="try-a-map" class="level2"><h2 class="anchored" data-anchor-id="try-a-map">Try a map</h2>
+</section><section id="try-a-map-in-ggplot" class="level2"><h2 class="anchored" data-anchor-id="try-a-map-in-ggplot">Try a map in ggplot</h2>
+<p>This should work, all we are creating is a scatterplot</p>
 <div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="use-sf" class="level2"><h2 class="anchored" data-anchor-id="use-sf">Use sf</h2>
+<p>Give an ordinary dataset a crs and make it spatial feature object</p>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="using-st_read-with-a-remote-geojson" class="level2"><h2 class="anchored" data-anchor-id="using-st_read-with-a-remote-geojson">Using st_read with a remote geojson</h2>
+<p>If this works, we have a chance</p>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="try-a-map-in-leaflet-doesnt-work-unfortunately" class="level2"><h2 class="anchored" data-anchor-id="try-a-map-in-leaflet-doesnt-work-unfortunately">Try a map in Leaflet (doesn’t work unfortunately)</h2>
+<div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
