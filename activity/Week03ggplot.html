@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.553">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="For Spring 2024 Stats 422">
 <title>Statistics 422 - Week 3 ggplot</title>
@@ -227,7 +227,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggpubr\")\n\noptions(dplyr.width = Inf)\n\nlibrary(readr)\nlibrary(knitr)\nlibrary(tidyverse)\nlibrary(ggpubr)","options":{"context":"interactive","out-width":"700px","classes":"","fig-height":5,"dpi":72,"message":"false","output":"true","label":"unnamed-chunk-1","results":"markup","autorun":"false","fig-cap":"","out-height":"","comment":"","warning":"false","fig-width":7},"id":1},{"code":"taxi2 <- read.csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/taxi_trips2.csv\") |> tibble::as_tibble()","options":{"context":"interactive","out-width":"700px","classes":"","fig-height":5,"dpi":72,"message":"true","output":"true","label":"unnamed-chunk-2","results":"markup","autorun":"false","fig-cap":"","out-height":"","comment":"","warning":"true","fig-width":7},"id":2},{"code":"glimpse(taxi2)","options":{"context":"interactive","out-width":"700px","classes":"","fig-height":5,"dpi":72,"message":"true","output":"true","label":"unnamed-chunk-3","results":"markup","autorun":"false","fig-cap":"","out-height":"","comment":"","warning":"true","fig-width":7},"id":3},{"code":"## feel free to choose a different summary function\noptions(width = 140)\ntaxi2 %>% \n  select(1:11) %>%\n  summarise_all(list(mean = mean, sd = sd)) %>%\n  t()","options":{"context":"interactive","out-width":"700px","classes":"","fig-height":5,"dpi":72,"message":"true","output":"true","label":"unnamed-chunk-4","results":"markup","autorun":"false","fig-cap":"","out-height":"","comment":"","warning":"true","fig-width":7},"id":4},{"code":"# can we make this prettier or more informative?\nggplot(taxi2) +\n  geom_boxplot(aes(x = Payment.Type, y = Trip.Total)) ","options":{"context":"interactive","out-width":"700px","classes":"","fig-height":5,"dpi":72,"message":"true","output":"true","label":"unnamed-chunk-5","results":"markup","autorun":"false","fig-cap":"","out-height":"","comment":"","warning":"true","fig-width":7},"id":5},{"code":"## Or try a different geom also different data\n\n ","options":{"context":"interactive","out-width":"700px","classes":"","fig-height":5,"dpi":72,"message":"true","output":"true","label":"unnamed-chunk-6","results":"markup","autorun":"false","fig-cap":"","out-height":"","comment":"","warning":"true","fig-width":7},"id":6}];
+globalThis.qwebrCellDetails = [{"code":"# please press run code and then move onto the next part\nwebr::install(\"readr\")\nwebr::install(\"knitr\")\nwebr::install(\"tidyverse\")\nwebr::install(\"ggpubr\")\n\noptions(dplyr.width = Inf)\n\nlibrary(readr)\nlibrary(knitr)\nlibrary(tidyverse)\nlibrary(ggpubr)","options":{"label":"unnamed-chunk-1","autorun":"false","dpi":72,"message":"false","classes":"","context":"interactive","output":"true","warning":"false","results":"markup","out-height":"","comment":"","fig-height":5,"fig-cap":"","fig-width":7,"out-width":"700px"},"id":1},{"code":"taxi2 <- read.csv(\"https://raw.githubusercontent.com/lewv/S24STATS101A/main/data/taxi_trips2.csv\") |> tibble::as_tibble()","options":{"label":"unnamed-chunk-2","autorun":"false","dpi":72,"message":"true","classes":"","context":"interactive","output":"true","warning":"true","results":"markup","out-height":"","comment":"","fig-height":5,"fig-cap":"","fig-width":7,"out-width":"700px"},"id":2},{"code":"glimpse(taxi2)","options":{"label":"unnamed-chunk-3","autorun":"false","dpi":72,"message":"true","classes":"","context":"interactive","output":"true","warning":"true","results":"markup","out-height":"","comment":"","fig-height":5,"fig-cap":"","fig-width":7,"out-width":"700px"},"id":3},{"code":"## feel free to choose a different summary function\noptions(width = 140)\ntaxi2 %>% \n  select(1:11) %>%\n  summarise_all(list(mean = mean, sd = sd)) %>%\n  t()","options":{"label":"unnamed-chunk-4","autorun":"false","dpi":72,"message":"true","classes":"","context":"interactive","output":"true","warning":"true","results":"markup","out-height":"","comment":"","fig-height":5,"fig-cap":"","fig-width":7,"out-width":"700px"},"id":4},{"code":"# can we make this prettier or more informative?\nggplot(taxi2) +\n  geom_boxplot(aes(x = Payment.Type, y = Trip.Total)) ","options":{"label":"unnamed-chunk-5","autorun":"false","dpi":72,"message":"true","classes":"","context":"interactive","output":"true","warning":"true","results":"markup","out-height":"","comment":"","fig-height":5,"fig-cap":"","fig-width":7,"out-width":"700px"},"id":5},{"code":"## Or try a different geom also different data\n\n ","options":{"label":"unnamed-chunk-6","autorun":"false","dpi":72,"message":"true","classes":"","context":"interactive","output":"true","warning":"true","results":"markup","out-height":"","comment":"","fig-height":5,"fig-cap":"","fig-width":7,"out-width":"700px"},"id":6}];
 
 </script><script type="module">
 // Declare startupMessageQWebR globally
@@ -1042,6 +1042,12 @@ globalThis.qwebrExecuteCode = async function (
   <div class="sidebar-item-container"> 
   <a href="../lectures/Lecture04.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 04 Shiny</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/Lecture06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 06 Maps</span></a>
   </div>
 </li>
       </ul>
