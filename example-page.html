@@ -229,7 +229,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"options":{"comment":"","autorun":"","results":"markup","label":"","output":"true","fig-cap":"","warning":"true","context":"interactive","classes":"","read-only":"false","message":"true","fig-width":7,"out-height":"","dpi":72,"fig-height":5,"out-width":"700px"},"code":"import pandas as pd \nimport numpy as np \n\ndf = pd.DataFrame(\n    {\n        \"A\": 1.0,\n        \"B\": pd.Timestamp(\"20130102\"),\n        \"C\": pd.Series(1, index=list(range(4)), dtype=\"float32\"),\n        \"D\": np.array([3] * 4, dtype=\"int32\"),\n        \"E\": pd.Categorical([\"test\", \"train\", \"test\", \"train\"]),\n        \"F\": \"foo\",\n    }\n)\n\n\ndf","id":1}];
+globalThis.qpyodideCellDetails = [{"options":{"output":"true","warning":"true","message":"true","context":"interactive","fig-cap":"","out-height":"","dpi":72,"read-only":"false","label":"","fig-height":5,"comment":"","autorun":"","classes":"","out-width":"700px","results":"markup","fig-width":7},"code":"import pandas as pd \nimport numpy as np \n\ndf = pd.DataFrame(\n    {\n        \"A\": 1.0,\n        \"B\": pd.Timestamp(\"20130102\"),\n        \"C\": pd.Series(1, index=list(range(4)), dtype=\"float32\"),\n        \"D\": np.array([3] * 4, dtype=\"int32\"),\n        \"E\": pd.Categorical([\"test\", \"train\", \"test\", \"train\"]),\n        \"F\": \"foo\",\n    }\n)\n\n\ndf","id":1}];
 
 
 </script>
@@ -539,6 +539,12 @@ globalThis._qpyodideGetInstance = function() {
   <div class="sidebar-item-container"> 
   <a href="./lectures/Lecture06.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 06 Maps</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lectures/Lecture08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 08 Tables and Times</span></a>
   </div>
 </li>
       </ul>
