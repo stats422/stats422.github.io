@@ -4470,5 +4470,47 @@
       "Lectures",
       "Lecture 01"
     ]
+  },
+  {
+    "objectID": "activity/Week08tables.html",
+    "href": "activity/Week08tables.html",
+    "title": "Week 8 tables and times",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.\nHere is an empty box if you prefer to use your own data. It’s easiest to use data available on the web and base R works far better than readr for reading in data.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/Week08tables.html#loading-libraries",
+    "href": "activity/Week08tables.html#loading-libraries",
+    "title": "Week 8 tables and times",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.\nHere is an empty box if you prefer to use your own data. It’s easiest to use data available on the web and base R works far better than readr for reading in data.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/Week08tables.html#some-data",
+    "href": "activity/Week08tables.html#some-data",
+    "title": "Week 8 tables and times",
+    "section": "Some data",
+    "text": "Some data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/Week08tables.html#no-gt-and-no-reactjs",
+    "href": "activity/Week08tables.html#no-gt-and-no-reactjs",
+    "title": "Week 8 tables and times",
+    "section": "No gt and no reactjs",
+    "text": "No gt and no reactjs\nUnfortunately, these two libraries clash fiercely with webr, so no tablework in this activity or easy formatting, only time."
+  },
+  {
+    "objectID": "activity/Week08tables.html#figure-out-what-works-best",
+    "href": "activity/Week08tables.html#figure-out-what-works-best",
+    "title": "Week 8 tables and times",
+    "section": "Figure out what works best",
+    "text": "Figure out what works best\nExplore some data (doesn’t need to be my choices, like you can change the stock) a bit and then decide what works best for you, example, fitting a straight line:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nvs. something a lot “bumpier”\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nbe adventurous (sorta):\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/Week08tables.html#barplots",
+    "href": "activity/Week08tables.html#barplots",
+    "title": "Week 8 tables and times",
+    "section": "barplots",
+    "text": "barplots\nFor representing time, they are not bad, especially when discrete:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]
