@@ -2494,6 +2494,50 @@
     ]
   },
   {
+    "objectID": "hw/hw-4.html",
+    "href": "hw/hw-4.html",
+    "title": "Homework 4",
+    "section": "",
+    "text": "Due: anytime before June 8th 2024",
+    "crumbs": [
+      "Homework",
+      "HW 4"
+    ]
+  },
+  {
+    "objectID": "hw/hw-4.html#for-those-who-are-trying-to-finish-up-before-june-14th.",
+    "href": "hw/hw-4.html#for-those-who-are-trying-to-finish-up-before-june-14th.",
+    "title": "Homework 4",
+    "section": "For those who are trying to finish up before June 14th.",
+    "text": "For those who are trying to finish up before June 14th.\nPlease select any three graphics (preferred, this was supposed to be a data viz class) or tables (a mix of these but just three items) from your thesis. You do not actually need to create them, sketching them out by hand or with software is acceptable to me (I will want the final version in your final report)\nThere should be order to them (e.g., I am hoping these are coming out of some section of your thesis) and I would like you to write text around them which explains (a) what purpose this graphic/table/code serves in your thesis (in other words “WHY is in your thesis” and (b) your interpretation it (that is, what is it communicating to you or what should your audience be getting out of viewing it?) In other words, you are telling a story using the three as helpful illustrations.\nSo you are just turning in a document. I will put a length of two pages minimum double spaced for the entire submission, so you don’t need to write much, but I am forcing you to write.",
+    "crumbs": [
+      "Homework",
+      "HW 4"
+    ]
+  },
+  {
+    "objectID": "hw/hw-4.html#if-you-are-not-trying-to-finish-up-before-june-14th.",
+    "href": "hw/hw-4.html#if-you-are-not-trying-to-finish-up-before-june-14th.",
+    "title": "Homework 4",
+    "section": "If you are not trying to finish up before June 14th.",
+    "text": "If you are not trying to finish up before June 14th.\nPlease design or generate (if you are that far along) three graphics (no tables). They are not required to be in sequence (you are not writing a thesis), so they are similar to three short stories.\nYour job is to present them - so please record yourself explaining them to someone who is capable of completing an advanced degree but lacks your specialized training. Zoom works nicely, but use whatever you want. There is no minimum/maximum presentation time.\nI am forcing you to practice your presentation skills for upcoming job interviews and/or future advisor meetings.\nYou do not need to write anything, I am looking for a video (this could be uploaded or ot could be link) and yes, I am forcing you to speak/present and not write.",
+    "crumbs": [
+      "Homework",
+      "HW 4"
+    ]
+  },
+  {
+    "objectID": "hw/hw-4.html#for-both-groups",
+    "href": "hw/hw-4.html#for-both-groups",
+    "title": "Homework 4",
+    "section": "For both groups",
+    "text": "For both groups\n\nYou select the data, if you are working on your thesis, ideally use your thesis data. For the non-thesis group do not use iris, titanic, penguins but Tidy Tuesday is OK (like IKEA from Tidy Tuesday is fine). Check with me if you aren’t sure, again, the goal is to get you that job or that thesis.\nYou select the software. If I teach 422 again, I will probably work more Python in (maybe they will grant a TA to me) and continue to keep the course “language agnostic” so use whatever you like to use. I would suggest either use what you are most comfortable using OR use what you need to help get you that next job.",
+    "crumbs": [
+      "Homework",
+      "HW 4"
+    ]
+  },
+  {
     "objectID": "hw/hw-3.html",
     "href": "hw/hw-3.html",
     "title": "Homework 3",
