@@ -2053,11 +2053,11 @@
     "text": "About this site"
   },
   {
-    "objectID": "projects/project-1.html",
-    "href": "projects/project-1.html",
-    "title": "project-1",
+    "objectID": "projects/Final_Web_app.html",
+    "href": "projects/Final_Web_app.html",
+    "title": "Final Web App Guidelines",
     "section": "",
-    "text": "To be filled out soon",
+    "text": "What to turn in\nDue: anytime before June 21st 11:59pm. Otherwise, I’ll issue an incomplete grade and you will have until the end of Fall 2024 to turn something in.\n\n\nAssignment\nIf you changed your mind between Homework 3 and the submission of the final web app, please include a link to the data you used for this Final project. Otherwise, I have it as a part of HW 3. I have tried to italicize what is used in the grading.\n\nPlease upload or point to a video recording (e.g., posted privately to YouTube or Google Drive etc) of you taking a viewer through your web app. Here are some content guidelines.\n\n\nYou are just telling a story about your project. So it should be casual/relaxed. Some things you may want to talk about - why you are interested in this - example, one of your classmates showed me a very fun web app on book reviews and your classmate is an avid book lover. That is a perfectly fine way to introduce someone to your web app. (I am using this portion to assess the overall structure of the web app - basically did you do what you said you were going to do.)\nPretend you were showing this to a potential employer or a supervisor - and assume they like you, they either want to hire you or are happy that they made the right choice in hiring you. This video can be any length, what I am observing is your interaction with your project so I will want to see you in your recording. (I am using this portion to give you overall feedback, there are no deductions here but you do earn points towards the final score here.)\nYou do not need to record every aspect of your web app (I will check it through myself to reproduce it/verify it ran as recorded in your video) instead show me what you liked best/most proud of/would show an employer. So pick your best example for your video.\n\n\nPlease upload what materials I need (zipped archive/zipped file preferred) to examine your web app (please include all of material I need to run the web app for verification). These should be uploaded to BruinLearn.\n\nThis is not meant to be difficult/complicated but it is meant to serve as an interactive piece for you to showcase your talents and/or interests to others who may not be able to understand your interests or your thesis topic etc.",
     "crumbs": [
       "Projects",
       "Project 1 (web app)"
@@ -2936,11 +2936,33 @@
     ]
   },
   {
-    "objectID": "projects/project-2.html",
-    "href": "projects/project-2.html",
-    "title": "project-2",
+    "objectID": "projects/Final_Report.html",
+    "href": "projects/Final_Report.html",
+    "title": "Final Report Guidelines",
     "section": "",
-    "text": "To be filled out soon",
+    "text": "Due: anytime before June 21st 11:59pm. Otherwise, I’ll issue an incomplete grade and you will have until the end of Fall 2024 to turn something in.",
+    "crumbs": [
+      "Projects",
+      "Project 2 (report)"
+    ]
+  },
+  {
+    "objectID": "projects/Final_Report.html#for-those-who-are-filing-their-masds-on-or-before-june-14th",
+    "href": "projects/Final_Report.html#for-those-who-are-filing-their-masds-on-or-before-june-14th",
+    "title": "Final Report Guidelines",
+    "section": "For those who are filing their MASDS on or before June 14th",
+    "text": "For those who are filing their MASDS on or before June 14th\n\nPlease write a brief report which includes a minimum of 3 visualizations (a nice table can serve as one of them). This can (not required) come straight out of your thesis and only needs to be as long as needed to discuss your product. So for example, if you were using tables and visualizations in an EDA to help you write your thesis, that is a good source for this brief report.\nPlease upload what materials I need (zipped archive/zipped file preferred) to reproduce your report (please include all of material I need to recreate your report graphics at minimum for verification, of course I’d rather have the whole report). The materials should be uploaded to BruinLearn.",
+    "crumbs": [
+      "Projects",
+      "Project 2 (report)"
+    ]
+  },
+  {
+    "objectID": "projects/Final_Report.html#for-everyone-else",
+    "href": "projects/Final_Report.html#for-everyone-else",
+    "title": "Final Report Guidelines",
+    "section": "For everyone else",
+    "text": "For everyone else\n\nIdeally, you should have 3 visualizations after finishing homework 4. Please write some text around each of your visualizations. Your text should explain your basic idea and your design choices. I think you could take the transcription of your video and edit it a little bit and it would be a reasonable report. Your writing only needs to be as long as you need to cover the 3 visualizations.\nYour report should be formatted with a view towards thesis writing in the next year, so it should ultimately render to PDF. You do not need to concern yourself with the exact thesis guidelines (e.g., margins, pagination) unless you want to incorporate that now (no extra points and also no deductions). Please upload what materials I need (zipped archive/zipped file preferred) to reproduce your report (the whole thing,images and text) there is no page length minimum or maximum. The materials should be uploaded to BruinLearn.",
     "crumbs": [
       "Projects",
       "Project 2 (report)"
