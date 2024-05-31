@@ -229,7 +229,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"options":{"classes":"","dpi":72,"out-width":"700px","context":"interactive","output":"true","label":"","fig-width":7,"autorun":"","out-height":"","comment":"","fig-cap":"","results":"markup","warning":"true","fig-height":5,"message":"true","read-only":"false"},"id":1,"code":"import pandas as pd \nimport numpy as np \n\ndf = pd.DataFrame(\n    {\n        \"A\": 1.0,\n        \"B\": pd.Timestamp(\"20130102\"),\n        \"C\": pd.Series(1, index=list(range(4)), dtype=\"float32\"),\n        \"D\": np.array([3] * 4, dtype=\"int32\"),\n        \"E\": pd.Categorical([\"test\", \"train\", \"test\", \"train\"]),\n        \"F\": \"foo\",\n    }\n)\n\n\ndf"}];
+globalThis.qpyodideCellDetails = [{"id":1,"code":"import pandas as pd \nimport numpy as np \n\ndf = pd.DataFrame(\n    {\n        \"A\": 1.0,\n        \"B\": pd.Timestamp(\"20130102\"),\n        \"C\": pd.Series(1, index=list(range(4)), dtype=\"float32\"),\n        \"D\": np.array([3] * 4, dtype=\"int32\"),\n        \"E\": pd.Categorical([\"test\", \"train\", \"test\", \"train\"]),\n        \"F\": \"foo\",\n    }\n)\n\n\ndf","options":{"classes":"","dpi":72,"label":"","warning":"true","output":"true","out-width":"700px","autorun":"","context":"interactive","message":"true","fig-width":7,"out-height":"","read-only":"false","results":"markup","comment":"","fig-height":5,"fig-cap":""}}];
 
 
 </script>
@@ -545,6 +545,12 @@ globalThis._qpyodideGetInstance = function() {
   <div class="sidebar-item-container"> 
   <a href="./lectures/Lecture08.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 08 Tables and Times</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lectures/Lecture09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 09 Tableau</span></a>
   </div>
 </li>
       </ul>
