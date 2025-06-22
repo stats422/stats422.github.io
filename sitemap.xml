@@ -1,123 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://stats422.github.io/lectures/Lecture02Rcode.html</loc>
-    <lastmod>2024-04-12T01:17:17.408Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/lectures/Lecture03.html</loc>
-    <lastmod>2024-04-18T23:40:23.834Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/lectures/Lecture06.html</loc>
-    <lastmod>2024-05-10T00:30:48.810Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/lectures/Lecture09.html</loc>
-    <lastmod>2024-05-31T00:02:29.544Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/lectures/Lecture03python.html</loc>
-    <lastmod>2024-04-19T00:06:57.977Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/example-page.html</loc>
-    <lastmod>2024-03-12T20:41:57.631Z</lastmod>
+    <loc>https://stats422.github.io/Syllabus.html</loc>
+    <lastmod>2025-06-22T01:22:46.512Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/index.html</loc>
     <lastmod>2024-03-09T05:07:55.882Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/projects/Final_Report.html</loc>
-    <lastmod>2024-05-27T19:46:31.523Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/activity/Week03Python.html</loc>
-    <lastmod>2024-04-19T01:20:58.096Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/activity/shiny_activity.html</loc>
-    <lastmod>2024-04-25T08:06:01.104Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/activity/Week08tables.html</loc>
-    <lastmod>2024-05-24T00:39:30.310Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/activity/ggplot1.html</loc>
-    <lastmod>2024-04-04T23:15:59.830Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/activity/RRefresher.html</loc>
-    <lastmod>2024-03-08T20:45:45.716Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/hw/hw-1.html</loc>
-    <lastmod>2024-03-18T06:44:47.125Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/hw/hw-3.html</loc>
-    <lastmod>2024-04-25T18:44:47.205Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/hw/hw-4.html</loc>
-    <lastmod>2024-05-25T04:21:09.714Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/hw/hw-2.html</loc>
-    <lastmod>2024-04-16T20:31:04.526Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/activity/ikea.html</loc>
-    <lastmod>2024-04-06T16:42:44.171Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/activity/Week06mapping.html</loc>
-    <lastmod>2024-05-10T00:34:27.176Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/activity/ggplot2.html</loc>
-    <lastmod>2024-04-11T23:45:01.762Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/activity/06Simulation.html</loc>
-    <lastmod>2024-04-17T06:25:10.302Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/activity/Week03ggplot.html</loc>
-    <lastmod>2024-04-19T00:21:29.331Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/StoryTelling.html</loc>
-    <lastmod>2024-04-04T19:05:04.110Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/projects/Final_Web_app.html</loc>
-    <lastmod>2024-05-27T19:29:28.711Z</lastmod>
-  </url>
-  <url>
     <loc>https://stats422.github.io/about.html</loc>
     <lastmod>2024-02-18T22:17:40.615Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/Syllabus.html</loc>
-    <lastmod>2024-05-03T02:18:13.486Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/lectures/Lecture08.html</loc>
-    <lastmod>2024-05-23T22:08:39.548Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/lectures/Lecture04.html</loc>
-    <lastmod>2024-04-25T17:50:01.329Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/lectures/Lecture02.html</loc>
-    <lastmod>2024-04-11T23:57:56.280Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats422.github.io/lectures/Lecture01.html</loc>
-    <lastmod>2024-04-04T23:19:55.068Z</lastmod>
   </url>
 </urlset>
