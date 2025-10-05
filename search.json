@@ -657,7 +657,14 @@
     "href": "lectures/Lecture02.html#stat-layer-example",
     "title": "Basic Tools: ggplot",
     "section": "stat layer example",
-    "text": "stat layer example\n\nlibrary(ggplot2)\nggplot(mpg, aes(trans, cty)) + \n  geom_point() + \n  geom_point(stat = \"summary\", fun = \"mean\", colour = \"red\", size = 4)"
+    "text": "stat layer example"
+  },
+  {
+    "objectID": "lectures/Lecture02.html#stat-layer-example-notes",
+    "href": "lectures/Lecture02.html#stat-layer-example-notes",
+    "title": "Basic Tools: ggplot",
+    "section": "stat layer example notes",
+    "text": "stat layer example notes\n\nlibrary(ggplot2)\nggplot(mpg, aes(trans, cty)) + \n  geom_point() + \n  geom_point(stat = \"summary\", fun = \"mean\", colour = \"red\", size = 4)\n\n\nNote have multiple geoms (one for the original points and one for the transformed). We have one aes(), think of it as “global”"
   },
   {
     "objectID": "lectures/Lecture02.html#coordinates-and-scales",
