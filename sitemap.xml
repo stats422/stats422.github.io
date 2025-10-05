@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://stats422.github.io/Syllabus.html</loc>
-    <lastmod>2025-06-22T01:22:46.512Z</lastmod>
+    <loc>https://stats422.github.io/lectures/Lecture01.html</loc>
+    <lastmod>2025-10-01T12:10:26.279Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats422.github.io/about.html</loc>
+    <lastmod>2024-02-18T22:17:40.615Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats422.github.io/activity/ggplot2.html</loc>
+    <lastmod>2025-10-05T01:26:02.033Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats422.github.io/activity/ggplot1.html</loc>
+    <lastmod>2025-10-05T01:22:50.652Z</lastmod>
   </url>
   <url>
     <loc>https://stats422.github.io/index.html</loc>
     <lastmod>2024-03-09T05:07:55.882Z</lastmod>
   </url>
   <url>
-    <loc>https://stats422.github.io/about.html</loc>
-    <lastmod>2024-02-18T22:17:40.615Z</lastmod>
+    <loc>https://stats422.github.io/Syllabus.html</loc>
+    <lastmod>2025-06-22T01:22:46.512Z</lastmod>
   </url>
 </urlset>

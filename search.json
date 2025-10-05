@@ -1,5 +1,518 @@
 [
   {
+    "objectID": "lectures/Lecture01.html#tonights-takeaways",
+    "href": "lectures/Lecture01.html#tonights-takeaways",
+    "title": "Welcome Statistics 422",
+    "section": "Tonight’s Takeaways",
+    "text": "Tonight’s Takeaways\n\nSocialize (45 min)\nExpectations (20 min)\nTeam Activity (30 - 40min)\nStorytelling (30 min)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#early-evening-social",
+    "href": "lectures/Lecture01.html#early-evening-social",
+    "title": "Welcome Statistics 422",
+    "section": "Early Evening Social",
+    "text": "Early Evening Social\nLet’s use this time to interact & relax before getting started\n\n\nPlease gather in small groups (minimum 3 classmates, maximum 6)\nIf you don’t know someone please introduce yourself\nIf your group sees someone without a group, please be kind and extend an invitation to join\nEvery 15 minutes I’m going to ask you to shuffle and meet new classmates\nWe will shuffle 3 times, then take break",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section",
+    "href": "lectures/Lecture01.html#section",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "Instructor\nDr. Vivian Lew\n\nMath Sciences 8923 (neighbors are Nicolas Christou & Akram Almohalwas)\nBruinLearn e-mail is the best way to reach me\nTA is Navin Souda (nvsouda@ucla.edu)\n\n\nOther Course Details\n\nMeet Once a Week Wednesdays 6pm-8:50pm\n\nMath Sciences 5117\n\nOffice Hours\n\nW after class (MS 5117) and F 3pm-5pm (Zoom)\nand you are welcome to schedule appointment(s in person and/or online), just ask if you need an evening or weekend time.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#what-to-expect",
+    "href": "lectures/Lecture01.html#what-to-expect",
+    "title": "Welcome Statistics 422",
+    "section": "What to expect",
+    "text": "What to expect\n\nA lot of interaction\nFormat: During Class\n\nWorkshop style - some lecturing, some small group activities, breaks\nInteractive - please bring your electronics (laptop, iPad, maybe phone)\n\nFormat: Outside of Class\n\nIndividual homework assignments, individual late mid-quarter project, individual final project\nEncourage interaction with me but much more important, with each other and with your TA",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#why",
+    "href": "lectures/Lecture01.html#why",
+    "title": "Welcome Statistics 422",
+    "section": "Why",
+    "text": "Why\n\nAI is not going away\nInvest in what makes you human\n\nEmpathy, ethics, and judgment\nInterpersonal communication\nUnderstanding cultural context\nCreativity grounded in your life experience",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#more-why",
+    "href": "lectures/Lecture01.html#more-why",
+    "title": "Welcome Statistics 422",
+    "section": "More Why",
+    "text": "More Why\n\nInvest your time to develop:\n\nEmotional intelligence - listen/lead\nStorytelling and writing – clarity, tone, and persuasiveness\nCritical thinking – evaluate, ask, think\nEthics and responsibility – data, stats, science",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#what-to-expect-in-422",
+    "href": "lectures/Lecture01.html#what-to-expect-in-422",
+    "title": "Welcome Statistics 422",
+    "section": "What to expect in 422",
+    "text": "What to expect in 422\nDeveloping the scaffolding needed for understanding and building on one’s existing data visualization skills.\n\nAspects\n\nTranslating data and the relationships within visually for others.\n\nLearning to structure and organize data for effective visualization.\n\nLearning about the different types of visual representation and their purposes.\nUnderstanding of Graphical Perception/perceived visual information and some of the cognitive principles involved.\nLearning to generate static and interactive visualizations\nKnowing how to present your visualizations in different media (print, website, video)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#what-to-expect-1",
+    "href": "lectures/Lecture01.html#what-to-expect-1",
+    "title": "Welcome Statistics 422",
+    "section": "What to expect",
+    "text": "What to expect\n\nThe Process (this makes more sense later)\n\nStart with an audience and an idea and find the data (not necessarily in that order)\nPrepare the data for visualization (e.g., clean, pivot)\nRepresent the data visually with various graphical elements (e.g., color, sizes, and shape)\nPost-process the data (e.g., decide whether interactivity would add power, post process a static visualization )\n\nTools\n\nR/ggplot2, Shiny; Python/matplotlib, Streamlit; Tableau",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#what-is-not-covered",
+    "href": "lectures/Lecture01.html#what-is-not-covered",
+    "title": "Welcome Statistics 422",
+    "section": "What is not covered",
+    "text": "What is not covered\n\nWhat Stats 422 will not cover\n\nJavaScript\nHTML5\nCSS\nBig Data\nSpark-based viz libraries\n\nIf any of you know a pro (someone paid to work with these regularly), I could arrange for a stipend if they want to come in as a guest speaker",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#grading",
+    "href": "lectures/Lecture01.html#grading",
+    "title": "Welcome Statistics 422",
+    "section": "Grading",
+    "text": "Grading\n\n30% Attending class weekly with in-class team activity,\n30% 2 individual homework assignments and one team homework assignment\n10% Discussion Section\n15% Web App: (individual) Find your data, Design a page, Code and Video\n15% Final Project: (individual) Find your own data, Report, Code and Video\nThe data for the Web App can be the same as the final project, but ideally a simple dataset like iris for the Web App and something more complex and more closely related to your thesis for your final project.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#team-activity-20-40-minutes",
+    "href": "lectures/Lecture01.html#team-activity-20-40-minutes",
+    "title": "Welcome Statistics 422",
+    "section": "Team Activity (20-40 minutes)",
+    "text": "Team Activity (20-40 minutes)\n\n\nIf you aren’t already in a group, please join one, minimum 3 maximum 6. Please put yourself into a Week 1 group on BruinLearn to be credited for being here tonight.\nSomeone take a team photo (selfie/grelfie/usie/0.5?) and upload an annotated copy to BruinLearn for credit for attending today.\nLet’s take 15-20 minutes to examine and discuss some visualizations on the same topic (see In Class Team Activity Week 1).\nIF we have time, let’s share in class, your impressions/interpretation as to why your team chose the image it chose. I will take any team, any answer.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#a-story",
+    "href": "lectures/Lecture01.html#a-story",
+    "title": "Welcome Statistics 422",
+    "section": "A story",
+    "text": "A story\n\nPlease let me tell you a story about a former student",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-1",
+    "href": "lectures/Lecture01.html#section-1",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "What makes a story?\n\n“(stories) fulfill a profound human need to grasp the patterns of living not merely as an intellectual exercise, but within a very personal, emotional experience” - Robert McGee (2003 Harvard Business Review)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-2",
+    "href": "lectures/Lecture01.html#section-2",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "Story Elements\n\nTension. A problem.\nBelievable and Relatable.\nA pivot (turning point)\nA resolution (positive, genuine)\nReflection maybe Action",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-3",
+    "href": "lectures/Lecture01.html#section-3",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "An Outline to close out tonight\n\nGOAL: connect your ideas/analyses to your audience’s emotion\n\nSuggested (422) solution: tell a compelling story about your visualization\n\nStories allow us to weave a lot of information into whatever we are presenting\nand allows you to connect to your audience’s emotions and energy.\n\nTHIS IS NOT EASY TO DO! (don’t give up, practice makes perfect)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-4",
+    "href": "lectures/Lecture01.html#section-4",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "An Outline to close out tonight (cont’d)\n\nREQUIREMENTS:\nAn understanding of your material\nStorytelling skills to present ideas that connect with your audience",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-5",
+    "href": "lectures/Lecture01.html#section-5",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "An Outline to close out tonight (cont’d)\n\nRESULT:\n\nYour ideas are REMEMBERED.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-6",
+    "href": "lectures/Lecture01.html#section-6",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "A data visualization with a story\n\nstories often center on life as it is/was and its patterns of change",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-7",
+    "href": "lectures/Lecture01.html#section-7",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "Categories of Data Viz stories\n\nThere are plenty, to name a few:\n\nillustrate change\n\ncommunicate understanding\n\npurely descriptive\n\noffers solutions to a problem\n\n\nNeuroscientists tell us we forget bullet points, but we remember stories.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-8",
+    "href": "lectures/Lecture01.html#section-8",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "What’s the story? (example)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-9",
+    "href": "lectures/Lecture01.html#section-9",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "Some applicable situations\n\nWe could identify some situations where Data Viz storytelling might apply:\n\nConvincing your committee your model is the best model\n\nPersuading your employer to apply your recommender system\nExplaining to a prospective employer the visualization you created for the interview\nHighlighting problems, finding something of interest (possible solution?)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#reassurance",
+    "href": "lectures/Lecture01.html#reassurance",
+    "title": "Welcome Statistics 422",
+    "section": "Reassurance",
+    "text": "Reassurance\n\nThere is NO expectation of perfection in Stats 422\nGenerating data visualizations has a learning curve\n\nEven if you use AI",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-10",
+    "href": "lectures/Lecture01.html#section-10",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "Strategic Storytelling with Data Visualization\n\nKeep it simple\nEdit ruthlessly\nBe genuine\nDon’t communicate for yourself — communicate for your audience\nThe story you are telling is not for you; the story is for the audience\n\nHelp your audience see what you see in the data",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-11",
+    "href": "lectures/Lecture01.html#section-11",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "More on the Audience\n\nAlways keep your audience in mind. Give them a reason for spending time with you\nThink about what will resonate with them and motivate them\nAlso think about whether and when a visualization will strengthen your story\nMake the information presented specific and relevant to your audience",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-12",
+    "href": "lectures/Lecture01.html#section-12",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "Advice for Data Visualizations & their stories\n\nEven a beautiful data visualization might fail if it does not possess a compelling story/narrative\nA strong story will overcome a weak data visualization\n\nAim to display data in such a way that makes the complex clear\n\nTHE IDEAL - when effective visuals are combined with a powerful story",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture01.html#section-13",
+    "href": "lectures/Lecture01.html#section-13",
+    "title": "Welcome Statistics 422",
+    "section": "",
+    "text": "Tactical advice\n\nIf someone were to only read the label and title of your data visualization, they should still know what it was about\nAll information presented should be self-reinforcing. The content reinforces the titles. The words reinforce the visual\nAvoid extra or unrelated information, what to drop is as important as what to keep.\nTry outcome based story development (start with the takeaway and work backwards)\nAsk others to comment/give feedback",
+    "crumbs": [
+      "Lectures",
+      "Lecture 01"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "activity/ggplot2.html",
+    "href": "activity/ggplot2.html",
+    "title": "ggplot part 2",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#loading-libraries",
+    "href": "activity/ggplot2.html#loading-libraries",
+    "title": "ggplot part 2",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
+    "href": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
+    "title": "ggplot part 2",
+    "section": "the details are in the aes() mappings",
+    "text": "the details are in the aes() mappings\n\nthe aes() values commonly seen are: color, fill, shape, group, linetype\ntypically only x and y are required (sometimes just x)\nhttps://ggplot2.tidyverse.org/reference/aes.html\nand there are countless options BUT the individual geoms may only understand some of them:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nif we were to re-run it using geom_smooth and leaving everything else the same, we would see an error (but it would create our plot)",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#example-read-some-data",
+    "href": "activity/ggplot2.html#example-read-some-data",
+    "title": "ggplot part 2",
+    "section": "Example: Read some data",
+    "text": "Example: Read some data\nPlease, you may decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#discover-their-content",
+    "href": "activity/ggplot2.html#discover-their-content",
+    "title": "ggplot part 2",
+    "section": "Discover their content",
+    "text": "Discover their content\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#basic-examination",
+    "href": "activity/ggplot2.html#basic-examination",
+    "title": "ggplot part 2",
+    "section": "Basic examination",
+    "text": "Basic examination\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#eda",
+    "href": "activity/ggplot2.html#eda",
+    "title": "ggplot part 2",
+    "section": "EDA",
+    "text": "EDA\nEDA (exploratory data analysis) is very visual and your excellent graphical skills will be useful.\nData Cleaning\nThere is none of that in our class (we will just delete), but missing values need a decision in your research (e.g., imputation, deletion).\nI will misuse summary() it’s handy (no need to load libraries)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand it reveals the NAs and some heavily rounded statistics. If you need to use a mean else, do not rely on summary() this is for a quick look at the basic statistics only.\nOther things you can do\n\nBe sure each variable has been read as its correct type (numeric, non-numeric)\nAlways check for duplicates - they can mess up any analysis\nIdentify possible outliers in the data and decide what to do with them.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ncheck distributions\n\nCheck the distribution and skewness of your data\n\nHistograms maybe boxplots\n\nand use group_by() in dplyr if your data has categorical information or numeric information with a limited number of unique values, group_by() is an important tool - example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nReorganizing information with arrange() in dplryr may offer additional insight that is more difficult to recognize it its natural or alphabetically ordered format:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExploratory Visualization\n\nUnivariate – so bar chart, histogram - here you are trying to understand the distribution.\nBivariate or Multivariate – the scatter plot is the most basic but a boxplot, a heatmap, contour maps etc.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#example",
+    "href": "activity/ggplot2.html#example",
+    "title": "ggplot part 2",
+    "section": "Example",
+    "text": "Example\nCorrelation Analysis\nA correlation would be generated very early in the process of using data for research\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe would then move to a visualization of the relationship\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html",
+    "href": "activity/ggplot1.html",
+    "title": "ggplot part 1",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#loading-libraries",
+    "href": "activity/ggplot1.html#loading-libraries",
+    "title": "ggplot part 1",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#five-minute-ggplot",
+    "href": "activity/ggplot1.html#five-minute-ggplot",
+    "title": "ggplot part 1",
+    "section": "Five minute ggplot",
+    "text": "Five minute ggplot\nIf there is only one package you need in R, it’s ggplot. It’s simple and logical and flows with data beautifully. We can use penguins\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAT MINIMUM ggplot needs to know what data you plan to use and it needs to have an aesthetic (aes) specified. We will choose two numeric variables.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNo error, but no graphic. All we have done is specified the data and given ggplot a sense of how the graphic should appear (x, y) as it relates to the features.\nThe “+” in ggplot separates “layers” of a graphic.\nThink of ggplot as like making a cake, you lay down the foundation and then you start decorating. Next up, the geom_ which tell ggplot how the features should be plotted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThat is about five minutes. The rest of ggplot is about beautifying your graphic through additional options. Mapping the data to the aesthetic then is the most critical skill here.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#ggplot-in-detail",
+    "href": "activity/ggplot1.html#ggplot-in-detail",
+    "title": "ggplot part 1",
+    "section": "ggplot in detail",
+    "text": "ggplot in detail\nOk let’s slow down, identify the data types within the dataset\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand let’s fix some issues with missing values or we will get lots of warnings\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#non-numeric-variables",
+    "href": "activity/ggplot1.html#non-numeric-variables",
+    "title": "ggplot part 1",
+    "section": "Non-Numeric Variables",
+    "text": "Non-Numeric Variables\nHow do we work with non-numeric information (like gender)?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#multiple-geoms",
+    "href": "activity/ggplot1.html#multiple-geoms",
+    "title": "ggplot part 1",
+    "section": "Multiple Geoms",
+    "text": "Multiple Geoms\nYou might be asking - sometimes you put an aes( ) in the geom, sometimes not? Some would tell you it should only go in the geom() but that works best if you have multiple geoms:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGets messy though, this suggests an appearance issue, we get into themes (later)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGo badk to something simpler. Plotting categorical variables with different geoms.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nInteraction is a handy function, comining sex and species:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#faceting",
+    "href": "activity/ggplot1.html#faceting",
+    "title": "ggplot part 1",
+    "section": "Faceting",
+    "text": "Faceting\nI do recommend you learn how to “facet” (condition) the plots:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nread “as a function of island”, if you wanted island on the rows, move to facet_grid()\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\na better use of facet_grid\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#statistics",
+    "href": "activity/ggplot1.html#statistics",
+    "title": "ggplot part 1",
+    "section": "Statistics",
+    "text": "Statistics\nSome of the geoms automatically apply a statistical transformation to the data, we need to do little except call them:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nbut others require additional work on our part\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nreturn to geom_bar",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#scales-coordinate-flipping",
+    "href": "activity/ggplot1.html#scales-coordinate-flipping",
+    "title": "ggplot part 1",
+    "section": "Scales + Coordinate flipping",
+    "text": "Scales + Coordinate flipping\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#themes",
+    "href": "activity/ggplot1.html#themes",
+    "title": "ggplot part 1",
+    "section": "Themes",
+    "text": "Themes\nThe remaining functions of ggplot deal with appearance such as labels, legends, tick marks, background color etc. etc.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot1.html#challenge",
+    "href": "activity/ggplot1.html#challenge",
+    "title": "ggplot part 1",
+    "section": "Challenge",
+    "text": "Challenge\nYou can use penguins or choose your own data (and you don’t need to use this web app but you need to use ggplot).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nI’d like to see what you can do in a short amount of time.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Statistics 422",
+    "section": "",
+    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
+    "crumbs": [
+      "Start Here",
+      "Overview"
+    ]
+  },
+  {
     "objectID": "Syllabus.html",
     "href": "Syllabus.html",
     "title": "STATS 422 Fall 2025 Syllabus",
@@ -61,23 +574,5 @@
     "title": "STATS 422 Fall 2025 Syllabus",
     "section": "Plan for the Unexpected",
     "text": "Plan for the Unexpected\n\nBruin Alert https://oem.ucla.edu/bruinalert\n\nBruin Safe Online https://bso.ucla.edu/\n\n\n\n\nQuestion\nResponse\n\n\n\nHow will our class meet if we are unable to meet in person?\nIf we are unable to meet on campus for class, there will be an announcement on BruinLearn about how we will be meeting going forward.\n\n\nHow will instruction be delivered if we are unable to meet in person?\nIn lieu of in-person meetings, we will hold online meetings using Zoom and post a mix of videos on BruinLearn, covering the content. In order to ensure accountability we will embed quizzes within the videos and require participation for credit if you are unable to attend live online.\n\n\nHow often do I need to log into BruinLearn?\nIt is expected that you visit the course site daily. If we experience an emergency or if there is another wave of the pandemic, you are expected to participate in the online activities for as long as we are unable to meet on campus.\n\n\nHow will I turn in my homework if we don’t meet in person?\nHomework and other assignments will be turned in through the assignments link within BruinLearn. Instructions for submission can be found within the assignment.\n\n\nHow will I see my Grades?\nAll official grades are posted on MyUCLA. BruinLearn posted grades are subject to change.\n\n\nIf I am ill or cannot attend class for some reason, how can I participate in class?\nPlease contact me directly for more details if you must be absent or have changing situations so that I can understand how we can best help you.\n\n\nWhat if I’m experiencing symptoms, tested positive, or have had contact with a person who has tested positive for COVID-19?\nPlease stay home and do not return to campus or leave your on-campus residence. Complete a Reporting COVID-19 Diagnosis/Symptom form. The Campus Health Officer will follow up with you for next steps. If applicable, the Campus Health Officer will notify faculty members that the student is prohibited from returning to campus until they are cleared by Health Services. Please review UCLA’s COVID-19 protocols https://covid-19.ucla.edu/ucla-covid-protocols/.\n\n\nWhat if I’m having personal problems unrelated to illness? Where can I go for help?\nThere are resources listed throughout this document and you are also encouraged to speak, privately, with your professor(s), your peers, or other members of the university community during your time of difficulty."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to Statistics 422",
-    "section": "",
-    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
-    "crumbs": [
-      "Start Here",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   }
 ]
