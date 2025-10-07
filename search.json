@@ -290,7 +290,7 @@
     "href": "lectures/Lecture0201.html#announcements",
     "title": "Lecture 02 Part 1",
     "section": "Announcements",
-    "text": "Announcements\n\nAdvisors and Advising\n\nfaculty\n\nData\nSoftware\nReproducible",
+    "text": "Announcements\n\nAdvisors and Advising\n\nfaculty\ntheses\n\nData\nSoftware\nReproducible",
     "crumbs": [
       "Lectures",
       "Lecture 02 part 1"
@@ -1036,5 +1036,404 @@
       "Lectures",
       "Lecture 02 part 2"
     ]
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#setup",
+    "href": "lectures/Lecture0203.html#setup",
+    "title": "Lecture 2 Part 3",
+    "section": "Setup",
+    "text": "Setup\n\n# load packages\nlibrary(tidyverse)\nlibrary(ggthemes)\nlibrary(hrbrthemes) # devtools::install_github(\"hrbrmstr/hrbrthemes\")\nlibrary(ggtech) # devtools::install_github(\"ricardo-bion/ggtech\", dependencies=TRUE)\nlibrary(scales)\nlibrary(glue)\nlibrary(RColorBrewer)\nlibrary(MoMAColors) # devtools::install_github(\"BlakeRMills/MoMAColors\")\nlibrary(ggpubr)\n\n\n# set theme for ggplot2\n#ggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))\n\n# set width of code output\noptions(width = 65)\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.width = 7, # 7\" width\n  fig.asp = 0.618, # the golden ratio\n  fig.retina = 3, # dpi multiplier for displaying HTML output on retina\n  fig.align = \"center\", # center align figures\n  dpi = 300 # higher dpi, sharper image\n)"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#data-for-tonight",
+    "href": "lectures/Lecture0203.html#data-for-tonight",
+    "title": "Lecture 2 Part 3",
+    "section": "data for tonight",
+    "text": "data for tonight\n\nload(\"./LABuldings.RData\")\nikea &lt;- read_csv(\"./ikea.csv\")"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section",
+    "href": "lectures/Lecture0203.html#section",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Summaries\n\n\n# A tibble: 1,675 × 5\n# Groups:   POSTAL CODE [122]\n   `POSTAL CODE` `PROPERTY TYPE`                   N   freq   pct\n           &lt;dbl&gt; &lt;chr&gt;                         &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt;\n 1         90001 Distribution Center              18 0.0968    10\n 2         90001 Manufacturing/Industrial Pla…    89 0.478     48\n 3         90001 Mixed Use Property                8 0.0430     4\n 4         90001 Non-Refrigerated Warehouse       48 0.258     26\n 5         90001 Office                            3 0.0161     2\n 6         90001 Other                             9 0.0484     5\n 7         90001 Refrigerated Warehouse            5 0.0269     3\n 8         90001 Self-Storage Facility             6 0.0323     3\n 9         90002 Enclosed Mall                     1 0.0227     2\n10         90002 Fire Station                     10 0.227     23\n# ℹ 1,665 more rows"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-1",
+    "href": "lectures/Lecture0203.html#section-1",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Summaries\nWe will keep the largest and reverse sort\n\n\n# A tibble: 7 × 4\n  `POSTAL CODE`     N   freq   pct\n          &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1         91311  1639 0.0336     3\n2         90045  1371 0.0281     3\n3         90028  1318 0.0270     3\n4         90020  1210 0.0248     2\n5         91402  1109 0.0227     2\n6         91406  1099 0.0225     2\n7         90036  1004 0.0206     2"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-2",
+    "href": "lectures/Lecture0203.html#section-2",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Boxplot of the LA data"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-3",
+    "href": "lectures/Lecture0203.html#section-3",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Modify the Ikea data\n\nikea4plot &lt;- ikea %&gt;%\n  group_by(`category`) %&gt;%\n         mutate(N = n(),\n                freq = N / sum(N),\n                pct = round((freq*100), 0)) %&gt;%\n  filter(N &gt; 250) %&gt;%\n  ungroup()"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-4",
+    "href": "lectures/Lecture0203.html#section-4",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Boxplot of the Ikea data"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-5",
+    "href": "lectures/Lecture0203.html#section-5",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Basic Themes - B & W\nhttps://ggplot2.tidyverse.org/reference/ggtheme.html"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-6",
+    "href": "lectures/Lecture0203.html#section-6",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Basic Themes - B & W\nhttps://ggplot2.tidyverse.org/reference/ggtheme.html\n\nbox_plot + \n  theme_bw() + \n  theme(axis.text.x = element_text(size = 4))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-7",
+    "href": "lectures/Lecture0203.html#section-7",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Basic Themes - Classic\n\nbox_plot + \n  theme_classic() + \n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-8",
+    "href": "lectures/Lecture0203.html#section-8",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Basic Themes - Dark\n\nplot + \n  geom_col(fill = \"yellow\", color = \"black\") +\n  theme_dark() + \n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-9",
+    "href": "lectures/Lecture0203.html#section-9",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Basic Themes - Light\n\nplot + \n  theme_light() + \n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-10",
+    "href": "lectures/Lecture0203.html#section-10",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Basic Themes - Line drawing\n\nplot + \n  theme_linedraw() + \n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-11",
+    "href": "lectures/Lecture0203.html#section-11",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Basic Themes - Minimal\nThere is also a blank theme.\n\nplot + \n  theme_minimal() + \n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-12",
+    "href": "lectures/Lecture0203.html#section-12",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Closer look at theme()\n\ntheme_minimal()\n\n&lt;theme&gt; List of 144\n $ line                            : &lt;ggplot2::element_line&gt;\n  ..@ colour       : chr \"black\"\n  ..@ linewidth    : num 0.5\n  ..@ linetype     : num 1\n  ..@ lineend      : chr \"butt\"\n  ..@ linejoin     : chr \"round\"\n  ..@ arrow        : logi FALSE\n  ..@ arrow.fill   : chr \"black\"\n  ..@ inherit.blank: logi TRUE\n $ rect                            : &lt;ggplot2::element_rect&gt;\n  ..@ fill         : chr \"white\"\n  ..@ colour       : chr \"black\"\n  ..@ linewidth    : num 0.5\n  ..@ linetype     : num 1\n  ..@ linejoin     : chr \"round\"\n  ..@ inherit.blank: logi TRUE\n $ text                            : &lt;ggplot2::element_text&gt;\n  ..@ family       : chr \"\"\n  ..@ face         : chr \"plain\"\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : chr \"black\"\n  ..@ size         : num 11\n  ..@ hjust        : num 0.5\n  ..@ vjust        : num 0.5\n  ..@ angle        : num 0\n  ..@ lineheight   : num 0.9\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 0 0 0 0\n  ..@ debug        : logi FALSE\n  ..@ inherit.blank: logi TRUE\n $ title                           : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : NULL\n  ..@ vjust        : NULL\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : NULL\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ point                           : &lt;ggplot2::element_point&gt;\n  ..@ colour       : chr \"black\"\n  ..@ shape        : num 19\n  ..@ size         : num 1.5\n  ..@ fill         : chr \"white\"\n  ..@ stroke       : num 0.5\n  ..@ inherit.blank: logi TRUE\n $ polygon                         : &lt;ggplot2::element_polygon&gt;\n  ..@ fill         : chr \"white\"\n  ..@ colour       : chr \"black\"\n  ..@ linewidth    : num 0.5\n  ..@ linetype     : num 1\n  ..@ linejoin     : chr \"round\"\n  ..@ inherit.blank: logi TRUE\n $ geom                            : &lt;ggplot2::element_geom&gt;\n  ..@ ink        : chr \"black\"\n  ..@ paper      : chr \"white\"\n  ..@ accent     : chr \"#3366FF\"\n  ..@ linewidth  : num 0.5\n  ..@ borderwidth: num 0.5\n  ..@ linetype   : int 1\n  ..@ bordertype : int 1\n  ..@ family     : chr \"\"\n  ..@ fontsize   : num 3.87\n  ..@ pointsize  : num 1.5\n  ..@ pointshape : num 19\n  ..@ colour     : NULL\n  ..@ fill       : NULL\n $ spacing                         : 'simpleUnit' num 5.5points\n  ..- attr(*, \"unit\")= int 8\n $ margins                         : &lt;ggplot2::margin&gt; num [1:4] 5.5 5.5 5.5 5.5\n $ aspect.ratio                    : NULL\n $ axis.title                      : NULL\n $ axis.title.x                    : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : NULL\n  ..@ vjust        : num 1\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 2.75 0 0 0\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.title.x.top                : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : NULL\n  ..@ vjust        : num 0\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 0 0 2.75 0\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.title.x.bottom             : NULL\n $ axis.title.y                    : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : NULL\n  ..@ vjust        : num 1\n  ..@ angle        : num 90\n  ..@ lineheight   : NULL\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 0 2.75 0 0\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.title.y.left               : NULL\n $ axis.title.y.right              : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : NULL\n  ..@ vjust        : num 1\n  ..@ angle        : num -90\n  ..@ lineheight   : NULL\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 0 0 0 2.75\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.text                       : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : chr \"#4D4D4DFF\"\n  ..@ size         : 'rel' num 0.8\n  ..@ hjust        : NULL\n  ..@ vjust        : NULL\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : NULL\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.text.x                     : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : NULL\n  ..@ vjust        : num 1\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 2.2 0 0 0\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.text.x.top                 : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : NULL\n  ..@ vjust        : NULL\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 0 0 4.95 0\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.text.x.bottom              : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : NULL\n  ..@ vjust        : NULL\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 4.95 0 0 0\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.text.y                     : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : num 1\n  ..@ vjust        : NULL\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 0 2.2 0 0\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.text.y.left                : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : NULL\n  ..@ vjust        : NULL\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 0 4.95 0 0\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.text.y.right               : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : NULL\n  ..@ vjust        : NULL\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 0 0 0 4.95\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.text.theta                 : NULL\n $ axis.text.r                     : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : num 0.5\n  ..@ vjust        : NULL\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : &lt;ggplot2::margin&gt; num [1:4] 0 2.2 0 2.2\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ axis.ticks                      : &lt;ggplot2::element_blank&gt;\n $ axis.ticks.x                    : NULL\n $ axis.ticks.x.top                : NULL\n $ axis.ticks.x.bottom             : NULL\n $ axis.ticks.y                    : NULL\n $ axis.ticks.y.left               : NULL\n $ axis.ticks.y.right              : NULL\n $ axis.ticks.theta                : NULL\n $ axis.ticks.r                    : NULL\n $ axis.minor.ticks.x.top          : NULL\n $ axis.minor.ticks.x.bottom       : NULL\n $ axis.minor.ticks.y.left         : NULL\n $ axis.minor.ticks.y.right        : NULL\n $ axis.minor.ticks.theta          : NULL\n $ axis.minor.ticks.r              : NULL\n $ axis.ticks.length               : 'rel' num 0.5\n $ axis.ticks.length.x             : NULL\n $ axis.ticks.length.x.top         : NULL\n $ axis.ticks.length.x.bottom      : NULL\n $ axis.ticks.length.y             : NULL\n $ axis.ticks.length.y.left        : NULL\n $ axis.ticks.length.y.right       : NULL\n $ axis.ticks.length.theta         : NULL\n $ axis.ticks.length.r             : NULL\n $ axis.minor.ticks.length         : 'rel' num 0.75\n $ axis.minor.ticks.length.x       : NULL\n $ axis.minor.ticks.length.x.top   : NULL\n $ axis.minor.ticks.length.x.bottom: NULL\n $ axis.minor.ticks.length.y       : NULL\n $ axis.minor.ticks.length.y.left  : NULL\n $ axis.minor.ticks.length.y.right : NULL\n $ axis.minor.ticks.length.theta   : NULL\n $ axis.minor.ticks.length.r       : NULL\n $ axis.line                       : &lt;ggplot2::element_blank&gt;\n $ axis.line.x                     : NULL\n $ axis.line.x.top                 : NULL\n $ axis.line.x.bottom              : NULL\n $ axis.line.y                     : NULL\n $ axis.line.y.left                : NULL\n $ axis.line.y.right               : NULL\n $ axis.line.theta                 : NULL\n $ axis.line.r                     : NULL\n $ legend.background               : &lt;ggplot2::element_blank&gt;\n $ legend.margin                   : NULL\n $ legend.spacing                  : 'rel' num 2\n $ legend.spacing.x                : NULL\n $ legend.spacing.y                : NULL\n $ legend.key                      : &lt;ggplot2::element_blank&gt;\n $ legend.key.size                 : 'simpleUnit' num 1.2lines\n  ..- attr(*, \"unit\")= int 3\n $ legend.key.height               : NULL\n $ legend.key.width                : NULL\n $ legend.key.spacing              : NULL\n $ legend.key.spacing.x            : NULL\n $ legend.key.spacing.y            : NULL\n $ legend.key.justification        : NULL\n $ legend.frame                    : NULL\n $ legend.ticks                    : NULL\n $ legend.ticks.length             : 'rel' num 0.2\n $ legend.axis.line                : NULL\n $ legend.text                     : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : 'rel' num 0.8\n  ..@ hjust        : NULL\n  ..@ vjust        : NULL\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : NULL\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ legend.text.position            : NULL\n $ legend.title                    : &lt;ggplot2::element_text&gt;\n  ..@ family       : NULL\n  ..@ face         : NULL\n  ..@ italic       : chr NA\n  ..@ fontweight   : num NA\n  ..@ fontwidth    : num NA\n  ..@ colour       : NULL\n  ..@ size         : NULL\n  ..@ hjust        : num 0\n  ..@ vjust        : NULL\n  ..@ angle        : NULL\n  ..@ lineheight   : NULL\n  ..@ margin       : NULL\n  ..@ debug        : NULL\n  ..@ inherit.blank: logi TRUE\n $ legend.title.position           : NULL\n $ legend.position                 : chr \"right\"\n $ legend.position.inside          : NULL\n $ legend.direction                : NULL\n $ legend.byrow                    : NULL\n $ legend.justification            : chr \"center\"\n $ legend.justification.top        : NULL\n $ legend.justification.bottom     : NULL\n $ legend.justification.left       : NULL\n $ legend.justification.right      : NULL\n $ legend.justification.inside     : NULL\n  [list output truncated]\n @ complete: logi TRUE\n @ validate: logi TRUE"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-13",
+    "href": "lectures/Lecture0203.html#section-13",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes\n\nYou can create your own themes\nOr use some of the popular created themes\nand these can be modified"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-14",
+    "href": "lectures/Lecture0203.html#section-14",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - base\n\n# library(ggthemes)\nplot + \n  theme_base() +  # like base R\n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-15",
+    "href": "lectures/Lecture0203.html#section-15",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - calc\n\nplot + \n  theme_calc() +  # like Free Office\n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-16",
+    "href": "lectures/Lecture0203.html#section-16",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - clean\n\nplot + \n  theme_clean() +  # like minimal\n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-17",
+    "href": "lectures/Lecture0203.html#section-17",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - The Economist\n\nplot + \n  theme_economist() +  # mimic The Economist publication\n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-18",
+    "href": "lectures/Lecture0203.html#section-18",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - The Economist white\n\nplot + \n  theme_economist_white() +  # mimic The Economist publication\n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-19",
+    "href": "lectures/Lecture0203.html#section-19",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - examination\nfunction (base_size = 10, base_family = \"sans\", horizontal = TRUE, \n    dkpanel = FALSE) \n{\n    bgcolors &lt;- deframe(ggthemes::ggthemes_data[[\"economist\"]][[\"bg\"]])\n    ret &lt;- theme_foundation(base_size = base_size, base_family = base_family) + \n        theme(line = element_line(colour = \"black\"), rect = element_rect(fill = bgcolors[\"ebg\"], \n            colour = NA, linetype = 1), text = element_text(colour = \"black\"), \n            axis.line = element_line(linewidth = rel(0.8)), axis.line.y = element_blank(), \n            axis.text = element_text(size = rel(1)), axis.text.x = element_text(vjust = 0, \n                margin = margin(t = base_size, unit = \"pt\")), \n            axis.text.x.top = element_text(vjust = 0, margin = margin(b = base_size, \n                unit = \"pt\")), axis.text.y = element_text(hjust = 0, \n                margin = margin(r = base_size, unit = \"pt\")), \n            axis.ticks = element_line(), axis.ticks.y = element_blank(), \n            axis.title = element_text(size = rel(1)), axis.title.x = element_text(), \n            axis.title.y = element_text(angle = 90), axis.ticks.length = unit(-base_size * \n                0.5, \"points\"), legend.background = element_rect(linetype = 0), \n            legend.spacing = unit(base_size * 1.5, \"points\"), \n            legend.key = element_rect(linetype = 0), legend.key.size = unit(1.2, \n                \"lines\"), legend.key.height = NULL, legend.key.width = NULL, \n            legend.text = element_text(size = rel(1.25)), legend.title = element_text(size = rel(1), \n                hjust = 0), legend.position = \"top\", legend.direction = NULL, \n            legend.justification = \"center\", panel.background = element_rect(linetype = 0), \n            panel.border = element_blank(), panel.grid.major = element_line(colour = \"white\", \n                linewidth = rel(1.75)), panel.grid.minor = element_blank(), \n            panel.spacing = unit(0.25, \"lines\"), strip.background = element_rect(fill = bgcolors[\"ebg\"], \n                colour = NA, linetype = 0), strip.text = element_text(size = rel(1.25)), \n            strip.text.x = element_text(), strip.text.y = element_text(angle = -90), \n            plot.background = element_rect(fill = bgcolors[\"blue-gray\"], \n                colour = NA), plot.title = element_text(size = rel(1.5), \n                hjust = 0, face = \"bold\"), plot.margin = unit(c(6, \n                5, 6, 5) * 2, \"points\"), complete = TRUE)\n    if (horizontal) {\n        ret &lt;- ret + theme(panel.grid.major.x = element_blank())\n    }\n    else {\n        ret &lt;- ret + theme(panel.grid.major.y = element_blank())\n    }\n    if (dkpanel == TRUE) {\n        ret &lt;- ret + theme(panel.background = element_rect(fill = unname(bgcolors[\"dark blue-gray\"])), \n            strip.background = element_rect(fill = unname(bgcolors[\"dark blue-gray\"])))\n    }\n    ret\n}\n&lt;bytecode: 0x144448270&gt;\n&lt;environment: namespace:ggthemes&gt;"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-20",
+    "href": "lectures/Lecture0203.html#section-20",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - Excel (new)\n\nplot + \n  theme_excel_new() +  # for fun\n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-21",
+    "href": "lectures/Lecture0203.html#section-21",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - Few (Stephen)\n\nplot + \n  theme_few() +  # applies Few's rules\n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-22",
+    "href": "lectures/Lecture0203.html#section-22",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - fivethirtyeight\n\nplot + \n  theme_fivethirtyeight() +  # inspired by \n  theme(axis.text.x = element_text(size = 8))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-23",
+    "href": "lectures/Lecture0203.html#section-23",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - Google Doc\n\nplot + \n  theme_gdocs() +  # Google Doc's charts\n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-24",
+    "href": "lectures/Lecture0203.html#section-24",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - Highchart\n\nplot + \n  theme_hc() +  # Highcharts\n  theme(axis.text.x = element_text(size = 8))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-25",
+    "href": "lectures/Lecture0203.html#section-25",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - inverse\n\nplot + \n  theme_igray() +  # inverse\n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-26",
+    "href": "lectures/Lecture0203.html#section-26",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - pander\n\nplot + \n  theme_pander() +  # pander default\n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-27",
+    "href": "lectures/Lecture0203.html#section-27",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - classic base R\n\nplot + \n  theme_par()  # classic Base r plot"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-28",
+    "href": "lectures/Lecture0203.html#section-28",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - solarized palette\n\nplot + \n  theme_solarized() +  # solarized palette\n  theme(axis.text.x = element_text(size = 7))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-29",
+    "href": "lectures/Lecture0203.html#section-29",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - solarized variant\n\nplot + \n  theme_solarized_2() +  \n  theme(axis.text.x = element_text(size = 7))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-30",
+    "href": "lectures/Lecture0203.html#section-30",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - Stata\n\nplot + \n  theme_stata() +  \n  theme(axis.text.x = element_text(size = 6))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-31",
+    "href": "lectures/Lecture0203.html#section-31",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - Tufte\n\nplot + \n  theme_tufte() +  # based on Tufte's designs\n  theme(axis.text.x = element_text(size = 8))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-32",
+    "href": "lectures/Lecture0203.html#section-32",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggthemes - Wall Street Journal\n\nplot + \n  theme_wsj() + \n  theme(axis.text.x = element_text(size = 7))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#hrbrthemes",
+    "href": "lectures/Lecture0203.html#hrbrthemes",
+    "title": "Lecture 2 Part 3",
+    "section": "hrbrthemes",
+    "text": "hrbrthemes"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-33",
+    "href": "lectures/Lecture0203.html#section-33",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "hrbrthemes - Financial Times\n\nplot + \n  theme_ft_rc() +  #Dark theme based on FT’s dark theme\n  theme(axis.text.x = element_text(size = 8))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-34",
+    "href": "lectures/Lecture0203.html#section-34",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "hrbrthemes - Arial (changed font)\n\nplot + \n  theme_ipsum() # Arial Narrow"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-35",
+    "href": "lectures/Lecture0203.html#section-35",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "hrbrthemes - Goldman Sachs (download, install)\n\nplot + \n  theme_ipsum_gs() # Goldman Sachs Sans\n\n# May need to install - https://design.gs.com/foundation/typography/goldman-sans"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-36",
+    "href": "lectures/Lecture0203.html#section-36",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "hrbrthemes - Roboto (popular)\n\nplot + \n  theme_modern_rc() \n\n  # Modern Roboto Condensed - May need to install font"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-37",
+    "href": "lectures/Lecture0203.html#section-37",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggtech - installing from Github\n\n## https://exts.ggplot2.tidyverse.org/ggtech.html\n## run once\n## devtools::install_github(\"ricardo-bion/ggtech\", \n##                          dependencies=TRUE)"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-38",
+    "href": "lectures/Lecture0203.html#section-38",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "installing fonts in R\n\nlibrary(extrafont)\n\n## Facebook \ndownload.file(\"http://social-fonts.com/assets/fonts/facebook-letter-faces/facebook-letter-faces.ttf\", \"/Library/Fonts/facebook-letter-faces.ttf\", method=\"curl\")\n\nfont_import(pattern = 'facebook-letter-faces.ttf', prompt=FALSE)\n\n## Google \ndownload.file(\"http://social-fonts.com/assets/fonts/product-sans/product-sans.ttf\", \"/Library/Fonts/product-sans.ttf\", method=\"curl\")\n\nfont_import(pattern = 'product-sans.ttf', prompt=FALSE)\n\n## Twitter \ndownload.file(\"http://social-fonts.com/assets/fonts/pico-black/pico-black.ttf\", \"/Library/Fonts/pico-black.ttf\", method=\"curl\")\n\ndownload.file(\"http://social-fonts.com/assets/fonts/arista-light/arista-light.ttf\", \"/Library/Fonts/arista-light.ttf\", method=\"curl\")\n\nfont_import(pattern = 'pico-black.ttf', prompt=FALSE)\nfont_import(pattern = 'arista-light.ttf', prompt=FALSE)"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-39",
+    "href": "lectures/Lecture0203.html#section-39",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggtech: Facebook\n\nlibrary(ggtech)\nplot + \n  theme_tech(theme = \"facebook\")"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-40",
+    "href": "lectures/Lecture0203.html#section-40",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggtech: Google\n\nplot + \n  theme_tech(theme = \"google\")"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-41",
+    "href": "lectures/Lecture0203.html#section-41",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggtech: Twitter\n\nplot + \n  theme_tech(theme = \"twitter\")"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-42",
+    "href": "lectures/Lecture0203.html#section-42",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "RColorBrewer\n\nis a package of palettes for making graphics that are visually appealing\nthe palettes were created to address common visualization problems\nthe palettes properly optimized for readability/accessiblity\npretty + functional\nintegrates with ggplot2\nColorBrewer is also in Python"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-43",
+    "href": "lectures/Lecture0203.html#section-43",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "RColorBrewer\nHas palettes for different kinds of data:\n\nSequential palettes are for data that has ordering\nDiverging palettes are for data where the extremes are important and data deviates around a center (e.g., baseline temperature or health measure).\nQualitative palettes for categorical data"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-44",
+    "href": "lectures/Lecture0203.html#section-44",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "palettes\n\ndisplay.brewer.all()\n\n ## ### Example Application\n\nggplot(data=iris, aes(x=Species, y=Petal.Length, fill=Species)) +\n  geom_boxplot() +\n  scale_fill_brewer(palette = \"BrBG\")"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-45",
+    "href": "lectures/Lecture0203.html#section-45",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Extract colors\n\nmy_colors &lt;- brewer.pal(3, \"BrBG\")\nplot(x = iris$Species, col = my_colors)"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-46",
+    "href": "lectures/Lecture0203.html#section-46",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "installing from GitHub\n\n# install.packages(\"devtools\")\ndevtools::install_github(\"BlakeRMills/MoMAColors\")\n\n\nhttps://github.com/BlakeRMills/MoMAColors\nJust an example of custom palettes"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-47",
+    "href": "lectures/Lecture0203.html#section-47",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "MoMA colors - Example with fill\n\nggplot(data=iris, aes(x=Species, y=Petal.Length, fill=Species)) +\n  geom_violin() +\n  scale_fill_manual(values=moma.colors(\"Connors\", 3))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-48",
+    "href": "lectures/Lecture0203.html#section-48",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "MoMA colors - Example with color discrete\n\nggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +\n  geom_point(size=2) +\n  scale_color_moma_d(\"Warhol\") # discrete\n\n\n\n\n\n\n\n\nMoMA colors - Example with color continuous\n\nggplot(data=iris, aes(x=Species, y=Sepal.Width, color=Sepal.Width)) +\n  geom_point(size=3) +\n  scale_color_gradientn(colors=moma.colors(\"Flash\"))"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-49",
+    "href": "lectures/Lecture0203.html#section-49",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "Add your own colors\n\nucla_colors &lt;- c(\"#2774AE\",\"#FFD100\",\"#DAEBFE\")\n\nggplot(data=iris, aes(x=Species, y=Petal.Length, fill=Species)) +\n  geom_violin() +\n  scale_fill_manual(values=ucla_colors)"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-50",
+    "href": "lectures/Lecture0203.html#section-50",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggpubr - enhancements for publication\n\nPerhaps you want several plots on a single figure\nOr slightly nicer basic statistical graphics with less work!"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-51",
+    "href": "lectures/Lecture0203.html#section-51",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "gghistogram\n\ngghistogram(ikea4plot, x = \"price\",\n   add = \"mean\", rug = TRUE,\n   color = \"other_colors\", fill = \"other_colors\", bins= 15)"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-52",
+    "href": "lectures/Lecture0203.html#section-52",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggboxplot\n\nmy_comp &lt;- list(c(\"setosa\", \"versicolor\"), c(\"versicolor\", \"virginica\"), c(\"setosa\", \"virginica\"))\n\nggviolin(iris, x = \"Species\", y = \"Sepal.Length\", fill = \"Species\",\n         add = \"boxplot\", add.params = list(fill = \"white\"))+\n   stat_compare_means(comparisons = my_comp) +\n   stat_compare_means(label.y = 7)"
+  },
+  {
+    "objectID": "lectures/Lecture0203.html#section-53",
+    "href": "lectures/Lecture0203.html#section-53",
+    "title": "Lecture 2 Part 3",
+    "section": "",
+    "text": "ggarrange\nSuppose I have two saved ggplots, they can exist in the same graphic:\n\nggarrange(ggplot1, ggplot2, ncol = 2)"
   }
 ]
