@@ -844,7 +844,7 @@
     "href": "lectures/Lecture0202.html#section-6",
     "title": "Lecture 02 Part 2",
     "section": "",
-    "text": "One Continuous Variable\n\nAreaAreasDensity",
+    "text": "One Continuous Variable\n\nAreacodeAreascodeDensitycode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovies &lt;- read_csv(\"../lectures/movies.csv\") \nmovies &lt;- movies %&gt;% filter(budget &gt; 100000000)\n\nggplot(data = movies, aes(x = gross)) +\n  geom_area(stat = \"bin\",\n            fill = \"skyblue\", \n            alpha = 0.5, \n            color = \"blue\") +  # Area under the curve\n  labs(title = \"Gross receipts\",\n       x = \"Gross receipts\") +\n  theme_classic()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = movies, aes(x = gross, fill = rating)) +\n  geom_area(stat = \"bin\",\n            alpha = 0.5) +  \n  labs(title = \"Gross receipts by rating\",\n       x = \"Gross receipts\") +\n  theme_classic()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = movies) +\n  geom_density(aes(x = year, color = rating)) +\n  labs(title = \"Movies with $100mil+ budgets\") +\n  xlab(\"Year\") + \n  theme_classic()",
     "crumbs": [
       "Lectures",
       "Lecture 02 part 2"
