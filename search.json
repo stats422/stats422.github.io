@@ -517,7 +517,7 @@
     "href": "activity/ggplot2.html#example-read-some-data",
     "title": "ggplot part 2",
     "section": "Example: Read some data",
-    "text": "Example: Read some data\nPlease, you decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Example: Read some data\nPlease, you decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some outside of their R packages\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Activities",
       "Lecture 2 Activity 2"
