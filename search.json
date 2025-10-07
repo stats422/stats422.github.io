@@ -517,7 +517,7 @@
     "href": "activity/ggplot2.html#example-read-some-data",
     "title": "ggplot part 2",
     "section": "Example: Read some data",
-    "text": "Example: Read some data\nPlease, you may decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Example: Read some data\nPlease, you decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Activities",
       "Lecture 2 Activity 2"
@@ -682,7 +682,7 @@
     "href": "activity/ggplot1.html#challenge",
     "title": "ggplot part 1",
     "section": "Challenge",
-    "text": "Challenge\nYou can use penguins or choose your own data (and you don’t need to use this web app but you need to use ggplot).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nI’d like to see what you can do in a short amount of time.",
+    "text": "Challenge\nYou can use penguins or choose your own data (and you don’t need to use this web app but you need to use ggplot).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nI’d like you to see what you can do after a brief and rapid lesson.",
     "crumbs": [
       "Activities",
       "Lecture 2 Activity 1"
@@ -1452,10 +1452,21 @@
     "href": "activity/ggplot1.html#scale",
     "title": "ggplot part 1",
     "section": "Scale",
-    "text": "Scale\nscale_**() controls the mapping between your data and what is actually plotted. scale**() is an option because ggplot is making choices when the aes() is specified. scale*_*() allows us to modify those defaults\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ncoord_flip\nrather than have separate functions for vertical and horizontal plots, we can coordinate flip:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Scale\nscale_**() controls the mapping between your data and what is actually plotted. scale**() is an option because ggplot is making choices when the aes() is specified. scale*_*() allows us to modify those defaults\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ncoord_flip\nrather than have separate functions for vertical and horizontal plots, we can coordinate flip:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNotice we saved a ggplot object named “p” and modified it.",
     "crumbs": [
       "Activities",
       "Lecture 2 Activity 1"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#eda-see-chapter-10-of-r-for-data-science",
+    "href": "activity/ggplot2.html#eda-see-chapter-10-of-r-for-data-science",
+    "title": "ggplot part 2",
+    "section": "EDA (see Chapter 10 of R for Data Science)",
+    "text": "EDA (see Chapter 10 of R for Data Science)\nEDA (exploratory data analysis) is very visual and your excellent graphical skills will be useful.\nData Cleaning\nThere is none of that in our class (we will just delete), but missing values need a decision in your research (e.g., imputation, deletion).\nI will misuse summary() it’s handy (no need to load libraries)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand it reveals the NAs and some heavily rounded statistics. If you need to use a mean else, do not rely on summary() this is for a quick look at the basic statistics only.\nOther things you can do\n\nBe sure each variable has been read as its correct type (numeric, non-numeric)\nAlways check for duplicates - they can mess up any analysis\nIdentify possible outliers in the data and decide what to do with them.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ncheck distributions\n\nCheck the distribution and skewness of your data\n\nHistograms maybe boxplots\n\nand use group_by() in dplyr if your data has categorical information or numeric information with a limited number of unique values, group_by() is an important tool - example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nReorganizing information with arrange() in dplryr may offer additional insight that is more difficult to recognize it its natural or alphabetically ordered format:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExploratory Visualization\n\nUnivariate – so bar chart, histogram - here you are trying to understand the distribution.\nBivariate or Multivariate – the scatter plot is the most basic but a boxplot, a heatmap, contour maps etc.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
     ]
   }
 ]
