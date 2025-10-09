@@ -1258,11 +1258,11 @@
     ]
   },
   {
-    "objectID": "lectures/Lecture0201.html#data",
-    "href": "lectures/Lecture0201.html#data",
+    "objectID": "lectures/Lecture0201.html#data-repositories---examples",
+    "href": "lectures/Lecture0201.html#data-repositories---examples",
     "title": "Lecture 2 Part 1",
-    "section": "Data",
-    "text": "Data\n\nKaggle\nUCI Machine Learning\nGoogle Research Data\nAwesome Public Datasets on GitHub\nFRED data",
+    "section": "Data Repositories - Examples",
+    "text": "Data Repositories - Examples\n\nKaggle\nUCI Machine Learning\nGoogle Research Data\nAwesome Public Datasets on GitHub\nFRED data",
     "crumbs": [
       "Lectures",
       "Lecture 02 part 1"
@@ -1284,7 +1284,7 @@
     "href": "lectures/Lecture0201.html#ch-1-look-at-data-takeaways",
     "title": "Lecture 2 Part 1",
     "section": "Ch 1 “Look at Data” (Takeaways)",
-    "text": "Ch 1 “Look at Data” (Takeaways)\n\nYour visualizations do not need to be publication-ready.\nVisualization can be for checking that is detecting problems and patterns (also Ch 10 of Wickham et al R for Data Science)\nHuman perception is limited: simple and accurate works best\nVisualizing data is iterative: Looking helps Discovering helps Questioning helps Refining",
+    "text": "Ch 1 “Look at Data” (Takeaways)\n\nYour visualizations do not need to be publication-ready.\nVisualization can be for checking that is detecting problems and patterns (also Ch 10 of Wickham et al R for Data Science)\nHuman perception is limited: simple and accurate works best (see part 2)\nVisualizing data is iterative: Looking helps Discovering - helps Questioning - helps Refining",
     "crumbs": [
       "Lectures",
       "Lecture 02 part 1"
@@ -1306,7 +1306,7 @@
     "href": "lectures/Lecture0201.html#suggestions-for-r-for-data-science",
     "title": "Lecture 2 Part 1",
     "section": "Suggestions for R for Data Science",
-    "text": "Suggestions for R for Data Science\n\nChapter 1 is on Data Visualization\nChapter 10 on EDA",
+    "text": "Suggestions for R for Data Science\n\nChapter 1 is on building the Data Visualization given a “story or need to communicate”\nChapter 10 on EDA, no story, discovery",
     "crumbs": [
       "Lectures",
       "Lecture 02 part 1"
@@ -1357,8 +1357,8 @@
     ]
   },
   {
-    "objectID": "lectures/Lecture0201.html#data-1",
-    "href": "lectures/Lecture0201.html#data-1",
+    "objectID": "lectures/Lecture0201.html#data",
+    "href": "lectures/Lecture0201.html#data",
     "title": "Lecture 2 Part 1",
     "section": "Data",
     "text": "Data\n\n\n\n\n\n\n\n\n\nIn GG, data is the foundation\n\nAll graphical representation decisions rest on top of it\n\nAll the decisions are data-driven\n\nResult: meaningful and accurate visual representation of data\n\nAND a wide variety of graphics",
@@ -1502,7 +1502,7 @@
   {
     "objectID": "lectures/Lecture0202.html#setup",
     "href": "lectures/Lecture0202.html#setup",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "Setup",
     "text": "Setup\n\n# load packages\nlibrary(tidyverse)\nlibrary(readxl)\nlibrary(readr)\nlibrary(hexbin)\nlibrary(viridis) # an accessible color map\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.align = \"center\", # center align figures\n  fig.asp = 0.618,      # the golden ratio\n  fig.retina = 3,       # dpi multiplier for displaying HTML output on retina\n  fig.height = 4,        # 4 inches\n  dpi = 200             # higher is crisper\n)",
     "crumbs": [
@@ -1513,7 +1513,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section",
     "href": "lectures/Lecture0202.html#section",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Summary Points for Chapter 1\n\nColor is a highly effective way to communicate information and highlight specific elements within a visualization.\nColor &gt; Shape\nLarge numbers of observations should be summarized\nCombining color, shape, size, texture, can be tricky (opacity can help)",
     "crumbs": [
@@ -1524,7 +1524,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-1",
     "href": "lectures/Lecture0202.html#section-1",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Summary Points for Chapter 1 (cont’d)\nArticle (optional) by Heer & Bostock",
     "crumbs": [
@@ -1535,7 +1535,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-2",
     "href": "lectures/Lecture0202.html#section-2",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Summary Points for Chapter 1 (cont’d)\nRecall storytelling",
     "crumbs": [
@@ -1546,7 +1546,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-3",
     "href": "lectures/Lecture0202.html#section-3",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Summary Points for Chapter 1 (cont’d)\nFlexibility is important too. Rules? Not really.",
     "crumbs": [
@@ -1557,7 +1557,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-4",
     "href": "lectures/Lecture0202.html#section-4",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Geoms\n\nThe geoms (geometric objects) control the plot type used to represent the data\nRecall https://rstudio.github.io/cheatsheets/html/data-visualization.html",
     "crumbs": [
@@ -1568,7 +1568,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-5",
     "href": "lectures/Lecture0202.html#section-5",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Continuous Variable",
     "crumbs": [
@@ -1579,7 +1579,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-6",
     "href": "lectures/Lecture0202.html#section-6",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Continuous Variable\n\nAreacodeAreascodeDensitycode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovies &lt;- read_csv(\"movies.csv\") \nmovies &lt;- movies %&gt;% filter(budget &gt; 100000000)\n\nggplot(data = movies, aes(x = gross)) +\n  geom_area(stat = \"bin\",\n            fill = \"skyblue\", \n            alpha = 0.5, \n            color = \"blue\") +  # Area under the curve\n  labs(title = \"Gross receipts\",\n       x = \"Gross receipts\") +\n  theme_classic()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = movies, aes(x = gross, fill = rating)) +\n  geom_area(stat = \"bin\",\n            alpha = 0.5) +  \n  labs(title = \"Gross receipts by rating\",\n       x = \"Gross receipts\") +\n  theme_classic()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = movies) +\n  geom_density(aes(x = year, color = rating)) +\n  labs(title = \"Movies with $100mil+ budgets\") +\n  xlab(\"Year\") + \n  theme_classic()",
     "crumbs": [
@@ -1590,7 +1590,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-7",
     "href": "lectures/Lecture0202.html#section-7",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Continuous Variable (cont’d)\n\nDotplotcodeDotplot + Jittercode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\noptions(scipen = 9999999)\nmovies_a &lt;- movies %&gt;% filter(genre == \"Animation\")\nggplot(data = movies_a) +\n  geom_dotplot(aes(x = budget, fill = rating)) +\n  labs(title = \"Animation Films\") +\n  xlab(\"Budget\") + \n  theme_classic()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = movies_a) +\n  geom_dotplot(aes(x = budget, fill = rating),\n               position = \"jitter\",\n               binwidth = 5000000) +\n  labs(title = \"Animation Films\") +\n  xlab(\"Budget\") + \n  theme_classic()",
     "crumbs": [
@@ -1601,7 +1601,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-8",
     "href": "lectures/Lecture0202.html#section-8",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Continuous Variable (cont’d)\n\nFreqpolycodeHistogramcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(movies, aes(x = budget, color = rating)) +\n  geom_freqpoly(binwidth = 7000000) +\n  labs(title = \"Frequency Polygon\",\n       x = \"Scores\",\n       y = \"Frequency\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovies &lt;- read_csv(\"movies.csv\") \nggplot(movies, aes(x = score)) +\n  geom_histogram(color = \"blue\", fill = \"gold\") +\n  labs(title = \"Histogram\",\n       x = \"Scores\",\n       y = \"Frequency\") +\n  theme_minimal()",
     "crumbs": [
@@ -1612,7 +1612,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-9",
     "href": "lectures/Lecture0202.html#section-9",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Discrete Variable\nTypically non-numeric but ordered or limited values work here",
     "crumbs": [
@@ -1623,7 +1623,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-10",
     "href": "lectures/Lecture0202.html#section-10",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Discrete Variable\n\nBarcodeBarcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovies_b &lt;- movies %&gt;% filter(gross &gt; 750000000)\n\n\nggplot(movies_b, aes(x = reorder(genre, genre, function(x)-length(x)))) +\n  geom_bar(fill = \"green\") +\n  labs(title = \"Bar Plot of Genre with gross &gt; $750mil\",\n       x = \"Genre\",\n       y = \"Frequency\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(size = 12, angle = 30, hjust = 1))  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovies_high &lt;- movies %&gt;% filter(gross &gt; 750000000)\n\n\nggplot(movies_high, aes(x = reorder(genre, genre, function(x)-length(x)),\n                   y = ..prop..,\n                   group = 1)) + # group = 1 sums to 1\n  geom_bar(fill = \"green\") +\n  labs(title = \"Ordered Bar Plot of Genre\",\n       x = \"Genre\",\n       y = \"Proportion\") +\n  theme_classic() +\n  theme(axis.text.x = element_text(size = 12, angle = 30, hjust = 1))",
     "crumbs": [
@@ -1634,7 +1634,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-11",
     "href": "lectures/Lecture0202.html#section-11",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Discrete Variable\n\nHoriz.codeBar with coord_polar (donut)code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(movies_high, aes(x = reorder(genre, genre, function(x)-length(x)),\n                   y = ..prop..,\n                   group = 1)) + # group = 1 sums to 1\n  geom_bar(fill = \"green\") +\n  labs(title = \"Ordered Bar Plot of Genre\",\n       x = \"Genre\",\n       y = \"Proportion\") +\n  coord_flip() +\n  theme_classic()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovies_tabulated &lt;- movies_high %&gt;%\n  count(genre, name = \"count\")\n\nggplot(data = movies_tabulated, aes(x=\"\", y=count, fill=genre)) +\n  geom_bar(stat=\"identity\", width = 0.75) + # vary width for size of hole\n  coord_polar(theta=\"y\") +  # for circular plot\n  theme(panel.grid = element_blank(),  \n        axis.text = element_blank(), \n        axis.title = element_blank(), \n        axis.ticks = element_blank()) +\n  annotate(\"text\", x = 0, y = 0, label = \"\") # for the hole",
     "crumbs": [
@@ -1645,7 +1645,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-12",
     "href": "lectures/Lecture0202.html#section-12",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous Variables",
     "crumbs": [
@@ -1656,7 +1656,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-13",
     "href": "lectures/Lecture0202.html#section-13",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous Variables\n\nPointcodeCluster 1code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsoybeans &lt;- read_csv(\"soybeans.csv\") \nsoybeans &lt;- soybeans %&gt;% select(-2)\n\nggplot(soybeans, aes(x = NS, y = GY)) +\n  geom_point() +\n  labs(title = \"Scatterplot Soybean Yields\",\n       x = \"Number of Grains Per Plant\",\n       y = \"Grain Yield per Acre\") +\n  theme_classic() \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncls &lt;- kmeans(x = soybeans, centers = 3)\nsoybeans$cluster &lt;- as.character(cls$cluster)\n\nggplot() +\n  geom_point(data = soybeans, \n             mapping = aes(x = NS,\n                           y = GY,\n                           color = cluster),\n             size = 3)",
     "crumbs": [
@@ -1667,7 +1667,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-14",
     "href": "lectures/Lecture0202.html#section-14",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous Variables\n\nCluster 2codeBubblecode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncls &lt;- kmeans(x = soybeans, centers = 3)\nsoybeans$cluster &lt;- as.character(cls$cluster)\n\nggplot() +\n  geom_point(data = soybeans, aes(x = NS,y = GY, color = cluster), size = 2) +\n  geom_point(aes(x = cls$centers[, \"NS\"], \n                                  y = cls$centers[, \"GY\"]),\n                                  color = \"black\", size = 4) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(soybeans, aes(x=NS, y=GY, size = Repetition, color = GY)) +\n    geom_point(alpha=0.5) +\n    scale_size(range = c(1, 16), name=\"\") +\n    scale_color_viridis() +\n    theme_light() +\n    theme(legend.position = \"none\")",
     "crumbs": [
@@ -1678,7 +1678,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-15",
     "href": "lectures/Lecture0202.html#section-15",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous Variables\n\nQuantile Reg.codeRugcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nq &lt;- seq(0.00, 1, by = 0.25)\n\np &lt;- ggplot(soybeans, aes(x = NS, y = GY)) +\n  geom_point() \n\np + geom_quantile(quantiles = q) +\n  labs(title = \"Quantile Reg + Scatterplot Soybean Yields\",\n       x = \"Number of Grains Per Plant\",\n       y = \"Grain Yield per Acre\") +\n  theme_classic() \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovies_g &lt;- movies %&gt;% filter(gross &gt; 500000000)\n\n\nggplot(movies_g, aes(x = budget, y = gross)) +\n  geom_point(color = \"gold\", alpha = 0.3) +\n  geom_rug(color = \"blue\") +\n  labs(title = \"Plot of budget with gross \",\n       x = \"Budget\",\n       y = \"Gross\") +\n  theme_classic() +\n  theme(axis.text = element_text(size = 6,  hjust = 1))",
     "crumbs": [
@@ -1689,7 +1689,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-16",
     "href": "lectures/Lecture0202.html#section-16",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous Variables\n\nSmoothcodeSmooth 2code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(movies_g, aes(x = budget, y = gross)) +\n  geom_point(color = \"gold\", alpha = 0.3) +\n  geom_rug(color = \"blue\") +\n  geom_smooth() +\n  labs(title = \"Plot of budget with gross \",\n       x = \"Budget\",\n       y = \"Gross\") +\n  theme_classic() +\n  theme(axis.text = element_text(size = 6,  hjust = 1))  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(movies_g, aes(x = budget, y = gross)) +\n  geom_point(color = \"gold\", alpha = 0.3) +\n  geom_rug(color = \"blue\") +\n  geom_smooth(method = \"lm\") +\n  labs(title = \"Plot of budget with gross \",\n       x = \"Budget\",\n       y = \"Gross\") +\n  theme_classic() +\n  theme(axis.text = element_text(size = 6,  hjust = 1))",
     "crumbs": [
@@ -1700,7 +1700,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-17",
     "href": "lectures/Lecture0202.html#section-17",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous Variables\n\nPrepcodeTextcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(maps)\n\ndf &lt;- data.frame(x = state.center$x, \n                 y = state.center$y,\n                 state = state.name)\n\np &lt;- ggplot(df, aes(x = x, y = y)) + \n       geom_polygon(data = map_data(\"state\"),\n                    color = \"black\",\n                    aes(x = long, y = lat,\n                        fill = map_data(\"state\")$region,\n                        group = group)) +\n       xlab(\"Longitude X\") +\n       ylab(\"Latitude Y\") +\n       guides(fill = \"none\") +  # no legend\n       theme_classic()\np\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\np + \n  geom_text(aes(label = state), size = 2)",
     "crumbs": [
@@ -1711,7 +1711,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-18",
     "href": "lectures/Lecture0202.html#section-18",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous Variables\n\nLabelcoderepelcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\np + geom_label(aes(label = state), size = 1.5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(ggrepel)\np + \n  geom_label_repel(aes(label = state), \n                   size = 1.5, max.overlaps = 25)",
     "crumbs": [
@@ -1722,7 +1722,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-19",
     "href": "lectures/Lecture0202.html#section-19",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Discrete/One Continuous\n\nWe will use some of the Yelp academic data",
     "crumbs": [
@@ -1733,7 +1733,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-20",
     "href": "lectures/Lecture0202.html#section-20",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Discrete & Continuous\n\nColcodeflipped & orderedcodeNotes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfor101a %&gt;% \n  group_by(Cuisine) %&gt;% \n  summarize(mean_stars = mean(stars, na.rm=TRUE)) %&gt;% \n  ggplot() + \n  geom_col(aes(x=Cuisine, y=mean_stars), fill = \"lightskyblue\") +\n  ylab(\"Average Star Rating\") +\n  xlab(\"Cuisine\") +\n  theme_classic() +\n  theme(legend.position = \"none\", axis.text  = element_text(size = 5)) \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndata &lt;- for101a %&gt;%\n  group_by(Cuisine) %&gt;%\n  summarize(mean_stars = mean(stars, na.rm = TRUE)) %&gt;%\n  mutate(Cuisine = factor(Cuisine, levels = Cuisine[order(mean_stars)]))  # Order levels using mean_stars\n\nggplot(data, aes(x=Cuisine, y=mean_stars)) + \n  geom_col(fill = \"lightskyblue\") +\n  ylab(\"Average Star Rating\") +\n  coord_flip() +\n  theme_classic() +\n  theme(legend.position = \"none\", axis.text.y  = element_text(size = 10)) \n\n\n\n\ngeom_col requires x and y values. \n\nThe heights of the bars represent __values__ \nin the data\n\nThe trick to ordering is to utilize factors",
     "crumbs": [
@@ -1744,7 +1744,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-21",
     "href": "lectures/Lecture0202.html#section-21",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Discrete/One Continuous (cont’d)\n\nBoxplotcodeHoriz.code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = ikea) +\n  geom_boxplot(aes(x = category, y = price)) +\n  theme_light()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = ikea) +\n  geom_boxplot(aes(x = category, \n                   y = price,\n                   fill = category),\n               color = \"black\") +\n  coord_flip() +\n  theme_light() +\n  theme(legend.position = \"none\")",
     "crumbs": [
@@ -1755,7 +1755,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-22",
     "href": "lectures/Lecture0202.html#section-22",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Discrete/One Continuous (cont’d)\n\nMult.codeSwitchedcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = ikea) +\n  geom_boxplot(aes(x = interaction(category, other_colors),\n                   y = price,\n                   fill = category),\n               color = \"black\") +\n  coord_flip() +\n  theme_light() +\n  theme(legend.position = \"none\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = ikea) +\n  geom_boxplot(aes(x = interaction(other_colors, category),\n                   y = price,\n                   fill = category),\n               color = \"black\") +\n  xlab(\"Colors/Category\") +\n  coord_flip() +\n  theme_light() +\n  theme(legend.position = \"none\")",
     "crumbs": [
@@ -1766,7 +1766,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-23",
     "href": "lectures/Lecture0202.html#section-23",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Discrete/One Continuous (cont’d)\n\nviolinplotcodeHoriz.code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = ikea) +\n  geom_violin(aes(x = category, y = price)) +\n  theme_light()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = ikea) +\n  geom_violin(aes(x = category, \n                   y = price,\n                   fill = category),\n               color = \"black\") +\n  coord_flip() +\n  theme_light() +\n  theme(legend.position = \"none\")",
     "crumbs": [
@@ -1777,7 +1777,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-24",
     "href": "lectures/Lecture0202.html#section-24",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "One Discrete/One Continuous (cont’d)\n\nMult.codeSwitchedcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = ikea) +\n  geom_violin(aes(x = interaction(category, other_colors),\n                   y = price,\n                   fill = category),\n               color = \"black\") +\n  coord_flip() +\n  theme_light() +\n  theme(legend.position = \"none\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = ikea) +\n  geom_violin(aes(x = interaction(other_colors, category),\n                   y = price,\n                   fill = category),\n               color = \"black\",\n              draw_quantiles =  c(0.10, 0.25, 0.5, 0.75, 0.90)) +\n  coord_flip() +\n  xlab(\"Colors/Category\") +\n  theme_light() +\n  theme(legend.position = \"none\")",
     "crumbs": [
@@ -1788,7 +1788,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-25",
     "href": "lectures/Lecture0202.html#section-25",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous",
     "crumbs": [
@@ -1799,7 +1799,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-26",
     "href": "lectures/Lecture0202.html#section-26",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous Variables\n\nContourcodeHeatmap 1code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstolen &lt;- read_csv(\"stolen.csv\") \n\nggplot(stolen, aes(x = LON, y = LAT)) +\n geom_point() +\n geom_density_2d()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(stolen, aes(x = LON, y = LAT)) +\n geom_point() +\n geom_density_2d_filled(alpha = 0.5) +\n  xlab(\"Longitude\") +\n  ylab(\"Latitude\") +\n  theme_light() +\n  theme(axis.text  = element_text(size = 5),\n        axis.title = element_text(size=6,face=\"bold\"), # change axis label size\n        legend.key.size = unit(0.4, 'cm'), #change legend key size\n        legend.key.height = unit(0.4, 'cm'), #change legend key height\n        legend.key.width = unit(0.4, 'cm'), #change legend key width\n        legend.title = element_text(size=5), #change legend title font size\n        legend.text = element_text(size=4)) #change legend text font size",
     "crumbs": [
@@ -1810,7 +1810,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-27",
     "href": "lectures/Lecture0202.html#section-27",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous Variables\n\nHeatmap 2codeContourcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(stolen, aes(x = LON, y = LAT)) +\n  geom_point() +\n  geom_density_2d_filled(alpha = 0.5, color = \"black\") +\n  theme_light() +\n  theme(axis.text  = element_text(size = 5),\n        axis.title = element_text(size=6,face=\"bold\"), # change axis label size\n        legend.key.size = unit(0.4, 'cm'), #change legend key size\n        legend.key.height = unit(0.4, 'cm'), #change legend key height\n        legend.key.width = unit(0.4, 'cm'), #change legend key width\n        legend.title = element_text(size=5), #change legend title font size\n        legend.text = element_text(size=4)) #change legend text font size\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstolen$month_cat &lt;- month(stolen$`DATE OCC`, \n                          label = TRUE) |&gt; as.character()\n\nstolen &lt;- stolen %&gt;% filter(month_cat %in% c(\"Jan\", \"Feb\",\"Mar\")) %&gt;% mutate(month = factor(month_cat, levels = c(\"Jan\", \"Feb\",\"Mar\")))\n\n\nggplot(stolen, aes(x = LON, y = LAT)) +\n  geom_point() +\n  geom_density_2d(aes(color = month)) +\n  facet_wrap(~ month) +\n  theme(legend.position = \"none\",\n        axis.text.x  = element_text(size = 4))",
     "crumbs": [
@@ -1821,7 +1821,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-28",
     "href": "lectures/Lecture0202.html#section-28",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous Variables\n\nhex_1codehex_2code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovies &lt;- read_csv(\"movies.csv\",\n                    show_col_types = FALSE) \n\nggplot(data = movies, aes(x = year, y = score, color = votes)) +\n  geom_hex(color = \"white\") +\n  scale_fill_viridis_c() +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\np &lt;- ggplot(movies, aes(x=votes,y=score)) +\n  geom_hex() +\n  scale_fill_viridis_c() +\n  labs(title = \"Distribution of Scores by votes\",\n       x = \"votes\",\n       y = \"score\",\n       fill = \"# of movies\") +\n  theme_bw()\n\np",
     "crumbs": [
@@ -1832,7 +1832,7 @@
   {
     "objectID": "lectures/Lecture0202.html#section-29",
     "href": "lectures/Lecture0202.html#section-29",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "",
     "text": "Two Continuous Variables\n\nAreacodelinecode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntsla &lt;- read_csv(\"TSLA.csv\") %&gt;%\n           mutate(Date = as.Date(Date))\nggplot() + # allow for multiple data, aes\n  geom_area(data = tsla, \n            aes(x = Date, y = Volume),\n            fill = \"blue\", \n            alpha = 0.5, \n            color = \"red\") +  # Area under the curve\n  labs(title = \"geom_area, stock trading volume\",\n       x = \"Date\",\n       y = \"Volume\") +\n  theme_classic()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovies_l &lt;- movies %&gt;% \n  filter(genre %in% c(\"Action\",\"Animation\", \"Comedy\", \"Drama\")) %&gt;% \n  group_by(year, genre) %&gt;% \n  mutate(median_budget = median(budget, na.rm = TRUE))\nggplot(data = movies_l) + # allow for multiple  aes\n  geom_line(aes(x = year, \n                y = median_budget, \n                color = genre)) +  # line plot\n  labs(title = \"geom_line example\",\n       x = \"Date\",\n       y = \"budget\") +\n  theme_classic()",
     "crumbs": [
@@ -1843,7 +1843,7 @@
   {
     "objectID": "lectures/Lecture0202.html#two-discrete-variables",
     "href": "lectures/Lecture0202.html#two-discrete-variables",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "Two Discrete(?) Variables",
     "text": "Two Discrete(?) Variables\nTile",
     "crumbs": [
@@ -1854,7 +1854,7 @@
   {
     "objectID": "lectures/Lecture0202.html#two-discrete-variables-1",
     "href": "lectures/Lecture0202.html#two-discrete-variables-1",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "Two Discrete(?) Variables",
     "text": "Two Discrete(?) Variables\ncode\n\nmovies_t &lt;- movies %&gt;% \n  filter(genre %in% c(\"Action\",\"Animation\", \"Comedy\", \"Drama\",\n                      \"Biography\", \"Adventure\", \"Crime\", \"Horror\")) %&gt;%   \n  group_by(year, genre) %&gt;% \n  mutate(total_budget = sd(budget, na.rm = TRUE))\n\nggplot(data = movies_t) + # allow for multiple data, aes\n  geom_tile(aes(x = year, y = genre, fill = total_budget)) + \n  labs(title = \"geom_tile example\",\n       x = \"year\",\n       y = \"genre\") +\n  scale_fill_viridis() +\n  theme_classic()",
     "crumbs": [
@@ -1865,7 +1865,7 @@
   {
     "objectID": "lectures/Lecture0202.html#two-discrete-variables-2",
     "href": "lectures/Lecture0202.html#two-discrete-variables-2",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "Two Discrete(?) Variables",
     "text": "Two Discrete(?) Variables\nTile + Facet",
     "crumbs": [
@@ -1876,7 +1876,7 @@
   {
     "objectID": "lectures/Lecture0202.html#two-discrete-variables-3",
     "href": "lectures/Lecture0202.html#two-discrete-variables-3",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "Two Discrete(?) Variables",
     "text": "Two Discrete(?) Variables\nTile + Facet\n\ntsla &lt;- read_csv(\"TSLA.csv\")\ntsla2025 &lt;- tsla %&gt;% \n  mutate(Date = mdy(Date),\n         Close = as.numeric(gsub(\"\\\\$\", \"\", `Close/Last`)),\n         Year = year(Date), \n         Month = month(Date),\n         Day = yday(Date),\n         DOW = wday(Date, label = TRUE)) %&gt;%\n  filter(Year &gt; 2021)\n\nggplot(data = tsla2025) + \n  geom_tile(aes(x = Day, y = DOW, fill = Close),\n            height = 1, width = 10,\n            color = \"white\")+ \n  scale_fill_viridis()  +  \n  scale_y_discrete(limits=rev, expand = c(0, 4)) +\n  facet_wrap(~ Year, ncol = 1) +\n  labs(title = \"geom_tile, TSLA close 2022-2025\",\n       x = \"\",\n       y = \"\") +\n  theme_void()",
     "crumbs": [
@@ -1887,9 +1887,9 @@
   {
     "objectID": "lectures/Lecture0202.html#takeaways",
     "href": "lectures/Lecture0202.html#takeaways",
-    "title": "Lecture 02 Part 2",
+    "title": "Lecture 2 Part 2",
     "section": "Takeaways",
-    "text": "Takeaways\n\nBefore you can use graphics to ask questions, you need to know how to make the basics.\nthe grammar of graphics (ggplot2) is a good system, aesthetic mappings, faceting, scales, etc.\nthe cognitive load of having to learn syntax while exploring data is too high.\nmove to interactive graphics for exploration",
+    "text": "Takeaways\n\nBefore you can use graphics to ask questions, you need to know how to build the basics.\nthe grammar of graphics (ggplot2) is a good system, aesthetic mappings, faceting, scales, etc.\nthe cognitive load of having to learn syntax while exploring data at the same time is too high\nmove to interactive graphics for exploration",
     "crumbs": [
       "Lectures",
       "Lecture 02 part 2"
