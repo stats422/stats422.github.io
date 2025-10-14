@@ -1152,6 +1152,24 @@
     ]
   },
   {
+    "objectID": "pyodide_test.html",
+    "href": "pyodide_test.html",
+    "title": "Pyodide and Quarto HTML Documents",
+    "section": "",
+    "text": "a This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "activity/pyodide_test.html",
+    "href": "activity/pyodide_test.html",
+    "title": "Pyodide and Quarto HTML Documents",
+    "section": "",
+    "text": "a This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 3 Activity pyodide"
+    ]
+  },
+  {
     "objectID": "activity/ggplot2.html",
     "href": "activity/ggplot2.html",
     "title": "ggplot part 2",
