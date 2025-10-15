@@ -1562,176 +1562,824 @@
     ]
   },
   {
-    "objectID": "Syllabus.html",
-    "href": "Syllabus.html",
-    "title": "STATS 422 Fall 2025 Syllabus",
+    "objectID": "lectures/Lecture0303.html#setup",
+    "href": "lectures/Lecture0303.html#setup",
+    "title": "Lecture 3 Part 3",
+    "section": "Setup",
+    "text": "Setup\n\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport matplotlib.colors as mcolors\nimport seaborn as sns\nimport plotnine as p9\nfrom plotnine.data import mtcars\n\nplt.rcParams['figure.figsize'] = [10, 5] # my default figure size for this lecture\nplt.rcParams['figure.constrained_layout.use'] = True # supercedes tight layout",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#bring-a-little-data-in",
+    "href": "lectures/Lecture0303.html#bring-a-little-data-in",
+    "title": "Lecture 3 Part 3",
+    "section": "Bring a little data in",
+    "text": "Bring a little data in\n\nikea = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-11-03/ikea.csv', usecols=lambda col: col != 'Unnamed: 0', index_col='item_id')\nikea['category'] = ikea['category'].astype('category')\nikea['other_colors'] = ikea['other_colors'].replace({'Yes': True, 'No': False})\nikea.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nIndex: 3694 entries, 90420332 to 69157376\nData columns (total 12 columns):\n #   Column             Non-Null Count  Dtype   \n---  ------             --------------  -----   \n 0   name               3694 non-null   object  \n 1   category           3694 non-null   category\n 2   price              3694 non-null   float64 \n 3   old_price          3694 non-null   object  \n 4   sellable_online    3694 non-null   bool    \n 5   link               3694 non-null   object  \n 6   other_colors       3694 non-null   bool    \n 7   short_description  3694 non-null   object  \n 8   designer           3694 non-null   object  \n 9   depth              2231 non-null   float64 \n 10  height             2706 non-null   float64 \n 11  width              3105 non-null   float64 \ndtypes: bool(2), category(1), float64(4), object(5)\nmemory usage: 300.1+ KB",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#check-it",
+    "href": "lectures/Lecture0303.html#check-it",
+    "title": "Lecture 3 Part 3",
+    "section": "Check it",
+    "text": "Check it\n\nikea.head(10)\n\n                           name       category   price  ... depth  height width\nitem_id                                                 ...                    \n90420332               FREKVENS  Bar furniture   265.0  ...   NaN    99.0  51.0\n368814                NORDVIKEN  Bar furniture   995.0  ...   NaN   105.0  80.0\n9333523   NORDVIKEN / NORDVIKEN  Bar furniture  2095.0  ...   NaN     NaN   NaN\n80155205                   STIG  Bar furniture    69.0  ...  50.0   100.0  60.0\n30180504                NORBERG  Bar furniture   225.0  ...  60.0    43.0  74.0\n10122647                 INGOLF  Bar furniture   345.0  ...  45.0    91.0  40.0\n70404875               FRANKLIN  Bar furniture   129.0  ...  44.0    95.0  50.0\n60155602                DALFRED  Bar furniture   195.0  ...  50.0     NaN  50.0\n50406465               FRANKLIN  Bar furniture   129.0  ...  44.0    95.0  50.0\n69304221    EKEDALEN / EKEDALEN  Bar furniture  2176.0  ...   NaN     NaN   NaN\n\n[10 rows x 12 columns]",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#seaborn",
+    "href": "lectures/Lecture0303.html#seaborn",
+    "title": "Lecture 3 Part 3",
+    "section": "Seaborn",
+    "text": "Seaborn\n\nSeaborn (https://seaborn.pydata.org/) (static)\nSeaborn is a Python data visualization library\nIt is built on top of Matplotlib like pandas\nSeaborn has a high-level interface for creating statistical graphics\nSeaborn works with Pandas DataFrames\nSeaborn can create complex visualizations using less code than Matplotlib",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#example-basic-boxplot-in-pandas",
+    "href": "lectures/Lecture0303.html#example-basic-boxplot-in-pandas",
+    "title": "Lecture 3 Part 3",
+    "section": "Example: Basic Boxplot in pandas",
+    "text": "Example: Basic Boxplot in pandas\n\nLet’s see a boxplot using pandas alone, bare minimum\nBut now, let’s capture the plot (bp1 =) so we can modify it in a multiple plot/production setting\n\n\n# Create a boxplot\nbp1 = ikea.boxplot(column=\"price\", \n             by=\"category\", \n             figsize=(14, 6));",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#basic-boxplot-in-pandas---result",
+    "href": "lectures/Lecture0303.html#basic-boxplot-in-pandas---result",
+    "title": "Lecture 3 Part 3",
+    "section": "Basic Boxplot in pandas - Result",
+    "text": "Basic Boxplot in pandas - Result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#what-is-there-to-like",
+    "href": "lectures/Lecture0303.html#what-is-there-to-like",
+    "title": "Lecture 3 Part 3",
+    "section": "What is there to like…",
+    "text": "What is there to like…\n\nI don’t like the title or price as a subtitle\nThe labels look horrible and the x axis should be fixed\n\n\n\n\n\n\n\nNote\n\n\n\nIf you are creating a single plot in your script or notebook, you don’t need to capture the plot\nIf you don’t capture a plot, it may be easier to allow matplotlib to manage the plot object.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#example-one-of-many",
+    "href": "lectures/Lecture0303.html#example-one-of-many",
+    "title": "Lecture 3 Part 3",
+    "section": "Example, one of many",
+    "text": "Example, one of many\n\nTechnically, the more correct Pythonic way in a production situation with multiple plots is to save the plot objects then modify.\n\n\nbp1 = ikea.boxplot(column=\"price\", by=\"category\", figsize=(14, 6))\n\n# Rotate x-axis tick labels using a for loop\nfor label in bp1.get_xticklabels():\n    label.set_rotation(45)\n    label.set_fontsize(8)\n    label.set_ha('right')  \n\n# Set titles & labels\nbp1.set_title(\"Price Distribution by Category\")\nbp1.set_xlabel(\"Category\")\nbp1.set_ylabel(\"Price\")\nplt.suptitle(\"\")  # Remove default pandas title\nplt.show()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#example-one-of-many---result",
+    "href": "lectures/Lecture0303.html#example-one-of-many---result",
+    "title": "Lecture 3 Part 3",
+    "section": "Example, one of many - result",
+    "text": "Example, one of many - result\n\nLooks the same as those not saved to an object",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#what-is-get_xticklabels",
+    "href": "lectures/Lecture0303.html#what-is-get_xticklabels",
+    "title": "Lecture 3 Part 3",
+    "section": "What is get_xticklabels()?",
+    "text": "What is get_xticklabels()?\n\nSo we are using a for loop to modify the object matplotlib stores for the labels\nIt is a list, the for loop is appropriate (as a opposed to a list comprehension) because it’s more readable and we are not returning anything or creating anything new, just modifying:\n\n\nprint(type(bp1.get_xticklabels())) # a simple list\n\n&lt;class 'list'&gt;\n\nprint(type(bp1.get_xticklabels()[0])) # of matplotlib.text objects\n\n&lt;class 'matplotlib.text.Text'&gt;\n\nbp1.get_xticklabels()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#whew---recap",
+    "href": "lectures/Lecture0303.html#whew---recap",
+    "title": "Lecture 3 Part 3",
+    "section": "Whew! - Recap",
+    "text": "Whew! - Recap\n\nPanda’s boxplot needs work when using messier data like Ikea’s catalog information\nThe label solution in this situation involves a for-loop to modify the positions of the labels\nWe have choices (save or not to save)\nAlso note the need to suppress the defaults",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#basic-boxplot-in-seaborn",
+    "href": "lectures/Lecture0303.html#basic-boxplot-in-seaborn",
+    "title": "Lecture 3 Part 3",
+    "section": "Basic Boxplot in Seaborn",
+    "text": "Basic Boxplot in Seaborn\n\nLet’s see a boxplot using Seaborn alone\n\n\n# adjust figure size using matplotlib\nplt.figure(figsize=(14, 6))\n\n# Create a boxplot\nbp2 = sns.boxplot(x='category', \n                  y='price', \n                  data = ikea);",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#basic-boxplot-in-seaborn---result",
+    "href": "lectures/Lecture0303.html#basic-boxplot-in-seaborn---result",
+    "title": "Lecture 3 Part 3",
+    "section": "Basic Boxplot in Seaborn - Result",
+    "text": "Basic Boxplot in Seaborn - Result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#label-modifications-in-seaborn",
+    "href": "lectures/Lecture0303.html#label-modifications-in-seaborn",
+    "title": "Lecture 3 Part 3",
+    "section": "Label modifications in Seaborn",
+    "text": "Label modifications in Seaborn\n\nand changing the colors too (an additional modification with a third variable and alternating colors)\n\n\nbp2 = sns.boxplot(x='category', \n            y='price',\n            hue = 'other_colors' , # a third variable\n            palette=['blue', 'orange'],\n            data = ikea)\n\n# Rotate labels\nfor label in bp2.get_xticklabels():\n    label.set_rotation(45)\n    label.set_ha('right')\n\n# Set labels and titles\nbp2.set_title(\"Price Distribution by Category\")\nbp2.set_xlabel(\"Category\")\nbp2.set_ylabel(\"Price\")\n\n# Show the plot\nplt.show()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#label-modifications-in-seaborn---result",
+    "href": "lectures/Lecture0303.html#label-modifications-in-seaborn---result",
+    "title": "Lecture 3 Part 3",
+    "section": "Label modifications in Seaborn - result",
+    "text": "Label modifications in Seaborn - result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#examining-facets",
+    "href": "lectures/Lecture0303.html#examining-facets",
+    "title": "Lecture 3 Part 3",
+    "section": "Examining Facets",
+    "text": "Examining Facets\n\nHelps with data exploration\nComparisons made easier\nClarity (can reduce overplotting)\nNot specific to one industry/field",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#faceting-boxplots-with-seaborn---data",
+    "href": "lectures/Lecture0303.html#faceting-boxplots-with-seaborn---data",
+    "title": "Lecture 3 Part 3",
+    "section": "Faceting Boxplots with Seaborn - data",
+    "text": "Faceting Boxplots with Seaborn - data\n\nBecause the furniture category has been set as a ‘category’ type\nwe need to remove empty categories when we subset\nSince we are referencing to part of a DataFrame rather than a full independent copy of it we should .copy() (make a copy of the dataframe to be safe)\n\n\ntop_categories = ikea['category'].value_counts().keys()[:4]\nnew_data = ikea[ikea['category'].isin(top_categories)].copy() # note this is a copy\nnew_data['category'] = new_data['category'].cat.remove_unused_categories()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#faceting-boxplots-with-seaborn",
+    "href": "lectures/Lecture0303.html#faceting-boxplots-with-seaborn",
+    "title": "Lecture 3 Part 3",
+    "section": "Faceting Boxplots with Seaborn",
+    "text": "Faceting Boxplots with Seaborn\n\nNow facet\n\n\ng = sns.catplot(x='category', \n                y='price', \n                hue = 'category',\n                col='other_colors',\n                data=new_data, \n                kind='box',\n                height=4, aspect=1.5)\n\ng.set_xticklabels(rotation=45, ha = 'right')\n\nplt.show()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#faceting-boxplots-with-seaborn---result",
+    "href": "lectures/Lecture0303.html#faceting-boxplots-with-seaborn---result",
+    "title": "Lecture 3 Part 3",
+    "section": "Faceting Boxplots with Seaborn - result",
+    "text": "Faceting Boxplots with Seaborn - result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#aside-bad-faceting-with-seaborn",
+    "href": "lectures/Lecture0303.html#aside-bad-faceting-with-seaborn",
+    "title": "Lecture 3 Part 3",
+    "section": "(aside) Bad faceting with Seaborn",
+    "text": "(aside) Bad faceting with Seaborn\n\nif you didn’t .cat.remove_unused_categories()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#notes-on-faceting",
+    "href": "lectures/Lecture0303.html#notes-on-faceting",
+    "title": "Lecture 3 Part 3",
+    "section": "Notes on Faceting",
+    "text": "Notes on Faceting\n\nIn Pandas and in Matplotlib, faceting would require first creating subplots (one for each facet)\nThen process the categories in each facet, so in the Ikea example we would filter the DataFrame for a category, and then plotting the category in its designated subplot.\nIf you were to avoid Seaborn, choose Matplotlib not Pandas to do this kind of work",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#aside-faceting-with-pandas",
+    "href": "lectures/Lecture0303.html#aside-faceting-with-pandas",
+    "title": "Lecture 3 Part 3",
+    "section": "(Aside) Faceting with Pandas",
+    "text": "(Aside) Faceting with Pandas\n\nFirst you would need to define a function\n\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport math\n\ndef facet_plot(df, group_col, x, y, kind='line', figsize=(8, 4), sharex=True, sharey=False, **kwargs):\n    \"\"\"\n    Create faceted subplots for each group in `group_col`.\n\n    Parameters:\n    - df: DataFrame\n    - group_col: column to group/facet by\n    - x: column for x-axis\n    - y: column for y-axis\n    - kind: plot type ('line', 'scatter', 'bar')\n    - figsize: tuple for individual subplot size\n    - sharex/sharey: whether to share axes across subplots\n    - kwargs: passed to pandas plot function\n    \"\"\"\n\n    groups = df[group_col].unique()\n    n = len(groups)\n\n    # Calculate grid size (e.g., 3 rows x 2 columns for 6 plots)\n    cols = math.ceil(math.sqrt(n))\n    rows = math.ceil(n / cols)\n\n    fig, axs = plt.subplots(rows, cols, figsize=(figsize[0] * cols, figsize[1] * rows),\n                            sharex=sharex, sharey=sharey)\n\n    axs = axs.flatten()\n\n    for i, group in enumerate(groups):\n        ax = axs[i]\n        subset = df[df[group_col] == group]\n\n        subset.plot(kind=kind, x=x, y=y, ax=ax, legend=False, **kwargs)\n        ax.set_title(f\"{group_col}: {group}\")\n        ax.set_xlabel(x)\n        ax.set_ylabel(y)\n\n    # Hide any unused subplots\n    for j in range(i + 1, len(axs)):\n        fig.delaxes(axs[j])\n\n    plt.tight_layout()\n    plt.show()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#aside-faceting-with-pandas-contd",
+    "href": "lectures/Lecture0303.html#aside-faceting-with-pandas-contd",
+    "title": "Lecture 3 Part 3",
+    "section": "(Aside) Faceting with Pandas (cont’d)",
+    "text": "(Aside) Faceting with Pandas (cont’d)\n\nThen use it. It works but we have a ways to go\n\n\nfrom sklearn.datasets import load_iris\nimport pandas as pd\n\n# Load iris dataset\niris = load_iris()\ndf = pd.DataFrame(iris.data, columns=iris.feature_names)\ndf['species'] = [iris.target_names[i] for i in iris.target]\n\n# Create faceted scatter plots\nfacet_plot(df, group_col='species',\n           x='sepal length (cm)',\n           y='sepal width (cm)',\n           kind='scatter')",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#aside-faceting-with-pandas-result",
+    "href": "lectures/Lecture0303.html#aside-faceting-with-pandas-result",
+    "title": "Lecture 3 Part 3",
+    "section": "(Aside) Faceting with Pandas Result",
+    "text": "(Aside) Faceting with Pandas Result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#faceting-with-seaborn",
+    "href": "lectures/Lecture0303.html#faceting-with-seaborn",
+    "title": "Lecture 3 Part 3",
+    "section": "Faceting with Seaborn",
+    "text": "Faceting with Seaborn\n\nimport seaborn as sns\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_iris\n\n# Load and convert to DataFrame\niris = load_iris()\ndf = pd.DataFrame(iris.data, columns=iris.feature_names)\ndf['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)\n\n# Faceted scatterplot\ng = sns.relplot(\n    x='sepal length (cm)', \n    y='sepal width (cm)',\n    hue='species', \n    col='species',\n    data=df, \n    kind='scatter',\n    height=4, aspect=1.2, legend=False\n)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#faceting-with-seaborn-1",
+    "href": "lectures/Lecture0303.html#faceting-with-seaborn-1",
+    "title": "Lecture 3 Part 3",
+    "section": "Faceting with Seaborn",
+    "text": "Faceting with Seaborn",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#more-faceting-with-seaborn",
+    "href": "lectures/Lecture0303.html#more-faceting-with-seaborn",
+    "title": "Lecture 3 Part 3",
+    "section": "More faceting with Seaborn",
+    "text": "More faceting with Seaborn\n\nThe faceting layout is determined by col= ‘other_colors’\n\n\ng = sns.displot(\n    data=ikea,\n    x= 'price',\n    col= 'other_colors',  \n    bins=20,\n    color= 'lightblue'\n)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#more-faceting-with-seaborn-1",
+    "href": "lectures/Lecture0303.html#more-faceting-with-seaborn-1",
+    "title": "Lecture 3 Part 3",
+    "section": "More faceting with Seaborn",
+    "text": "More faceting with Seaborn",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#plotnine-is-ggplot2",
+    "href": "lectures/Lecture0303.html#plotnine-is-ggplot2",
+    "title": "Lecture 3 Part 3",
+    "section": "plotnine Is ggplot2",
+    "text": "plotnine Is ggplot2\n\nplotnine is a Python implementation of Wilkinson’s Grammar of Graphics, built to mirror R’s ggplot2 syntax.\nIt sits on top of pandas, matplotlib, and mizani (the latter handles scales and themes).\nhttps://plotnine.org/\nhttps://plotnine.org/gallery/",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#plotnine-details",
+    "href": "lectures/Lecture0303.html#plotnine-details",
+    "title": "Lecture 3 Part 3",
+    "section": "plotnine details",
+    "text": "plotnine details\nInstall it maybe:\npip install plotnine\nThen:\nfrom plotnine import *\nimport pandas as pd",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#comparisons",
+    "href": "lectures/Lecture0303.html#comparisons",
+    "title": "Lecture 3 Part 3",
+    "section": "Comparisons",
+    "text": "Comparisons\n\n\n\n\n\n\n\n\n\nConcept\nggplot2 (R)\nplotnine (Python)\nNotes\n\n\n\n\nData\nggplot(data)\nggplot(df)\ndf is a pandas DataFrame\n\n\nAesthetics\naes(x, y, color)\naes('x', 'y', color='var')\nUse strings for column names\n\n\nLayers\n+ geom_point()\n+ geom_point()\nIdentical layering\n\n\nThemes\n+ theme_minimal()\n+ theme_minimal()\nSame theme names\n\n\nFacets\nfacet_wrap(~var)\nfacet_wrap('~var')\nString formula\n\n\nLabels\nlabs(title=, x=, y=)\nlabs(title=, x=, y=)\nIdentical\n\n\nScales\nscale_color_brewer()\nscale_color_brewer()\nSame\n\n\nSave\nggsave(\"plot.png\")\nggsave(plot, \"plot.png\")\nSlightly different signature",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#example-translating-from-r-to-python",
+    "href": "lectures/Lecture0303.html#example-translating-from-r-to-python",
+    "title": "Lecture 3 Part 3",
+    "section": "Example: Translating from R to Python",
+    "text": "Example: Translating from R to Python\nR (ggplot2)\nlibrary(ggplot2)\nggplot(mpg, aes(x = displ, y = hwy, color = class)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  facet_wrap(~drv) +\n  theme_minimal()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#example-translating-from-r-to-python-1",
+    "href": "lectures/Lecture0303.html#example-translating-from-r-to-python-1",
+    "title": "Lecture 3 Part 3",
+    "section": "Example: Translating from R to Python",
+    "text": "Example: Translating from R to Python\nPython (plotnine)\nfrom plotnine import *\nfrom plotnine.data import mpg\n\n(\n    ggplot(mpg, aes('displ', 'hwy', color='class'))\n    + geom_point()\n    + geom_smooth(method='lm', se=False)\n    + facet_wrap('~drv')\n    + theme_minimal()\n)\nUse parentheses to wrap the full expression, since Python doesn’t support line continuation via + like R.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#differences-in-data-handling",
+    "href": "lectures/Lecture0303.html#differences-in-data-handling",
+    "title": "Lecture 3 Part 3",
+    "section": "Differences in Data Handling",
+    "text": "Differences in Data Handling\n\npandas parallels dplyr: Perform transformations in pandas before passing to plotnine:\ndf2 = df.query(\"year == 2024\").assign(ratio=lambda d: d['value1']/d['value2'])\nggplot(df2, aes('x', 'ratio')) + geom_col()\nFactor levels: R has built-in factor order; in Python, use CategoricalDtype",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#gotchas",
+    "href": "lectures/Lecture0303.html#gotchas",
+    "title": "Lecture 3 Part 3",
+    "section": "Gotchas",
+    "text": "Gotchas\n\n\n\n\n\n\n\n\nIssue\nR way\nplotnine fix\n\n\n\n\nNon-string aesthetics\naes(x = mpg, y = wt)\naes('mpg', 'wt')\n\n\nString concatenation\npaste()\n+ or f-strings\n\n\nDisplaying plot\nImplicit in RStudio\nExplicit print(plot) in Python\n\n\nThemes\nUse theme_* functions\nMostly identical, but a few (e.g. theme_gray) differ slightly\n\n\nSaving\nggsave() auto-saves last plot\nYou must pass the plot object: ggsave(plot, 'file.png')",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#python-beyond-ggplot2",
+    "href": "lectures/Lecture0303.html#python-beyond-ggplot2",
+    "title": "Lecture 3 Part 3",
+    "section": "Python Beyond ggplot2",
+    "text": "Python Beyond ggplot2\nplotnine gives you:\n\nInteractive save/display via matplotlib.\nAccess to matplotlib backends (e.g., Jupyter inline display).\nCustom Python logic: integrate seamlessly with numpy/pandas/scikit-learn.\n\nExample:\nfrom sklearn.linear_model import LinearRegression\nimport numpy as np\n\nmodel = LinearRegression().fit(mpg[['displ']], mpg['hwy'])\nmpg['pred'] = model.predict(mpg[['displ']])\n\n(\n    ggplot(mpg, aes('displ', 'hwy'))\n    + geom_point()\n    + geom_line(aes(y='pred'), color='red')\n)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#geoms",
+    "href": "lectures/Lecture0303.html#geoms",
+    "title": "Lecture 3 Part 3",
+    "section": "Geoms",
+    "text": "Geoms\n\n\n\n\n\n\n\n\nPurpose\nggplot2 (R)\nplotnine (Python)\n\n\n\n\nScatter\ngeom_point()\ngeom_point()\n\n\nLine\ngeom_line()\ngeom_line()\n\n\nSmooth (trend)\ngeom_smooth(method = \"lm\")\ngeom_smooth(method='lm')\n\n\nHistogram\ngeom_histogram(binwidth = 1)\ngeom_histogram(binwidth=1)\n\n\nDensity\ngeom_density()\ngeom_density()\n\n\nBar\ngeom_bar()\ngeom_bar()\n\n\nBoxplot\ngeom_boxplot()\ngeom_boxplot()\n\n\nViolin\ngeom_violin()\ngeom_violin()\n\n\nText\ngeom_text(aes(label = name))\ngeom_text(aes(label='name'))\n\n\nJitter\ngeom_jitter(width = .1)\ngeom_jitter(width=.1)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#aesthetics-aes",
+    "href": "lectures/Lecture0303.html#aesthetics-aes",
+    "title": "Lecture 3 Part 3",
+    "section": "Aesthetics (aes())",
+    "text": "Aesthetics (aes())\n\n\n\nMapping\nggplot2 (R)\nplotnine (Python)\n\n\n\n\nBasic\naes(x = displ, y = hwy)\naes('displ', 'hwy')\n\n\nColor\naes(color = class)\naes(color='class')\n\n\nSize\naes(size = cyl)\naes(size='cyl')\n\n\nShape\naes(shape = drv)\naes(shape='drv')\n\n\nFill\naes(fill = class)\naes(fill='class')\n\n\nAlpha\naes(alpha = hwy)\naes(alpha='hwy')",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#facets-is-the-same",
+    "href": "lectures/Lecture0303.html#facets-is-the-same",
+    "title": "Lecture 3 Part 3",
+    "section": "Facets is the same",
+    "text": "Facets is the same\n\n\n\nType\nggplot2 (R)\nplotnine (Python)\n\n\n\n\nWrap\nfacet_wrap(~class)\nfacet_wrap('~class')\n\n\nGrid\nfacet_grid(drv ~ cyl)\nfacet_grid('drv ~ cyl')",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#saving-plots",
+    "href": "lectures/Lecture0303.html#saving-plots",
+    "title": "Lecture 3 Part 3",
+    "section": "Saving Plots",
+    "text": "Saving Plots\n\n\n\n\n\n\n\n\nTask\nggplot2 (R)\nplotnine (Python)\n\n\n\n\nSave\nggsave(\"plot.png\")\nggsave(plot, \"plot.png\", dpi=300)\n\n\nDifferent format\nggsave(\"plot.pdf\")\nggsave(plot, \"plot.pdf\")",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#same-plot-in-r-and-python-plotnine",
+    "href": "lectures/Lecture0303.html#same-plot-in-r-and-python-plotnine",
+    "title": "Lecture 3 Part 3",
+    "section": "Same Plot in R and Python Plotnine",
+    "text": "Same Plot in R and Python Plotnine\nR\nggplot(mpg, aes(displ, hwy, color = class)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  facet_wrap(~drv) +\n  labs(title = \"Fuel Efficiency by Drive Type\") +\n  theme_minimal()\nPython\nfrom plotnine import *\nfrom plotnine.data import mpg\n\n(\n    ggplot(mpg, aes('displ', 'hwy', color='class'))\n    + geom_point()\n    + geom_smooth(method='lm', se=False)\n    + facet_wrap('~drv')\n    + labs(title='Fuel Efficiency by Drive Type')\n    + theme_minimal()\n)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#ggplot-in-python-is-plotnine",
+    "href": "lectures/Lecture0303.html#ggplot-in-python-is-plotnine",
+    "title": "Lecture 3 Part 3",
+    "section": "ggplot in Python is plotnine",
+    "text": "ggplot in Python is plotnine\n\nimport plotnine as p9\n# import plotnine as *\n\n(\n    p9.ggplot(mtcars, \n        p9.aes('wt', 'mpg', color='factor(gear)'))\n    + p9.geom_point()\n    + p9.facet_wrap('gear')\n    + p9.stat_smooth(method='lm')\n    + p9.ggtitle('mpg on wt faceted by gear')\n    + p9.theme_bw()\n)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#ggplot-in-python-with-plotnine---result",
+    "href": "lectures/Lecture0303.html#ggplot-in-python-with-plotnine---result",
+    "title": "Lecture 3 Part 3",
+    "section": "ggplot in Python with plotnine - result",
+    "text": "ggplot in Python with plotnine - result\n\n\n&lt;plotnine.ggplot.ggplot object at 0x3187c5fd0&gt;",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#plotnine-considerations",
+    "href": "lectures/Lecture0303.html#plotnine-considerations",
+    "title": "Lecture 3 Part 3",
+    "section": "plotnine considerations",
+    "text": "plotnine considerations\n\nIt is a port of ggplot\nModifications are ggplot, NOT matplotlib based\n\n\n(p9.ggplot(ikea, \n    p9.aes('category', \n        'price', \n        fill='category'))\n    + p9.geom_boxplot() \n \n    + p9.ggtitle(title='Comparison of Price Across Category')\n    + p9.theme_bw()\n    + p9.theme(legend_position='none',\n                figure_size=(10, 6),\n                axis_text_x = p9.element_text(angle=45, size = 6,\n                va='top', ha='right'))\n)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#all-plotnine-no-matplotlib",
+    "href": "lectures/Lecture0303.html#all-plotnine-no-matplotlib",
+    "title": "Lecture 3 Part 3",
+    "section": "all plotnine (no matplotlib)",
+    "text": "all plotnine (no matplotlib)\n\n\n&lt;plotnine.ggplot.ggplot object at 0x313e36120&gt;",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#layering-with-plotnine",
+    "href": "lectures/Lecture0303.html#layering-with-plotnine",
+    "title": "Lecture 3 Part 3",
+    "section": "layering with plotnine",
+    "text": "layering with plotnine\n\nimport plotnine as p9\n\n(\n    p9.ggplot(ikea, \n        p9.aes('category', 'price', fill='category'))\n    + p9.geom_boxplot()\n    \n    + p9.stat_summary(\n        fun_y=np.mean,  \n        geom='line',\n        group=1,\n        color='red',\n        size=1\n    )\n    + p9.stat_summary(\n        fun_y=np.mean,\n        geom='point',\n        color='black',\n        size=2\n    )\n    \n    + p9.ggtitle(title='Comparison of Price Across Category')    \n    + p9.theme_bw()\n    + p9.theme(\n        figure_size=(10, 6),\n        legend_position='none',\n        axis_text_x=p9.element_text(angle=45, size=6, va='top', ha='right')\n    )\n)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#layering-with-plotnine-result",
+    "href": "lectures/Lecture0303.html#layering-with-plotnine-result",
+    "title": "Lecture 3 Part 3",
+    "section": "layering with plotnine result",
+    "text": "layering with plotnine result\n\n\n&lt;plotnine.ggplot.ggplot object at 0x318896690&gt;",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#same-in-seaborn",
+    "href": "lectures/Lecture0303.html#same-in-seaborn",
+    "title": "Lecture 3 Part 3",
+    "section": "Same in seaborn",
+    "text": "Same in seaborn\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport numpy as np\n\n# Assuming ikea is already loaded\n# Calculate the means per category\nmean_df = (\n    ikea.groupby(\"category\", as_index=False)[\"price\"]\n    .mean()\n    .rename(columns={\"price\": \"mean_price\"})\n)\n\n# Create the boxplot\nplt.figure(figsize=(10, 6))\nax = sns.boxplot(data=ikea, x=\"category\", y=\"price\", palette=\"pastel\")\n\n# Add mean points\nsns.scatterplot(\n    data=mean_df,\n    x=\"category\",\n    y=\"mean_price\",\n    color=\"black\",\n    s=40,\n    zorder=10,\n    ax=ax,\n    marker='o'\n)\n\n# Add connecting line between mean points\nsns.lineplot(\n    data=mean_df,\n    x=\"category\",\n    y=\"mean_price\",\n    color=\"red\",\n    linewidth=1,\n    zorder=9,\n    ax=ax\n)\n\n# Customize appearance\nplt.title(\"Comparison of Price Across Category\\nWith means plotted and connected\")\nplt.xticks(rotation=45, ha='right', fontsize=6)\n#ax.legend_.remove()  # Remove legend\nplt.show()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#same-in-seaborn---result",
+    "href": "lectures/Lecture0303.html#same-in-seaborn---result",
+    "title": "Lecture 3 Part 3",
+    "section": "Same in seaborn - result",
+    "text": "Same in seaborn - result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#a-plot-with-no-name",
+    "href": "lectures/Lecture0303.html#a-plot-with-no-name",
+    "title": "Lecture 3 Part 3",
+    "section": "a plot with no name",
+    "text": "a plot with no name\n\n(\n    p9.ggplot(ikea, p9.aes('price'))\n    + p9.geom_histogram(p9.aes(y='..density..'), fill='blue', color='black', alpha=0.5, bins=30)\n    + p9.geom_density(color='red', size=1)\n    + p9.facet_wrap('other_colors')\n    + p9.ggtitle(title='Comparison of Price Across Colors')\n    + p9.theme_538()\n    + p9.theme(\n        figure_size=(10, 6),\n        legend_position='none')\n)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#a-plot-with-no-name-result",
+    "href": "lectures/Lecture0303.html#a-plot-with-no-name-result",
+    "title": "Lecture 3 Part 3",
+    "section": "a plot with no name result",
+    "text": "a plot with no name result\n\n\n&lt;plotnine.ggplot.ggplot object at 0x313fe6b10&gt;",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#seaborns-version",
+    "href": "lectures/Lecture0303.html#seaborns-version",
+    "title": "Lecture 3 Part 3",
+    "section": "seaborn’s version",
+    "text": "seaborn’s version\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nfrom matplotlib import style\nplt.style.use('ggplot')\n\n# Create FacetGrid manually\ng = sns.FacetGrid(\n    data=ikea,\n    col=\"other_colors\",\n    height=3,\n    aspect=1\n)\n\n# Add histogram and KDE manually\ng.map(\n    sns.histplot,\n    data = ikea,\n    x=\"price\",\n    bins=30,\n    color=\"blue\",\n    edgecolor=\"black\",\n    alpha=0.5, \n    stat='density'\n)\n\n# Add histogram and KDE manually\ng.map(\n    sns.kdeplot,\n    data = ikea,\n    x=\"price\",\n    color=\"red\"\n)\n# Set a title \ng.fig.suptitle(\"Comparison of Price Across Colors\", fontsize=12)\nplt.subplots_adjust(top=0.85)\nplt.show()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#seaborns-version-result",
+    "href": "lectures/Lecture0303.html#seaborns-version-result",
+    "title": "Lecture 3 Part 3",
+    "section": "seaborn’s version result",
+    "text": "seaborn’s version result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#aesthetics-aesthetic-mappings",
+    "href": "lectures/Lecture0303.html#aesthetics-aesthetic-mappings",
+    "title": "Lecture 3 Part 3",
+    "section": "Aesthetics (Aesthetic Mappings)",
+    "text": "Aesthetics (Aesthetic Mappings)\n\nThese are the rules for the visualization\n\nThe aesthetics map (connect) data variables to the visual properties of the graphical elements\n\nMost frequently - x, y, color, size, and shape\n\nThe connection of data to graphical elements allow us to see/interpret patterns, trends, and anomalies within the data",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#aesthetic---example",
+    "href": "lectures/Lecture0303.html#aesthetic---example",
+    "title": "Lecture 3 Part 3",
+    "section": "Aesthetic - Example",
+    "text": "Aesthetic - Example\n\nstrange, I know, but the aesthetic does not need to be global (top line) but can be in each geom giving a lot of flexibility\n\n\nimport pandas as pd\nimport plotnine as p9\nfrom sklearn.datasets import load_iris\n\n# Load and convert to DataFrame\niris = load_iris()\ndf = pd.DataFrame(iris.data, columns=iris.feature_names)\ndf['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)\n\n(\n    p9.ggplot(df)\n    + p9.geom_point(p9.aes('sepal length (cm)', 'sepal width (cm)'), color = 'blue')\n    + p9.geom_point(p9.aes('sepal width (cm)', 'sepal length (cm)'), color = 'red', shape = 'D')\n    + p9.geom_smooth(p9.aes('sepal width (cm)', 'sepal length (cm)'),color = 'yellow', size =3)\n    + p9.geom_smooth(p9.aes('sepal length (cm)', 'sepal width (cm)'),color = 'yellow', size =3)    \n    + p9.facet_wrap('species')\n    + p9.ggtitle(title='flipping aesthetics')\n    + p9.theme(\n        figure_size=(10, 6),\n        legend_position='none')    \n)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#aesthetic-example---result",
+    "href": "lectures/Lecture0303.html#aesthetic-example---result",
+    "title": "Lecture 3 Part 3",
+    "section": "Aesthetic Example - result",
+    "text": "Aesthetic Example - result\n\n\n&lt;plotnine.ggplot.ggplot object at 0x3187e8e90&gt;",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#geoms-geometries-include",
+    "href": "lectures/Lecture0303.html#geoms-geometries-include",
+    "title": "Lecture 3 Part 3",
+    "section": "Geoms (Geometries) include",
+    "text": "Geoms (Geometries) include\n\nPoints, typically used for individual values\n\nLines, connect points in some defined order (e.g., time, location)\nBars, typically used for categories (e.g., pizza types)\nPolygons, used to represent areas (e.g., maps)\nPaths, fatter lines, used to represent flows",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#geoms-1",
+    "href": "lectures/Lecture0303.html#geoms-1",
+    "title": "Lecture 3 Part 3",
+    "section": "Geoms",
+    "text": "Geoms\n\nimport pandas as pd\nimport numpy as np\nimport plotnine as p9\nfrom plotnine.data import mpg\n\ndf = mpg.copy()\n\n# Create a plot with multiple geoms \n# - Violin plot for distribution\n# - a tiny boxplot inside for summary\n# - jitter points to show individual cars\n# - the mean point highlighted\n\np = (\n    p9.ggplot(df, p9.aes(x='class', y='hwy', fill='class'))\n    + p9.geom_violin(alpha=0.3)\n    + p9.geom_boxplot(width=0.2, outlier_shape=None, alpha=0.6)\n    + p9.geom_jitter(p9.aes(color='class'), width=0.15, size=1.5, alpha=0.5)\n    + p9.stat_summary(fun_y=np.mean, geom='point', fill='black', size=3, shape='o')\n    + p9.labs(\n        title='Highway MPG by Vehicle Class',\n        x='Class',\n        y='MPG'\n    )\n    + p9.theme_bw()\n    + p9.theme(axis_text_x=p9.element_text(rotation=45, hjust=1))\n)\n\n# Show the plot object\np",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#geoms---result",
+    "href": "lectures/Lecture0303.html#geoms---result",
+    "title": "Lecture 3 Part 3",
+    "section": "Geoms - result",
+    "text": "Geoms - result\n\n\n&lt;plotnine.ggplot.ggplot object at 0x3188962d0&gt;",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#facets-and-layers",
+    "href": "lectures/Lecture0303.html#facets-and-layers",
+    "title": "Lecture 3 Part 3",
+    "section": "Facets and Layers",
+    "text": "Facets and Layers\n\nCondition the data with facets and layers\nSubsets are called facets\nLayers combine multiple types of visualizations into a single graphic",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#statistics",
+    "href": "lectures/Lecture0303.html#statistics",
+    "title": "Lecture 3 Part 3",
+    "section": "Statistics",
+    "text": "Statistics\n\nData can be summarized or modified prior to visualization examples:\n\nAggregation (like sums or means)\nsmoothing\n\nHaving these can clarify the underlying structure or relationships in data.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#coordinates-and-scales",
+    "href": "lectures/Lecture0303.html#coordinates-and-scales",
+    "title": "Lecture 3 Part 3",
+    "section": "Coordinates and scales",
+    "text": "Coordinates and scales\n\nCoordinate systems (Cartesian, polar, etc.).\nScaling (linear, logarithmic, etc.)\nThey influence the position of data points\nAnd possibly help interpretation",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#rescaling",
+    "href": "lectures/Lecture0303.html#rescaling",
+    "title": "Lecture 3 Part 3",
+    "section": "Rescaling",
+    "text": "Rescaling\n\nimport plotnine as p9\nfrom plotnine.data import mpg\n\n# Example: Scaling in action\np = (\n    p9.ggplot(mpg, p9.aes(x='displ', y='hwy', color='class'))\n    + p9.geom_point(size=3, alpha=0.7)\n    + p9.scale_color_brewer(type='qual', palette='Set2')  # Categorical color palette\n    + p9.labs(\n        title=\"Engine Displacement vs. Highway MPG\",\n        x=\"Engine Size\",\n        y=\"Highway MPG\",\n        color=\"Vehicle Class\"\n    )\n    + p9.theme_bw()\n)\np + p9.scale_x_reverse()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#rescaling---result",
+    "href": "lectures/Lecture0303.html#rescaling---result",
+    "title": "Lecture 3 Part 3",
+    "section": "Rescaling - result",
+    "text": "Rescaling - result\n\n\n&lt;plotnine.ggplot.ggplot object at 0x313fe4050&gt;",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#themes",
+    "href": "lectures/Lecture0303.html#themes",
+    "title": "Lecture 3 Part 3",
+    "section": "Themes",
+    "text": "Themes\n\nControl the overall “look” of the graphic\nfonts, colors, gridlines\nlabeling, legends, captioning\nlayout etc.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#pandas-seaborn-matplotlib",
+    "href": "lectures/Lecture0303.html#pandas-seaborn-matplotlib",
+    "title": "Lecture 3 Part 3",
+    "section": "Pandas, Seaborn, Matplotlib",
+    "text": "Pandas, Seaborn, Matplotlib\n\n\n\n\n\n\n\n\nLibrary\nGrammar of Graphics Model?\nDescription\n\n\n\n\nmatplotlib\nNo, opposite of GG\nImperative, low-level, procedural not grammar-based\n\n\npandas.plot\nNo, Very limited mapping\nThin wrapper over matplotlib; minimal aesthetics mapping\n\n\nseaborn\nSemi-grammatical\nHigh-level API inspired by GoG, but not fully declarative\n\n\nplotnine (Python)\nFull GG\nA direct port of ggplot2\n\n\nggplot2 (R)\nFull GG implementation\nfully declarative",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 3"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "The purpose of Statistics 422 is to gain a thorough understanding of the fundamentals of data visualization in Statistics & Data Science and develop the ability to perform data visualization tasks in R and/or Python while incorporating additional supportive software tools.\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\nContact Info: BruinLearn mail or vlew@stat.ucla.edu\nOffice Hours: W after class (MS 5117) and F 3pm-5pm (Zoom) and you are welcome to schedule Zoom appointment(s), most evenings & weekends too\nMeeting Times and Locations: W 6pm - 8:50pm Mathematical Sciences 5117"
+    "text": "About this site"
   },
   {
-    "objectID": "Syllabus.html#introduction",
-    "href": "Syllabus.html#introduction",
-    "title": "STATS 422 Fall 2025 Syllabus",
+    "objectID": "activity/using_OData_params.html",
+    "href": "activity/using_OData_params.html",
+    "title": "Using OData with Python",
     "section": "",
-    "text": "The purpose of Statistics 422 is to gain a thorough understanding of the fundamentals of data visualization in Statistics & Data Science and develop the ability to perform data visualization tasks in R and/or Python while incorporating additional supportive software tools.\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\nContact Info: BruinLearn mail or vlew@stat.ucla.edu\nOffice Hours: W after class (MS 5117) and F 3pm-5pm (Zoom) and you are welcome to schedule Zoom appointment(s), most evenings & weekends too\nMeeting Times and Locations: W 6pm - 8:50pm Mathematical Sciences 5117"
+    "text": "We want to read the entire dataset from the web for a variety of reasons. OData (Open Data Protocol) is a standardized, REST-based protocol for building and consuming data services over the web. REST means “Representational State Transfer”. It is a type of architecture for designing applications that communicate over the internet.\nThe requests library in Python happens to know how to interact with Socrata (among many other things). The requests library is not part of the Python standard library so you would need to install it (e.g., using conda or pip etc.) but it is a commonly used library.",
+    "crumbs": [
+      "Activities",
+      "Lecture 3 OData, Python + R"
+    ]
   },
   {
-    "objectID": "Syllabus.html#proposed-learning-outcomes",
-    "href": "Syllabus.html#proposed-learning-outcomes",
-    "title": "STATS 422 Fall 2025 Syllabus",
-    "section": "Proposed Learning Outcomes",
-    "text": "Proposed Learning Outcomes\nThe overall goal of this course is to provide students with the foundations necessary for understanding and building on their existing skillset with emphasis on the clear and effective visual communication of data. After this quarter, students will have:\n\nAn understanding of different ways to visually represent data (e.g., bar charts, line graphs, scatter plots, heat maps), and when and how to use them effectively to represent different kinds of data and relationships,\nAn understanding of how to explore and analyze data to discover patterns, trends, insights and then to communicate these to a larger audience,\nAn understanding of data models: ways of structuring, organizing and transforming different types of data (quantitative, qualitative, spatial) for effective visualization,\nAn understanding of graphical perception/perceived visual information. Applying some of the cognitive principles related to visual perception and to create compelling visualizations,\nThe ability to use data visualization tools and supporting software, for example open-source libraries in Python (e.g., Matplotlib, Seaborn) and R (e.g., ggplot2) with , Quarto, and others,\nDesigning and creating interactive data visualizations that allow users to explore data at their own pace, using tools such as Streamlit (Python) or Shiny (R),\nProducing a brief thesis-styled report with visualizations applied in a student’s personal domains of interest such as business, entertainment, healthcare, public policy, and encouraging novel combinations of these (e.g., business + law + data)."
-  },
-  {
-    "objectID": "Syllabus.html#course-materials-resources",
-    "href": "Syllabus.html#course-materials-resources",
-    "title": "STATS 422 Fall 2025 Syllabus",
-    "section": "Course Materials & Resources",
-    "text": "Course Materials & Resources\nAll course related materials are posted to BruinLearn, https://bruinlearn.ucla.edu/courses/217546, all assignments are uploaded to that site as well typically in the form of PDF files, photographs or recordings. Official course grades are found online on myUCLA only. Other materials used:\nText\nWe will use many sources this quarter, but a reasonable (optional) textbook is:\n\nHealy, Kieran. Data visualization: a practical introduction. Princeton University Press, 2018. https://kieranhealy.org/publications/dataviz/\n\nSoftware\nWe will try to strike a balance given the many choices available to us. All of these are free:\n\nR https://www.r-project.org\n\nggplot2 https://ggplot2.tidyverse.org/\n\nShiny https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html\n\n\n\nPython https://www.python.org/\n\nStreamlit https://streamlit.io/\n\n\n\nTableau https://www.tableau.com/academic/students\n\nOptional Sites\n\nA GitHub presence is strongly encouraged but not required. Example: https://github.com/mwaskom (the author and maintainer of Seaborn)\nQuarto is useful but not required. https://quarto.org/\n\nOverleaf is useful but not required. https://www.overleaf.com/\n\nO’Reilly library access https://www.oreilly.com/library-access/\n\nA data visualization gallery https://datavizproject.com/ (there are many, make an effort to seek inspiration)\nOptional materials\n\nTufte, Edward R. The visual display of quantitative information. Vol. 2. Cheshire, CT: Graphics press, 2001.\nYau, Nathan. Visualize this: the FlowingData guide to design, visualization, and statistics. John Wiley & Sons, 2011.\n\nWickham, Hadley. et. al. R for Data Science, 2nd Edition O’Reilly Media, Inc. 2023 and TidyTuesday"
-  },
-  {
-    "objectID": "Syllabus.html#grading",
-    "href": "Syllabus.html#grading",
-    "title": "STATS 422 Fall 2025 Syllabus",
-    "section": "Grading",
-    "text": "Grading\nA letter grade is assigned upon the successful completion of this course.\nFinal Grade Determination\nFinal grades are assigned according to UCLA’s recommended straight scale grading with minor modifications at the high and low end:\n\n50% and below: F\n51.0 - 76.9%: C, 77.0 - 79.9%: C+\n80.0 - 82.9%: B-, 83.0 - 86.9%: B, 87.0 - 89.9%: B+\n90.0 - 92.9%: A-, 93.0% and up A\n\nI do not assign C-, D+, D, or D-. I also do not assign A+.\nGrading Component Weights\n\n\n30% (in person not required, try an activity) Attendance\n\nBeing there for the class, this involves attending regularly\nInteracting with difficult classmates in small teams during class meetings\n\n\n\n30% Three (all Individual) Homework Assignments\n\nWeb Portfolio (Due before the end of Week 2)\nProfessional quality report using visualization (Due before the end of Week 5)\nA “pitch” book presentation (recording) (Due before the end of Week 8)\n\n\n20% (Individual) Interactive Web App: Find your data, design a website to showcase your skills, make reproducible code available and present it with a video, due by the end of Finals Week\n20% (Individual) Final Project: Find your own data, produce a report, make reproducible code available and present it with a video, due by the end of Finals Week\nAssignment Late Policy\nIf you submit your homework assignments before I start the grading, it will not be counted as late even if it past the deadline. Once I begin grading it is counted as late and will not be accepted for full credit (but will still be accepted for partial credit).\nThe Web App and Final Project should both be submitted before the end of Week 11 (finals week) as grading will begin immediately. I will still accept web apps and projects for partial credit if you miss the deadline."
-  },
-  {
-    "objectID": "Syllabus.html#course-outline-this-is-subject-to-change",
-    "href": "Syllabus.html#course-outline-this-is-subject-to-change",
-    "title": "STATS 422 Fall 2025 Syllabus",
-    "section": "Course Outline (this is subject to change)",
-    "text": "Course Outline (this is subject to change)\n\n\nDate\nTopic & Suggested Reading\n\n\n\nWeek 1 10/1\nFirst Day business; software; story telling Healy Ch. 1/2; Knaflic Ch. 7\n\n\n\nWeek 2 10/8\nData Exploration/Analysis; Visualization Insights & Types Wickham Ch. 10 ; Healy Ch. 3/4; Yau Ch. 3; Wilke Ch. 5\n\n\n\nWeek 3 10/15\nReorganizing Data, Python Visualization Tools Yau Ch.2, Wickham Ch. 5; Molin\n\n\n\nWeek 4 10/22\nInteractive: R/Shiny, Python/Streamlit Wickham ; Richards ; Examples\n\n\n\nWeek 5 10/29\nVisualizing Spatial Data and Time Dependent Data Healy Ch. 7; Yau Ch. 8; Wilke Ch. 15; Yau Ch. 4; Wilke Ch. 13 and Wilke Ch. 14\n\n\n\nWeek 6 11/5\nGuest speaker 1\n\n\nWeek 7 11/12\nGuest speaker 2\n\n\nWeek 8 11/19\nFinish Time-Dependent examine Hierarchical Data Network (relational) visualizations\n\n\nWeek 9 11/26\nNO MEETING. A pre-recorded lecture topic TBD, optional readings from Milligan; and also Sleeper\n\n\n\nWeek 10 12/3\nAnimating visualizations with gganimate and htmlwidgets https://bookdown.org/yihui/rmarkdown/html-widgets.html, https://gallery.htmlwidgets.org/, https://www.htmlwidgets.org/index.html, https://cran.r-project.org/web/packages/htmlwidgets/vignettes/develop_intro.html\n\n\nWeek 11 12/12\nNo meetings but Web App and Final Report are due no later than 11:59pm 12/12"
-  },
-  {
-    "objectID": "Syllabus.html#academic-dishonesty",
-    "href": "Syllabus.html#academic-dishonesty",
-    "title": "STATS 422 Fall 2025 Syllabus",
-    "section": "Academic Dishonesty",
-    "text": "Academic Dishonesty\nAs Bruins, we uphold the UCLA Student Code of Conduct. Academic dishonesty means activities like plagiarism, unauthorized material used on exams, unauthorized collaborations etc. According to Senate Regulation A-306, if an instructor encounters a problem, the instructor must report it to the Dean of Students. Sources: https://www.deanofstudents.ucla.edu/Student-Conduct#10690514-student-conduct-code, https://ucla.app.box.com/s/8xq1jyrvqhs9343e4rzyvporx9lt8u1g\nAI Assistant policy\nYour instructor’s belief is AI such as Claude, ChatGPT, etc. should be used – wisely – as if it were an amazingly clever tutor or friend. But copying and pasting the code of the first example’s (below) ChatGPT response is not about learning and chances are, you will forget how to do it if you do not do it regularly. Asking ChatGPT questions in the second way gives your mind the opportunity to develop the skills scaffolding and retain the knowledge long after this course is over.\n\n\n\n\n\n\nQuestion\nResponse\n\n\n\nPlease write some code in R that splits a dataset into test and training.\ninstall.packages(“caret”) # Run only if not already installed\n\n\n\nlibrary(caret)\n\n\n\nset.seed(123)\n\n\n\ntrain_indices &lt;- createDataPartition(mtcars$mpg, p = 0.7, list = FALSE)\n\n\n\ntrain_data &lt;- mtcars[train_indices, ]\n\n\n\ntest_data &lt;- mtcars[-train_indices, ]\n\n\n\nLet me know if you’d like to stratify the split (e.g., ensure balance on a categorical variable) or save the result to file.\n\n\nPlease teach me on how to write code using base R that splits a dataset into training and test with a 70-30 split - but don’t write the code for me, I want to learn how to think it through on my own.\nAbsolutely, I’d be glad to guide you on how to approach this! 1. Understanding the Data: - Before you begin, familiarize yourself with the dataset. Use functions like str(), head(), and summary() to understand the structure and contents of your data. 2. Setting a Seed: - To ensure that your results are reproducible, you will want to set a seed using the set.seed() function. This function controls the random number generator in R. 3. Determining the Number of Rows: - You need to know the total number of rows in your dataset to create the splits. The nrow() function can help you determine this.\n\n\n\n4. Calculating Split Sizes: - Next, determine how many rows should go into your training and test sets. You’ll want 70% of the data to be in the training set and 30% in the test set. Use arithmetic operations to calculate the respective sizes.\n\n\n\n5. Creating a Random Sample of Indices: - To create your training set, you’ll need to randomly select 70% of the indices (row numbers) from your dataset. You can use the sample() function to do this. Remember to use the total number of rows and the size of the training set as parameters in this function.\n\n\n\n6. Subsetting the Dataset: - Once you have a vector of random indices, use it to subset your dataset into two parts: one for training and one for testing. In R, you can subset a data frame using square brackets []. You’ll use the vector of random indices to select rows for the training set, and the - operator to select the remaining rows for the test set.\n\n\n\n7. Verifying Your Split: - After creating your training and test sets, verify that you’ve split the data correctly. Use the dim() function to check the dimensions of each set and ensure the split ratio is approximately 70-30. You can also use the head() function to quickly view the top rows of each set and ensure they look correct.  Remember to write your code step by step, verifying each part before moving on to the next, to avoid confusion and ensure accuracy. Once you are confident in your understanding of each step, try to write the code on your own. Good luck!\n\n\n\nAI assistants are wonderful tools to help you with subjects that are outside of your skill set which do not make sense for you to invest huge amounts of time or resources remembering/learning."
-  },
-  {
-    "objectID": "Syllabus.html#resources",
-    "href": "Syllabus.html#resources",
-    "title": "STATS 422 Fall 2025 Syllabus",
-    "section": "Resources",
-    "text": "Resources\nCOVID-19 health and safety\nIn compliance with Los Angeles County policies effective January 6 2023, UCLA strongly recommends indoor masking, regardless of vaccination status. Testing is also strongly encouraged. See\n\nhttps://covid-19.ucla.edu/covid-protocols-at-a-glance/\nhttp://publichealth.lacounty.gov/phcommon/public/media/mediapubHPdisplay.cfm\n\nSome of us might feel more comfortable wearing masks and continuing to social distance, for example, during small-group work in class or section. All of our preferences are reasonable, and it is important that we treat each others’ preferences with respect and care so that we each feel comfortable and prepared to learn in class. You can find the most current policies on campus requirements on the UCLA COVID-19 resources site https://covid-19.ucla.edu/.\nAccessible Education\nStudents with accessibility issues are welcome and encouraged to seek accommodation. Students needing academic accommodations based on a documented disability should contact the Center for Accessible Education (CAE) at (310)825-1501 or in person at Murphy Hall A255. In order to ensure accommodations, students need to contact CAE within the first two weeks of the term.\nDealing with Financial Stress\nLife is unpredictable and can create financial emergencies. If you find yourself in this situation, please seek assistance:\n\nBruin Shelter: http://www.bruinshelter.org/ Provides a safe, supportive environment for fellow college students experiencing homelessness by fostering a collaborative effort between universities, community-based organizations, and service providers.\nThe CPO Food Shelter: https://basicneeds.ucla.edu/services/cpo-food-closet Provides free food for any UCLA student who may be experiencing hunger and/or struggling to attain food due to financial hardships.\nTitle IX\nUCLA prohibits gender discrimination, including sexual harassment, domestic and dating violence, sexual assault, and stalking. If you have experienced sexual harassment or sexual violence, there are a variety of resources to assist you.\n\nCONFIDENTIAL RESOURCES: You can receive confidential support and advocacy at the CARE Advocacy Office for Sexual and Gender-Based Violence, 1st Floor Wooden Center West, (310) 206-2465. Counseling and Psychological Services (CAPS) also provides confidential counseling to all students and can be reached 24/7 at (310) 825-0768.\nNON-CONFIDENTIAL RESOURCES: You can also report sexual violence or sexual harassment directly to the University’s Title IX Coordinator, 2241 Murphy Hall, titleix@conet.ucla.edu, (310) 206-3417. Reports to law enforcement can be made to UCPD at (310) 825-1491. These offices may be required to pursue an official investigation.\nPsychological Health, Well-Being and Resilience\nUCLA is renowned for academic excellence, and yet we know that many students feel overwhelmed at times by demands to succeed academically, socially and personally. Our campus community is committed to helping all students thrive, learn to cope with stress, and build resilience. Remember, self-care is a skill that is critical to your long-term success. Here are some of the many resources available at UCLA to support you:\n\nCounseling and Psychological Services (CAPS):https://www.counseling.ucla.edu/ Provides counseling and other psychological/mental health services to students. Walk-in hours are Monday-Thursday 8am-4:30pm and Friday 9am-4:30pm in John Wooden Center West. Crisis counseling is also available 24 hours/day at (310) 825-0768.\nAshe Student Health and Wellness Center:http://www.studenthealth.ucla.edu Provides high quality and accessible ambulatory healthcare and education by caring professionals to support the academic success and personal development of all UCLA students.\nHealthy Campus Initiative (HCI): https://healthy.ucla.edu Provides links to a wide variety of resources for enhancing physical and psychological well-being, positive social interactions, healthy sleep, healthy eating, healthy physical activity and more.\nCampus and Student Resilience: https://risecenter.ucla.edu/ Provides programs to promote resilience and trains students to help support their peers.\nUCLA Recreation: https://www.recreation.ucla.edu/ Offers a broad array of services and programs including fitness, yoga, dance, martial arts, meditation, sports, and much more."
-  },
-  {
-    "objectID": "Syllabus.html#plan-for-the-unexpected",
-    "href": "Syllabus.html#plan-for-the-unexpected",
-    "title": "STATS 422 Fall 2025 Syllabus",
-    "section": "Plan for the Unexpected",
-    "text": "Plan for the Unexpected\n\nBruin Alert https://oem.ucla.edu/bruinalert\n\nBruin Safe Online https://bso.ucla.edu/\n\n\n\n\nQuestion\nResponse\n\n\n\nHow will our class meet if we are unable to meet in person?\nIf we are unable to meet on campus for class, there will be an announcement on BruinLearn about how we will be meeting going forward.\n\n\nHow will instruction be delivered if we are unable to meet in person?\nIn lieu of in-person meetings, we will hold online meetings using Zoom and post a mix of videos on BruinLearn, covering the content. In order to ensure accountability we will embed quizzes within the videos and require participation for credit if you are unable to attend live online.\n\n\nHow often do I need to log into BruinLearn?\nIt is expected that you visit the course site daily. If we experience an emergency or if there is another wave of the pandemic, you are expected to participate in the online activities for as long as we are unable to meet on campus.\n\n\nHow will I turn in my homework if we don’t meet in person?\nHomework and other assignments will be turned in through the assignments link within BruinLearn. Instructions for submission can be found within the assignment.\n\n\nHow will I see my Grades?\nAll official grades are posted on MyUCLA. BruinLearn posted grades are subject to change.\n\n\nIf I am ill or cannot attend class for some reason, how can I participate in class?\nPlease contact me directly for more details if you must be absent or have changing situations so that I can understand how we can best help you.\n\n\nWhat if I’m experiencing symptoms, tested positive, or have had contact with a person who has tested positive for COVID-19?\nPlease stay home and do not return to campus or leave your on-campus residence. Complete a Reporting COVID-19 Diagnosis/Symptom form. The Campus Health Officer will follow up with you for next steps. If applicable, the Campus Health Officer will notify faculty members that the student is prohibited from returning to campus until they are cleared by Health Services. Please review UCLA’s COVID-19 protocols https://covid-19.ucla.edu/ucla-covid-protocols/.\n\n\nWhat if I’m having personal problems unrelated to illness? Where can I go for help?\nThere are resources listed throughout this document and you are also encouraged to speak, privately, with your professor(s), your peers, or other members of the university community during your time of difficulty."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to Statistics 422",
+    "objectID": "activity/using_OData_params.html#a-strength-of-python",
+    "href": "activity/using_OData_params.html#a-strength-of-python",
+    "title": "Using OData with Python",
     "section": "",
-    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
+    "text": "We want to read the entire dataset from the web for a variety of reasons. OData (Open Data Protocol) is a standardized, REST-based protocol for building and consuming data services over the web. REST means “Representational State Transfer”. It is a type of architecture for designing applications that communicate over the internet.\nThe requests library in Python happens to know how to interact with Socrata (among many other things). The requests library is not part of the Python standard library so you would need to install it (e.g., using conda or pip etc.) but it is a commonly used library.",
     "crumbs": [
-      "Start Here",
-      "Overview"
+      "Activities",
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html",
-    "href": "activity/ggplot2.html",
-    "title": "ggplot part 2",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "activity/using_OData_params.html#odata-examples",
+    "href": "activity/using_OData_params.html#odata-examples",
+    "title": "Using OData with Python",
+    "section": "OData examples",
+    "text": "OData examples\nThe example uses the Washington State Electric Vehicle population files. Many other government websites use OData to distribute data some examples\nLos AngelesSan FranciscoPortlandSeattleMemphisWashington DC\nThe tricky part - the different cities and datasets need slight modifications in code to get the data read. But it is free and may be useful.",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html#loading-libraries",
-    "href": "activity/ggplot2.html#loading-libraries",
-    "title": "ggplot part 2",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "activity/using_OData_params.html#using-python-r-works-too",
+    "href": "activity/using_OData_params.html#using-python-r-works-too",
+    "title": "Using OData with Python",
+    "section": "Using Python (R works too)",
+    "text": "Using Python (R works too)\n\nimport requests\nimport pandas as pd\npd.set_option('display.max_columns', None)\n\nurl = \"https://data.wa.gov/api/odata/v4/f6w7-q2d2?$format=json\"\n\nrows = []\nnext_url = url  # first page\n\nparams = {\n    \"$top\"   : \"100\",\n    \"$select\": \"county,make,model,model_year\"\n}\n\nwhile next_url: # will run while this is not empty \n    print(\"Fetching:\", next_url) # just a status indicator, where are we\n\n    if next_url == url: # on the first pass\n        r = requests.get(next_url, params=params) # apply the parameters on the first\n    else:\n        r = requests.get(next_url) # all other\n\n    r.raise_for_status() # just in case we have an error\n    data = r.json() # converts the response to a python object\n    rows.extend(data[\"value\"])  # make the list longer\n\n    if \"$top\" in params:\n        break\n\n    next_url = data.get(\"@odata.nextLink\") # next_url updated by what the website returns until the end\n\nFetching: https://data.wa.gov/api/odata/v4/f6w7-q2d2?$format=json\n\ndf = pd.DataFrame(rows) # the finished result is converted to a pandas data frame\nprint(f\"Loaded {len(df)} rows\") # just print a new status indicator\n\nLoaded 100 rows\n\ndf = df.drop(columns=['@odata.id'], errors='ignore')\ndf.head() # take a look at the top\n\n      county model_year    make    model\n0   Thurston       2024    AUDI     Q5 E\n1     Yakima       2018    AUDI       A3\n2       King       2015  NISSAN     LEAF\n3       King       2019    AUDI   E-TRON\n4  Snohomish       2022   TESLA  MODEL X\n\n\nR could have read it too with the package RSocrata. You can “read” it too with a slight modification of the URL:\nhttps://data.wa.gov/resource/f6w7-q2d2.json",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
-    "href": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
-    "title": "ggplot part 2",
-    "section": "the details are in the aes() mappings",
-    "text": "the details are in the aes() mappings\n\nthe aes() values commonly seen are: color, fill, shape, group, linetype\ntypically only x and y are required (sometimes just x)\nhttps://ggplot2.tidyverse.org/reference/aes.html\nand there are countless options BUT the individual geoms may only understand some of them:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nif we were to re-run it using geom_smooth and leaving everything else the same, we would see an error (but it would create our plot)",
+    "objectID": "activity/using_OData_params.html#once-read",
+    "href": "activity/using_OData_params.html#once-read",
+    "title": "Using OData with Python",
+    "section": "Once read",
+    "text": "Once read\nOnce the data is read, we could save it. Pandas is perfectly capable.\n\noutput_path = \"washington_ev_data.csv\"  \ndf.to_csv(output_path, index=False)\nprint(f\"Data saved to {output_path}\")\n\nData saved to washington_ev_data.csv",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html#example-read-some-data",
-    "href": "activity/ggplot2.html#example-read-some-data",
-    "title": "ggplot part 2",
-    "section": "Example: Read some data",
-    "text": "Example: Read some data\nPlease, you decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some outside of their R packages\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "activity/using_OData_params.html#returning-to-r",
+    "href": "activity/using_OData_params.html#returning-to-r",
+    "title": "Using OData with Python",
+    "section": "Returning to R",
+    "text": "Returning to R\nWe could have saved the data using R too. Python gives us many more options. Using the reticulate library we can access the pandas dataframe:\n\nlibrary(dplyr)\nlibrary(readr)\nlibrary(ggplot2)\nlibrary(reticulate)\n\nwa_ev_data &lt;- py$df\nglimpse(wa_ev_data)\n\nRows: 100\nColumns: 4\n$ county     &lt;chr&gt; \"Thurston\", \"Yakima\", \"King\", \"King\", \"Snohomish\", \"Snohomi…\n$ model_year &lt;chr&gt; \"2024\", \"2018\", \"2015\", \"2019\", \"2022\", \"2016\", \"2019\", \"20…\n$ make       &lt;chr&gt; \"AUDI\", \"AUDI\", \"NISSAN\", \"AUDI\", \"TESLA\", \"KIA\", \"NISSAN\",…\n$ model      &lt;chr&gt; \"Q5 E\", \"A3\", \"LEAF\", \"E-TRON\", \"MODEL X\", \"SOUL\", \"LEAF\", …\n\n\nand do whatever we want to it.",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html#discover-their-content",
-    "href": "activity/ggplot2.html#discover-their-content",
-    "title": "ggplot part 2",
-    "section": "Discover their content",
-    "text": "Discover their content\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "activity/using_OData_params.html#ggplot---one-dimension",
+    "href": "activity/using_OData_params.html#ggplot---one-dimension",
+    "title": "Using OData with Python",
+    "section": "ggplot - one dimension",
+    "text": "ggplot - one dimension\nRecall, ggplot is simple and we can add layers to increase the control and complexity.\nStart with the data\n\nwa_ev_data &lt;- wa_ev_data %&gt;%\n    mutate(myear = as.numeric(model_year))\n\nPass the data to ggplot. Specify your aesthetic either in the global ggplot function or in a specific geom. Choose a geom.\ngeom_histogram\n\nggplot(wa_ev_data, \n    aes(x = myear)) +\n  geom_histogram( \n    binwidth = 1, \n    fill = \"lightgreen\", \n    color = \"black\") +\n  labs(title = \"Electric Vehicles by Model Year - Histogram\",\n       x = \"Model Year\", y = \"Count\")\n\n\n\n\n\n\n\ngeom_bar\n\nggplot(wa_ev_data) +\n  geom_bar(\n    aes(x = model_year),\n    fill = \"cornflowerblue\", \n    color = \"black\") +\n  labs(title = \"Electric Vehicles by Model Year - Barplot\",\n       x = \"Model Year\", y = \"Count\")\n\n\n\n\n\n\n\ngeom_col\nThis is for pre-aggregated data, I’ll groupby/summarise the population then plot\n\nwa_ev_agg &lt;- wa_ev_data %&gt;%\n  group_by(model_year) %&gt;%\n  summarise(totals = n())\n\nwa_ev_agg\n\n# A tibble: 15 × 2\n   model_year totals\n   &lt;chr&gt;       &lt;int&gt;\n 1 2012            2\n 2 2013            3\n 3 2014            2\n 4 2015            4\n 5 2016            9\n 6 2017            8\n 7 2018           22\n 8 2019           14\n 9 2020           10\n10 2021            5\n11 2022            3\n12 2023            8\n13 2024            4\n14 2025            5\n15 2026            1\n\n\nresult\n\nggplot(wa_ev_agg) +\n  geom_col(\n    aes(x = model_year, y = totals),\n    fill = \"magenta\", \n    color = \"black\") +\n  labs(title = \"Electric Vehicles by Model Year - Barplot\",\n       x = \"Model Year\", y = \"Count\")\n\n\n\n\n\n\n\nresult 2 multiple aes()\n\nggplot(wa_ev_agg, aes(x = model_year)) +\n  geom_col(\n    aes(y = totals),\n    fill = \"yellow\", \n    color = \"black\") +\n  geom_line(\n    aes(y = totals, group = 1), # forces ggplot to connect a single path\n    linewidth = 1.2, \n    color = \"blue\") + \n  labs(title = \"Electric Vehicles by Model Year - Barplot & Line\",\n       x = \"Model Year\", y = \"Total\")",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html#basic-examination",
-    "href": "activity/ggplot2.html#basic-examination",
-    "title": "ggplot part 2",
-    "section": "Basic examination",
-    "text": "Basic examination\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "activity/using_OData_params.html#takeaways",
+    "href": "activity/using_OData_params.html#takeaways",
+    "title": "Using OData with Python",
+    "section": "Takeaways",
+    "text": "Takeaways\n\nPython is very strong in the acquistion of data\nPython and R can work together\nggplot is elegant and not as difficult as it may first seem\nbut it can be slower than some of Python’s visualization libraries",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot2.html#eda-see-chapter-10-of-r-for-data-science",
-    "href": "activity/ggplot2.html#eda-see-chapter-10-of-r-for-data-science",
-    "title": "ggplot part 2",
-    "section": "EDA (see Chapter 10 of R for Data Science)",
-    "text": "EDA (see Chapter 10 of R for Data Science)\nEDA (exploratory data analysis) is very visual and your excellent graphical skills will be useful.\nData Cleaning\nThere is none of that in our class (we will just delete), but missing values need a decision in your research (e.g., imputation, deletion).\nI will misuse summary() it’s handy (no need to load libraries)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand it reveals the NAs and some heavily rounded statistics. If you need to use a mean else, do not rely on summary() this is for a quick look at the basic statistics only.\nOther things you can do\n\nBe sure each variable has been read as its correct type (numeric, non-numeric)\nAlways check for duplicates - they can mess up any analysis\nIdentify possible outliers in the data and decide what to do with them.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ncheck distributions\n\nCheck the distribution and skewness of your data\n\nHistograms maybe boxplots\n\nand use group_by() in dplyr if your data has categorical information or numeric information with a limited number of unique values, group_by() is an important tool - example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nReorganizing information with arrange() in dplryr may offer additional insight that is more difficult to recognize it its natural or alphabetically ordered format:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExploratory Visualization\n\nUnivariate – so bar chart, histogram - here you are trying to understand the distribution.\nBivariate or Multivariate – the scatter plot is the most basic but a boxplot, a heatmap, contour maps etc.",
-    "crumbs": [
-      "Activities",
-      "Lecture 2 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot2.html#example",
-    "href": "activity/ggplot2.html#example",
-    "title": "ggplot part 2",
-    "section": "Example",
-    "text": "Example\nCorrelation Analysis\nA correlation would be generated very early in the process of using data for research\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe would then move to a visualization of the relationship\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 2 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/pyodide_test.html",
-    "href": "activity/pyodide_test.html",
-    "title": "Pyodide and Quarto HTML Documents",
-    "section": "",
-    "text": "a This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 3 Activity pyodide"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
@@ -1856,99 +2504,177 @@
     ]
   },
   {
-    "objectID": "activity/using_OData_params.html",
-    "href": "activity/using_OData_params.html",
-    "title": "Using OData with Python",
+    "objectID": "activity/pyodide_test.html",
+    "href": "activity/pyodide_test.html",
+    "title": "Pyodide and Quarto HTML Documents",
     "section": "",
-    "text": "We want to read the entire dataset from the web for a variety of reasons. OData (Open Data Protocol) is a standardized, REST-based protocol for building and consuming data services over the web. REST means “Representational State Transfer”. It is a type of architecture for designing applications that communicate over the internet.\nThe requests library in Python happens to know how to interact with Socrata (among many other things). The requests library is not part of the Python standard library so you would need to install it (e.g., using conda or pip etc.) but it is a commonly used library.",
+    "text": "a This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Activities",
-      "Lecture 3 OData, Python + R"
+      "Lecture 3 Activity pyodide"
     ]
   },
   {
-    "objectID": "activity/using_OData_params.html#a-strength-of-python",
-    "href": "activity/using_OData_params.html#a-strength-of-python",
-    "title": "Using OData with Python",
+    "objectID": "activity/ggplot2.html",
+    "href": "activity/ggplot2.html",
+    "title": "ggplot part 2",
     "section": "",
-    "text": "We want to read the entire dataset from the web for a variety of reasons. OData (Open Data Protocol) is a standardized, REST-based protocol for building and consuming data services over the web. REST means “Representational State Transfer”. It is a type of architecture for designing applications that communicate over the internet.\nThe requests library in Python happens to know how to interact with Socrata (among many other things). The requests library is not part of the Python standard library so you would need to install it (e.g., using conda or pip etc.) but it is a commonly used library.",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Activities",
-      "Lecture 3 OData, Python + R"
+      "Lecture 2 Activity 2"
     ]
   },
   {
-    "objectID": "activity/using_OData_params.html#odata-examples",
-    "href": "activity/using_OData_params.html#odata-examples",
-    "title": "Using OData with Python",
-    "section": "OData examples",
-    "text": "OData examples\nThe example uses the Washington State Electric Vehicle population files. Many other government websites use OData to distribute data some examples\nLos AngelesSan FranciscoPortlandSeattleMemphisWashington DC\nThe tricky part - the different cities and datasets need slight modifications in code to get the data read. But it is free and may be useful.",
-    "crumbs": [
-      "Activities",
-      "Lecture 3 OData, Python + R"
-    ]
-  },
-  {
-    "objectID": "activity/using_OData_params.html#using-python-r-works-too",
-    "href": "activity/using_OData_params.html#using-python-r-works-too",
-    "title": "Using OData with Python",
-    "section": "Using Python (R works too)",
-    "text": "Using Python (R works too)\n\nimport requests\nimport pandas as pd\npd.set_option('display.max_columns', None)\n\nurl = \"https://data.wa.gov/api/odata/v4/f6w7-q2d2?$format=json\"\n\nrows = []\nnext_url = url  # first page\n\nparams = {\n    \"$top\"   : \"100\",\n    \"$select\": \"county,make,model,model_year\"\n}\n\nwhile next_url: # will run while this is not empty \n    print(\"Fetching:\", next_url) # just a status indicator, where are we\n\n    if next_url == url: # on the first pass\n        r = requests.get(next_url, params=params) # apply the parameters on the first\n    else:\n        r = requests.get(next_url) # all other\n\n    r.raise_for_status() # just in case we have an error\n    data = r.json() # converts the response to a python object\n    rows.extend(data[\"value\"])  # make the list longer\n\n    if \"$top\" in params:\n        break\n\n    next_url = data.get(\"@odata.nextLink\") # next_url updated by what the website returns until the end\n\nFetching: https://data.wa.gov/api/odata/v4/f6w7-q2d2?$format=json\n\ndf = pd.DataFrame(rows) # the finished result is converted to a pandas data frame\nprint(f\"Loaded {len(df)} rows\") # just print a new status indicator\n\nLoaded 100 rows\n\ndf = df.drop(columns=['@odata.id'], errors='ignore')\ndf.head() # take a look at the top\n\n      county model_year    make    model\n0   Thurston       2024    AUDI     Q5 E\n1     Yakima       2018    AUDI       A3\n2       King       2015  NISSAN     LEAF\n3       King       2019    AUDI   E-TRON\n4  Snohomish       2022   TESLA  MODEL X\n\n\nR could have read it too with the package RSocrata. You can “read” it too with a slight modification of the URL:\nhttps://data.wa.gov/resource/f6w7-q2d2.json",
-    "crumbs": [
-      "Activities",
-      "Lecture 3 OData, Python + R"
-    ]
-  },
-  {
-    "objectID": "activity/using_OData_params.html#once-read",
-    "href": "activity/using_OData_params.html#once-read",
-    "title": "Using OData with Python",
-    "section": "Once read",
-    "text": "Once read\nOnce the data is read, we could save it. Pandas is perfectly capable.\n\noutput_path = \"washington_ev_data.csv\"  \ndf.to_csv(output_path, index=False)\nprint(f\"Data saved to {output_path}\")\n\nData saved to washington_ev_data.csv",
-    "crumbs": [
-      "Activities",
-      "Lecture 3 OData, Python + R"
-    ]
-  },
-  {
-    "objectID": "activity/using_OData_params.html#returning-to-r",
-    "href": "activity/using_OData_params.html#returning-to-r",
-    "title": "Using OData with Python",
-    "section": "Returning to R",
-    "text": "Returning to R\nWe could have saved the data using R too. Python gives us many more options. Using the reticulate library we can access the pandas dataframe:\n\nlibrary(dplyr)\nlibrary(readr)\nlibrary(ggplot2)\nlibrary(reticulate)\n\nwa_ev_data &lt;- py$df\nglimpse(wa_ev_data)\n\nRows: 100\nColumns: 4\n$ county     &lt;chr&gt; \"Thurston\", \"Yakima\", \"King\", \"King\", \"Snohomish\", \"Snohomi…\n$ model_year &lt;chr&gt; \"2024\", \"2018\", \"2015\", \"2019\", \"2022\", \"2016\", \"2019\", \"20…\n$ make       &lt;chr&gt; \"AUDI\", \"AUDI\", \"NISSAN\", \"AUDI\", \"TESLA\", \"KIA\", \"NISSAN\",…\n$ model      &lt;chr&gt; \"Q5 E\", \"A3\", \"LEAF\", \"E-TRON\", \"MODEL X\", \"SOUL\", \"LEAF\", …\n\n\nand do whatever we want to it.",
-    "crumbs": [
-      "Activities",
-      "Lecture 3 OData, Python + R"
-    ]
-  },
-  {
-    "objectID": "activity/using_OData_params.html#ggplot---one-dimension",
-    "href": "activity/using_OData_params.html#ggplot---one-dimension",
-    "title": "Using OData with Python",
-    "section": "ggplot - one dimension",
-    "text": "ggplot - one dimension\nRecall, ggplot is simple and we can add layers to increase the control and complexity.\nStart with the data\n\nwa_ev_data &lt;- wa_ev_data %&gt;%\n    mutate(myear = as.numeric(model_year))\n\nPass the data to ggplot. Specify your aesthetic either in the global ggplot function or in a specific geom. Choose a geom.\ngeom_histogram\n\nggplot(wa_ev_data, \n    aes(x = myear)) +\n  geom_histogram( \n    binwidth = 1, \n    fill = \"lightgreen\", \n    color = \"black\") +\n  labs(title = \"Electric Vehicles by Model Year - Histogram\",\n       x = \"Model Year\", y = \"Count\")\n\n\n\n\n\n\n\ngeom_bar\n\nggplot(wa_ev_data) +\n  geom_bar(\n    aes(x = model_year),\n    fill = \"cornflowerblue\", \n    color = \"black\") +\n  labs(title = \"Electric Vehicles by Model Year - Barplot\",\n       x = \"Model Year\", y = \"Count\")\n\n\n\n\n\n\n\ngeom_col\nThis is for pre-aggregated data, I’ll groupby/summarise the population then plot\n\nwa_ev_agg &lt;- wa_ev_data %&gt;%\n  group_by(model_year) %&gt;%\n  summarise(totals = n())\n\nwa_ev_agg\n\n# A tibble: 15 × 2\n   model_year totals\n   &lt;chr&gt;       &lt;int&gt;\n 1 2012            2\n 2 2013            3\n 3 2014            2\n 4 2015            4\n 5 2016            9\n 6 2017            8\n 7 2018           22\n 8 2019           14\n 9 2020           10\n10 2021            5\n11 2022            3\n12 2023            8\n13 2024            4\n14 2025            5\n15 2026            1\n\n\nresult\n\nggplot(wa_ev_agg) +\n  geom_col(\n    aes(x = model_year, y = totals),\n    fill = \"magenta\", \n    color = \"black\") +\n  labs(title = \"Electric Vehicles by Model Year - Barplot\",\n       x = \"Model Year\", y = \"Count\")\n\n\n\n\n\n\n\nresult 2 multiple aes()\n\nggplot(wa_ev_agg, aes(x = model_year)) +\n  geom_col(\n    aes(y = totals),\n    fill = \"yellow\", \n    color = \"black\") +\n  geom_line(\n    aes(y = totals, group = 1), # forces ggplot to connect a single path\n    linewidth = 1.2, \n    color = \"blue\") + \n  labs(title = \"Electric Vehicles by Model Year - Barplot & Line\",\n       x = \"Model Year\", y = \"Total\")",
-    "crumbs": [
-      "Activities",
-      "Lecture 3 OData, Python + R"
-    ]
-  },
-  {
-    "objectID": "activity/using_OData_params.html#takeaways",
-    "href": "activity/using_OData_params.html#takeaways",
-    "title": "Using OData with Python",
-    "section": "Takeaways",
-    "text": "Takeaways\n\nPython is very strong in the acquistion of data\nPython and R can work together\nggplot is elegant and not as difficult as it may first seem\nbut it can be slower than some of Python’s visualization libraries",
-    "crumbs": [
-      "Activities",
-      "Lecture 3 OData, Python + R"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "activity/ggplot2.html#loading-libraries",
+    "href": "activity/ggplot2.html#loading-libraries",
+    "title": "ggplot part 2",
     "section": "",
-    "text": "About this site"
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
+    "href": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
+    "title": "ggplot part 2",
+    "section": "the details are in the aes() mappings",
+    "text": "the details are in the aes() mappings\n\nthe aes() values commonly seen are: color, fill, shape, group, linetype\ntypically only x and y are required (sometimes just x)\nhttps://ggplot2.tidyverse.org/reference/aes.html\nand there are countless options BUT the individual geoms may only understand some of them:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nif we were to re-run it using geom_smooth and leaving everything else the same, we would see an error (but it would create our plot)",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#example-read-some-data",
+    "href": "activity/ggplot2.html#example-read-some-data",
+    "title": "ggplot part 2",
+    "section": "Example: Read some data",
+    "text": "Example: Read some data\nPlease, you decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some outside of their R packages\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#discover-their-content",
+    "href": "activity/ggplot2.html#discover-their-content",
+    "title": "ggplot part 2",
+    "section": "Discover their content",
+    "text": "Discover their content\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#basic-examination",
+    "href": "activity/ggplot2.html#basic-examination",
+    "title": "ggplot part 2",
+    "section": "Basic examination",
+    "text": "Basic examination\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#eda-see-chapter-10-of-r-for-data-science",
+    "href": "activity/ggplot2.html#eda-see-chapter-10-of-r-for-data-science",
+    "title": "ggplot part 2",
+    "section": "EDA (see Chapter 10 of R for Data Science)",
+    "text": "EDA (see Chapter 10 of R for Data Science)\nEDA (exploratory data analysis) is very visual and your excellent graphical skills will be useful.\nData Cleaning\nThere is none of that in our class (we will just delete), but missing values need a decision in your research (e.g., imputation, deletion).\nI will misuse summary() it’s handy (no need to load libraries)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand it reveals the NAs and some heavily rounded statistics. If you need to use a mean else, do not rely on summary() this is for a quick look at the basic statistics only.\nOther things you can do\n\nBe sure each variable has been read as its correct type (numeric, non-numeric)\nAlways check for duplicates - they can mess up any analysis\nIdentify possible outliers in the data and decide what to do with them.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ncheck distributions\n\nCheck the distribution and skewness of your data\n\nHistograms maybe boxplots\n\nand use group_by() in dplyr if your data has categorical information or numeric information with a limited number of unique values, group_by() is an important tool - example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nReorganizing information with arrange() in dplryr may offer additional insight that is more difficult to recognize it its natural or alphabetically ordered format:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExploratory Visualization\n\nUnivariate – so bar chart, histogram - here you are trying to understand the distribution.\nBivariate or Multivariate – the scatter plot is the most basic but a boxplot, a heatmap, contour maps etc.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#example",
+    "href": "activity/ggplot2.html#example",
+    "title": "ggplot part 2",
+    "section": "Example",
+    "text": "Example\nCorrelation Analysis\nA correlation would be generated very early in the process of using data for research\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe would then move to a visualization of the relationship\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Statistics 422",
+    "section": "",
+    "text": "This site was produced with WebR and Quarto in RStudio and is currently hosted by GitHub. It was created for the students of Statistics & Data Science 422.\nTo learn more about Quarto websites please visit https://quarto.org/docs/websites.\nTo learn more about WebR please visit https://quarto-webr.thecoatlessprofessor.com/qwebr-first-steps.html.\nAnd this site is hosted by GitHub (free) and easy setup and maintenance https://pages.github.com/",
+    "crumbs": [
+      "Start Here",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "Syllabus.html",
+    "href": "Syllabus.html",
+    "title": "STATS 422 Fall 2025 Syllabus",
+    "section": "",
+    "text": "The purpose of Statistics 422 is to gain a thorough understanding of the fundamentals of data visualization in Statistics & Data Science and develop the ability to perform data visualization tasks in R and/or Python while incorporating additional supportive software tools.\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\nContact Info: BruinLearn mail or vlew@stat.ucla.edu\nOffice Hours: W after class (MS 5117) and F 3pm-5pm (Zoom) and you are welcome to schedule Zoom appointment(s), most evenings & weekends too\nMeeting Times and Locations: W 6pm - 8:50pm Mathematical Sciences 5117"
+  },
+  {
+    "objectID": "Syllabus.html#introduction",
+    "href": "Syllabus.html#introduction",
+    "title": "STATS 422 Fall 2025 Syllabus",
+    "section": "",
+    "text": "The purpose of Statistics 422 is to gain a thorough understanding of the fundamentals of data visualization in Statistics & Data Science and develop the ability to perform data visualization tasks in R and/or Python while incorporating additional supportive software tools.\nInstructor: Vivian Lew\nOffice: Math Sciences 8923\nContact Info: BruinLearn mail or vlew@stat.ucla.edu\nOffice Hours: W after class (MS 5117) and F 3pm-5pm (Zoom) and you are welcome to schedule Zoom appointment(s), most evenings & weekends too\nMeeting Times and Locations: W 6pm - 8:50pm Mathematical Sciences 5117"
+  },
+  {
+    "objectID": "Syllabus.html#proposed-learning-outcomes",
+    "href": "Syllabus.html#proposed-learning-outcomes",
+    "title": "STATS 422 Fall 2025 Syllabus",
+    "section": "Proposed Learning Outcomes",
+    "text": "Proposed Learning Outcomes\nThe overall goal of this course is to provide students with the foundations necessary for understanding and building on their existing skillset with emphasis on the clear and effective visual communication of data. After this quarter, students will have:\n\nAn understanding of different ways to visually represent data (e.g., bar charts, line graphs, scatter plots, heat maps), and when and how to use them effectively to represent different kinds of data and relationships,\nAn understanding of how to explore and analyze data to discover patterns, trends, insights and then to communicate these to a larger audience,\nAn understanding of data models: ways of structuring, organizing and transforming different types of data (quantitative, qualitative, spatial) for effective visualization,\nAn understanding of graphical perception/perceived visual information. Applying some of the cognitive principles related to visual perception and to create compelling visualizations,\nThe ability to use data visualization tools and supporting software, for example open-source libraries in Python (e.g., Matplotlib, Seaborn) and R (e.g., ggplot2) with , Quarto, and others,\nDesigning and creating interactive data visualizations that allow users to explore data at their own pace, using tools such as Streamlit (Python) or Shiny (R),\nProducing a brief thesis-styled report with visualizations applied in a student’s personal domains of interest such as business, entertainment, healthcare, public policy, and encouraging novel combinations of these (e.g., business + law + data)."
+  },
+  {
+    "objectID": "Syllabus.html#course-materials-resources",
+    "href": "Syllabus.html#course-materials-resources",
+    "title": "STATS 422 Fall 2025 Syllabus",
+    "section": "Course Materials & Resources",
+    "text": "Course Materials & Resources\nAll course related materials are posted to BruinLearn, https://bruinlearn.ucla.edu/courses/217546, all assignments are uploaded to that site as well typically in the form of PDF files, photographs or recordings. Official course grades are found online on myUCLA only. Other materials used:\nText\nWe will use many sources this quarter, but a reasonable (optional) textbook is:\n\nHealy, Kieran. Data visualization: a practical introduction. Princeton University Press, 2018. https://kieranhealy.org/publications/dataviz/\n\nSoftware\nWe will try to strike a balance given the many choices available to us. All of these are free:\n\nR https://www.r-project.org\n\nggplot2 https://ggplot2.tidyverse.org/\n\nShiny https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html\n\n\n\nPython https://www.python.org/\n\nStreamlit https://streamlit.io/\n\n\n\nTableau https://www.tableau.com/academic/students\n\nOptional Sites\n\nA GitHub presence is strongly encouraged but not required. Example: https://github.com/mwaskom (the author and maintainer of Seaborn)\nQuarto is useful but not required. https://quarto.org/\n\nOverleaf is useful but not required. https://www.overleaf.com/\n\nO’Reilly library access https://www.oreilly.com/library-access/\n\nA data visualization gallery https://datavizproject.com/ (there are many, make an effort to seek inspiration)\nOptional materials\n\nTufte, Edward R. The visual display of quantitative information. Vol. 2. Cheshire, CT: Graphics press, 2001.\nYau, Nathan. Visualize this: the FlowingData guide to design, visualization, and statistics. John Wiley & Sons, 2011.\n\nWickham, Hadley. et. al. R for Data Science, 2nd Edition O’Reilly Media, Inc. 2023 and TidyTuesday"
+  },
+  {
+    "objectID": "Syllabus.html#grading",
+    "href": "Syllabus.html#grading",
+    "title": "STATS 422 Fall 2025 Syllabus",
+    "section": "Grading",
+    "text": "Grading\nA letter grade is assigned upon the successful completion of this course.\nFinal Grade Determination\nFinal grades are assigned according to UCLA’s recommended straight scale grading with minor modifications at the high and low end:\n\n50% and below: F\n51.0 - 76.9%: C, 77.0 - 79.9%: C+\n80.0 - 82.9%: B-, 83.0 - 86.9%: B, 87.0 - 89.9%: B+\n90.0 - 92.9%: A-, 93.0% and up A\n\nI do not assign C-, D+, D, or D-. I also do not assign A+.\nGrading Component Weights\n\n\n30% (in person not required, try an activity) Attendance\n\nBeing there for the class, this involves attending regularly\nInteracting with difficult classmates in small teams during class meetings\n\n\n\n30% Three (all Individual) Homework Assignments\n\nWeb Portfolio (Due before the end of Week 2)\nProfessional quality report using visualization (Due before the end of Week 5)\nA “pitch” book presentation (recording) (Due before the end of Week 8)\n\n\n20% (Individual) Interactive Web App: Find your data, design a website to showcase your skills, make reproducible code available and present it with a video, due by the end of Finals Week\n20% (Individual) Final Project: Find your own data, produce a report, make reproducible code available and present it with a video, due by the end of Finals Week\nAssignment Late Policy\nIf you submit your homework assignments before I start the grading, it will not be counted as late even if it past the deadline. Once I begin grading it is counted as late and will not be accepted for full credit (but will still be accepted for partial credit).\nThe Web App and Final Project should both be submitted before the end of Week 11 (finals week) as grading will begin immediately. I will still accept web apps and projects for partial credit if you miss the deadline."
+  },
+  {
+    "objectID": "Syllabus.html#course-outline-this-is-subject-to-change",
+    "href": "Syllabus.html#course-outline-this-is-subject-to-change",
+    "title": "STATS 422 Fall 2025 Syllabus",
+    "section": "Course Outline (this is subject to change)",
+    "text": "Course Outline (this is subject to change)\n\n\nDate\nTopic & Suggested Reading\n\n\n\nWeek 1 10/1\nFirst Day business; software; story telling Healy Ch. 1/2; Knaflic Ch. 7\n\n\n\nWeek 2 10/8\nData Exploration/Analysis; Visualization Insights & Types Wickham Ch. 10 ; Healy Ch. 3/4; Yau Ch. 3; Wilke Ch. 5\n\n\n\nWeek 3 10/15\nReorganizing Data, Python Visualization Tools Yau Ch.2, Wickham Ch. 5; Molin\n\n\n\nWeek 4 10/22\nInteractive: R/Shiny, Python/Streamlit Wickham ; Richards ; Examples\n\n\n\nWeek 5 10/29\nVisualizing Spatial Data and Time Dependent Data Healy Ch. 7; Yau Ch. 8; Wilke Ch. 15; Yau Ch. 4; Wilke Ch. 13 and Wilke Ch. 14\n\n\n\nWeek 6 11/5\nGuest speaker 1\n\n\nWeek 7 11/12\nGuest speaker 2\n\n\nWeek 8 11/19\nFinish Time-Dependent examine Hierarchical Data Network (relational) visualizations\n\n\nWeek 9 11/26\nNO MEETING. A pre-recorded lecture topic TBD, optional readings from Milligan; and also Sleeper\n\n\n\nWeek 10 12/3\nAnimating visualizations with gganimate and htmlwidgets https://bookdown.org/yihui/rmarkdown/html-widgets.html, https://gallery.htmlwidgets.org/, https://www.htmlwidgets.org/index.html, https://cran.r-project.org/web/packages/htmlwidgets/vignettes/develop_intro.html\n\n\nWeek 11 12/12\nNo meetings but Web App and Final Report are due no later than 11:59pm 12/12"
+  },
+  {
+    "objectID": "Syllabus.html#academic-dishonesty",
+    "href": "Syllabus.html#academic-dishonesty",
+    "title": "STATS 422 Fall 2025 Syllabus",
+    "section": "Academic Dishonesty",
+    "text": "Academic Dishonesty\nAs Bruins, we uphold the UCLA Student Code of Conduct. Academic dishonesty means activities like plagiarism, unauthorized material used on exams, unauthorized collaborations etc. According to Senate Regulation A-306, if an instructor encounters a problem, the instructor must report it to the Dean of Students. Sources: https://www.deanofstudents.ucla.edu/Student-Conduct#10690514-student-conduct-code, https://ucla.app.box.com/s/8xq1jyrvqhs9343e4rzyvporx9lt8u1g\nAI Assistant policy\nYour instructor’s belief is AI such as Claude, ChatGPT, etc. should be used – wisely – as if it were an amazingly clever tutor or friend. But copying and pasting the code of the first example’s (below) ChatGPT response is not about learning and chances are, you will forget how to do it if you do not do it regularly. Asking ChatGPT questions in the second way gives your mind the opportunity to develop the skills scaffolding and retain the knowledge long after this course is over.\n\n\n\n\n\n\nQuestion\nResponse\n\n\n\nPlease write some code in R that splits a dataset into test and training.\ninstall.packages(“caret”) # Run only if not already installed\n\n\n\nlibrary(caret)\n\n\n\nset.seed(123)\n\n\n\ntrain_indices &lt;- createDataPartition(mtcars$mpg, p = 0.7, list = FALSE)\n\n\n\ntrain_data &lt;- mtcars[train_indices, ]\n\n\n\ntest_data &lt;- mtcars[-train_indices, ]\n\n\n\nLet me know if you’d like to stratify the split (e.g., ensure balance on a categorical variable) or save the result to file.\n\n\nPlease teach me on how to write code using base R that splits a dataset into training and test with a 70-30 split - but don’t write the code for me, I want to learn how to think it through on my own.\nAbsolutely, I’d be glad to guide you on how to approach this! 1. Understanding the Data: - Before you begin, familiarize yourself with the dataset. Use functions like str(), head(), and summary() to understand the structure and contents of your data. 2. Setting a Seed: - To ensure that your results are reproducible, you will want to set a seed using the set.seed() function. This function controls the random number generator in R. 3. Determining the Number of Rows: - You need to know the total number of rows in your dataset to create the splits. The nrow() function can help you determine this.\n\n\n\n4. Calculating Split Sizes: - Next, determine how many rows should go into your training and test sets. You’ll want 70% of the data to be in the training set and 30% in the test set. Use arithmetic operations to calculate the respective sizes.\n\n\n\n5. Creating a Random Sample of Indices: - To create your training set, you’ll need to randomly select 70% of the indices (row numbers) from your dataset. You can use the sample() function to do this. Remember to use the total number of rows and the size of the training set as parameters in this function.\n\n\n\n6. Subsetting the Dataset: - Once you have a vector of random indices, use it to subset your dataset into two parts: one for training and one for testing. In R, you can subset a data frame using square brackets []. You’ll use the vector of random indices to select rows for the training set, and the - operator to select the remaining rows for the test set.\n\n\n\n7. Verifying Your Split: - After creating your training and test sets, verify that you’ve split the data correctly. Use the dim() function to check the dimensions of each set and ensure the split ratio is approximately 70-30. You can also use the head() function to quickly view the top rows of each set and ensure they look correct.  Remember to write your code step by step, verifying each part before moving on to the next, to avoid confusion and ensure accuracy. Once you are confident in your understanding of each step, try to write the code on your own. Good luck!\n\n\n\nAI assistants are wonderful tools to help you with subjects that are outside of your skill set which do not make sense for you to invest huge amounts of time or resources remembering/learning."
+  },
+  {
+    "objectID": "Syllabus.html#resources",
+    "href": "Syllabus.html#resources",
+    "title": "STATS 422 Fall 2025 Syllabus",
+    "section": "Resources",
+    "text": "Resources\nCOVID-19 health and safety\nIn compliance with Los Angeles County policies effective January 6 2023, UCLA strongly recommends indoor masking, regardless of vaccination status. Testing is also strongly encouraged. See\n\nhttps://covid-19.ucla.edu/covid-protocols-at-a-glance/\nhttp://publichealth.lacounty.gov/phcommon/public/media/mediapubHPdisplay.cfm\n\nSome of us might feel more comfortable wearing masks and continuing to social distance, for example, during small-group work in class or section. All of our preferences are reasonable, and it is important that we treat each others’ preferences with respect and care so that we each feel comfortable and prepared to learn in class. You can find the most current policies on campus requirements on the UCLA COVID-19 resources site https://covid-19.ucla.edu/.\nAccessible Education\nStudents with accessibility issues are welcome and encouraged to seek accommodation. Students needing academic accommodations based on a documented disability should contact the Center for Accessible Education (CAE) at (310)825-1501 or in person at Murphy Hall A255. In order to ensure accommodations, students need to contact CAE within the first two weeks of the term.\nDealing with Financial Stress\nLife is unpredictable and can create financial emergencies. If you find yourself in this situation, please seek assistance:\n\nBruin Shelter: http://www.bruinshelter.org/ Provides a safe, supportive environment for fellow college students experiencing homelessness by fostering a collaborative effort between universities, community-based organizations, and service providers.\nThe CPO Food Shelter: https://basicneeds.ucla.edu/services/cpo-food-closet Provides free food for any UCLA student who may be experiencing hunger and/or struggling to attain food due to financial hardships.\nTitle IX\nUCLA prohibits gender discrimination, including sexual harassment, domestic and dating violence, sexual assault, and stalking. If you have experienced sexual harassment or sexual violence, there are a variety of resources to assist you.\n\nCONFIDENTIAL RESOURCES: You can receive confidential support and advocacy at the CARE Advocacy Office for Sexual and Gender-Based Violence, 1st Floor Wooden Center West, (310) 206-2465. Counseling and Psychological Services (CAPS) also provides confidential counseling to all students and can be reached 24/7 at (310) 825-0768.\nNON-CONFIDENTIAL RESOURCES: You can also report sexual violence or sexual harassment directly to the University’s Title IX Coordinator, 2241 Murphy Hall, titleix@conet.ucla.edu, (310) 206-3417. Reports to law enforcement can be made to UCPD at (310) 825-1491. These offices may be required to pursue an official investigation.\nPsychological Health, Well-Being and Resilience\nUCLA is renowned for academic excellence, and yet we know that many students feel overwhelmed at times by demands to succeed academically, socially and personally. Our campus community is committed to helping all students thrive, learn to cope with stress, and build resilience. Remember, self-care is a skill that is critical to your long-term success. Here are some of the many resources available at UCLA to support you:\n\nCounseling and Psychological Services (CAPS):https://www.counseling.ucla.edu/ Provides counseling and other psychological/mental health services to students. Walk-in hours are Monday-Thursday 8am-4:30pm and Friday 9am-4:30pm in John Wooden Center West. Crisis counseling is also available 24 hours/day at (310) 825-0768.\nAshe Student Health and Wellness Center:http://www.studenthealth.ucla.edu Provides high quality and accessible ambulatory healthcare and education by caring professionals to support the academic success and personal development of all UCLA students.\nHealthy Campus Initiative (HCI): https://healthy.ucla.edu Provides links to a wide variety of resources for enhancing physical and psychological well-being, positive social interactions, healthy sleep, healthy eating, healthy physical activity and more.\nCampus and Student Resilience: https://risecenter.ucla.edu/ Provides programs to promote resilience and trains students to help support their peers.\nUCLA Recreation: https://www.recreation.ucla.edu/ Offers a broad array of services and programs including fitness, yoga, dance, martial arts, meditation, sports, and much more."
+  },
+  {
+    "objectID": "Syllabus.html#plan-for-the-unexpected",
+    "href": "Syllabus.html#plan-for-the-unexpected",
+    "title": "STATS 422 Fall 2025 Syllabus",
+    "section": "Plan for the Unexpected",
+    "text": "Plan for the Unexpected\n\nBruin Alert https://oem.ucla.edu/bruinalert\n\nBruin Safe Online https://bso.ucla.edu/\n\n\n\n\nQuestion\nResponse\n\n\n\nHow will our class meet if we are unable to meet in person?\nIf we are unable to meet on campus for class, there will be an announcement on BruinLearn about how we will be meeting going forward.\n\n\nHow will instruction be delivered if we are unable to meet in person?\nIn lieu of in-person meetings, we will hold online meetings using Zoom and post a mix of videos on BruinLearn, covering the content. In order to ensure accountability we will embed quizzes within the videos and require participation for credit if you are unable to attend live online.\n\n\nHow often do I need to log into BruinLearn?\nIt is expected that you visit the course site daily. If we experience an emergency or if there is another wave of the pandemic, you are expected to participate in the online activities for as long as we are unable to meet on campus.\n\n\nHow will I turn in my homework if we don’t meet in person?\nHomework and other assignments will be turned in through the assignments link within BruinLearn. Instructions for submission can be found within the assignment.\n\n\nHow will I see my Grades?\nAll official grades are posted on MyUCLA. BruinLearn posted grades are subject to change.\n\n\nIf I am ill or cannot attend class for some reason, how can I participate in class?\nPlease contact me directly for more details if you must be absent or have changing situations so that I can understand how we can best help you.\n\n\nWhat if I’m experiencing symptoms, tested positive, or have had contact with a person who has tested positive for COVID-19?\nPlease stay home and do not return to campus or leave your on-campus residence. Complete a Reporting COVID-19 Diagnosis/Symptom form. The Campus Health Officer will follow up with you for next steps. If applicable, the Campus Health Officer will notify faculty members that the student is prohibited from returning to campus until they are cleared by Health Services. Please review UCLA’s COVID-19 protocols https://covid-19.ucla.edu/ucla-covid-protocols/.\n\n\nWhat if I’m having personal problems unrelated to illness? Where can I go for help?\nThere are resources listed throughout this document and you are also encouraged to speak, privately, with your professor(s), your peers, or other members of the university community during your time of difficulty."
   },
   {
     "objectID": "lectures/Lecture0302.html#rule-of-two",
