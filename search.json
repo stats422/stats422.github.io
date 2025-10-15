@@ -957,6 +957,611 @@
     ]
   },
   {
+    "objectID": "lectures/Lecture0301.html#load-r-libraries",
+    "href": "lectures/Lecture0301.html#load-r-libraries",
+    "title": "Lecture 3 Part 1",
+    "section": "Load R libraries",
+    "text": "Load R libraries\n\nlibrary(readr)\nlibrary(jsonlite)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(scales)\nlibrary(reticulate)\nlibrary(tidyr)\nlibrary(sf)\nlibrary(plotly)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#begin-searching",
+    "href": "lectures/Lecture0301.html#begin-searching",
+    "title": "Lecture 3 Part 1",
+    "section": "Begin searching",
+    "text": "Begin searching\n\nAdvisor(s)\nData\nKeep it simple with basic tools (work towards complex)\nExploration: one, two, then more\nIt is an iterative process, so give yourself time & grace",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#overview",
+    "href": "lectures/Lecture0301.html#overview",
+    "title": "Lecture 3 Part 1",
+    "section": "Overview",
+    "text": "Overview\n\nData structure determines the space of possible visualizations\nFundamental form is the rectangular (table) data\nrows = observations (records), columns = variables (fields)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#basic-example",
+    "href": "lectures/Lecture0301.html#basic-example",
+    "title": "Lecture 3 Part 1",
+    "section": "Basic Example",
+    "text": "Basic Example\nWashington State EVs",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#front-page",
+    "href": "lectures/Lecture0301.html#front-page",
+    "title": "Lecture 3 Part 1",
+    "section": "Front page",
+    "text": "Front page\n\nHome Page",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#some-observations",
+    "href": "lectures/Lecture0301.html#some-observations",
+    "title": "Lecture 3 Part 1",
+    "section": "Some observations",
+    "text": "Some observations\n\nflat data frame, frequently stored as csv, “one row per observation”\nbest use - the basics - bar charts, scatterplots, histograms, boxplots,\nmany functions expect data to be in long (tidy) format — each variable is a column, each observation a row",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#lets-add-python",
+    "href": "lectures/Lecture0301.html#lets-add-python",
+    "title": "Lecture 3 Part 1",
+    "section": "Let’s add Python",
+    "text": "Let’s add Python\n\nTry it with OData\nPlease examine using_OData (see Week 3 Module)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#tidying-data",
+    "href": "lectures/Lecture0301.html#tidying-data",
+    "title": "Lecture 3 Part 1",
+    "section": "Tidying Data",
+    "text": "Tidying Data\n\n“Tidy Data” a 2014 article by Hadley Wickham of RStudio https://vita.had.co.nz/papers/tidy-data.pdf\nIntroduced the concept of melting and casting for data transformation in R\ninspired similar operations in Python’s pandas library",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#wickhams-main-points",
+    "href": "lectures/Lecture0301.html#wickhams-main-points",
+    "title": "Lecture 3 Part 1",
+    "section": "Wickham’s Main Points",
+    "text": "Wickham’s Main Points\n\nData reshaping — converting between “wide” and “long” formats — is essential for flexible, organized and efficient data analysis\nGenerally it is easier to describe the functional relationships between variables (e.g., \\(weight/height^2\\)) than between rows\nBUT it is easier to make comparisons between groups of observations in the rows than between groups of columns.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#wickhams-main-points-contd",
+    "href": "lectures/Lecture0301.html#wickhams-main-points-contd",
+    "title": "Lecture 3 Part 1",
+    "section": "Wickham’s Main Points (cont’d)",
+    "text": "Wickham’s Main Points (cont’d)\n\nWickham writes that most datasets are not optimized for analysis. He formalizes two operations to make data more suitable for analysis:\n\nMelting - convert wide data to long format (melt in pandas)\nCasting - convert long data to wide format (pivot in pandas)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#attributes",
+    "href": "lectures/Lecture0301.html#attributes",
+    "title": "Lecture 3 Part 1",
+    "section": "Attributes",
+    "text": "Attributes\n\nflat but contains multiple measurements of the same entity over time\nbest use - line plots (if small), summaries by group, maybe some type of faceting\nidentifiable by its grouping structure, repeated measurements, can appear “wide”\ntypically pivot to long",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#basic-example---wide",
+    "href": "lectures/Lecture0301.html#basic-example---wide",
+    "title": "Lecture 3 Part 1",
+    "section": "Basic Example - Wide",
+    "text": "Basic Example - Wide\nPerception of Attractiveness\n\nThis was the original dataset given to us by a consulting client\nEach row represented a “rater” who gave multiple ratings\nConsider how one might visualize this data",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#basic-example---long",
+    "href": "lectures/Lecture0301.html#basic-example---long",
+    "title": "Lecture 3 Part 1",
+    "section": "Basic Example - Long",
+    "text": "Basic Example - Long\nLong or Tall format\n\nThis is the original dataset “pivoted” for analysis\nLibraries like ggplot2 expect one column per variable, not multiple columns encoding the same kind of information\nSo we make the data long so that “rating” becomes one variable, not a set of separate columns.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#tiny-wide-example",
+    "href": "lectures/Lecture0301.html#tiny-wide-example",
+    "title": "Lecture 3 Part 1",
+    "section": "Tiny Wide Example",
+    "text": "Tiny Wide Example\n\nratings_wide &lt;- tibble(\n  rater_id = 1:6,\n  age = c(23, 25, 40, 38, 31, 45),\n  gender = c(\"F\", \"M\", \"M\", \"F\", \"F\", \"M\"),\n  rating_modelA = c(4, 3, 2, 5, 4, 3),\n  rating_modelB = c(3, 4, 4, 5, 5, 4),\n  rating_modelC = c(5, 2, 3, 5, 4, 5)\n)\n\nratings_wide\n\n# A tibble: 6 × 6\n  rater_id   age gender rating_modelA rating_modelB rating_modelC\n     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;\n1        1    23 F                  4             3             5\n2        2    25 M                  3             4             2\n3        3    40 M                  2             4             3\n4        4    38 F                  5             5             5\n5        5    31 F                  4             5             4\n6        6    45 M                  3             4             5",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#pivot-the-tiny-example",
+    "href": "lectures/Lecture0301.html#pivot-the-tiny-example",
+    "title": "Lecture 3 Part 1",
+    "section": "Pivot the Tiny Example",
+    "text": "Pivot the Tiny Example\n\nratings_long &lt;- ratings_wide %&gt;%\n  pivot_longer(\n    cols = starts_with(\"rating_\"),\n    names_to = \"model\",\n    names_prefix = \"rating_\",\n    values_to = \"rating\"\n  )\n\nratings_long\n\n# A tibble: 18 × 5\n   rater_id   age gender model  rating\n      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;\n 1        1    23 F      modelA      4\n 2        1    23 F      modelB      3\n 3        1    23 F      modelC      5\n 4        2    25 M      modelA      3\n 5        2    25 M      modelB      4\n 6        2    25 M      modelC      2\n 7        3    40 M      modelA      2\n 8        3    40 M      modelB      4\n 9        3    40 M      modelC      3\n10        4    38 F      modelA      5\n11        4    38 F      modelB      5\n12        4    38 F      modelC      5\n13        5    31 F      modelA      4\n14        5    31 F      modelB      5\n15        5    31 F      modelC      4\n16        6    45 M      modelA      3\n17        6    45 M      modelB      4\n18        6    45 M      modelC      5",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#application---sum-by-group",
+    "href": "lectures/Lecture0301.html#application---sum-by-group",
+    "title": "Lecture 3 Part 1",
+    "section": "Application - sum by group",
+    "text": "Application - sum by group\nWe convert it to the basic flat rectangular structure\n\nratings_summary &lt;- ratings_long %&gt;%\n  group_by(model, gender) %&gt;%\n  summarise(\n    mean_rating = mean(rating),\n    sd_rating = sd(rating),\n    n = n(),\n    .groups = \"drop\"\n  )\n\nratings_summary\n\n# A tibble: 6 × 5\n  model  gender mean_rating sd_rating     n\n  &lt;chr&gt;  &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt; &lt;int&gt;\n1 modelA F             4.33     0.577     3\n2 modelA M             2.67     0.577     3\n3 modelB F             4.33     1.15      3\n4 modelB M             4        0         3\n5 modelC F             4.67     0.577     3\n6 modelC M             3.33     1.53      3",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#visual-result",
+    "href": "lectures/Lecture0301.html#visual-result",
+    "title": "Lecture 3 Part 1",
+    "section": "Visual result",
+    "text": "Visual result\n\nggplot(ratings_summary, aes(x = model, y = mean_rating, fill = gender)) +\n  geom_col(position = position_dodge(0.8)) +\n  geom_errorbar(aes(ymin = mean_rating - sd_rating,\n                    ymax = mean_rating + sd_rating),\n                width = 0.2,\n                position = position_dodge(0.8)) +\n  labs(title = \"Average Model Ratings by Gender\",\n       x = \"Model\", y = \"Mean Rating\") +\n  theme_minimal()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#but-why-bother-to-do-this",
+    "href": "lectures/Lecture0301.html#but-why-bother-to-do-this",
+    "title": "Lecture 3 Part 1",
+    "section": "But why bother to do this?",
+    "text": "But why bother to do this?\n\nOur analytic demands drive the need to tidy/reshape data\nReshaping is rearranging data without modifying values and is less aggressive than aggregating\nChances are, if you didn’t design or collect the data, the data that you are using conforms to another’s needs and not yours\nData collection methods (e.g. video, survey form) are typically disconnected from the person analyzing the data",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#what-does-it-mean-to-tidyreshape",
+    "href": "lectures/Lecture0301.html#what-does-it-mean-to-tidyreshape",
+    "title": "Lecture 3 Part 1",
+    "section": "What does it mean to tidy/reshape?",
+    "text": "What does it mean to tidy/reshape?\n\nChange the structure of data but do not change its values\n\nChange how data is arranged in rows and columns\nTransforming wide-format data to long-format data and back again\nFlattening nested data structures into 2D tabular format\nReordering dimensions in multidimensional arrays",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#tabular-data-vocabulary-recap",
+    "href": "lectures/Lecture0301.html#tabular-data-vocabulary-recap",
+    "title": "Lecture 3 Part 1",
+    "section": "Tabular Data vocabulary recap",
+    "text": "Tabular Data vocabulary recap\n\nMoving between wide and Long Format\n\nWide implies many columns (e.g., repeated measurements), one obesrvation per row (usually)\nLong implies few columns, more rows where manys row could be a single observation\nPivot implies making the rows columns, and making columns rows, usually within a table\nMelt implies converting “wide” data into “long” data",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#why-bother-for-the-specific-analysis.",
+    "href": "lectures/Lecture0301.html#why-bother-for-the-specific-analysis.",
+    "title": "Lecture 3 Part 1",
+    "section": "Why bother? For the specific analysis.",
+    "text": "Why bother? For the specific analysis.\n\nRandom Forest, XGBoost, Logistic Regression - typically can remain “wide”\nVisualization methods typically want the data to be “long”\nSome deep learning methods may benefit from the data being reshaped (e.g. wide to 3D array)\nEDA would probably be easier in “long” format",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#example-from-census-data",
+    "href": "lectures/Lecture0301.html#example-from-census-data",
+    "title": "Lecture 3 Part 1",
+    "section": "Example from Census Data",
+    "text": "Example from Census Data\n\nCanadian Census Example\nflat but contains entities within entities\nbest use -\n\ntypically split and recombine\nstored as JSON, nested lists, or relational tables (SQL!) joined by keys",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#example-read",
+    "href": "lectures/Lecture0301.html#example-read",
+    "title": "Lecture 3 Part 1",
+    "section": "Example Read",
+    "text": "Example Read\nReading is straightforward\n\nlibrary(readr)\nlibrary(ggplot2)\nhier_file &lt;- read_csv(\"hierarchical_file.csv\")\nhead(hier_file)\n\n# A tibble: 6 × 12\n  HH_ID PP_ID    PR AGEGRP BEDRM  ROOM    VALUE CITIZEN GENDER TOTINC RELIG\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1     1 11101    35     11     1     3 99999999       1      1  12000     3\n2     2 21101    24     11     3     4   230000       1      2  61000     2\n3     2 21102    24     11     3     4   230000       1      1  37000     2\n4     3 31101    59     11     3    10  1210000       1      2  34000     3\n5     3 31102    59     11     3    10  1210000       1      1  63000     9\n6     4 41103    35     11     4     9  1500000       2      1  34000    88\n# ℹ 1 more variable: MARSTH &lt;dbl&gt;",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#example-biased-plot",
+    "href": "lectures/Lecture0301.html#example-biased-plot",
+    "title": "Lecture 3 Part 1",
+    "section": "Example (biased) plot",
+    "text": "Example (biased) plot\nWorking with hierarchical data less so. code.\n\nggplot(hier_file, aes(x = as.factor(PR), y = ROOM, fill = as.factor(PR))) +\n  geom_boxplot(alpha = 0.6) +\n  labs(title = \"(biased) Dwelling Size by Province\",\n       x = \"Province\",\n       y = \"Rooms\",\n       fill = \"Province\") +\n  theme_minimal()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#example-biased-plot-1",
+    "href": "lectures/Lecture0301.html#example-biased-plot-1",
+    "title": "Lecture 3 Part 1",
+    "section": "Example (biased) plot",
+    "text": "Example (biased) plot\nFinally.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#understanding-the-need-to-aggregate",
+    "href": "lectures/Lecture0301.html#understanding-the-need-to-aggregate",
+    "title": "Lecture 3 Part 1",
+    "section": "Understanding the need to aggregate",
+    "text": "Understanding the need to aggregate\n\nhousehold_agg &lt;- hier_file %&gt;%\n  mutate(across(where(is.numeric), ~ na_if(., 99999999))) %&gt;%\n  group_by(HH_ID) %&gt;%\n  summarise(\n    province = first(PR),\n    rooms = first(ROOM),\n    hh_inc = sum(TOTINC),\n    .groups = \"drop\"\n  )\n\nhead(household_agg)\n\n# A tibble: 6 × 4\n  HH_ID province rooms hh_inc\n  &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1     1       35     3  12000\n2     2       24     4  98000\n3     3       59    10  97000\n4     4       35     9     NA\n5     5       24     2  14000\n6     6       35     5     NA",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#less-biased-plot",
+    "href": "lectures/Lecture0301.html#less-biased-plot",
+    "title": "Lecture 3 Part 1",
+    "section": "Less biased plot",
+    "text": "Less biased plot\n\nggplot(household_agg, aes(x = as.factor(province), \n                          y = rooms, \n                          fill = as.factor(province))) +\n  geom_boxplot(alpha = 0.6) +\n  labs(title = \"Dwelling Size by Province\",\n       x = \"Province\",\n       y = \"Rooms\",\n       fill = \"Province\") +\n  theme_minimal()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#less-biased-plot-1",
+    "href": "lectures/Lecture0301.html#less-biased-plot-1",
+    "title": "Lecture 3 Part 1",
+    "section": "Less biased plot",
+    "text": "Less biased plot",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#treemaps---visualizing-hierarchical-data",
+    "href": "lectures/Lecture0301.html#treemaps---visualizing-hierarchical-data",
+    "title": "Lecture 3 Part 1",
+    "section": "Treemaps - visualizing hierarchical data",
+    "text": "Treemaps - visualizing hierarchical data\n\nlibrary(treemapify)\n\nhousehold_agg %&gt;%\n  ggplot(aes(\n    area = hh_inc,\n    fill = province,\n    label = HH_ID,\n    subgroup = province\n  )) +\n  geom_treemap() +\n  geom_treemap_subgroup_border(color = \"white\", size = 1) +\n  geom_treemap_text(color = \"white\", place = \"centre\", grow = FALSE) +\n  scale_fill_viridis_c() +\n  labs(title = \"Treemap of Households (size = household income, color = province)\") +\n  theme(legend.position = \"right\")",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#treemap",
+    "href": "lectures/Lecture0301.html#treemap",
+    "title": "Lecture 3 Part 1",
+    "section": "Treemap",
+    "text": "Treemap",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#spatial-data-characteristics",
+    "href": "lectures/Lecture0301.html#spatial-data-characteristics",
+    "title": "Lecture 3 Part 1",
+    "section": "Spatial Data Characteristics",
+    "text": "Spatial Data Characteristics\n\ntypically stored as hierarchical (e.g. geojson)\ncoordinates, geometries, or shapefiles\ntools include choropleths, point maps",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#example",
+    "href": "lectures/Lecture0301.html#example",
+    "title": "Lecture 3 Part 1",
+    "section": "Example",
+    "text": "Example\n\ngeojson",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#in-r",
+    "href": "lectures/Lecture0301.html#in-r",
+    "title": "Lecture 3 Part 1",
+    "section": "in R",
+    "text": "in R\n\ngeojson_basemap &lt;- st_read(\"wa_counties.geojson\", \n                           quiet = TRUE)\nggplot() +\n  geom_sf(data = geojson_basemap) +\n  theme_void()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#what-is-it",
+    "href": "lectures/Lecture0301.html#what-is-it",
+    "title": "Lecture 3 Part 1",
+    "section": "What is it?",
+    "text": "What is it?\n\nA GeoJSON file is a JSON (JavaScript Object Notation) format designed for encoding geographic data.\nGeographical features and their properties are made human readable by using standard JSON.\nGeoJSON allows us to connect data to specific geographic features\nWidely used, platform independent, relatively easy to use",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#raster-image-data",
+    "href": "lectures/Lecture0301.html#raster-image-data",
+    "title": "Lecture 3 Part 1",
+    "section": "Raster / Image Data",
+    "text": "Raster / Image Data\n\nGIS, remote sensing work\nGeoTIFF (.tif) is the standard filetype, open source and used everywhere\nIf you download data from NASA, NOAA, USGS, etc it will be GeoTIFF",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#example-1",
+    "href": "lectures/Lecture0301.html#example-1",
+    "title": "Lecture 3 Part 1",
+    "section": "Example",
+    "text": "Example\n\na screenshot of a GeoTIFF",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#using-rpython-etc.",
+    "href": "lectures/Lecture0301.html#using-rpython-etc.",
+    "title": "Lecture 3 Part 1",
+    "section": "Using R/Python etc.",
+    "text": "Using R/Python etc.\n\nlibrary(terra)\nlibrary(ggplot2)\n\nr &lt;- rast(\"Palisades-CA-prelim-dNBR_20250710_235959.tif\")\n\nr\n\nclass       : SpatRaster \nsize        : 555, 881, 1  (nrow, ncol, nlyr)\nresolution  : 20, 20  (x, y)\nextent      : -2058645, -2041025, 1461785, 1472885  (xmin, xmax, ymin, ymax)\ncoord. ref. : USA_Contiguous_Albers_Equal_Area_Conic_USGS_version \nsource      : Palisades-CA-prelim-dNBR_20250710_235959.tif \nname        : Palisades-CA-prelim-dNBR_20250710_235959 \n\nsummary(values(r))\n\n Palisades-CA-prelim-dNBR_20250710_235959\n Min.   :-32768.0                        \n 1st Qu.:   387.0                        \n Median :   556.0                        \n Mean   :   531.1                        \n 3rd Qu.:   690.0                        \n Max.   :  1188.0                        \n NA's   :246261                          \n\n# Convert raster to data frame for ggplot\nr_df &lt;- as.data.frame(r, xy = TRUE)\nnames(r_df)[3] &lt;- \"dNBR\"",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#basic-raster-plot-with-ggplot2",
+    "href": "lectures/Lecture0301.html#basic-raster-plot-with-ggplot2",
+    "title": "Lecture 3 Part 1",
+    "section": "Basic raster plot with ggplot2",
+    "text": "Basic raster plot with ggplot2\n\nr_df %&gt;% \n  filter(dNBR &gt; -100) %&gt;%\n  ggplot(aes(x = x, y = y, fill=dNBR)) +\n  geom_raster() +\n  coord_equal() +\n  scale_fill_viridis_c(option = \"C\") +\n  labs(\n    title = \"Palisades-CA dNBR (Differenced Normalized Burn Ratio)\",\n    fill = \"dNBR\"\n  ) +\n  theme_minimal()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#result",
+    "href": "lectures/Lecture0301.html#result",
+    "title": "Lecture 3 Part 1",
+    "section": "Result",
+    "text": "Result",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#note",
+    "href": "lectures/Lecture0301.html#note",
+    "title": "Lecture 3 Part 1",
+    "section": "Note",
+    "text": "Note\n\ndNBR (Differenced Normalized Burn Ratio) is an indicator of burn severity.\n\n\\[\ndNBR = NBR_{pre} - NBR_{post}\n\\]\n\nHigh positive values reflect vegetation loss (burned areas)\nNegative values reflect regrowth or increased vegetation",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#time-series",
+    "href": "lectures/Lecture0301.html#time-series",
+    "title": "Lecture 3 Part 1",
+    "section": "Time Series",
+    "text": "Time Series\n\nData collected over time, measurements taken at a specific point/interval\nOrder of the observations matters — shows change\nbar, line, area for single series\nside by side bar, multiple lines for comparisons\nfaceting",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#example-2",
+    "href": "lectures/Lecture0301.html#example-2",
+    "title": "Lecture 3 Part 1",
+    "section": "Example",
+    "text": "Example\nLibraries and reading the data\n\nlibrary(dplyr)\nlibrary(lubridate)\nlibrary(tidyr)\nlibrary(readr)\nlibrary(ggplot2)\n\nAAPL10 &lt;- read_csv(\"AAPL10.csv\")",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#cleaning",
+    "href": "lectures/Lecture0301.html#cleaning",
+    "title": "Lecture 3 Part 1",
+    "section": "Cleaning",
+    "text": "Cleaning\n\ncleaned_data &lt;- AAPL10  %&gt;%\n  mutate(\n    Date = mdy(Date),    \n    Close = as.numeric(gsub(\"\\\\$\", \"\", `Close/Last`)), \n    Low   = as.numeric(gsub(\"\\\\$\", \"\", Low))\n  ) %&gt;%\n  arrange(Date)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#plot-barplot",
+    "href": "lectures/Lecture0301.html#plot-barplot",
+    "title": "Lecture 3 Part 1",
+    "section": "Plot (barplot)",
+    "text": "Plot (barplot)\n\nggplot(cleaned_data, aes(x = Date, y = Close)) +\n  geom_col(fill = \"lightgreen\") +\n  labs(\n    title = \"Daily Closing Price\",\n    x = \"Date\",\n    y = \"Close Price ($)\"\n  ) +\n  theme_minimal()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#alternative",
+    "href": "lectures/Lecture0301.html#alternative",
+    "title": "Lecture 3 Part 1",
+    "section": "Alternative",
+    "text": "Alternative\n\nggplot(cleaned_data, aes(x = Date, y = Close)) +\n  geom_line(color = \"darkblue\", linewidth = 1) +\n  geom_point(color = \"darkblue\") +\n  labs(\n    title = \"Closing Price Over Time\",\n    x = \"Date\",\n    y = \"Close Price ($)\"\n  ) +\n  theme_minimal()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#pivoting-time-series-data",
+    "href": "lectures/Lecture0301.html#pivoting-time-series-data",
+    "title": "Lecture 3 Part 1",
+    "section": "Pivoting time series data",
+    "text": "Pivoting time series data\n\ncleaned_data_long &lt;- AAPL10 %&gt;%\n  filter(year(mdy(Date)) == 2025) %&gt;%\n  mutate(\n    Date  = mdy(Date),\n    Close = as.numeric(gsub(\"\\\\$\", \"\", `Close/Last`)),\n    Low   = as.numeric(gsub(\"\\\\$\", \"\", Low))\n  ) %&gt;%\n  select(Date, Close, Low) %&gt;%\n  pivot_longer(cols = c(Close, Low), names_to = \"Type\", values_to = \"Price\") %&gt;%\n  arrange(Date)\n\nhead(cleaned_data_long)\n\n# A tibble: 6 × 3\n  Date       Type  Price\n  &lt;date&gt;     &lt;chr&gt; &lt;dbl&gt;\n1 2025-01-02 Close  244.\n2 2025-01-02 Low    242.\n3 2025-01-03 Close  243.\n4 2025-01-03 Low    242.\n5 2025-01-06 Close  245 \n6 2025-01-06 Low    243.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#plot-side-by-side-bar",
+    "href": "lectures/Lecture0301.html#plot-side-by-side-bar",
+    "title": "Lecture 3 Part 1",
+    "section": "Plot side-by-side bar",
+    "text": "Plot side-by-side bar\n\nggplot(cleaned_data_long, aes(x = Date, y = Price, fill = Type)) +\n  geom_col(position = \"dodge\") +\n  labs(\n    title = \"Daily Closing and Low Prices\",\n    x = \"Date\",\n    y = \"Price ($)\"\n  ) +\n  theme_minimal()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#plot-multiple-lines",
+    "href": "lectures/Lecture0301.html#plot-multiple-lines",
+    "title": "Lecture 3 Part 1",
+    "section": "Plot multiple lines",
+    "text": "Plot multiple lines\n\nggplot(cleaned_data_long, aes(x = Date, y = Price, color = Type)) +\n  geom_line(linewidth = 1) +\n  geom_point(size = 2) +\n  labs(\n    title = \"Closing and Low Prices Over Time (2025)\",\n    x = \"Date\",\n    y = \"Price ($)\"\n  ) +\n  theme_minimal()",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#graph-network-data",
+    "href": "lectures/Lecture0301.html#graph-network-data",
+    "title": "Lecture 3 Part 1",
+    "section": "Graph / Network Data",
+    "text": "Graph / Network Data\n\nVisualization of relationships between entities instead of tabular “rows and columns”\nNodes (Vertices) are entities (e.g., people, places)\nEdges (Links) are relationships or connections (e.g., friendships, roads) and edges can be\n\nDirected (A -&gt; B) — e.g., YouTube “subscribers”\nUndirected (A — B) — e.g., Facebook “friendships”\nWeighted has a numerical value",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#example-read-1",
+    "href": "lectures/Lecture0301.html#example-read-1",
+    "title": "Lecture 3 Part 1",
+    "section": "Example: read",
+    "text": "Example: read\n\nlibrary(tidyverse)\nlibrary(tidygraph)\nlibrary(ggraph)\nlibrary(dplyr)\nlibrary(readr)\n\nrel_artists &lt;- read_csv(\"related_artists.csv\")\nhead(rel_artists)\n\n# A tibble: 6 × 7\n  nominee       related_artists artist wikipedia_link followers popularity genre\n  &lt;chr&gt;         &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;              &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;\n1 06HL4z0CvFAx… 6JL8zeS1NmiOft… Taylo… https://en.wi…  26530277         95 danc…\n2 06HL4z0CvFAx… 1uNFoZAHBGtllm… Taylo… https://en.wi…  26530277         95 danc…\n3 06HL4z0CvFAx… 6sFIWsNpZYqfjU… Taylo… https://en.wi…  26530277         95 danc…\n4 06HL4z0CvFAx… 6eUKZXaKkcviH0… Taylo… https://en.wi…  26530277         95 danc…\n5 06HL4z0CvFAx… 66CXWjxzNUsdJx… Taylo… https://en.wi…  26530277         95 danc…\n6 06HL4z0CvFAx… 3BmGtnKgCSGYIU… Taylo… https://en.wi…  26530277         95 danc…",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#example-clean",
+    "href": "lectures/Lecture0301.html#example-clean",
+    "title": "Lecture 3 Part 1",
+    "section": "Example: clean",
+    "text": "Example: clean\n\nclean_edges &lt;- rel_artists %&gt;%\n  filter(!is.na(nominee), !is.na(related_artists))\n\nedges &lt;- clean_edges %&gt;%\n  select(from = nominee, to = related_artists)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#example-create-nodes-clean-edges",
+    "href": "lectures/Lecture0301.html#example-create-nodes-clean-edges",
+    "title": "Lecture 3 Part 1",
+    "section": "Example: create nodes, clean edges",
+    "text": "Example: create nodes, clean edges\n\n# Create node table with artist attributes\nnodes &lt;- clean_edges %&gt;%\n  distinct(nominee, artist, wikipedia_link, followers, popularity) %&gt;%\n  rename(name = nominee)\n\nclean_edges &lt;- edges %&gt;%\n  filter(from %in% nodes$name, to %in% nodes$name)",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#building-the-graph",
+    "href": "lectures/Lecture0301.html#building-the-graph",
+    "title": "Lecture 3 Part 1",
+    "section": "building the graph",
+    "text": "building the graph\n\n# Build tidygraph object\ngraph &lt;- tbl_graph(nodes = nodes, edges = clean_edges, directed = FALSE)\n\n# check object\ngraph\n\n# A tbl_graph: 13 nodes and 35 edges\n#\n# An undirected multigraph with 1 component\n#\n# Node Data: 13 × 5 (active)\n   name                   artist           wikipedia_link   followers popularity\n   &lt;chr&gt;                  &lt;chr&gt;            &lt;chr&gt;                &lt;dbl&gt;      &lt;dbl&gt;\n 1 06HL4z0CvFAxyc27GXpf02 Taylor Swift     https://en.wiki…  26530277         95\n 2 66CXWjxzNUsdJxJ2JdwvnR Ariana Grande    https://en.wiki…  42023952         95\n 3 1HY2Jd0NmPuamShAr6KMms Lady Gaga        https://en.wiki…  10403543         89\n 4 7n2wHs1TKAczGzO7Dd2rGr Shawn Mendes     https://en.wiki…  23875330         93\n 5 163tK9Wjr9P9DmM0AVK7lm Lorde            https://en.wiki…   5360126         81\n 6 2wUjUUtkb5lvLKcGKsKqsR Alessia Cara     https://en.wiki…   6702852         84\n 7 1uNFoZAHBGtllmzznpCI3s Justin Bieber    https://en.wiki…  32835094         96\n 8 6eUKZXaKkcviH0Ku9w2n3V Ed Sheeran       https://en.wiki…  58883961         98\n 9 6JL8zeS1NmiOftqZTRgdTz Meghan Trainor   https://en.wiki…   8580381         84\n10 6jJ0s89eD6GaHleKKya26X Katy Perry       https://en.wiki…  14665902         88\n11 6sFIWsNpZYqfjUpaCgueju Carly Rae Jepsen https://en.wiki…   3893801         78\n12 0ZED1XzwlLHW4ZaG4lOT6m Julia Michaels   https://en.wiki…   2555932         87\n13 25uiPmTg16RbhZWAqwLBy5 Charlie XCX      https://en.wiki…   1934472         80\n#\n# Edge Data: 35 × 2\n   from    to\n  &lt;int&gt; &lt;int&gt;\n1     1     9\n2     1     7\n3     1    11\n# ℹ 32 more rows",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#code-for-graph",
+    "href": "lectures/Lecture0301.html#code-for-graph",
+    "title": "Lecture 3 Part 1",
+    "section": "code for graph",
+    "text": "code for graph\n\nggraph(graph) +\n  geom_edge_link(alpha = 0.3, color = \"gray70\") +\n  geom_node_point(aes(size = followers, color = as.character(popularity))) +\n  geom_node_text(aes(label = artist), repel = TRUE) +\n  theme_void() +\n  theme(legend.position = \"none\") +\n  labs(title = \"Artist Collaboration Network\")",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
+    "objectID": "lectures/Lecture0301.html#finally",
+    "href": "lectures/Lecture0301.html#finally",
+    "title": "Lecture 3 Part 1",
+    "section": "finally!",
+    "text": "finally!",
+    "crumbs": [
+      "Lectures",
+      "Lecture 03 part 1"
+    ]
+  },
+  {
     "objectID": "Syllabus.html",
     "href": "Syllabus.html",
     "title": "STATS 422 Fall 2025 Syllabus",
@@ -1028,6 +1633,105 @@
     "crumbs": [
       "Start Here",
       "Overview"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html",
+    "href": "activity/ggplot2.html",
+    "title": "ggplot part 2",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#loading-libraries",
+    "href": "activity/ggplot2.html#loading-libraries",
+    "title": "ggplot part 2",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
+    "href": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
+    "title": "ggplot part 2",
+    "section": "the details are in the aes() mappings",
+    "text": "the details are in the aes() mappings\n\nthe aes() values commonly seen are: color, fill, shape, group, linetype\ntypically only x and y are required (sometimes just x)\nhttps://ggplot2.tidyverse.org/reference/aes.html\nand there are countless options BUT the individual geoms may only understand some of them:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nif we were to re-run it using geom_smooth and leaving everything else the same, we would see an error (but it would create our plot)",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#example-read-some-data",
+    "href": "activity/ggplot2.html#example-read-some-data",
+    "title": "ggplot part 2",
+    "section": "Example: Read some data",
+    "text": "Example: Read some data\nPlease, you decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some outside of their R packages\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#discover-their-content",
+    "href": "activity/ggplot2.html#discover-their-content",
+    "title": "ggplot part 2",
+    "section": "Discover their content",
+    "text": "Discover their content\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#basic-examination",
+    "href": "activity/ggplot2.html#basic-examination",
+    "title": "ggplot part 2",
+    "section": "Basic examination",
+    "text": "Basic examination\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#eda-see-chapter-10-of-r-for-data-science",
+    "href": "activity/ggplot2.html#eda-see-chapter-10-of-r-for-data-science",
+    "title": "ggplot part 2",
+    "section": "EDA (see Chapter 10 of R for Data Science)",
+    "text": "EDA (see Chapter 10 of R for Data Science)\nEDA (exploratory data analysis) is very visual and your excellent graphical skills will be useful.\nData Cleaning\nThere is none of that in our class (we will just delete), but missing values need a decision in your research (e.g., imputation, deletion).\nI will misuse summary() it’s handy (no need to load libraries)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand it reveals the NAs and some heavily rounded statistics. If you need to use a mean else, do not rely on summary() this is for a quick look at the basic statistics only.\nOther things you can do\n\nBe sure each variable has been read as its correct type (numeric, non-numeric)\nAlways check for duplicates - they can mess up any analysis\nIdentify possible outliers in the data and decide what to do with them.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ncheck distributions\n\nCheck the distribution and skewness of your data\n\nHistograms maybe boxplots\n\nand use group_by() in dplyr if your data has categorical information or numeric information with a limited number of unique values, group_by() is an important tool - example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nReorganizing information with arrange() in dplryr may offer additional insight that is more difficult to recognize it its natural or alphabetically ordered format:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExploratory Visualization\n\nUnivariate – so bar chart, histogram - here you are trying to understand the distribution.\nBivariate or Multivariate – the scatter plot is the most basic but a boxplot, a heatmap, contour maps etc.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/ggplot2.html#example",
+    "href": "activity/ggplot2.html#example",
+    "title": "ggplot part 2",
+    "section": "Example",
+    "text": "Example\nCorrelation Analysis\nA correlation would be generated very early in the process of using data for research\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe would then move to a visualization of the relationship\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 2 Activity 2"
+    ]
+  },
+  {
+    "objectID": "activity/pyodide_test.html",
+    "href": "activity/pyodide_test.html",
+    "title": "Pyodide and Quarto HTML Documents",
+    "section": "",
+    "text": "a This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 3 Activity pyodide"
     ]
   },
   {
@@ -1152,102 +1856,91 @@
     ]
   },
   {
-    "objectID": "activity/pyodide_test.html",
-    "href": "activity/pyodide_test.html",
-    "title": "Pyodide and Quarto HTML Documents",
+    "objectID": "activity/using_OData_params.html",
+    "href": "activity/using_OData_params.html",
+    "title": "Using OData with Python",
     "section": "",
-    "text": "a This is a pyodide-enabled code cell in a Quarto HTML document. Go ahead and modify it to see what you can do with a webpage.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try Quarto’s example from Using Python code blocks which calls NumPy and Matplotlib.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s try pandas out:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnd let’s try to read data from a different location using Pyodide and pandas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "We want to read the entire dataset from the web for a variety of reasons. OData (Open Data Protocol) is a standardized, REST-based protocol for building and consuming data services over the web. REST means “Representational State Transfer”. It is a type of architecture for designing applications that communicate over the internet.\nThe requests library in Python happens to know how to interact with Socrata (among many other things). The requests library is not part of the Python standard library so you would need to install it (e.g., using conda or pip etc.) but it is a commonly used library.",
     "crumbs": [
       "Activities",
-      "Lecture 3 Activity pyodide"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html",
-    "href": "activity/ggplot2.html",
-    "title": "ggplot part 2",
+    "objectID": "activity/using_OData_params.html#a-strength-of-python",
+    "href": "activity/using_OData_params.html#a-strength-of-python",
+    "title": "Using OData with Python",
     "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "We want to read the entire dataset from the web for a variety of reasons. OData (Open Data Protocol) is a standardized, REST-based protocol for building and consuming data services over the web. REST means “Representational State Transfer”. It is a type of architecture for designing applications that communicate over the internet.\nThe requests library in Python happens to know how to interact with Socrata (among many other things). The requests library is not part of the Python standard library so you would need to install it (e.g., using conda or pip etc.) but it is a commonly used library.",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html#loading-libraries",
-    "href": "activity/ggplot2.html#loading-libraries",
-    "title": "ggplot part 2",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "activity/using_OData_params.html#odata-examples",
+    "href": "activity/using_OData_params.html#odata-examples",
+    "title": "Using OData with Python",
+    "section": "OData examples",
+    "text": "OData examples\nThe example uses the Washington State Electric Vehicle population files. Many other government websites use OData to distribute data some examples\nLos AngelesSan FranciscoPortlandSeattleMemphisWashington DC\nThe tricky part - the different cities and datasets need slight modifications in code to get the data read. But it is free and may be useful.",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
-    "href": "activity/ggplot2.html#the-details-are-in-the-aes-mappings",
-    "title": "ggplot part 2",
-    "section": "the details are in the aes() mappings",
-    "text": "the details are in the aes() mappings\n\nthe aes() values commonly seen are: color, fill, shape, group, linetype\ntypically only x and y are required (sometimes just x)\nhttps://ggplot2.tidyverse.org/reference/aes.html\nand there are countless options BUT the individual geoms may only understand some of them:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nif we were to re-run it using geom_smooth and leaving everything else the same, we would see an error (but it would create our plot)",
+    "objectID": "activity/using_OData_params.html#using-python-r-works-too",
+    "href": "activity/using_OData_params.html#using-python-r-works-too",
+    "title": "Using OData with Python",
+    "section": "Using Python (R works too)",
+    "text": "Using Python (R works too)\n\nimport requests\nimport pandas as pd\npd.set_option('display.max_columns', None)\n\nurl = \"https://data.wa.gov/api/odata/v4/f6w7-q2d2?$format=json\"\n\nrows = []\nnext_url = url  # first page\n\nparams = {\n    \"$top\"   : \"100\",\n    \"$select\": \"county,make,model,model_year\"\n}\n\nwhile next_url: # will run while this is not empty \n    print(\"Fetching:\", next_url) # just a status indicator, where are we\n\n    if next_url == url: # on the first pass\n        r = requests.get(next_url, params=params) # apply the parameters on the first\n    else:\n        r = requests.get(next_url) # all other\n\n    r.raise_for_status() # just in case we have an error\n    data = r.json() # converts the response to a python object\n    rows.extend(data[\"value\"])  # make the list longer\n\n    if \"$top\" in params:\n        break\n\n    next_url = data.get(\"@odata.nextLink\") # next_url updated by what the website returns until the end\n\nFetching: https://data.wa.gov/api/odata/v4/f6w7-q2d2?$format=json\n\ndf = pd.DataFrame(rows) # the finished result is converted to a pandas data frame\nprint(f\"Loaded {len(df)} rows\") # just print a new status indicator\n\nLoaded 100 rows\n\ndf = df.drop(columns=['@odata.id'], errors='ignore')\ndf.head() # take a look at the top\n\n      county model_year    make    model\n0   Thurston       2024    AUDI     Q5 E\n1     Yakima       2018    AUDI       A3\n2       King       2015  NISSAN     LEAF\n3       King       2019    AUDI   E-TRON\n4  Snohomish       2022   TESLA  MODEL X\n\n\nR could have read it too with the package RSocrata. You can “read” it too with a slight modification of the URL:\nhttps://data.wa.gov/resource/f6w7-q2d2.json",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html#example-read-some-data",
-    "href": "activity/ggplot2.html#example-read-some-data",
-    "title": "ggplot part 2",
-    "section": "Example: Read some data",
-    "text": "Example: Read some data\nPlease, you decide, if you are using this interface, you can use any dataset from tidyverse or tidytuesday or things like iris – otherwise, here are some outside of their R packages\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "activity/using_OData_params.html#once-read",
+    "href": "activity/using_OData_params.html#once-read",
+    "title": "Using OData with Python",
+    "section": "Once read",
+    "text": "Once read\nOnce the data is read, we could save it. Pandas is perfectly capable.\n\noutput_path = \"washington_ev_data.csv\"  \ndf.to_csv(output_path, index=False)\nprint(f\"Data saved to {output_path}\")\n\nData saved to washington_ev_data.csv",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html#discover-their-content",
-    "href": "activity/ggplot2.html#discover-their-content",
-    "title": "ggplot part 2",
-    "section": "Discover their content",
-    "text": "Discover their content\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "activity/using_OData_params.html#returning-to-r",
+    "href": "activity/using_OData_params.html#returning-to-r",
+    "title": "Using OData with Python",
+    "section": "Returning to R",
+    "text": "Returning to R\nWe could have saved the data using R too. Python gives us many more options. Using the reticulate library we can access the pandas dataframe:\n\nlibrary(dplyr)\nlibrary(readr)\nlibrary(ggplot2)\nlibrary(reticulate)\n\nwa_ev_data &lt;- py$df\nglimpse(wa_ev_data)\n\nRows: 100\nColumns: 4\n$ county     &lt;chr&gt; \"Thurston\", \"Yakima\", \"King\", \"King\", \"Snohomish\", \"Snohomi…\n$ model_year &lt;chr&gt; \"2024\", \"2018\", \"2015\", \"2019\", \"2022\", \"2016\", \"2019\", \"20…\n$ make       &lt;chr&gt; \"AUDI\", \"AUDI\", \"NISSAN\", \"AUDI\", \"TESLA\", \"KIA\", \"NISSAN\",…\n$ model      &lt;chr&gt; \"Q5 E\", \"A3\", \"LEAF\", \"E-TRON\", \"MODEL X\", \"SOUL\", \"LEAF\", …\n\n\nand do whatever we want to it.",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html#basic-examination",
-    "href": "activity/ggplot2.html#basic-examination",
-    "title": "ggplot part 2",
-    "section": "Basic examination",
-    "text": "Basic examination\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "activity/using_OData_params.html#ggplot---one-dimension",
+    "href": "activity/using_OData_params.html#ggplot---one-dimension",
+    "title": "Using OData with Python",
+    "section": "ggplot - one dimension",
+    "text": "ggplot - one dimension\nRecall, ggplot is simple and we can add layers to increase the control and complexity.\nStart with the data\n\nwa_ev_data &lt;- wa_ev_data %&gt;%\n    mutate(myear = as.numeric(model_year))\n\nPass the data to ggplot. Specify your aesthetic either in the global ggplot function or in a specific geom. Choose a geom.\ngeom_histogram\n\nggplot(wa_ev_data, \n    aes(x = myear)) +\n  geom_histogram( \n    binwidth = 1, \n    fill = \"lightgreen\", \n    color = \"black\") +\n  labs(title = \"Electric Vehicles by Model Year - Histogram\",\n       x = \"Model Year\", y = \"Count\")\n\n\n\n\n\n\n\ngeom_bar\n\nggplot(wa_ev_data) +\n  geom_bar(\n    aes(x = model_year),\n    fill = \"cornflowerblue\", \n    color = \"black\") +\n  labs(title = \"Electric Vehicles by Model Year - Barplot\",\n       x = \"Model Year\", y = \"Count\")\n\n\n\n\n\n\n\ngeom_col\nThis is for pre-aggregated data, I’ll groupby/summarise the population then plot\n\nwa_ev_agg &lt;- wa_ev_data %&gt;%\n  group_by(model_year) %&gt;%\n  summarise(totals = n())\n\nwa_ev_agg\n\n# A tibble: 15 × 2\n   model_year totals\n   &lt;chr&gt;       &lt;int&gt;\n 1 2012            2\n 2 2013            3\n 3 2014            2\n 4 2015            4\n 5 2016            9\n 6 2017            8\n 7 2018           22\n 8 2019           14\n 9 2020           10\n10 2021            5\n11 2022            3\n12 2023            8\n13 2024            4\n14 2025            5\n15 2026            1\n\n\nresult\n\nggplot(wa_ev_agg) +\n  geom_col(\n    aes(x = model_year, y = totals),\n    fill = \"magenta\", \n    color = \"black\") +\n  labs(title = \"Electric Vehicles by Model Year - Barplot\",\n       x = \"Model Year\", y = \"Count\")\n\n\n\n\n\n\n\nresult 2 multiple aes()\n\nggplot(wa_ev_agg, aes(x = model_year)) +\n  geom_col(\n    aes(y = totals),\n    fill = \"yellow\", \n    color = \"black\") +\n  geom_line(\n    aes(y = totals, group = 1), # forces ggplot to connect a single path\n    linewidth = 1.2, \n    color = \"blue\") + \n  labs(title = \"Electric Vehicles by Model Year - Barplot & Line\",\n       x = \"Model Year\", y = \"Total\")",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
-    "objectID": "activity/ggplot2.html#eda-see-chapter-10-of-r-for-data-science",
-    "href": "activity/ggplot2.html#eda-see-chapter-10-of-r-for-data-science",
-    "title": "ggplot part 2",
-    "section": "EDA (see Chapter 10 of R for Data Science)",
-    "text": "EDA (see Chapter 10 of R for Data Science)\nEDA (exploratory data analysis) is very visual and your excellent graphical skills will be useful.\nData Cleaning\nThere is none of that in our class (we will just delete), but missing values need a decision in your research (e.g., imputation, deletion).\nI will misuse summary() it’s handy (no need to load libraries)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nand it reveals the NAs and some heavily rounded statistics. If you need to use a mean else, do not rely on summary() this is for a quick look at the basic statistics only.\nOther things you can do\n\nBe sure each variable has been read as its correct type (numeric, non-numeric)\nAlways check for duplicates - they can mess up any analysis\nIdentify possible outliers in the data and decide what to do with them.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\ncheck distributions\n\nCheck the distribution and skewness of your data\n\nHistograms maybe boxplots\n\nand use group_by() in dplyr if your data has categorical information or numeric information with a limited number of unique values, group_by() is an important tool - example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nReorganizing information with arrange() in dplryr may offer additional insight that is more difficult to recognize it its natural or alphabetically ordered format:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExploratory Visualization\n\nUnivariate – so bar chart, histogram - here you are trying to understand the distribution.\nBivariate or Multivariate – the scatter plot is the most basic but a boxplot, a heatmap, contour maps etc.",
+    "objectID": "activity/using_OData_params.html#takeaways",
+    "href": "activity/using_OData_params.html#takeaways",
+    "title": "Using OData with Python",
+    "section": "Takeaways",
+    "text": "Takeaways\n\nPython is very strong in the acquistion of data\nPython and R can work together\nggplot is elegant and not as difficult as it may first seem\nbut it can be slower than some of Python’s visualization libraries",
     "crumbs": [
       "Activities",
-      "Lecture 2 Activity 2"
-    ]
-  },
-  {
-    "objectID": "activity/ggplot2.html#example",
-    "href": "activity/ggplot2.html#example",
-    "title": "ggplot part 2",
-    "section": "Example",
-    "text": "Example\nCorrelation Analysis\nA correlation would be generated very early in the process of using data for research\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe would then move to a visualization of the relationship\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Activities",
-      "Lecture 2 Activity 2"
+      "Lecture 3 OData, Python + R"
     ]
   },
   {
@@ -1256,6 +1949,440 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#rule-of-two",
+    "href": "lectures/Lecture0303.html#rule-of-two",
+    "title": "Lecture 3 Part 3",
+    "section": "Rule of two",
+    "text": "Rule of two\n\nThe “Rule of Two” is a learning principle\nOne should focus on changing or learning only two things at a time\nTo avoid feeling overwhelmed and improve your ability to adapt and retain information\nSo maybe your “two” is numpy/pandas"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#what-it-is",
+    "href": "lectures/Lecture0303.html#what-it-is",
+    "title": "Lecture 3 Part 3",
+    "section": "What it is",
+    "text": "What it is\n\nActs like a convenience wrapper for other plotting libraries.\nIt relies on Matplotlib, but can use others e.g., plotly https://plotly.com/python/pandas-backend/\nProvides very basic plotting abilities for pandas\n\nhttps://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html#pandas.DataFrame.plot"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#pandas-plots",
+    "href": "lectures/Lecture0303.html#pandas-plots",
+    "title": "Lecture 3 Part 3",
+    "section": "pandas plots",
+    "text": "pandas plots\n\n\n\n\n\n\n\n\nPlot Type\nSyntax (df.plot(...))\nComment\n\n\n\n\nLine plot\ndf.plot() or kind=\"line\"\nDefault and matplotlib must be installed\n\n\nBar plot\nkind=\"bar\"\nVertical bars\n\n\nHorizontal bar\nkind=\"barh\"\nHorizontal bars\n\n\nArea plot\nkind=\"area\"\nLike a filled line plot\n\n\nHistogram\nkind=\"hist\"\nUseful for univariate distributions\n\n\nBox plot\nkind=\"box\"\nFor showing distribution and outliers\n\n\nKDE plot\nkind=\"kde\" or \"density\"\nKernel Density Estimate (smoothed histogram)\n\n\nPie chart\nkind=\"pie\"\nOnly for Series (not DataFrame)\n\n\nScatter plot\nkind=\"scatter\" + x= and y=\nOnly for DataFrames; need to specify x and y\n\n\nHexbin plot\nkind=\"hexbin\" + x=, y=\nRequires binned 2D data; good for large scatterplots\n\n\n\nhttps://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html#pandas-dataframe-plot"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#set-up",
+    "href": "lectures/Lecture0303.html#set-up",
+    "title": "Lecture 3 Part 3",
+    "section": "set up",
+    "text": "set up\n\nimport pandas as pd\nAAPL10 = pd.read_csv(\"AAPL10.csv\")\n\n## create date/year/month variables as date time \nAAPL10['Date'] = pd.to_datetime(AAPL10['Date'], format='%m/%d/%Y')\nAAPL10['Year'] = AAPL10['Date'].dt.year\nAAPL10['Month'] = AAPL10['Date'].dt.month\n\n## fix the Close and Low variables variable\nAAPL10[['Close', 'Low']] = AAPL10[['Close/Last', 'Low']].replace(r'[\\$,]', '', regex=True).astype(float)\n\nAAPL10 = AAPL10.drop(['Close/Last', 'Date'], axis = 1) # need to reassign\n\nprint(AAPL10.head())\n\n        Low  Year  Month   Close\n0  197.0200  2025      5  198.51\n1  198.2100  2025      5  198.89\n2  202.1600  2025      5  205.35\n3  208.9000  2025      5  213.32\n4  206.6705  2025      4  212.50"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#lineplot",
+    "href": "lectures/Lecture0303.html#lineplot",
+    "title": "Lecture 3 Part 3",
+    "section": "Lineplot",
+    "text": "Lineplot\n\nAAPL10['Date'] = pd.to_datetime(AAPL10[['Year', 'Month']].assign(DAY=1))  # Creates 2015-05-01 etc/\n\n# Sort the data (important if it's not already sorted)\nAAPL10 = AAPL10.sort_values('Date')\nAAPL10\n\n           Low  Year  Month     Close       Date\n2514   31.0050  2015      5   31.3150 2015-05-01\n2499   32.4750  2015      5   32.5700 2015-05-01\n2500   32.7750  2015      5   32.9450 2015-05-01\n2501   32.5125  2015      5   33.0112 2015-05-01\n2502   32.2800  2015      5   32.4050 2015-05-01\n...        ...   ...    ...       ...        ...\n14    199.8000  2025      4  202.1400 2025-04-01\n3     208.9000  2025      5  213.3200 2025-05-01\n2     202.1600  2025      5  205.3500 2025-05-01\n1     198.2100  2025      5  198.8900 2025-05-01\n0     197.0200  2025      5  198.5100 2025-05-01\n\n[2515 rows x 5 columns]"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#default-pandas-plot",
+    "href": "lectures/Lecture0303.html#default-pandas-plot",
+    "title": "Lecture 3 Part 3",
+    "section": "default pandas plot",
+    "text": "default pandas plot\n\ngraphic on next slide\n\n\n# Plot with pandas plot (must have matplotlib installed, using kwargs from it)\nAAPL10.plot(x='Date', \n            y='Close', \n            title='Monthly Closing Prices', \n            xlabel = 'Month-Year',\n            ylabel = 'in Dollars',\n            marker='.', \n            color = 'orange', \n            figsize=(10, 5));"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#default-pandas-plot-1",
+    "href": "lectures/Lecture0303.html#default-pandas-plot-1",
+    "title": "Lecture 3 Part 3",
+    "section": "default pandas plot",
+    "text": "default pandas plot"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#boxplot",
+    "href": "lectures/Lecture0303.html#boxplot",
+    "title": "Lecture 3 Part 3",
+    "section": "Boxplot",
+    "text": "Boxplot\n\nAAPL10.plot(column = ['Low', 'Close'], \nkind='box', \nby='Month',  \nfigsize=(10, 5), \ntitle='Distribution by Month', \nlayout=(2, 1));"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#boxplot-graphic",
+    "href": "lectures/Lecture0303.html#boxplot-graphic",
+    "title": "Lecture 3 Part 3",
+    "section": "Boxplot graphic",
+    "text": "Boxplot graphic"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#other-possible-uses",
+    "href": "lectures/Lecture0303.html#other-possible-uses",
+    "title": "Lecture 3 Part 3",
+    "section": "Other possible uses",
+    "text": "Other possible uses\n\ncalculate medians for each month using groupby\n\n\n# in one step\nyear_monthly_median_AAPL10 =  AAPL10.groupby(['Month'])[['Close', 'Low']].median().reset_index()\n\n# in two steps, maybe more readable\n## grouped = AAPL10.groupby(['Year', 'Month'])\n## year_monthly_median_AAPL10 = grouped[['Close', 'Low']].median().reset_index()\n\nprint(year_monthly_median_AAPL10)\n\n    Month      Close        Low\n0       1   81.02625   80.01625\n1       2  101.39500   99.61375\n2       3  116.36000  116.21000\n3       4   98.22500   97.28875\n4       5   74.77375   74.16625\n5       6   49.94250   49.71750\n6       7   72.14375   70.98500\n7       8   56.90750   56.50000\n8       9  106.98000  104.05000\n9      10   62.22625   61.20000\n10     11   87.86500   86.89750\n11     12  121.78000  120.15000"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#barplot-of-the-medians",
+    "href": "lectures/Lecture0303.html#barplot-of-the-medians",
+    "title": "Lecture 3 Part 3",
+    "section": "Barplot of the medians",
+    "text": "Barplot of the medians\n\nyear_monthly_median_AAPL10.plot.bar(x = 'Month', \ny = 'Close',\nrot=0,\ncolor= 'tab:pink'); # from tableau"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#barplot-of-the-medians-1",
+    "href": "lectures/Lecture0303.html#barplot-of-the-medians-1",
+    "title": "Lecture 3 Part 3",
+    "section": "Barplot of the medians",
+    "text": "Barplot of the medians"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#barplot-horizontal",
+    "href": "lectures/Lecture0303.html#barplot-horizontal",
+    "title": "Lecture 3 Part 3",
+    "section": "Barplot Horizontal",
+    "text": "Barplot Horizontal\n\nyear_monthly_median_AAPL10.plot.barh(x = 'Month', \ny = 'Close',\nrot=0,\ncolor= 'tab:pink'); # from tableau"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#barplot-horizontal-1",
+    "href": "lectures/Lecture0303.html#barplot-horizontal-1",
+    "title": "Lecture 3 Part 3",
+    "section": "Barplot Horizontal",
+    "text": "Barplot Horizontal"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#we-can-pivot-to-wide",
+    "href": "lectures/Lecture0303.html#we-can-pivot-to-wide",
+    "title": "Lecture 3 Part 3",
+    "section": "We can pivot to wide",
+    "text": "We can pivot to wide\n\nThe opposite of melt\n\n\n# Pivot table: average Close per Year-Month\npivot = AAPL10.pivot_table(values='Close', index='Year', columns='Month', aggfunc='median')\npivot = pivot.reindex(columns=range(1, 13))  # Ensure Jan-Dec order\n\n\n# Display\npivot.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nIndex: 11 entries, 2015 to 2025\nData columns (total 12 columns):\n #   Column  Non-Null Count  Dtype  \n---  ------  --------------  -----  \n 0   1       10 non-null     float64\n 1   2       10 non-null     float64\n 2   3       10 non-null     float64\n 3   4       10 non-null     float64\n 4   5       11 non-null     float64\n 5   6       10 non-null     float64\n 6   7       10 non-null     float64\n 7   8       10 non-null     float64\n 8   9       10 non-null     float64\n 9   10      10 non-null     float64\n 10  11      10 non-null     float64\n 11  12      10 non-null     float64\ndtypes: float64(12)\nmemory usage: 1.1 KB"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#called-calendar-style",
+    "href": "lectures/Lecture0303.html#called-calendar-style",
+    "title": "Lecture 3 Part 3",
+    "section": "called “calendar style”",
+    "text": "called “calendar style”\n\n# Calendar style\npivot \n\nMonth         1         2          3   ...         10         11         12\nYear                                   ...                                 \n2015         NaN       NaN        NaN  ...   27.95625   29.54125   27.72875\n2016    24.34750   24.0450   26.22125  ...   29.07500   27.63000   28.95500\n2017    29.96875   33.7550   34.99750  ...   39.08250   43.26750   42.84750\n2018    43.58250   41.9450   43.82500  ...   55.16250   47.85250   41.37000\n2019    38.45000   42.7650   46.53000  ...   58.96750   65.60500   69.86000\n2020    78.17000   79.9025   63.63750  ...  116.24000  117.68500  127.23250\n2021   131.01000  133.9400  121.39000  ...  144.84000  151.28000  174.82000\n2022   172.08500  171.6600  163.98000  ...  143.86000  148.03000  136.50000\n2023   135.24000  151.0100  155.00000  ...  174.33000  188.01000  193.93500\n2024   185.92000  184.2600  172.45000  ...  230.57000  227.75000  248.13000\n2025   236.42500  240.3600  220.84000  ...        NaN        NaN        NaN\n\n[11 rows x 12 columns]"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#pivot-plotted",
+    "href": "lectures/Lecture0303.html#pivot-plotted",
+    "title": "Lecture 3 Part 3",
+    "section": "pivot plotted",
+    "text": "pivot plotted\n\nusually used for heatmaps (next week)\nresult on next slide\n\n\npivot.plot(figsize=(10, 5), \nlegend=True, \ntitle='AAPL Trends by Month & Year'); # note the semi-colon"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#pivot-plotted-result",
+    "href": "lectures/Lecture0303.html#pivot-plotted-result",
+    "title": "Lecture 3 Part 3",
+    "section": "pivot plotted result",
+    "text": "pivot plotted result"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#pivot-transposed-then-plotted",
+    "href": "lectures/Lecture0303.html#pivot-transposed-then-plotted",
+    "title": "Lecture 3 Part 3",
+    "section": "pivot transposed then plotted",
+    "text": "pivot transposed then plotted\n\npivot.T.plot(figsize=(10, 5), legend=True, title='AAPL Trends by Month & Year'); # note the semi-colon"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#more-data",
+    "href": "lectures/Lecture0303.html#more-data",
+    "title": "Lecture 3 Part 3",
+    "section": "More Data",
+    "text": "More Data\n\nimport pandas as pd\nSBUX10 = pd.read_csv(\"SBUX10.csv\")\n\n## create date/year/month variables as date time \nSBUX10['Date'] = pd.to_datetime(SBUX10['Date'], format='%m/%d/%Y')\nSBUX10['Year'] = SBUX10['Date'].dt.year\nSBUX10['Month'] =SBUX10['Date'].dt.month\n\n## fix the Close and Low variables variable\nSBUX10[['Close', 'Low']] = SBUX10[['Close/Last', 'Low']].replace(r'[\\$,]', '', regex=True).astype(float)\n\nSBUX10 = SBUX10.drop(['Close/Last', 'Date'], axis = 1) # need to reassign\nSBUX10.columns = ['SLow', 'SYear', 'SMonth', 'SClose']\nprint(SBUX10.head())\n\n    SLow  SYear  SMonth  SClose\n0  80.61   2025       5   82.78\n1  81.59   2025       5   81.66\n2  82.05   2025       5   84.69\n3  80.27   2025       5   82.01\n4  75.50   2025       4   80.05"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#put-them-together",
+    "href": "lectures/Lecture0303.html#put-them-together",
+    "title": "Lecture 3 Part 3",
+    "section": "Put them together",
+    "text": "Put them together\n\nAAPL_SBUX = AAPL10.join(SBUX10,)\nAAPL_SBUX.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nIndex: 2515 entries, 2514 to 0\nData columns (total 9 columns):\n #   Column  Non-Null Count  Dtype         \n---  ------  --------------  -----         \n 0   Low     2515 non-null   float64       \n 1   Year    2515 non-null   int32         \n 2   Month   2515 non-null   int32         \n 3   Close   2515 non-null   float64       \n 4   Date    2515 non-null   datetime64[ns]\n 5   SLow    2515 non-null   float64       \n 6   SYear   2515 non-null   int32         \n 7   SMonth  2515 non-null   int32         \n 8   SClose  2515 non-null   float64       \ndtypes: datetime64[ns](1), float64(4), int32(4)\nmemory usage: 221.7 KB"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#always-check",
+    "href": "lectures/Lecture0303.html#always-check",
+    "title": "Lecture 3 Part 3",
+    "section": "Always check",
+    "text": "Always check\n\nAAPL_SBUX.head()\n\n          Low  Year  Month    Close       Date    SLow  SYear  SMonth  SClose\n2514  31.0050  2015      5  31.3150 2015-05-01  48.720   2015       5   49.35\n2499  32.4750  2015      5  32.5700 2015-05-01  51.450   2015       5   51.96\n2500  32.7750  2015      5  32.9450 2015-05-01  51.445   2015       5   51.81\n2501  32.5125  2015      5  33.0112 2015-05-01  50.910   2015       5   51.59\n2502  32.2800  2015      5  32.4050 2015-05-01  50.660   2015       5   50.84"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#scatter",
+    "href": "lectures/Lecture0303.html#scatter",
+    "title": "Lecture 3 Part 3",
+    "section": "Scatter",
+    "text": "Scatter\n\nAAPL_SBUX[AAPL_SBUX['SYear'] == 2020].plot(x = 'Close', y = 'SClose', kind = 'scatter', title = 'AAPL vs STAR');"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#kde",
+    "href": "lectures/Lecture0303.html#kde",
+    "title": "Lecture 3 Part 3",
+    "section": "KDE",
+    "text": "KDE\ndata[‘AAPL_Close’].plot(kind=‘kde’, bw_method=0.3)\n\nAAPL_SBUX['Close'].plot(kind='kde', title='KDE of AAPL Close Prices')\n\n\n\n\n\n\n\n\n\nAAPL_SBUX['SClose'].plot(kind='kde', bw_method=0.3, title='KDE of SBUX Close Prices')"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#last-one",
+    "href": "lectures/Lecture0303.html#last-one",
+    "title": "Lecture 3 Part 3",
+    "section": "Last one",
+    "text": "Last one\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\n# Create the plot\nax = AAPL_SBUX['SClose'].plot(\n    kind='hist',\n    bins=30,\n    density=True,      # Normalize histogram to match KDE scale\n    alpha=0.5,\n    label='Histogram',\n    figsize=(10, 5),\n    title='SBUX Close Prices: Histogram + KDE'\n)\n\n# Overlay KDE on the same axes\nAAPL_SBUX['SClose'].plot(\n    kind='kde',\n    ax=ax,\n    label='KDE',\n    linewidth=2\n)\n\n# Final touches\nplt.xlabel('Price')\nplt.ylabel('Density')\nplt.legend()\nplt.grid(True)\nplt.tight_layout()\nplt.show()"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#result",
+    "href": "lectures/Lecture0303.html#result",
+    "title": "Lecture 3 Part 3",
+    "section": "result",
+    "text": "result"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#what-is-matplotlib",
+    "href": "lectures/Lecture0303.html#what-is-matplotlib",
+    "title": "Lecture 3 Part 3",
+    "section": "What is Matplotlib?",
+    "text": "What is Matplotlib?\nhttps://matplotlib.org/stable/api/pyplot_summary.html\n\nmatplotlib was created in 2003 to serve as the plotting library for Python and for NumPy.\nSimilar to MATLAB which widely used in math, CS and stat departments at the time.\nIt is old, but worth your time because it is the foundation of graphics in Python and all related functions and their libraries are built on it.\n\nhttps://github.com/matplotlib/matplotlib\n\n\n\n\n\n\nNote\n\n\nAlways (community rules): import matplotlib.pyplot as plt"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#background",
+    "href": "lectures/Lecture0303.html#background",
+    "title": "Lecture 3 Part 3",
+    "section": "Background",
+    "text": "Background\nFrom their webpage:\nMatplotlib is a comprehensive library for creating\n  static,\n  animated,\n  and interactive visualizations in Python\n\nMatplotlib OO gives you control of an image from the most basic level, the pixel if you need it otherwise the figure and axes (plot)\nMatplotlib pyplot gives you provides convenient functions to make plotting easier"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#start-it-up",
+    "href": "lectures/Lecture0303.html#start-it-up",
+    "title": "Lecture 3 Part 3",
+    "section": "Start it up",
+    "text": "Start it up\n\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport matplotlib.colors as mcolors\n\n#%matplotlib inline #for you jupyter users\nplt.rcParams['figure.figsize'] = [10, 5] # my default figure size for this lecture\nplt.rcParams['figure.constrained_layout.use'] = True # supercedes tight layout"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#try-it-out",
+    "href": "lectures/Lecture0303.html#try-it-out",
+    "title": "Lecture 3 Part 3",
+    "section": "Try it out",
+    "text": "Try it out\n\nyou only need one set of values (implies y)\nx will be an index (0, 1, 2 etc.)\nsee the next slide\n\n\nplt.plot([1, 2, 3])  \nplt.title(\"My First Plot\")"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#try-it-out-2",
+    "href": "lectures/Lecture0303.html#try-it-out-2",
+    "title": "Lecture 3 Part 3",
+    "section": "Try it out 2",
+    "text": "Try it out 2\n\nif it is not showing or if it is showing too much\nTry %matplotlib inline for the Jupyter users\nor add a semi-color or plt.show() to the end"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#what-is-pyplot",
+    "href": "lectures/Lecture0303.html#what-is-pyplot",
+    "title": "Lecture 3 Part 3",
+    "section": "What is pyplot?",
+    "text": "What is pyplot?\n\nmatplotlib.pyplot is a module (submodule) within the Matplotlib library\nit provides convenient functions for quickly building plots.\nit acts as a helper and manages figure creation, axes setup, and plot display automatically.\ndoing this makes it easier for you to get figure on the screen\nit interfaces with the object-oriented API components of matplotlib’s object-oriented (OO) plotting system\nit is a good place to start"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#plt.plot-with-x-y",
+    "href": "lectures/Lecture0303.html#plt.plot-with-x-y",
+    "title": "Lecture 3 Part 3",
+    "section": "plt.plot with x, y",
+    "text": "plt.plot with x, y\n\nx = [1, 2, 3]\ny = np.array([[1, 2], [3, 4], [5, 6]])\nplt.plot(x, y, 'o-') # [fmt] format\nplt.show()"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#plt.plot-multiple",
+    "href": "lectures/Lecture0303.html#plt.plot-multiple",
+    "title": "Lecture 3 Part 3",
+    "section": "plt.plot multiple",
+    "text": "plt.plot multiple\n\npyplot adjust easily to your data (try this in R…)\n\n\nx1 = [1, 2, 3]\ny1 = [1, 2, 3]\nx2 = [4, 5, 6]\ny2 = [4, 5, 8]\nplt.plot(x1, y1, 'o-')\nplt.plot(x2, y2, '+--')\nplt.xlabel('x discontinuous')\nplt.ylabel('y discontinuous')\nplt.title('With multiple plots and x and y')\nplt.show()"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#plt.plot-multiple-result",
+    "href": "lectures/Lecture0303.html#plt.plot-multiple-result",
+    "title": "Lecture 3 Part 3",
+    "section": "plt.plot multiple result",
+    "text": "plt.plot multiple result"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#why-plt.show-is-needed-sometimes",
+    "href": "lectures/Lecture0303.html#why-plt.show-is-needed-sometimes",
+    "title": "Lecture 3 Part 3",
+    "section": "Why plt.show() is needed sometimes",
+    "text": "Why plt.show() is needed sometimes\n\nIn Quarto, a .py script or the REPL (like Python shell, or terminal), plots are not shown automatically\n\nIn Jupyter notebooks plots display automatically\n\nplt.show() in a script Launches a window with the plot\nplt.show() may block further execution until the window is closed"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#saving-plots",
+    "href": "lectures/Lecture0303.html#saving-plots",
+    "title": "Lecture 3 Part 3",
+    "section": "Saving plots",
+    "text": "Saving plots\n\nx = [1, 2, 3]\ny = np.array([[1, 2], [3, 4], [5, 6]])\nplt.plot(x, y, 'o-')\nplt.savefig(\"plot.png\")\nplt.show()  # to display"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#some-formats-and-options",
+    "href": "lectures/Lecture0303.html#some-formats-and-options",
+    "title": "Lecture 3 Part 3",
+    "section": "Some formats and options",
+    "text": "Some formats and options\n\n\n\n\n\n\n\n\nFormat\nExtension(s)\nNotes\n\n\n\n\nPNG\n.png\nDefault\n\n\nJPG\n.jpg, .jpeg\nGood for photos\n\n\nPDF\n.pdf\nBest for print\n\n\nSVG\n.svg\nScalable vector good for web\n\n\n\n\ndpi Dots per inch (resolution)\n\nMake background transparent with transparent=True"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#just-enough-functions",
+    "href": "lectures/Lecture0303.html#just-enough-functions",
+    "title": "Lecture 3 Part 3",
+    "section": "Just enough functions",
+    "text": "Just enough functions\n\nJust enough to make you dangerous…\n\n\n\n\n\n\n\n\nFunction\nNotes\n\n\n\n\nplt.plot()\nDefaults to a line chart\n\n\nplt.title(“My Plot”)\nAdd a title\n\n\nplt.xlabel(“X Axis Label”)\nChange the default x axis label\n\n\nplt.ylabel(“Y Axis Label”)\nChange the default y axis label\n\n\nplt.show()\nDisplay the plot if necessary\n\n\nplt.save(“filename”)\nSave to drive, defaults to png"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#putting-pandas-to-use",
+    "href": "lectures/Lecture0303.html#putting-pandas-to-use",
+    "title": "Lecture 3 Part 3",
+    "section": "Putting pandas to use",
+    "text": "Putting pandas to use\n\nRecall prep for analysis:\n\n\nimport pandas as pd\nAAPL10 = pd.read_csv(\"AAPL10.csv\")\n\n## create date/year/month variables as date time \nAAPL10['Date'] = pd.to_datetime(AAPL10['Date'], format='%m/%d/%Y')\nAAPL10['Year'] = AAPL10['Date'].dt.year\nAAPL10['Month'] = AAPL10['Date'].dt.month\n\n## fix the Close and Low variables variable\nAAPL10[['Close', 'Low']] = AAPL10[['Close/Last', 'Low']].replace(r'[\\$,]', '', regex=True).astype(float)\n\nAAPL10 = AAPL10.drop(['Close/Last', 'Date'], axis = 1) # need to reassign\n\nAAPL10['Date'] = pd.to_datetime(AAPL10[['Year', 'Month']].assign(DAY=1))  # Creates 2015-05-01 etc/\n\n# Sort the data (important if it's not already sorted)\nAAPL10 = AAPL10.sort_values('Date').reset_index(drop=True)\nAAPL10.head()"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#result-1",
+    "href": "lectures/Lecture0303.html#result-1",
+    "title": "Lecture 3 Part 3",
+    "section": "Result",
+    "text": "Result\n\n\n       Low  Year  Month    Close       Date\n0  31.0050  2015      5  31.3150 2015-05-01\n1  32.4750  2015      5  32.5700 2015-05-01\n2  32.7750  2015      5  32.9450 2015-05-01\n3  32.5125  2015      5  33.0112 2015-05-01\n4  32.2800  2015      5  32.4050 2015-05-01"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#pandas-pd.plot",
+    "href": "lectures/Lecture0303.html#pandas-pd.plot",
+    "title": "Lecture 3 Part 3",
+    "section": "pandas pd.plot()",
+    "text": "pandas pd.plot()\n\nThe convenience wrapper on top of matplotlib\n\n\nAAPL10.plot(x='Date', \n            y='Close', \n            title='Monthly Closing Prices', \n            xlabel = 'Month-Year',\n            ylabel = 'in Dollars',\n            marker=',', \n            color = 'orange', \n            figsize=(10, 5));"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#pandas-pd.plot-result",
+    "href": "lectures/Lecture0303.html#pandas-pd.plot-result",
+    "title": "Lecture 3 Part 3",
+    "section": "pandas pd.plot() result",
+    "text": "pandas pd.plot() result\n\nAAPL10.plot(x='Date', \n            y='Close', \n            title='Monthly Closing Prices', \n            xlabel = 'Month-Year',\n            ylabel = 'in Dollars',\n            marker=',', \n            color = 'orange', \n            figsize=(10, 5));"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#pyplot-equivalent",
+    "href": "lectures/Lecture0303.html#pyplot-equivalent",
+    "title": "Lecture 3 Part 3",
+    "section": "pyplot equivalent",
+    "text": "pyplot equivalent\n\nmatplotlib’s own convenience wrapper\n\n\nplt.plot(AAPL10['Date'], AAPL10['Close'], marker=',', color='orange')\nplt.title('Monthly Closing Prices')\nplt.xlabel('Month-Year')\nplt.ylabel('in Dollars')\nplt.show()"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#pyplot-result",
+    "href": "lectures/Lecture0303.html#pyplot-result",
+    "title": "Lecture 3 Part 3",
+    "section": "pyplot result",
+    "text": "pyplot result"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#matplotlib-oop-equivalent",
+    "href": "lectures/Lecture0303.html#matplotlib-oop-equivalent",
+    "title": "Lecture 3 Part 3",
+    "section": "matplotlib OOP equivalent",
+    "text": "matplotlib OOP equivalent\n\nplt.subplots gets us to figure and axes\nHere, we are creating a Figure or Axes object.\nIn the previous slide everything is handled implicitly by pyplot.\nMore time consuming to program but gives more control.\n\n\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots(figsize=(10, 5)) \nax.plot(AAPL10['Date'], \n        AAPL10['Close'],\n        marker=',', \n        color='orange')\nax.set_title('Monthly Closing Prices')\nax.set_xlabel('Month-Year')\nax.set_ylabel('in Dollars')\nax.figure;"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#matplotlib-oop-result",
+    "href": "lectures/Lecture0303.html#matplotlib-oop-result",
+    "title": "Lecture 3 Part 3",
+    "section": "matplotlib OOP result",
+    "text": "matplotlib OOP result"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#what-is-object-oriented-matplotlib",
+    "href": "lectures/Lecture0303.html#what-is-object-oriented-matplotlib",
+    "title": "Lecture 3 Part 3",
+    "section": "What is Object Oriented matplotlib?",
+    "text": "What is Object Oriented matplotlib?\n\nit’s what you reach for when you want full control of a plot\nperhaps generating scientific figures\nperhaps working with images at the pixel level\nor you are customizing deeply"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#do-you-need-the-oop-access",
+    "href": "lectures/Lecture0303.html#do-you-need-the-oop-access",
+    "title": "Lecture 3 Part 3",
+    "section": "Do you need the OOP access?",
+    "text": "Do you need the OOP access?\n\nThe best use is when you must create reusable and/or complex plots\nA complex plot may involve multiple subplots\nIf you are doing quick things for homework or for an EDA accessing graphics through pandas is perfectly fine\nIf your plans take you into production work, then lean towards OOP"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#pandas-matplotlib-seabornplotly",
+    "href": "lectures/Lecture0303.html#pandas-matplotlib-seabornplotly",
+    "title": "Lecture 3 Part 3",
+    "section": "pandas → matplotlib → seaborn/plotly",
+    "text": "pandas → matplotlib → seaborn/plotly\nThink of pandas pd.plot() as the gateway to more advanced tools:\n\nStart with df.plot() because you have pandas skills\nWork with matplotlib for customization and layout\n\nMove onto seaborn and others for higher-level statistical plots (thease are just wrappers like pandas pd.plot)"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#integration-with-numpy-scipy-and-beyond",
+    "href": "lectures/Lecture0303.html#integration-with-numpy-scipy-and-beyond",
+    "title": "Lecture 3 Part 3",
+    "section": "Integration with NumPy, SciPy, and beyond",
+    "text": "Integration with NumPy, SciPy, and beyond\nBecause matplotlib is built to work seamlessly with NumPy arrays, it extends to:\n\nScientific data (signal processing, simulations, statistics)\nMachine learning model outputs\nMatrices, vectors, and function plots\nComputer vision etc."
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#why-invest-the-time",
+    "href": "lectures/Lecture0303.html#why-invest-the-time",
+    "title": "Lecture 3 Part 3",
+    "section": "Why invest the time?",
+    "text": "Why invest the time?\nEven at a basic level, learning matplotlib gives you:\n\nThe confidence to fix or enhance any pandas (or other wrapper) plot\nAccess to advanced plots not possible in pandas\nThe ability to communicate data insights more professionally"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#what-can-we-customize",
+    "href": "lectures/Lecture0303.html#what-can-we-customize",
+    "title": "Lecture 3 Part 3",
+    "section": "What can we customize?",
+    "text": "What can we customize?\n\nFont sizes and styles\nTick marks and labels\nColors, transparency, line thickness, point shapes\nAxis scaling and limits\nCustom annotations (arrows, text, highlights)\nMulti-panel layouts\nExport quality (for publications, posters, etc.)\n\nMost anything generated by matplotlib can be customized"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#some-basics-not-available-in-pandas",
+    "href": "lectures/Lecture0303.html#some-basics-not-available-in-pandas",
+    "title": "Lecture 3 Part 3",
+    "section": "some basics not available in pandas",
+    "text": "some basics not available in pandas\n\nWe will look at some of these to get you accustomed to matplotlib\n\n\n\n\nFunction\nNotes\n\n\n\n\nplt.errorbar()\nScientific data with uncertainty\n\n\nplt.imshow()\nImage data, heatmaps\n\n\nplt.contour()\n3D-like contour plots\n\n\nplt.quiver()\nVector fields (e.g., wind, direction)\n\n\nplt.polar()\nPolar plots (e.g., angles, radar)"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#the-anatomy-of-a-matplotlib-figure",
+    "href": "lectures/Lecture0303.html#the-anatomy-of-a-matplotlib-figure",
+    "title": "Lecture 3 Part 3",
+    "section": "The anatomy of a matplotlib figure",
+    "text": "The anatomy of a matplotlib figure\nhttps://matplotlib.org/stable/gallery/showcase/anatomy.html\n\n\n(0.0, 4.0)\n\n\n(0.0, 4.0)\n\n\n[None, None]"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#working-with-pyplot",
+    "href": "lectures/Lecture0303.html#working-with-pyplot",
+    "title": "Lecture 3 Part 3",
+    "section": "Working with pyplot",
+    "text": "Working with pyplot\n\nfig = plt.figure(figsize=(8, 8))\nplt.title('Monthly Closing Prices')\nplt.xlabel('Month-Year')\nplt.ylabel('in Dollars')\n\n\npyplot overview: https://matplotlib.org/stable/api/pyplot_summary.html\nplot: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#more-on-working-with-pyplot",
+    "href": "lectures/Lecture0303.html#more-on-working-with-pyplot",
+    "title": "Lecture 3 Part 3",
+    "section": "More on working with pyplot",
+    "text": "More on working with pyplot"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#more-about-seaborn",
+    "href": "lectures/Lecture0303.html#more-about-seaborn",
+    "title": "Lecture 3 Part 3",
+    "section": "More about Seaborn",
+    "text": "More about Seaborn\n\nSeaborn is a Python data visualization library\nIt is built on top of Matplotlib like pandas\nSeaborn has a high-level interface for creating statistical graphics\nSeaborn works with Pandas DataFrames\nSeaborn can create complex visualizations using less code than Matplotlib"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#pandas-seaborn-matplotlib",
+    "href": "lectures/Lecture0303.html#pandas-seaborn-matplotlib",
+    "title": "Lecture 3 Part 3",
+    "section": "Pandas, Seaborn, Matplotlib",
+    "text": "Pandas, Seaborn, Matplotlib\n\n\n\n\n\n\n\n\nLibrary\nGrammar of Graphics Model?\nDescription\n\n\n\n\nmatplotlib\nNo, opposite of GG\nImperative, low-level, procedural not grammar-based\n\n\npandas.plot\nNo, Very limited mapping\nThin wrapper over matplotlib; minimal aesthetics mapping\n\n\nseaborn\nSemi-grammatical\nHigh-level API inspired by GoG, but not fully declarative"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#comparisons-with-ggplot",
+    "href": "lectures/Lecture0303.html#comparisons-with-ggplot",
+    "title": "Lecture 3 Part 3",
+    "section": "Comparisons with ggplot",
+    "text": "Comparisons with ggplot\n\n\n\n\n\n\n\n\n\nGrammar of Graphics\nMatplotlib\nSeaborn\nPandas.plot\n\n\n\n\nDeclarative?\nNo, Imperative\nPartially\nNo\n\n\nAesthetic mapping\nNo, Manual\nYes (hue, style, etc.)\nSome\n\n\nGeoms\nYes (plot, bar)\nYes (scatterplot, boxplot, etc.)\nYes\n\n\nStats\nNo\nYes\nNo\n\n\nFacets\nManual with subplots\nYes\nNo\n\n\nThemes\nYes (with effort)\nYes (built-in)\nNo\n\n\nCoords/Scales\nYes\nPartially\nNo"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#examining-facets",
+    "href": "lectures/Lecture0303.html#examining-facets",
+    "title": "Lecture 3 Part 3",
+    "section": "Examining Facets",
+    "text": "Examining Facets\n\nHelps with data exploration\nComparisons made easier\nClarity (can reduce overplotting)\nNot specific to one industry/field"
+  },
+  {
+    "objectID": "lectures/Lecture0303.html#faceting-boxplots-with-seaborn---data",
+    "href": "lectures/Lecture0303.html#faceting-boxplots-with-seaborn---data",
+    "title": "Lecture 3 Part 3",
+    "section": "Faceting Boxplots with Seaborn - data",
+    "text": "Faceting Boxplots with Seaborn - data\n\nBecause the furniture category has been set as a ‘category’ type\nwe need to remove empty categories when we subset\nSince we are referencing to part of a DataFrame rather than a full independent copy of it we should .copy() (make a copy of the dataframe to be safe)\n\ntop_categories = ikea[‘category’].value_counts().keys()[:4] new_data = ikea[ikea[‘category’].isin(top_categories)].copy() # note this is a copy new_data[‘category’] = new_data[‘category’].cat.remove_unused_categories()"
   },
   {
     "objectID": "lectures/Lecture0201.html#announcements",
