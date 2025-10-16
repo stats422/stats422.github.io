@@ -2299,35 +2299,55 @@
     "href": "activity/Week03ggplot.html",
     "title": "Week 3 ggplot",
     "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 3 Activity ggplot practice"
+    ]
   },
   {
     "objectID": "activity/Week03ggplot.html#loading-libraries",
     "href": "activity/Week03ggplot.html#loading-libraries",
     "title": "Week 3 ggplot",
     "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 3 Activity ggplot practice"
+    ]
   },
   {
     "objectID": "activity/Week03ggplot.html#example-read-the-data",
     "href": "activity/Week03ggplot.html#example-read-the-data",
     "title": "Week 3 ggplot",
     "section": "Example: Read the data",
-    "text": "Example: Read the data\nThis is a sample of size 400 drawn from a much larger https://www.kaggle.com/datasets/adelanseur/taxi-trips-chicago-2024 database.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Example: Read the data\nThis is a sample of size 400 drawn from a much larger https://www.kaggle.com/datasets/adelanseur/taxi-trips-chicago-2024 database.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 3 Activity ggplot practice"
+    ]
   },
   {
     "objectID": "activity/Week03ggplot.html#basic-examination",
     "href": "activity/Week03ggplot.html#basic-examination",
     "title": "Week 3 ggplot",
     "section": "Basic examination",
-    "text": "Basic examination\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Basic examination\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 3 Activity ggplot practice"
+    ]
   },
   {
     "objectID": "activity/Week03ggplot.html#visualization-challenge",
     "href": "activity/Week03ggplot.html#visualization-challenge",
     "title": "Week 3 ggplot",
     "section": "Visualization Challenge",
-    "text": "Visualization Challenge\nBy this week, you should be very comfortable with ggplot (if not, ask questions)\nHere is a basic boxplot (or you and your team can try some other type of graphic, I like at least two variables)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe things you should be able to do after Week 3 are:\n- more geoms\n- more variables\n- color, fill, opacity\n- labels\n- change themes\nHere is an empty box if you prefer\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Visualization Challenge\nBy this week, you should be very comfortable with ggplot (if not, ask questions)\nHere is a basic boxplot (or you and your team can try some other type of graphic, I like at least two variables)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe things you should be able to do after Week 3 are:\n- more geoms\n- more variables\n- color, fill, opacity\n- labels\n- change themes\nHere is an empty box if you prefer\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Activities",
+      "Lecture 3 Activity ggplot practice"
+    ]
   },
   {
     "objectID": "activity/ggplot2.html",
